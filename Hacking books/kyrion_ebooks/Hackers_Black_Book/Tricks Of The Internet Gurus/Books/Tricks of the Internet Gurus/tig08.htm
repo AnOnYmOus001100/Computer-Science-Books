@@ -1,0 +1,1836 @@
+<HTML>
+
+<HEAD>
+
+<TITLE>Tricks of the Internet Gurus tig08.htm</TITLE>
+
+<LINK REL="ToC" HREF="httoc.htm">
+
+<LINK REL="Index" HREF="htindex.htm">
+
+<LINK REL="Next" HREF="tig09.htm">
+
+<LINK REL="Previous" HREF="tig07.htm"></HEAD>
+
+<BODY TEXT="#000000" LINK="#0000FF" VLINK="#800080" bgcolor=white>
+
+<P><A HREF="tig07.htm"><IMG SRC="bluprev.gif" WIDTH = 32 HEIGHT = 32 BORDER = 0 ALT="Previous Page"></A>
+
+<A HREF="httoc.htm"><IMG SRC="blutoc.gif" WIDTH = 32 HEIGHT = 32 BORDER = 0 ALT="TOC"></A>
+
+<A HREF="htindex.htm"><IMG SRC="bluindex.gif" WIDTH = 32 HEIGHT = 32 BORDER = 0 ALT="Index"></A>
+
+<A HREF="tig09.htm"><IMG SRC="blunext.gif" WIDTH = 32 HEIGHT = 32 BORDER = 0 ALT="Next Page"></A>
+
+<A HREF="httoc.htm"><IMG SRC="bluprev.gif" WIDTH = 32 HEIGHT = 32 BORDER = 0 ALT="Home"></A>
+
+</P><UL>
+
+<LI>
+
+<A HREF="#I1">8</A></LI>
+
+<UL>
+
+<LI>
+
+<A HREF="#I3">Telnet</A></LI>
+
+<UL>
+
+<UL>
+
+<UL>
+
+<LI>
+
+<A HREF="#I4"><A HREF="pscott.gif">--by Peter Scott</A></A></LI></UL></UL>
+
+<LI>
+
+<A HREF="#I5">UNIX telnet</A></LI>
+
+<UL>
+
+<LI>
+
+<A HREF="#I6">Using the Esc Character</A></LI>
+
+<LI>
+
+<A HREF="#I7">Machines in the Same Domain</A></LI>
+
+<LI>
+
+<A HREF="#I8">Using the set Command</A></LI>
+
+<LI>
+
+<A HREF="#I9">Using the ! Command</A></LI>
+
+<LI>
+
+<A HREF="#I10">Nonstandard Port Numbers</A></LI>
+
+<LI>
+
+<A HREF="#I11">Scott Yanoff's Internet Services List</A></LI>
+
+<LI>
+
+<A HREF="#I12">The Difference Between telnet and tn3270</A></LI></UL>
+
+<LI>
+
+<A HREF="#I13">NCSA Telnet</A></LI>
+
+<UL>
+
+<LI>
+
+<A HREF="#I14">Editing the config.tel file</A></LI>
+
+<LI>
+
+<A HREF="#I16">Starting a Single Remote Session</A></LI>
+
+<LI>
+
+<A HREF="#I17">Quitting a Remote Session</A></LI>
+
+<LI>
+
+<A HREF="#I18">Opening Multiple Sessions</A></LI>
+
+<LI>
+
+<A HREF="#I19">What the Status Line Indicates</A></LI>
+
+<LI>
+
+<A HREF="#I20">A Note on Hosts</A></LI>
+
+<LI>
+
+<A HREF="#I21">Working with the Scrollback Feature</A></LI>
+
+<LI>
+
+<A HREF="#I22">The config.tel File and Alt-P</A></LI></UL>
+
+<LI>
+
+<A HREF="#I23">WinQVT/Net</A></LI>
+
+<UL>
+
+<LI>
+
+<A HREF="#I24">Downloading to Your PC</A></LI></UL></UL></UL></UL>
+
+
+
+<H1><A ID="I1" NAME="I1">
+
+<BR>
+
+<FONT SIZE=5><A ID="I2" NAME="I2"></A><B>8</B>
+
+<BR></FONT></A></H1>
+
+<H2><A ID="I3" NAME="I3">
+
+<FONT SIZE=5><B>Telnet</B>
+
+<BR></FONT></A></H2>
+
+<H5><A ID="I4" NAME="I4">
+
+<FONT SIZE=3><B><A HREF="pscott.gif">--by Peter Scott</A></B>
+
+<BR></FONT></A></H5>
+
+<P>This chapter attempts to explain some tips and tricks for the telnet command. It does not attempt to cover all telnet programs on all platforms; that would be too onerous a task. Instead, it concentrates on NCSA Telnet, which runs on MS-DOS machines 
+with network connections; QVTNET, which runs under Windows in a networked environment; and UNIX Telnet, with which most Internet users will be familiar. In all of these versions, telnet enables a user to connect to another Internet machine, whether it be 
+in the next room or halfway around the globe. The phrase <I>Internet machine</I> refers to a system that is running the TCP/IP protocols. These protocols are what make Internet connectivity possible. Telnet is often referred to as <I>remote login</I>, 
+which simply means connecting one machine to another so that a user may interact with that other machine as though he or she were actually using it locally.
+
+<BR></P>
+
+<P>To explain this concept simply, take a look at a typical telnet session using the UNIX version.
+
+<BR></P>
+
+<H3><A ID="I5" NAME="I5">
+
+<FONT SIZE=4><B>UNIX telnet</B>
+
+<BR></FONT></A></H3>
+
+<P>A UNIX user performs most functions from a local prompt, which may consist of the % character or a machine name (for example, herald%), or a path (for example, scottp@mary:/home/homec/scottp%. If a user merely types telnet at the prompt, the following 
+prompt appears:
+
+<BR></P>
+
+<PRE>telnet&gt;</PRE>
+
+<HR ALIGN=CENTER>
+
+<NOTE>
+
+<IMG SRC="note.gif"><B>Note: </B>By keying help or ?, the following list of commands is presented:
+
+<BR>
+
+<BR></NOTE>
+
+<TABLE BORDER>
+
+<TR>
+
+<TD>
+
+<PRE><B><I>Command:</I></B>
+
+<BR></PRE>
+
+<TD>
+
+<PRE><B><I>Description</I></B>
+
+<BR></PRE>
+
+<TR>
+
+<TD>
+
+<P>close</P>
+
+<TD>
+
+<P>closes current connection</P>
+
+<TR>
+
+<TD>
+
+<P>display</P>
+
+<TD>
+
+<P>displays operating parameters</P>
+
+<TR>
+
+<TD>
+
+<P>mode</P>
+
+<TD>
+
+<P>tries to enter line or character mode (mode ? for more)</P>
+
+<TR>
+
+<TD>
+
+<P>open</P>
+
+<TD>
+
+<P>connects to a site</P>
+
+<TR>
+
+<TD>
+
+<P>quit</P>
+
+<TD>
+
+<P>exits telnet</P>
+
+<TR>
+
+<TD>
+
+<P>send</P>
+
+<TD>
+
+<P>transmits special characters (send ? for more)</P>
+
+<TR>
+
+<TD>
+
+<P>set</P>
+
+<TD>
+
+<P>sets operating parameters (set ? for more)</P>
+
+<TR>
+
+<TD>
+
+<P>unset</P>
+
+<TD>
+
+<P>unsets operating parameters (unset ? for more)</P>
+
+<TR>
+
+<TD>
+
+<P>status</P>
+
+<TD>
+
+<P>prints status information</P>
+
+<TR>
+
+<TD>
+
+<P>toggle</P>
+
+<TD>
+
+<P>toggles operating parameters (toggle ? for more)</P>
+
+<TR>
+
+<TD>
+
+<P>slc</P>
+
+<TD>
+
+<P>changes state of special charaters (slc ? for more)</P>
+
+<TR>
+
+<TD>
+
+<P>z</P>
+
+<TD>
+
+<P>suspends telnet</P>
+
+<TR>
+
+<TD>
+
+<P>!</P>
+
+<TD>
+
+<P>invokes a subshell</P>
+
+<TR>
+
+<TD>
+
+<P>environ</P>
+
+<TD>
+
+<P>changes environment variables (environ ? for more)</P>
+
+<TR>
+
+<TD>
+
+<P>?</P>
+
+<TD>
+
+<P>prints help information</P></TABLE>
+
+<HR ALIGN=CENTER>
+
+<P>In most cases it is not neccessary to use or even understand all of the commands. Let us, instead, concentrate on those that are useful and often deployed. By issuing the command:
+
+<BR></P>
+
+<PRE>telnet&gt; <B>open willow.usask.ca</B></PRE>
+
+<P>and pressing Enter, the user connects to a machine named willow, which is situated at the University of Saskatchewan in Canada:
+
+<BR></P>
+
+<PRE>telnet&gt; <B>open willow.usask.ca</B>
+
+Trying 128.233.74.5...
+
+Connected to willow.usask.ca.
+
+Escape character is '^]'.
+
+UNIX(r) System V Release 4.0 (willow)
+
+login:</PRE>
+
+<P>The local system tried to connect to the remote system willow.usask.ca, which also has the Internet number 128.233.74.5. In this case, the user is being told that the keyboard characters Ctrl+] will break the connection, that willow is operating with 
+UNIX(r) System V Release 4.0, and that it is ready to accept a user login name. If the user has an account on the remote system, then the username is entered:
+
+<BR></P>
+
+<PRE>login: <B>scott</B></PRE>
+
+<P>This brings up the password prompt, enabling the user to complete the login:
+
+<BR></P>
+
+<PRE>password: <B>xxxxxxxx</B></PRE>
+
+<P>and receive the remote prompt:
+
+<BR></P>
+
+<PRE>willow&gt;</PRE>
+
+<P>When the user has finished using the remote system, he or she may want to return to the local system. A simple logout or exit command usually suffices.
+
+<BR></P>
+
+<H4><A ID="I6" NAME="I6">
+
+<FONT SIZE=3><B>Using the Esc Character</B>
+
+<BR></FONT></A></H4>
+
+<P>Sometimes, it is not obvious which command is valid for logging out of a remote machine. A user may key any number of terms to break the connection and still not succeed. The best way to break a connection is with the escape character&#151;in this 
+example, by holding down the Ctrl key and the right bracket at the same time. This brings up the familiar telnet&gt; prompt, at which point the word quit or close is entered.
+
+<BR></P>
+
+<H4><A ID="I7" NAME="I7">
+
+<FONT SIZE=3><B>Machines in the Same Domain</B>
+
+<BR></FONT></A></H4>
+
+<P>If a user is connecting from a machine at, say, usask.ca to another machine at the same site, it is neccessary only to key the remote machine's name at the telnet prompt:
+
+<BR></P>
+
+<PRE>telnet&gt; <B>open </B><I>machine-name</I></PRE>
+
+<H4><A ID="I8" NAME="I8">
+
+<FONT SIZE=3><B>Using the </B><B><I>set</I></B><B> Command</B>
+
+<BR></FONT></A></H4>
+
+<P>Often, a user may be using telnet to connect to another machine (host 1) that, in turn, connects to a further machine (host 2). If the user keys the traditional escape key to leave host 2, then the connection to host 1 will also be lost. This may be 
+quite inconvenient. Instead, the set command can be used to change the escape key on the local machine. At the telnet&gt; prompt, the following may be issued:
+
+<BR></P>
+
+<PRE>telnet&gt; <B>set escape</B> <I>new-character</I></PRE>
+
+<P>It is always wise to define the new key in such a way that it will not conflict with any keystroke available on the host or remote system.
+
+<BR></P>
+
+<H4><A ID="I9" NAME="I9">
+
+<FONT SIZE=3><B>Using the </B><I>!</I><B> Command</B>
+
+<BR></FONT></A></H4>
+
+<P>At times it is neccessary to temporarily leave a telnet session in order to perform a task on the local machine. Here is an example. Suppose a user has used telnet to connect to an online catalog:
+
+<BR></P>
+
+<PRE>herald% <B>telnet</B>
+
+telnet&gt; <B>open sundog</B></PRE>
+
+<P>This puts the user into the remote site. In order to leave, the escape key is entered, bringing up the telnet&gt; prompt. The ! character is entered, and the user receives the local prompt again:
+
+<BR></P>
+
+<PRE>telnet&gt; <B>!</B>
+
+herald%</PRE>
+
+<P>at which point local machine commands may be entered. When exit is keyed, the local prompt is returned. Hitting Enter again places the user back into the remote site.
+
+<BR></P>
+
+<H4><A ID="I10" NAME="I10">
+
+<FONT SIZE=3><B>Nonstandard Port Numbers</B>
+
+<BR></FONT></A></H4>
+
+<P>When connecting to a remote computer with telnet, a user is automatically connected to port 23. This is the port reserved by UNIX systems for incoming telnet sessions. However, it is possible to telnet to another port to run certain applications. For 
+example, if a user wanted to run the finger program on a remote system, the following command would be issued:
+
+<BR></P>
+
+<PRE>telnet&gt; <B>open herald 79</B></PRE>
+
+<P>Once connected, the user merely hits the Return key to see who is currently logged in to that remote machine:
+
+<BR></P>
+
+<PRE>Login      Name                    TTY Idle    When            Office
+
+ford       Ron J. Ford             02   37     Tue 09:37
+
+jjk136     Justina Jill Koshins    03          Tue 06:41
+
+burke      John Burke              04    2     Tue 12:18
+
+bergg      Gary Berg               05   46     Tue 11:47
+
+anderson   Cathy Anderson          06   41     Tue 10:02
+
+stefaniu   Debbie Stefaniuk        07 3:41     Tue 08:53</PRE>
+
+<P>A local user can also receive specific information that a remote user has made public through his or her .plan file. For example, John A. Magliacane, of Brookdale Community College in New Jersey, &quot;publishes&quot; the <I>SpaceNews</I> online 
+newsletter. To read it, the user types the following:
+
+<BR></P>
+
+<PRE>telnet&gt; <B>open pilot.njin.net 79</B></PRE>
+
+<P>and when connected, types the username magliaco to receive the following:
+
+<BR></P>
+
+<PRE>Login name: <B>magliaco</B>
+
+In real life: John Magliacane
+
+Directory: /njin/u4/magliaco            Shell: /bin/ocsh
+
+Last login Tue Jun  7 09:33 on ttyu7 from basie.rutgers.ed
+
+New mail received Tue Jun  7 13:12:01 1994;
+
+  unread since Tue Jun  7 10:37:11 1994
+
+Plan:
+
+SB NEWS @ AMSAT $SPC0606
+
+* SpaceNews 06-Jun-94 *
+
+                               =========
+
+                               SpaceNews
+
+                               =========
+
+                           MONDAY JUNE 6, 1994
+
+SpaceNews originates at KD2BD in Wall Township, New Jersey, USA. It is
+
+published every week and is made available for unlimited distribution.
+
+&lt;text edited out&gt;</PRE>
+
+<P>Of course, regular UNIX users know that the finger program can accomplish the same task; I am merely pointing out the power that telnet has. It should be noted, however, that many non-UNIX users find that using telnet to port 79 is the only way to 
+access such information, because remote fingering is not always possible.
+
+<BR></P>
+
+<P>Here are some other useful information sources available via telnet to port 79. Note that the telnet address is being keyed in without the user being in open command mode:
+
+<BR></P>
+
+<PRE>telnet oddjob.uchicago.edu 79
+
+Enter: copi</PRE>
+
+<P>This is an Almanac of Events maintained by Craig J Copi.
+
+<BR></P>
+
+<P>The following give current earthquake information for various parts of the United States. Enter quake after being connected:
+
+<BR></P>
+
+<PRE>telnet geophys.washington.edu 79   (Washington, Oregon)
+
+telnet fm.gi.alaska.edu 79         (Alaska)
+
+telnet scec2.gps.caltech.edu 79    (Southern California)
+
+telnet slueas.slu.edu 79           (Southern Illinois)
+
+telnet seismo.unr.edu 79           (Nevada and California)
+
+telnet andreas.wr.usgs.gov 79      (Northern California)
+
+telnet eqinfo.seis.utah.edu 79     (Utah, Wyoming, Montana)</PRE>
+
+<H4><A ID="I11" NAME="I11">
+
+<FONT SIZE=3><B>Scott Yanoff's Internet Services List</B>
+
+<BR></FONT></A></H4>
+
+<P>Get a copy of the Internet Services List, compiled by Scott Yanoff. This list gives instructions for connecting to many Internet resources via telnet, especially those with nonstandard port numbers. It is available via telnet to csd4.csd.uwm.edu 79 
+(enter yanoff when connected). The list includes connections to Chat Services, Online Games, Sports Information, and certain Bulletin Board Services.
+
+<BR></P>
+
+<H4><A ID="I12" NAME="I12">
+
+<FONT SIZE=3><B>The Difference Between telnet and tn3270</B>
+
+<BR></FONT></A></H4>
+
+<P>Most remote computers can be accessed with telnet, but there are still many around that need to be connected via tn3270. tn3270 allows a UNIX machine to connect to an IBM-mainframe machine, using full-screen and full-duplex emulation. Suppose, for 
+example, a user needed to connect to the Pickler Memorial Library, Northeast Missouri State University, which has the Internet address academic.nemostate.edu. Telnetting to that address would connect the user but would not allow a public login. The user is 
+instead presented with
+
+<BR></P>
+
+<PRE>_8VM/ESA ONLINE_8</PRE>
+
+<P>which is not particularly enlightening. With a tn3270 connection the following is shown:
+
+<BR></P>
+
+<PRE>  VM/ESA ONLINE
+
+                  NN      NN    MM               MM        SSSSSSSS      UU     UU
+
+                  NNN    NN    MMM         MMM      SS           SS      UU     UU
+
+                  NNNN  NN    MMMM    MMMM     SS                      UU     UU
+
+                  NN NN NN    MM MM MM MM         SSSSSSS        UU     UU
+
+                  NN  NNNN    MM   MMM   MM                       SS     UU     UU
+
+                  NN    NNN    MM      M      MM      SS            SS     UU     UU
+
+                  NN      NN    MM               MM         SSSSSSSS     UUUUUU
+
+                                  VM/ESA Rel. 2.0
+
+                 If using TELNET to connect to our system, TAB to
+
+                 the COMMAND line and type DIAL VTAM. Otherwise,
+
+                 type VMEXIT on the COMMAND line to return to the
+
+                           A - NOTIS, B - MUSIC screen.
+
+ Fill in your USERID and PASSWORD and press ENTER
+
+ (Your password will not appear when you type it)
+
+ USERID   ===&gt;
+
+ PASSWORD ===&gt;
+
+ COMMAND  ===&gt;
+
+....................................................</PRE>
+
+<P>This is a typical, IBM-mainframe opening screen. The instructions should probably have used the term tn3270 instead of TELNET. By entering the phrase DIAL VTAM, the user is presented with a menu choice:
+
+<BR></P>
+
+<PRE>          WELCOME TO COMPUTING AT N.M.S.U.
+
+          Type the letter of the system you desire
+
+          and Press ENTER
+
+          A - Enter the NOTIS Library System
+
+          B - Enter the MUSIC Academic System
+
+.................</PRE>
+
+<P>Selecting A brings up the online catalog menu:
+
+<BR></P>
+
+<PRE>                    LUIS:  LIBRARY USER INFORMATION SERVICE
+
+        Pickler Memorial Library, Northeast Missouri State University
+
+           To search for:          Type a command and press &lt;ENTER&gt;
+
+                  Author             a=dickens charles
+
+                   Title                t=gone with the wind
+
+                 Subject            s=education elementary
+
+      Children's subject        sc=family problems
+
+                 Keyword           k=clancy and hunt and october
+
+             Call number           cl=bx7432
+
+        Type EXP OPT and press &lt;ENTER&gt; for a complete list of options.
+
+        REMOTE USERS:  Type STOP and press &lt;ENTER&gt; to log off.
+
+     For more information on searching in the Catalog, press &lt;ENTER&gt;.
+
+ ------------------------------------------------  + Page 1 of 2  -------------
+
+                    Enter search command                 &lt;F8&gt;  FORward page
+
+                    NEWs
+
+ NEXT COMMAND:
+
+................................................</PRE>
+
+<P>The user performs the search, enters STOP, and is presented with the menu choice again. Even though it is not stated, the command for logging off is UNDIAL. If the logoff command is not readily apparent, the user can hit Ctrl+C to receive the tn3270 
+prompt, at which time the word quit may be entered to break the connection. tn3270 connections are becoming less common, but there are still enough around to warrant this explanation.
+
+<BR></P>
+
+<H3><A ID="I13" NAME="I13">
+
+<FONT SIZE=4><B>NCSA Telnet</B>
+
+<BR></FONT></A></H3>
+
+<P>Users who wish to make telnet connections from their IBM personal computer may do so with NCSA Telnet. This software was developed by the National Center for Supercomputing Applications at the University of Illinois at Urbana-Champaign. Unlike the UNIX 
+version, this client resides on a user's own personal computer, thus allowing direct access to other computers on the Internet running the TCP/IP protocols.
+
+<BR></P>
+
+<P>In order to run the software, the personal computer must have the following:
+
+<BR></P>
+
+<P>MS-DOS version 2.0 or later
+
+<BR></P>
+
+<P>An Ethernet adaptor board and cable
+
+<BR></P>
+
+<P>384KB memory (minimum)
+
+<BR></P>
+
+<P>An Internet address (usually supplied by a system administrator)
+
+<BR></P>
+
+<P>The software is available via anonymous FTP from
+
+<BR></P>
+
+<PRE>ftp.ncsa.uiuc.edu</PRE>
+
+<P>After you log in to the site, change the directory to PC/Telnet/msdos. The files to receive are either tel2307b.zip or tel2307s.zip. The file tel2307b.zip is a PKZip 2.04 zipfile. It contains all the binaries and configuration files needed to run PC 
+telnet and is 717,475 bytes in size.
+
+<BR></P>
+
+<P>The file tel2307s.zip is also a PKZip 2.04 zipfile. It contains all the source code used to compile all the binaries, and the makefiles. It is 679,778 bytes large. There are no binaries in the source distribution.
+
+<BR></P>
+
+<H4><A ID="I14" NAME="I14">
+
+<FONT SIZE=3><A ID="I15" NAME="I15"></A><B>Editing the </B><B><I>config.tel</I></B><B> file</B>
+
+<BR></FONT></A></H4>
+
+<P>It is essential that the config.tel file be edited, so that the machine's IP number can be listed. If editing this file is problematic, then a system administrator should be consulted. The administrator will also know if the machine has the correct 
+Ethernet adaptor attached. Because the software resides on a personal computer, it can take advantage of the capabilities of the machine. For example, colors can be chosen, the clock set, and capture files can have names chosen.
+
+<BR></P>
+
+<P>Let's now look at how the program is started, how the terminal type is set, and how a telnet session is closed.
+
+<BR></P>
+
+<H4><A ID="I16" NAME="I16">
+
+<FONT SIZE=3><B>Starting a Single Remote Session</B>
+
+<BR></FONT></A></H4>
+
+<P>The simplest way to start NCSA Telnet is from the DOS prompt:
+
+<BR></P>
+
+<PRE>c:\ <B>telnet </B><I>hostname</I></PRE>
+
+<P>This command will, if the remote system is available, make an instantaneous connection. The user then logs in with a username and password if required.
+
+<BR></P>
+
+<P>Pressing Alt-H will bring up the help screen, overlaying the current session:
+
+<BR></P>
+
+<PRE>.............................
+
+Alt-A   add a session                   Alt-Y     Interrupt Process
+
+Alt-N   next session                    Alt-B     Previous Session
+
+Alt-D   Dump Screen to Capture file     Alt-O     Abort Output
+
+Alt-Z   message screen                  Alt-Q     Are you there?
+
+Alt-E   escape to DOS shell             Alt-U     Erase line
+
+Alt-G   graphics menu                   Alt-K     Erase Kharacter
+
+Alt-C   toggle capture on/off           Alt-V     Paste Capture to Session
+
+Alt-R   reset VT100 screen              HOME      exit graphics mode
+
+Alt-H   this help screen                Ctrl-HOME clear/enter graphics mode
+
+ScrLock pause/restart screen (DO NOT use Ctrl-NumLock)
+
+ScrLock enter/exit scroll-back mode
+
+Alt-F   start file transfer as if typed:ftp [internet address]
+
+Alt-I   send my internet address to host as if typed
+
+Alt-S   skip scrolling, jump ahead
+
+Alt-P   change a parameter, one of: color, capture file name, backspace,
+
+        session name, screen mode
+
+Alt-X   close connection
+
+CTRL-Shift-F3   abort program completely. STRONGLY discouraged
+
+Press ESC for information page, space bar to return to session:</PRE>
+
+<P>We will look at some of these commands later.
+
+<BR></P>
+
+<H4><A ID="I17" NAME="I17">
+
+<FONT SIZE=3><B>Quitting a Remote Session</B>
+
+<BR></FONT></A></H4>
+
+<P>With NCSA Telnet, the simplest way to quit a single session is to log out of the remote machine, and be returned to the DOS prompt. However, it could be that there is no clear way of logging out. Just like the UNIX version of telnet, this program also 
+has an escape key: Alt-X.
+
+<BR></P>
+
+<H4><A ID="I18" NAME="I18">
+
+<FONT SIZE=3><B>Opening Multiple Sessions</B>
+
+<BR></FONT></A></H4>
+
+<P>So much for a single session. One of great strengths of NCSA Telnet is the ability to have more than one session live at any given time. There are two ways of performing this. First, a user can enter multiple machine names at the DOS prompt:
+
+<BR></P>
+
+<PRE>C:\ <B>telnet</B> <I>machine1</I> <I>machine2</I> <I>machine3</I></PRE>
+
+<P>and be prompted for login and password information on each machine. The second way is to use Alt-A to add another session.
+
+<BR></P>
+
+<H4><A ID="I19" NAME="I19">
+
+<FONT SIZE=3><B>What the Status Line Indicates</B>
+
+<BR></FONT></A></H4>
+
+<P>The program uses VT100 terminal emulation. This means that only 24 of the screen's 25 lines are used by the terminal. The final line is used by the program to indicate the status of the sessions. Each session name is indicated in reverse video, with the 
+current session shown on the far left. The far right of the screen is reserved to show whether scrollback, capture, or FTP is enabled.
+
+<BR></P>
+
+<H4><A ID="I20" NAME="I20">
+
+<FONT SIZE=3><B>A Note on Hosts</B>
+
+<BR></FONT></A></H4>
+
+<P>The program can connect only to computers that have IP addresses. A user can find legal names by checking the config.tel file. This file can be configured to use the local domain-based name server to check names and addresses of machines. Like the UNIX 
+version of telnet, this program enables a user to enter only the specific machine name (for example, willow, herald, or duke), providing they are all in the same domain&#151;in this case, usask.ca. If the IP numbers are known, then it is neccessary only to 
+enter the last part of the number. So, if the local machine's number is 128.233.33.3 and the user wishes to connect to 128.233.33.7, then all that needs be entered is #7. Whereas UNIX allows a space between an IP address and a port number, this program 
+requires that a pound sign (#) be inserted (for example, 128.233.33.3#5000).
+
+<BR></P>
+
+<HR ALIGN=CENTER>
+
+<NOTE>
+
+<IMG SRC="imp.gif"><B>Tip: </B>Watch for the asterisk to disappear to show that you are connected.
+
+<BR></NOTE>
+
+<HR ALIGN=CENTER>
+
+<P>It can sometimes take a couple of minutes to connect to a remote machine. While the connection is being made, an asterisk appears in the status box. This disappears when the connection is made. However, it may take further time for a login command to 
+appear. At this point, it may make sense to break the connection with Alt-X and begin the procedure again.
+
+<BR></P>
+
+<H4><A ID="I21" NAME="I21">
+
+<FONT SIZE=3><B>Working with the Scrollback Feature</B>
+
+<BR></FONT></A></H4>
+
+<P>One of the most frustrating things about logging in to remote machines is that the information a user has received appears to drop off the top of the screen and be lost. NCSA Telnet has a very useful set of commands to enable a user to refer back to 
+that information. This is all achieved by the Scroll Lock key. When depressed, that key enables a user to refer back to received information with Page Up, Page Down, and the up and down arrow keys. The information can not only be read but manipulated with 
+cut-and-paste features. Here's how it works:
+
+<BR></P>
+
+<OL>
+
+<LI>Hit the Scroll Lock key.
+
+<BR>
+
+<BR></LI>
+
+<LI>Place the cursor at the start of text to be copied.
+
+<BR>
+
+<BR></LI>
+
+<LI>Press the Spacebar.
+
+<BR>
+
+<BR></LI>
+
+<LI>Move the cursor to the end of the text.
+
+<BR>
+
+<BR></LI>
+
+<LI>Press the Spacebar.
+
+<BR>
+
+<BR></LI>
+
+<LI>Press Alt-C to place text into the buffer.
+
+<BR>
+
+<BR></LI>
+
+<LI>Hit the Scroll Lock key.
+
+<BR>
+
+<BR></LI>
+
+<LI>Switch sessions with either Alt-B or Alt-N.
+
+<BR>
+
+<BR></LI>
+
+<LI>Move cursor to pasting position and press Alt-V.
+
+<BR>
+
+<BR></LI></OL>
+
+<P>This procedure can also be accomplished with a mouse, but takes some dexterity:
+
+<BR></P>
+
+<OL>
+
+<LI>Press the right mouse button.
+
+<BR>
+
+<BR></LI>
+
+<LI>Move to the start of the text to be copied.
+
+<BR>
+
+<BR></LI>
+
+<LI>Press the left mouse button.
+
+<BR>
+
+<BR></LI>
+
+<LI>Move to the end of the text.
+
+<BR>
+
+<BR></LI>
+
+<LI>Press left mouse button.
+
+<BR>
+
+<BR></LI>
+
+<LI>Press and hold the left mouse button.
+
+<BR>
+
+<BR></LI>
+
+<LI>Press the right mouse button.
+
+<BR>
+
+<BR></LI>
+
+<LI>Release both buttons. This copies the text into the buffer.
+
+<BR>
+
+<BR></LI>
+
+<LI>To exit Scrollback, press the right mouse button.
+
+<BR>
+
+<BR></LI></OL>
+
+<P>To paste the captured text, the user hits Alt-B or Alt-N to switch sessions. Then:
+
+<BR></P>
+
+<OL>
+
+<LI>Press and hold the right mouse button.
+
+<BR>
+
+<BR></LI>
+
+<LI>Press left mouse button.
+
+<BR>
+
+<BR></LI>
+
+<LI>Release both buttons.
+
+<BR>
+
+<BR></LI></OL>
+
+<P>NCSA Telnet also enables a user to capture text to a file on the personal computer or to a printer. An entire session or just a single screen can be captured. The Alt-C key combination turns capture on and off and appends the text to the file designated 
+in a user's parameters. To see the current name of the capture file and to change it if neccessary, Alt-P is depressed. This change can be made permanent by editing the config.tel file, which comes with the software.
+
+<BR></P>
+
+<P>Sometimes, a user may wish to capture only one screenful of information, particularly if that information is garbled by an Alt-C capture. To do this, use Alt-D. In any event, only one capture can occur at any given time. A user cannot capture text with 
+Alt-C in one session and Alt-D in another. If the captured text is to be sent to a printer instead of a file, the user should enter PRN as the capture file name.
+
+<BR></P>
+
+<P>In order to edit the captured file&#151;and indeed, to perform other DOS commands&#151;NCSA Telnet includes a DOS Shell feature. This is controlled by Alt-E. Typing exit returns the user to the program. While in the DOS shell, a user may run other 
+programs. However, any other program that wants to use the Ethernet connection will cause NCSA Telnet to crash. Other programs also may cause crashes. Learning which programs to avoid using is a matter of trial and error. Also, trying to run programs that 
+consume lots of random-access memory may cause problems.
+
+<BR></P>
+
+<H4><A ID="I22" NAME="I22">
+
+<FONT SIZE=3><B>The </B><B><I>config.tel</I></B><B> File and Alt-P</B>
+
+<BR></FONT></A></H4>
+
+<P>The config.tel file determines how NCSA Telnet will run. It is a text file that can be easily edited with a DOS text editor. Some instructions may not be clear to novices, however, in which case a systems person should be consulted for advice. Some 
+parameters&#151;for example, screen colors, capture-file name, terminal type, and so on&#151;can be changed while in the program. Depressing Alt-P brings up the following:
+
+<BR></P>
+
+<PRE>   &lt;      Select parameters, F1 to accept, F10 to leave unchanged      &gt;
+
+   --------------- Color setup and session parameters -----------------
+
+ Text:         normal    reverse   underline
+
+        Normal Foreground (nfcolor)       -       green
+
+        Normal Background (nbcolor)     -       black
+
+        Reverse Foreground (rfcolor)       -       black
+
+        Reverse Background (rbcolor)     -       white
+
+        Underline Foreground (ufcolor)    -       blue
+
+        Underline Background (ubcolor)  -       black
+
+        Use remote echo or local echo   -       Remote echo
+
+        Backspace key sends               -       Delete
+
+        Session name    *&gt;      ahostname
+
+        Terminal type   -       VT102 and Tek4014
+
+        Line Wrapping   -       Wrapping On
+
+        Output Mapping  -       Mapping Off
+
+   -------------- Parameters which apply to all sessions --------------
+
+        Capture file name       *&gt;      capfile
+
+  Screen mode (for BIOS compatibility)  Direct to screen
+
+        File transfer is        -       Enabled
+
+        Remote Copying is       -       Enabled
+
+        Clock is        Enabled
+
+Use arrow keys to select, Enter clears changeable field (*&gt;)</PRE>
+
+<P>To move through the list, the Up, Down, Home, and End keys are used. The left and right arrow keys allow changes to be made to fields by means of toggles. The fields marked *&gt; can have new values added by hand.
+
+<BR></P>
+
+<P>NCSA Telnet comes with some other useful utilities that mirror their UNIX counterparts:
+
+<BR></P>
+
+<UL>
+
+<LI><I>Finger</I>: Enables a local user to gain information about users on remote machines.
+
+<BR>
+
+<BR></LI>
+
+<LI><I>FTP</I>: Enables a local user to upload and download files from the local to the remote machine.
+
+<BR>
+
+<BR></LI>
+
+<LI><I>Lpq</I>: Displays printer queue jobs.
+
+<BR>
+
+<BR></LI>
+
+<LI><I>Lpr</I>: Sends a job to the printer.
+
+<BR>
+
+<BR></LI>
+
+<LI><I>Lprm</I>: Removes a job from the printer queue.
+
+<BR>
+
+<BR></LI>
+
+<LI><I>Rsh</I>: Similar to telnet but enables a user to add a personal name to a remote login.
+
+<BR>
+
+<BR></LI></UL>
+
+<P>Finally, here is a summary of frequently-used program commands:
+
+<BR></P>
+
+<TABLE BORDER>
+
+<TR>
+
+<TD>
+
+<P>Alt-A</P>
+
+<TD>
+
+<P>Adds a new session.</P>
+
+<TR>
+
+<TD>
+
+<P>Alt-B</P>
+
+<TD>
+
+<P>Goes back to a another session.</P>
+
+<TR>
+
+<TD>
+
+<P>Alt-C</P>
+
+<TD>
+
+<P>Toggles capture file on and off.</P>
+
+<TR>
+
+<TD>
+
+<P>Alt-D</P>
+
+<TD>
+
+<P>Dumps the current screen into the capture file.</P>
+
+<TR>
+
+<TD>
+
+<P>Alt-E</P>
+
+<TD>
+
+<P>Spawns a DOS shell.</P>
+
+<TR>
+
+<TD>
+
+<P>Alt-F</P>
+
+<TD>
+
+<P>Starts file transfer as if typed: FTP <I>Internet </I><I>address</I>.</P>
+
+<TR>
+
+<TD>
+
+<P>Alt-G</P>
+
+<TD>
+
+<P>Displays the Graphics menu.</P>
+
+<TR>
+
+<TD>
+
+<P>Alt-H</P>
+
+<TD>
+
+<P>Displays the Help screen.</P>
+
+<TR>
+
+<TD>
+
+<P>Alt-I</P>
+
+<TD>
+
+<P>Sends the internet address to the host.</P>
+
+<TR>
+
+<TD>
+
+<P>Alt-K</P>
+
+<TD>
+
+<P>Erases a character.</P>
+
+<TR>
+
+<TD>
+
+<P>Alt-N</P>
+
+<TD>
+
+<P>Goes to the next session.</P>
+
+<TR>
+
+<TD>
+
+<P>Alt-O</P>
+
+<TD>
+
+<P>Aborts output.</P>
+
+<TR>
+
+<TD>
+
+<P>Alt-P</P>
+
+<TD>
+
+<P>Changes a parameter (for example, color, capture file name, backspace).</P>
+
+<TR>
+
+<TD>
+
+<P>Alt-Q</P>
+
+<TD>
+
+<P>Sends the query, Are you there?</P>
+
+<TR>
+
+<TD>
+
+<P>Alt-R</P>
+
+<TD>
+
+<P>Resets the VT100 screen.</P>
+
+<TR>
+
+<TD>
+
+<P>Alt-S</P>
+
+<TD>
+
+<P>Skips scroll and jumps ahead.</P>
+
+<TR>
+
+<TD>
+
+<P>Alt-U</P>
+
+<TD>
+
+<P>Erases the line.</P>
+
+<TR>
+
+<TD>
+
+<P>Alt-V</P>
+
+<TD>
+
+<P>Copies text from clipboard onto the current session.</P>
+
+<TR>
+
+<TD>
+
+<P>Alt-W</P>
+
+<TD>
+
+<P>Sends your password when you're FTPing back to your PC.</P>
+
+<TR>
+
+<TD>
+
+<P>Alt-X</P>
+
+<TD>
+
+<P>Closes the connection.</P>
+
+<TR>
+
+<TD>
+
+<P>Alt-Y</P>
+
+<TD>
+
+<P>Interrupts the process.</P>
+
+<TR>
+
+<TD>
+
+<P>Alt-Z</P>
+
+<TD>
+
+<P>Displays the Message screen.</P>
+
+<TR>
+
+<TD>
+
+<P>Ctrl-Home</P>
+
+<TD>
+
+<P>Clears/enters graphics mode.</P>
+
+<TR>
+
+<TD>
+
+<P>Home</P>
+
+<TD>
+
+<P>Exits graphics mode.</P>
+
+<TR>
+
+<TD>
+
+<P>Scr Lock</P>
+
+<TD>
+
+<P>Enters/exits scrollback mode.</P></TABLE>
+
+<P>For more information on The National Center for Supercomputing Application, a user can connect to the NCSA Home Page (shown in Figure 8.1) on the World Wide Web:
+
+<BR></P>
+
+<PRE><A HREF="http://www.ncsa.uiuc.edu"> http://www.ncsa.uiuc.edu</A></PRE>
+
+<P>
+
+<BR><B><A HREF="06tig01.gif">Figure 8.1. The NCSA home page.</A></B>
+
+<BR></P>
+
+<P>A version that runs unders Windows 3.1 is called wintelb3.zip, available via anonymous FTP from ftp.ncsa.uiuc.edu in the /PC/Telnet/windows directory. It is currently in unsupported beta mode and will not be discussed here. Rather, I will look at 
+another Windows telnet program, WinQVT/Net.
+
+<BR></P>
+
+<H3><A ID="I23" NAME="I23">
+
+<FONT SIZE=4><B>WinQVT/Net</B>
+
+<BR></FONT></A></H3>
+
+<P>Currently, the best Windows-based telnet program is WinQVT/Net, produced by QPC Software, P.O.Box 226, Penfield, NY, 14526 (e-mail djpk@troi.cc.rochester.edu for further details). The registered version costs $40, and the shareware version is available 
+via anonymous FTP from biochemistry.cwru.edu in the directory /gopher/pub/qvtnet as:
+
+<BR></P>
+
+<PRE>qvtws397.zip    Windows Sockets version
+
+qvtne397.zip    packet-driver version
+
+qvtnt397.zip    32-bit version for Windows NT</PRE>
+
+<P>I presume that the user knows how to obtain the software and create an icon for it in Windows. To start the program, the user clicks the icon and is presented with a screen similar to Figure 8.2.
+
+<BR></P>
+
+<P>
+
+<BR><B><A HREF="06tig02.gif">Figure 8.2. The WinQVT/Net startup screen.</A></B>
+
+<BR></P>
+
+<P>Notice here that only the Terminal and FTP options have been configured.
+
+<BR></P>
+
+<P>To start a terminal session, which can be either a telnet or rlogin connection, the user merely clicks the Terminal button to receive the Start Terminal Session window, as shown in Figure 8.3.
+
+<BR></P>
+
+<P>
+
+<BR><B><A HREF="06tig03.gif">Figure 8.3. The Start Terminal Session window.</A></B>
+
+<BR></P>
+
+<P>A description of the elements of this screen will be useful. The Host Name or IP Address: box can be used to enter the site to which a user may wish to connect. The telnet or rlogin button is selected, and the OK button is clicked.
+
+<BR></P>
+
+<HR ALIGN=CENTER>
+
+<NOTE>
+
+<IMG SRC="note.gif"><B>Note: </B>A username <I>must</I> be entered if making an rlogin connection.
+
+<BR></NOTE>
+
+<HR ALIGN=CENTER>
+
+<P>Both telnet and rlogin connections function similarly to their UNIX counterparts; that is, telnet connects to port 23 of the remote machine, while rlogin connects to port 513. But while UNIX rlogin requires a user to key -L <I>username</I>, WinQVT/Net 
+accepts just the user's name. Also, if the connection requires another remote port number, then it can be added in the IP Port box.
+
+<BR></P>
+
+<P>Notice the large box on the right of Figure 8.3. This is the hosts list, which was created in the qvtnet.rc file. In this example, all machine names are local, meaning they belong to the usask.ca domain. However, any valid Internet address can be added 
+to the file. By selecting the entry for the remote machine herald and clicking OK, a connection is made, bringing up the login: prompt, as shown in Figure 8.4.
+
+<BR></P>
+
+<P>
+
+<BR><B><A HREF="06tig04.gif">Figure 8.4. A connection is made.</A></B>
+
+<BR></P>
+
+<P>Once the user is logged in, this screen can be turned into an icon in traditional Windows fashion, and another session can be started. In fact, up to fifteen concurrent sessions can be running at any given time.
+
+<BR></P>
+
+<HR ALIGN=CENTER>
+
+<NOTE>
+
+<IMG SRC="note.gif"><B>Note: </B>Use Alt-C to bring up the Console window. This brings up the Console window, from which other sessions can be started. It is, of course possible, to also start FTP, mail, news, and printer sessions from the Console window, 
+and have them all running simultaneously.
+
+<BR></NOTE>
+
+<HR ALIGN=CENTER>
+
+<HR ALIGN=CENTER>
+
+<NOTE>
+
+<IMG SRC="note.gif"><B>Note: </B>Once a number of sessions are running, a user can key the Alt-N combination to switch between sessions. This can be faster than doing the same thing with a mouse. Other useful key combinations are Alt-Tab and Alt-Esc, which 
+place a window in the background.
+
+<BR></NOTE>
+
+<HR ALIGN=CENTER>
+
+<P>WinQVT/Net's terminal sessions allow screen capture, logging a session to a file, the execution of scripts, cut and paste from one session to another, color and font selection, and the ability to redefine keys. Being a Windows-compatible program, 
+WinQVT/Net can also be used by such Worldwide Web browsers as Cello and Mosaic when spawning telnet sessions. It is a good idea to have it included in the Windows StartUp window, so that it loads automatically at login time.
+
+<BR></P>
+
+<P>There are other Windows-based telnet utilities worth looking at. These, like WinQVT/Net, are constantly being revised, so some of the filenames may change. They are all available via anonymous FTP from winftp.cica.indiana.edu:/pub/pc/win3/winsock:
+
+<BR></P>
+
+<TABLE BORDER>
+
+<TR>
+
+<TD>
+
+<PRE><B><I>Program Name</I></B>
+
+<BR></PRE>
+
+<TD>
+
+<PRE><B><I>Date</I></B>
+
+<BR></PRE>
+
+<TD>
+
+<PRE><B><I>Description</I></B>
+
+<BR></PRE>
+
+<TR>
+
+<TD>
+
+<P>ewan1c.zip</P>
+
+<TD>
+
+<P>940503</P>
+
+<TD>
+
+<P>EWAN a free Winsock 1.1 telnet</P>
+
+<TR>
+
+<TD>
+
+<P>qws3270.zip</P>
+
+<TD>
+
+<P>940325</P>
+
+<TD>
+
+<P>qws3270 Winsock tn3270 emulator (3/25/94 release)</P>
+
+<TR>
+
+<TD>
+
+<P>trmptel.zip</P>
+
+<TD>
+
+<P>940311</P>
+
+<TD>
+
+<P>Trumpet TELNET (VT100) Terminal for Winsock</P>
+
+<TR>
+
+<TD>
+
+<P>vt220.exe</P>
+
+<TD>
+
+<P>940519</P>
+
+<TD>
+
+<P>Dart Communications VT220 for workgroups Winsock</P>
+
+<TR>
+
+<TD>
+
+<P>wintelb3.zip</P>
+
+<TD>
+
+<P>931202</P>
+
+<TD>
+
+<P>NCSA Telnet for MS Windows (unsupported beta 3)</P></TABLE>
+
+<HR ALIGN=CENTER>
+
+<NOTE>
+
+<IMG SRC="imp.gif"><B>Tip: </B>Get a copy of Hytelnet for the most complete index of telnet-accessible resources.
+
+<BR></NOTE>
+
+<HR ALIGN=CENTER>
+
+<P>The very best source of telnet-accessible sites can be found in the Hytelnet utility. Here is the announcement for Version 6.7, which was released May 16, 1994:
+
+<BR></P>
+
+<P>Hytelnet version 6.7, the utility that gives an IBM-PC user instant-access to all Internet-accessible library catalogs, FREE-NETS, CWISs, BBSs, Gophers, WAIS, etc. is now available. You can get it via anonymous FTP from: ftp.usask.ca in the 
+pub/hytelnet/pc/latest subdirectory. It is listed as hyteln67.zip:
+
+<BR></P>
+
+<PRE>URL= <A HREF="ftp://ftp.usask.ca/pub/hytelnet/pc/latest/hyteln67.zip"> ftp://ftp.usask.ca/pub/hytelnet/pc/latest/hyteln67.zip</A></PRE>
+
+<P>Version 6.7 is a major upgrade. Much redundant information has been deleted, and errors have been corrected. All the new/updated files created since Version 6.6 have also been incorporated. The unzipped files total over 1.2 MB. . .but remember, you can 
+always edit out any information you do not need, in order to save space.
+
+<BR></P>
+
+<P>Information from Roy Tennant follows, slightly edited, describing how to obtain Hytelnet 6.7 from the FTP site:
+
+<BR></P>
+
+<OL>
+
+<LI>To retrieve Hytelnet, at your system prompt enter ftp ftp.usask.ca or ftp 128.233.3.11.
+
+<BR>
+
+<BR></LI>
+
+<LI>When you receive the Name: prompt, enter anonymous.
+
+<BR>
+
+<BR></LI>
+
+<LI>When you receive the Password: prompt, enter your Internet address.
+
+<BR>
+
+<BR></LI>
+
+<LI>When you are at the ftp&gt; prompt, enter binary.
+
+<BR>
+
+<BR></LI>
+
+<LI>At the next ftp&gt; prompt, enter: cd pub/hytelnet/pc/latest.
+
+<BR>
+
+<BR></LI>
+
+<LI>Enter get hyteln67.zip.
+
+<BR>
+
+<BR></LI>
+
+<LI>After the transfer has occurred, enter quit.
+
+<BR>
+
+<BR></LI></OL>
+
+<P>Proceed with the following instructions to retrieve the UNZIP utilities (which you need unless you already have them).
+
+<BR></P>
+
+<P>The Hytelnet program is archived using a PKZIP.EXE. To unarchive it, you must be able to unzip the file. If you have the file PKUNZIP.EXE, it will unarchive the hyteln67.zip file. If you do not have it, you may retrieve it by following these 
+instructions:
+
+<BR></P>
+
+<OL>
+
+<LI>Use the previous instructions for connecting to oak.oakland.edu.
+
+<BR>
+
+<BR></LI>
+
+<LI>At the ftp&gt; prompt, enter binary.
+
+<BR>
+
+<BR></LI>
+
+<LI>Enter cd pub/msdos/zip.
+
+<BR>
+
+<BR></LI>
+
+<LI>Enter get pkz204g.exe.
+
+<BR>
+
+<BR></LI>
+
+<LI>After the transfer has occurred, enter quit.
+
+<BR>
+
+<BR></LI></OL>
+
+<P>You can also unarchive with UNZIP.EXE. To retrieve it, follow these instructions:
+
+<BR></P>
+
+<OL>
+
+<LI>At your system prompt, enter ftp oak.oakland.edu.
+
+<BR>
+
+<BR></LI>
+
+<LI>When you receive the Name: prompt, enter anonymous.
+
+<BR>
+
+<BR></LI>
+
+<LI>When you receive the password prompt, enter your Internet address.
+
+<BR>
+
+<BR></LI>
+
+<LI>When you are at the ftp&gt; prompt, enter binary.
+
+<BR>
+
+<BR></LI>
+
+<LI>At the next ftp&gt; prompt, enter cd pub/msdos/zip.
+
+<BR>
+
+<BR></LI>
+
+<LI>Then enter get unz50p1.exe.
+
+<BR>
+
+<BR></LI></OL>
+
+<H4><A ID="I24" NAME="I24">
+
+<FONT SIZE=3><B>Downloading to Your PC</B>
+
+<BR></FONT></A></H4>
+
+<P>Because of the plethora of PC communications programs, I will not attempt to give step-by-step instructions on how to download to your PC. You should check the instructions for your software for downloading a binary file from your Internet account to 
+your PC.
+
+<BR></P>
+
+<P>To Unarchive hyteln67.zip, make a new directory on your hard disk (for example, mkdir hytelnet) Copy PKUNZIP.EXE or UNZIP.EXE and hyteln67.zip into the new directory. Make sure you are in that directory, then enter pkunzip hyteln67.zip. This will 
+unarchive hyteln67.zip, which contains the following files:
+
+<BR></P>
+
+<PRE>HYTELNET.ZIP
+
+READNOW</PRE>
+
+<P>The file READNOW gives full instructions for unarchiving HYTELNET.ZIP. Simply put, you <I>MUST</I> unZIP the file with the -d parameter (if you are using PKUNZIP.EXE) so that all the subdirectories will be recursed. If you are using UNZIP.EXE, no 
+parameters are required.
+
+<BR></P>
+
+<P>To use Hytelnet, you should refer to the instructions in the release announcement or to the README file included with the package.
+
+<BR></P>
+
+<P>Please note that I offer these instructions as a service for those who are unfamiliar with the steps required to download and use files from network sources. I cannot be responsible for any local variations in these procedures that may exist. Please 
+contact your local computer support staff if you have difficulty performing these tasks.
+
+<BR></P>
+
+<P>The UNIX/VMS version, created by Earl Fogel, is available for browsing by telnet to access.usask.ca; login with hytelnet (all lowercase). For more information on this version, contact Earl at fogel@herald.usask.ca.</P>
+
+<P><A HREF="tig07.htm"><IMG SRC="bluprev.gif" WIDTH = 32 HEIGHT = 32 BORDER = 0 ALT="Previous Page"></A>
+
+<A HREF="httoc.htm"><IMG SRC="blutoc.gif" WIDTH = 32 HEIGHT = 32 BORDER = 0 ALT="TOC"></A>
+
+<A HREF="htindex.htm"><IMG SRC="bluindex.gif" WIDTH = 32 HEIGHT = 32 BORDER = 0 ALT="Index"></A>
+
+<A HREF="tig09.htm"><IMG SRC="blunext.gif" WIDTH = 32 HEIGHT = 32 BORDER = 0 ALT="Next Page"></A>
+
+<A HREF="httoc.htm"><IMG SRC="bluprev.gif" WIDTH = 32 HEIGHT = 32 BORDER = 0 ALT="Home"></A>
+
+</P></BODY></HTML>
+

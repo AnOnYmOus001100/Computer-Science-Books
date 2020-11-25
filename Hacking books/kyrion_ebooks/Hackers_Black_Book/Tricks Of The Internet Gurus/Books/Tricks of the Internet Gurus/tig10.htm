@@ -1,0 +1,2380 @@
+<HTML>
+
+<HEAD>
+
+<TITLE>Tricks of the Internet Gurus tig10.htm</TITLE>
+
+<LINK REL="ToC" HREF="httoc.htm">
+
+<LINK REL="Index" HREF="htindex.htm">
+
+<LINK REL="Next" HREF="tigp3.htm">
+
+<LINK REL="Previous" HREF="tig09.htm"></HEAD>
+
+<BODY TEXT="#000000" LINK="#0000FF" VLINK="#800080" bgcolor=white>
+
+<P><A HREF="tig09.htm"><IMG SRC="bluprev.gif" WIDTH = 32 HEIGHT = 32 BORDER = 0 ALT="Previous Page"></A>
+
+<A HREF="httoc.htm"><IMG SRC="blutoc.gif" WIDTH = 32 HEIGHT = 32 BORDER = 0 ALT="TOC"></A>
+
+<A HREF="htindex.htm"><IMG SRC="bluindex.gif" WIDTH = 32 HEIGHT = 32 BORDER = 0 ALT="Index"></A>
+
+<A HREF="tigp3.htm"><IMG SRC="blunext.gif" WIDTH = 32 HEIGHT = 32 BORDER = 0 ALT="Next Page"></A>
+
+<A HREF="httoc.htm"><IMG SRC="bluprev.gif" WIDTH = 32 HEIGHT = 32 BORDER = 0 ALT="Home"></A>
+
+</P><UL>
+
+<LI>
+
+<A HREF="#I1">10</A></LI>
+
+<UL>
+
+<LI>
+
+<A HREF="#I3">World Wide Web</A></LI>
+
+<UL>
+
+<UL>
+
+<UL>
+
+<LI>
+
+<A HREF="#I4">by Billy Barron</A></LI></UL></UL>
+
+<LI>
+
+<A HREF="#I5">Locating Items in WWW</A></LI>
+
+<UL>
+
+<LI>
+
+<A HREF="#I6">Understanding URLs</A></LI>
+
+<LI>
+
+<A HREF="#I7">Hotlists and Personal HTML Documents</A></LI>
+
+<LI>
+
+<A HREF="#I8">Subject Hierarchies</A></LI>
+
+<LI>
+
+<A HREF="#I9">Organizational Hierarchies</A></LI>
+
+<LI>
+
+<A HREF="#I10">Geographical Hierarchies</A></LI>
+
+<LI>
+
+<A HREF="#I11">New Web Sites</A></LI>
+
+<LI>
+
+<A HREF="#I12">Indexes</A></LI></UL>
+
+<LI>
+
+<A HREF="#I13">Your Own Home Page</A></LI>
+
+<LI>
+
+<A HREF="#I14">Server Software</A></LI>
+
+<LI>
+
+<A HREF="#I15">Page Design Issues</A></LI>
+
+<UL>
+
+<LI>
+
+<A HREF="#I16">Lists versus Full-Text</A></LI>
+
+<LI>
+
+<A HREF="#I17">Number of Links</A></LI>
+
+<LI>
+
+<A HREF="#I18">Links Back</A></LI>
+
+<LI>
+
+<A HREF="#I19">Inline Graphics</A></LI>
+
+<LI>
+
+<A HREF="#I20">Client Independence</A></LI>
+
+<LI>
+
+<A HREF="#I21">CGI Scripts</A></LI>
+
+<LI>
+
+<A HREF="#I22">Forms</A></LI>
+
+<LI>
+
+<A HREF="#I23">Image Maps</A></LI></UL>
+
+<LI>
+
+<A HREF="#I24">Client Configuration</A></LI>
+
+<UL>
+
+<LI>
+
+<A HREF="#I25">Performance</A></LI>
+
+<LI>
+
+<A HREF="#I26">Mirroring Pages</A></LI>
+
+<LI>
+
+<A HREF="#I27">Related Viewers</A></LI>
+
+<LI>
+
+<A HREF="#I28">Downloading Images/Icons</A></LI></UL>
+
+<LI>
+
+<A HREF="#I29">Spiders</A></LI>
+
+<LI>
+
+<A HREF="#I30">Keeping Current with Future Development</A></LI></UL></UL></UL>
+
+
+
+<H1><A ID="I1" NAME="I1">
+
+<BR>
+
+<FONT SIZE=5><A ID="I2" NAME="I2"></A><B>10</B>
+
+<BR></FONT></A></H1>
+
+<H2><A ID="I3" NAME="I3">
+
+<FONT SIZE=5><B>World Wide Web</B>
+
+<BR></FONT></A></H2>
+
+<H5><A ID="I4" NAME="I4">
+
+<FONT SIZE=3><B>by Billy Barron</B>
+
+<BR></FONT></A></H5>
+
+<P>The World Wide Web (WWW) is growing at an explosive rate, and even we Internet gurus are having trouble keeping up with all the new developments. New WWW functions and interesting WWW pages are appearing on a daily basis. In May 1994, the traffic of the 
+Web was in the top 10 protocols and had even surpassed Gopher. However, we gurus have developed some tricks in dealing with the problems of the explosive growth of the Web.
+
+<BR></P>
+
+<P>In this chapter, we will look at these tricks as well as other tricks. Other tricks involve faster ways to navigate the Web, designing Web pages, and finding out what resources are available.
+
+<BR></P>
+
+<P>This chapter also assumes that you, the reader, have acquired and installed a WWW client before reading. All known clients are documented in a file http://info.cern.ch/hypertext/WWW/Clients.html (this is a URL specification, which is discussed later in 
+this chapter). However, you will be unlikely to look at this document without a client. Therefore, you would best start by asking a friend or associate to use their client and work up from there.
+
+<BR></P>
+
+<H3><A ID="I5" NAME="I5">
+
+<FONT SIZE=4><B>Locating Items in WWW</B>
+
+<BR></FONT></A></H3>
+
+<P>One of the largest problems with the WWW system as it stands today is that it is difficult to find resources, even for the WWW guru. While Veronica does a nice job of indexing Gopherspace, no direct equivalent exists for the Web that has the 
+completeness of Veronica. However, this is because it is easier to index Gopherspace. Veronica can just get all of the Gopher menu and know what is there.
+
+<BR></P>
+
+<P>With the Web, however, an indexer has to download the text of every document. Then it has to see if the document is HTML. If so, the document must be parsed and interpreted to get titles and to see if it contains links to other documents. It is a very 
+resource-intensive process.
+
+<BR></P>
+
+<P>The guru does have some tricks that can be used to find resources in the Web. None of them will guarantee to find a particular resource, but they do help greatly in the search. Before getting to the tricks, though, you need to have a firm grasp on some 
+background information.
+
+<BR></P>
+
+<H4><A ID="I6" NAME="I6">
+
+<FONT SIZE=3><B>Understanding URLs</B>
+
+<BR></FONT></A></H4>
+
+<P>To be a guru of the Web, a solid understanding of Uniform Resource Locators (URLs) is an absolute must as a first step. Every item on the Internet has at least one URL that defines its location. By having the URL of an item, you should be able to find 
+and access it, provided the resource is up and running and there are no security barriers in your way.
+
+<BR></P>
+
+<P>The official document on URLs is at
+
+<BR></P>
+
+<PRE>file://info.cern.ch/pub/www/doc/url-spec.txt</PRE>
+
+<P>This is itself a URL, but it will be explained in a moment. It contains a very detailed specification of them. We will not discuss them in such depth, but we will cover the most common URLs that will cover almost any case you will run across while using 
+the Internet. Also, a document called a &quot;Beginner's Guide to URLs&quot; is available at
+
+<BR></P>
+
+<PRE><A HREF="http://www.ncsa.uiuc.edu/demoweb/url-primer.html">http://www.ncsa.uiuc.edu/demoweb/url-primer.html</A></PRE>
+
+<P>URLs are usually made up of a protocol type, an address, an optional port number, and a path. The protocol types are listed in Table WW.1. The address is the address the server runs on and can be specified as either a hostname or a numeric IP address. 
+The port number is the number of IP port that the server is running on. If the server is running on the standard port for that protocol, the port number is unnecessary. If the server is running on a non-standard port, the port must be specified. For 
+example, a HTTP (HyperText Transfer Protocol) server has a standard port number of 80, so the port does not need to be specified in the URL if the HTTP server is running at port 80. By the way, HTTP is the protocol that is used by Web clients and servers, 
+so an HTTP server is a WWW server. The path is the path to the particular item the URL is referring to.
+
+<BR></P>
+
+<UL>
+
+<LH><B>Table 18.1. Protocol types.</B>
+
+<BR></LH></UL>
+
+<TABLE BORDER>
+
+<TR>
+
+<TD>
+
+<PRE><B><I>Protocol Type</I></B>
+
+<BR></PRE>
+
+<TD>
+
+<PRE><B><I>Description</I></B>
+
+<BR></PRE>
+
+<TR>
+
+<TD>
+
+<P>http</P>
+
+<TD>
+
+<P>WWW server</P>
+
+<TR>
+
+<TD>
+
+<P>gopher</P>
+
+<TD>
+
+<P>Gopher server</P>
+
+<TR>
+
+<TD>
+
+<P>ftp or file</P>
+
+<TD>
+
+<P>FTP server</P>
+
+<TR>
+
+<TD>
+
+<P>mailto</P>
+
+<TD>
+
+<P>E-mail</P>
+
+<TR>
+
+<TD>
+
+<P>telnet</P>
+
+<TD>
+
+<P>Remote login</P>
+
+<TR>
+
+<TD>
+
+<P>wais</P>
+
+<TD>
+
+<P>Wide Area Information Server</P></TABLE>
+
+<P>The basic formats of a URL are
+
+<BR></P>
+
+<PRE><I>protocol</I>://<I>hostname</I>:<I>port</I>/<I>path</I></PRE>
+
+<P>or
+
+<BR></P>
+
+<PRE><I>protocol</I>://<I>hostname</I>/<I>path</I></PRE>
+
+<P>To best understand URLs, let's run through a few examples. <A HREF="http://www.utdallas.edu/">http://www.utdallas.edu/</A> refers to the main WWW menu for the University of Texas at Dallas (UTD). First, we see the protocol is http, so we know it is a 
+WWW server. Second, we see the node name is www.utdallas.edu. Since no port was specified, this resource uses the default HTTP port of 80. The path is just a simple /. However, sometimes you may see it referenced as http://www.utdallas.edu instead. The 
+ending / is assumed if it is not there, so the two forms are equivalent.
+
+<BR></P>
+
+<P>My personal Web page can be found at <A HREF="http://www.utdallas.edu:80/acc/billy.html">http://www.utdallas.edu:80/acc/billy.html</A>. The protocol and hostname remain the same as our previous example. The port number is specified as 80 here, though it 
+is unnecessary, and the path is /acc/billy.html.
+
+<BR></P>
+
+<P>gopher://yaleinfo.yale.edu:7000/11/Libraries is a URL pointing at the Internet Library List at Yale University. The protocol is Gopher and the hostname is yaleinfo.yale.edu. The port is 7000 instead of the standard Gopher port of 70. The path is 
+/11/Libraries. However, to really understand the paths for Gopher, you need to understand the Gopher protocol. The short of it is that the 11 is a type specifier and /Libraries is the Gopher path. The type specification 11 means that it is a Gopher menu.
+
+<BR></P>
+
+<P><A HREF="ftp://ftp.utdallas.edu/pub/staff/billy/libguide/libraries.asia">ftp://ftp.utdallas.edu/pub/staff/billy/libguide/libraries.asia</A> is a URL to a document covering the Internet Libraries in Asia. The protocol is FTP. The hostname is 
+ftp.utdallas.edu and the path to the document is /pub/staff/billy/libguide/libraries.asia. In this case, it is anonymous FTP. Ways to specify userids and passwords exist, but they are rarely used.
+
+<BR></P>
+
+<P>telnet://dra.com is a URL to a telnet session to the host dra.com. There are ways to specify users and passwords with this URL too, but the use of this feature is rarely seen, so look in the URL documentation if you need to do this.
+
+<BR></P>
+
+<P>Another URL you may run across is mailto. For example, it might be used like mailto:billy@utdallas.edu. If it is selected by the user, an e-mail message will be sent to billy@utdallas.edu after you type it in. However, not all clients support this 
+feature, so it should be used with care. It is documented in the page <A HREF="http://siva.cshl.org/email/index.html">http://siva.cshl.org/email/index.html</A>.
+
+<BR></P>
+
+<P>It is important to understand URLs because the Web is totally based on them. Without a firm understanding of them, becoming a guru of the Web is impossible&#151;so take time to learn them if you don't understand them fully at this time. You will be 
+seeing quite a few URLs.
+
+<BR></P>
+
+<P>In the future, there will also be Uniform Resource Names (URNs). A Uniform Resource Name will be like an ISBN number on a book. Each item (defined as having the same URN) can exist in several locations on the network. Each of these locations is defined 
+by a URL, which is similar to a call number in a library.
+
+<BR></P>
+
+<H4><A ID="I7" NAME="I7">
+
+<FONT SIZE=3><B>Hotlists and Personal HTML Documents</B>
+
+<BR></FONT></A></H4>
+
+<P>Any Web explorer has run into the problem where a very interesting resource is found once, and then you can never find it again. It can be a most frustrating experience. The reason this happens more in the Web than Gopher or other systems is that 
+hypertext, especially poorly written hypertext, tends to allow you to drift off on unrelated tangents. Eventually, you will find some places interesting, but you have no idea how you arrived there.
+
+<BR></P>
+
+<P>Currently, there are two solutions to the problem. The first is the use of the Hotlist or Bookmark feature of your Web client. When you find a resource that is very useful, you just save it to your hotlist. Then whenever you want to go back to this 
+location, you can just pop up your hotlist and select the item.
+
+<BR></P>
+
+<P>The second method is to create your own Web document in HTML (HyperText Markup Language), which contains useful links. Obviously, this is quite a bit more work. However, the big advantage of it is that the Hotlist is just a sequential list of items. In 
+your HTML document, you can have headers, notes, comments, and even pictures. You can also take it one step further and make a set of pages like this all linked together.
+
+<BR></P>
+
+<P>The one problem these solutions do not solve is the movement of items around the Web. Also, sometimes items totally vanish. Unfortunately, at this stage, even the guru doesn't have a good solution to the problem. However, being a guru, if you move a 
+page of your own, you should leave a page at the old URL for a period of time, informing the users of the move.
+
+<BR></P>
+
+<H4><A ID="I8" NAME="I8">
+
+<FONT SIZE=3><B>Subject Hierarchies</B>
+
+<BR></FONT></A></H4>
+
+<P>Several different individuals or groups have pages that attempt to break access to WWW pages down by subject classifications. A Web guru needs to know about these to be able to find information fast. However, all of these classification systems are very 
+incomplete. This is unlikely to change because nobody can keep up with the growth or even the sheer size of the Web.
+
+<BR></P>
+
+<P>These classification schemes can generally be divided up into two basic categories. The first is controlled by an individual or small group of people. These people look at pages around the Web and find useful pages and include them under a subject 
+classification. These effects will always be incomplete because the authors can't possibly deal with the hundreds, if not thousands, of new Web pages that are being created every day.
+
+<BR></P>
+
+<P>The other category is a self-registration mode. Basically, the author provides the users of a page with a form. This form enables the user to enter a new page into the scheme and requires the user to enter information about the new page. Some even 
+enable the user to create new subject headings. These systems tend to contain more pages written by WWW gurus and less by novices. None of the systems I have seen to date have a good security/verification system. There is the potential for abuse, where 
+someone creates links to pages in the wrong category. Also, many of the pages that are included in such systems have little or no value to most people.
+
+<BR></P>
+
+<P>In any case, both types of systems are useful and should be looked at when trying to find information in the Web. I will provide a list in Table WW.2 of the currently available subject classification schemes. Over time, more will appear, so keep in mind 
+that this list is probably not comprehensive by the time you read it. In addition, some of these schemes will eventually die off. However, for the guru, this is the nature of the game called Internet.
+
+<BR></P>
+
+<UL>
+
+<LH><B>Table 18.2. Subject classification schemes.</B>
+
+<BR></LH></UL>
+
+<TABLE BORDER>
+
+<TR>
+
+<TD>
+
+<PRE><B><I>Name</I></B>
+
+<BR></PRE>
+
+<TD>
+
+<PRE><B><I>URL</I></B>
+
+<BR></PRE>
+
+<TR>
+
+<TD>
+
+<P>CERN - WWW by Subject</P>
+
+<TD>
+
+<P><A HREF="http://info.cern.ch/hypertext/DataSources/ bySubject/Overview.html">http://info.cern.ch/hypertext/DataSources/ bySubject/Overview.html</A></P>
+
+<TR>
+
+<TD>
+
+<P>EINet Galaxy</P>
+
+<TD>
+
+<P><A HREF="http://galaxy.einet.net/galaxy.html">http://galaxy.einet.net/galaxy.html</A></P>
+
+<TR>
+
+<TD>
+
+<P>Joel's Hierarchical</P>
+
+<TD>
+
+<P><A HREF="http://www.cen.uiuc.edu/~jj9544/index.html">http://www.cen.uiuc.edu/~jj9544/index.html</A></P>
+
+<TR>
+
+<TD>
+
+<P>Mother-of-all-BBes</P>
+
+<TD>
+
+<P><A HREF="http://www.cs.colorado.edu/homes/mcbryan/public_html/bb/summary.html">http://www.cs.colorado.edu/homes/mcbryan/public_html/bb/summary.html</A></P>
+
+<TR>
+
+<TD>
+
+<P>NCSA Meta-Index </P>
+
+<TD>
+
+<P><A HREF="http://www.ncsa.uiuc.edu/SDG/Software/Mosaic/MetaIndex.html">http://www.ncsa.uiuc.edu/SDG/Software/Mosaic/MetaIndex.html</A></P>
+
+<TR>
+
+<TD>
+
+<P>Netlink</P>
+
+<TD>
+
+<P><A HREF="http://honor.uc.wlu.edu:1020">http://honor.uc.wlu.edu:1020</A></P>
+
+<TR>
+
+<TD>
+
+<P>Nova-Links</P>
+
+<TD>
+
+<P><A HREF="http://alpha.acast.nova.edu/start.html">http://alpha.acast.nova.edu/start.html</A></P>
+
+<TR>
+
+<TD>
+
+<P>Project DA-CLOD</P>
+
+<TD>
+
+<P><A HREF="http://schiller.wustl.edu/DACLOD/daclod">http://schiller.wustl.edu/DACLOD/daclod</A></P>
+
+<TR>
+
+<TD>
+
+<P>Yahoo</P>
+
+<TD>
+
+<P><A HREF="http://akebono.stanford.edu/~jerry/bin/yahoo">http://akebono.stanford.edu/~jerry/bin/yahoo</A></P></TABLE>
+
+<H4><A ID="I9" NAME="I9">
+
+<FONT SIZE=3><B>Organizational Hierarchies</B>
+
+<BR></FONT></A></H4>
+
+<P>In addition to the subject hierarchies, some sites provide a set of pages that break down the WWW by the types of organizations that have pages. For example, it might list Universities, Corporations, and Non-Profit Organizations. Then Corporations are 
+often subdivided into subheirarchies like Accounting, Aerospace, and Chemicals.
+
+<BR></P>
+
+<P>The organizational hierarchies are useful when you are looking for a particular organization to find out about their services and/or products. Also, it is helpful when you are shopping for a particular type of service or product to be able to locate 
+information about it on the Web.
+
+<BR></P>
+
+<P>Just like the subject classification schemes, the organizational hierarchies fall into the same two basic categories. A list of known organizational hierarchies follows (Table 18.3).
+
+<BR></P>
+
+<UL>
+
+<LH><B>Table 18.3. Organizational Classification Schemes.</B>
+
+<BR></LH></UL>
+
+<TABLE BORDER>
+
+<TR>
+
+<TD>
+
+<PRE><B><I>Name</I></B>
+
+<BR></PRE>
+
+<TD>
+
+<PRE><B><I>URL</I></B>
+
+<BR></PRE>
+
+<TR>
+
+<TD>
+
+<P>American Universities</P>
+
+<TD>
+
+<P><A HREF="http://www.clas.ufl.edu/CLAS/american-universities.html">http://www.clas.ufl.edu/CLAS/american-universities.html</A></P>
+
+<TR>
+
+<TD>
+
+<P>Best Commercial Sites</P>
+
+<TD>
+
+<P><A HREF="http://wings.buffalo.edu/contest/awards/money.html">http://wings.buffalo.edu/contest/awards/money.html</A></P>
+
+<TR>
+
+<TD>
+
+<P>Commercial Services</P>
+
+<TD>
+
+<P><A HREF="http://tns-www.lcs.mit.edu/commerce.html">http://tns-www.lcs.mit.edu/commerce.html</A></P>
+
+<TR>
+
+<TD>
+
+<P>Community Colleges</P>
+
+<TD>
+
+<P>gopher://gopher1.faytech.cc.nc.us/</P>
+
+<TR>
+
+<TD>
+
+<P>Companies</P>
+
+<TD>
+
+<P><A HREF="http://www.cs.colorado.edu/homes/mcbryan/public_html/bb/09/summary.html">http://www.cs.colorado.edu/homes/mcbryan/public_html/bb/09/summary.html</A></P>
+
+<TR>
+
+<TD>
+
+<P>Computer Science Depts</P>
+
+<TD>
+
+<P><A HREF="http://www.cs.cmu.edu:8001/Web/People/anwar/cs-departments.html">http://www.cs.cmu.edu:8001/Web/People/anwar/cs-departments.html</A></P>
+
+<TR>
+
+<TD>
+
+<P>Corporations</P>
+
+<TD>
+
+<P><A HREF="http://www-external.hal.com/pages/hops.html#CORP">http://www-external.hal.com/pages/hops.html#CORP</A></P>
+
+<TR>
+
+<TD>
+
+<P>Freenets</P>
+
+<TD>
+
+<P><A HREF="http://herald.usask.ca/~scottp/free.html">http://herald.usask.ca/~scottp/free.html</A></P>
+
+<TR>
+
+<TD>
+
+<P>Government Agencies</P>
+
+<TD>
+
+<P><A HREF="http://www.cs.colorado.edu/homes/mcbryan/public_html/bb/11/summary.html">http://www.cs.colorado.edu/homes/mcbryan/public_html/bb/11/summary.html</A></P>
+
+<TR>
+
+<TD>
+
+<P>Museums</P>
+
+<TD>
+
+<P><A HREF="http://www-external.hal.com/pages/hops.html#MUSE">http://www-external.hal.com/pages/hops.html#MUSE</A></P>
+
+<TR>
+
+<TD>
+
+<P>Organizations</P>
+
+<TD>
+
+<P><A HREF="http://www-external.hal.com/pages/hops.html#ORGS">http://www-external.hal.com/pages/hops.html#ORGS</A></P>
+
+<TR>
+
+<TD>
+
+<P>Other Colleges</P>
+
+<TD>
+
+<P><A HREF="http://www.dartmouth.edu/Pages/otherSchools.html">http://www.dartmouth.edu/Pages/otherSchools.html</A></P>
+
+<TR>
+
+<TD>
+
+<P>Research Centers</P>
+
+<TD>
+
+<P><A HREF="http://www.cs.colorado.edu/homes/mcbryan/public_html/bb/10/summary.html">http://www.cs.colorado.edu/homes/mcbryan/public_html/bb/10/summary.html</A></P>
+
+<TR>
+
+<TD>
+
+<P>Universities and Schools</P>
+
+<TD>
+
+<P><A HREF="http://www-external.hal.com/pages/hops.html#UNIV">http://www-external.hal.com/pages/hops.html#UNIV</A></P></TABLE>
+
+<H4><A ID="I10" NAME="I10">
+
+<FONT SIZE=3><B>Geographical Hierarchies</B>
+
+<BR></FONT></A></H4>
+
+<P>Another scheme people are using to break down the Web is to list all the Web sites in a particular geographic location or region. This can be useful for several reasons. First, you might only need information about businesses or educational institutions 
+in a specific geographical region. Or you might be planning a trip and need information about a city. You may also just need information from your own city such as building codes, events, or even a restaurant. The possibilities are endless.
+
+<BR></P>
+
+<P>You will find text based and graphical interfaces to geographical hierarchies (see Table WW.4). Of course, if you have a text based client, you cannot use the graphical interfaces that many Web pages have. Each has its merits and uses. Additionally, you 
+will find that some geographical regions have good pages of this nature, and other regions are voids&#151;you will be unable to locate any geographical scheme that documents the region in any depth.
+
+<BR></P>
+
+<UL>
+
+<LH><B>Table 18.4. Geographical Classification Schemes.</B>
+
+<BR></LH></UL>
+
+<TABLE BORDER>
+
+<TR>
+
+<TD>
+
+<PRE><B><I>Name</I></B>
+
+<BR></PRE>
+
+<TD>
+
+<PRE><B><I>URL</I></B>
+
+<BR></PRE>
+
+<TR>
+
+<TD>
+
+<P>Alberta</P>
+
+<TD>
+
+<P><A HREF="http://www.sal.ists.ca/services/w3_can/alta.html">http://www.sal.ists.ca/services/w3_can/alta.html</A></P>
+
+<TR>
+
+<TD>
+
+<P>British Columbia</P>
+
+<TD>
+
+<P><A HREF="http://www.sal.ists.ca/services/w3_can/sbc.html">http://www.sal.ists.ca/services/w3_can/sbc.html</A></P>
+
+<TR>
+
+<TD>
+
+<P>Canada</P>
+
+<TD>
+
+<P><A HREF="http://www.sal.ists.ca/services/maps.html">http://www.sal.ists.ca/services/maps.html</A></P>
+
+<TR>
+
+<TD>
+
+<P>Connecticut</P>
+
+<TD>
+
+<P><A HREF="http://www.cs.yale.edu/HTML/YALE/MAPS/connecticut.html">http://www.cs.yale.edu/HTML/YALE/MAPS/connecticut.html</A></P>
+
+<TR>
+
+<TD>
+
+<P>Delaware</P>
+
+<TD>
+
+<P><A HREF="http://www.udel.edu/delaware/map.html">http://www.udel.edu/delaware/map.html</A></P>
+
+<TR>
+
+<TD>
+
+<P>Europe</P>
+
+<TD>
+
+<P><A HREF="http://www.eeb.ele.tue.nl/maps.html">http://www.eeb.ele.tue.nl/maps.html</A></P>
+
+<TR>
+
+<TD>
+
+<P>Florida</P>
+
+<TD>
+
+<P><A HREF="http://www.cis.ufl.edu/home-page/fl-servers/">http://www.cis.ufl.edu/home-page/fl-servers/</A></P>
+
+<TR>
+
+<TD>
+
+<P>Indiana</P>
+
+<TD>
+
+<P><A HREF="http://www.music.indiana.edu/tourist/">http://www.music.indiana.edu/tourist/</A></P>
+
+<TR>
+
+<TD>
+
+<P>Iowa</P>
+
+<TD>
+
+<P><A HREF="http://caesar.cs.uiowa.edu/iowa/">http://caesar.cs.uiowa.edu/iowa/</A></P>
+
+<TR>
+
+<TD>
+
+<P>Kentucky</P>
+
+<TD>
+
+<P><A HREF="http://www.uky.edu/kentucky-network-services.html">http://www.uky.edu/kentucky-network-services.html</A></P>
+
+<TR>
+
+<TD>
+
+<P>Manitoba</P>
+
+<TD>
+
+<P><A HREF="http://www.sal.ists.ca/services/w3_can/man.html">http://www.sal.ists.ca/services/w3_can/man.html</A></P>
+
+<TR>
+
+<TD>
+
+<P>Massachusetts</P>
+
+<TD>
+
+<P><A HREF="http://donald.phast.umass.edu/misc/mass.html">http://donald.phast.umass.edu/misc/mass.html</A></P>
+
+<TR>
+
+<TD>
+
+<P>Mexico</P>
+
+<TD>
+
+<P><A HREF="http://info.pue.udlap.mx/www-mex-eng.html">http://info.pue.udlap.mx/www-mex-eng.html</A></P>
+
+<TR>
+
+<TD>
+
+<P>Netlink</P>
+
+<TD>
+
+<P><A HREF="http://honor.uc.wlu.edu:1020/-ge">http://honor.uc.wlu.edu:1020/-ge</A></P>
+
+<TR>
+
+<TD>
+
+<P>New Jersey</P>
+
+<TD>
+
+<P><A HREF="http://www.stevens-tech.edu/nj.html">http://www.stevens-tech.edu/nj.html</A></P>
+
+<TR>
+
+<TD>
+
+<P>New York</P>
+
+<TD>
+
+<P><A HREF="http://wings.buffalo.edu/world/nywww.html">http://wings.buffalo.edu/world/nywww.html</A></P>
+
+<TR>
+
+<TD>
+
+<P>North Carolina</P>
+
+<TD>
+
+<P><A HREF="http://sunsite.unc.edu/nc/nchome.html">http://sunsite.unc.edu/nc/nchome.html</A></P>
+
+<TR>
+
+<TD>
+
+<P>Oregon</P>
+
+<TD>
+
+<P><A HREF="http://www.willamette.edu/~tjones/Oregonmap.html">http://www.willamette.edu/~tjones/Oregonmap.html</A></P>
+
+<TR>
+
+<TD>
+
+<P>Quebec</P>
+
+<TD>
+
+<P><A HREF="http://www.sal.ists.ca/services/w3_can/qc.html">http://www.sal.ists.ca/services/w3_can/qc.html</A></P>
+
+<TR>
+
+<TD>
+
+<P>Saskatchewan</P>
+
+<TD>
+
+<P><A HREF="http://www.sal.ists.ca/services/w3_can/sask.html">http://www.sal.ists.ca/services/w3_can/sask.html</A></P>
+
+<TR>
+
+<TD>
+
+<P>Southern Ontario</P>
+
+<TD>
+
+<P><A HREF="http://www.sal.ists.ca/services/w3_can/sont.html">http://www.sal.ists.ca/services/w3_can/sont.html</A></P>
+
+<TR>
+
+<TD>
+
+<P>Texas</P>
+
+<TD>
+
+<P><A HREF="http://www.quadralay.com/www/TexasInfoServers.html">http://www.quadralay.com/www/TexasInfoServers.html</A></P>
+
+<TR>
+
+<TD>
+
+<P>Utah</P>
+
+<TD>
+
+<P><A HREF="http://wings.buffalo.edu/world/utahwww.html">http://wings.buffalo.edu/world/utahwww.html</A></P>
+
+<TR>
+
+<TD>
+
+<P>World (from CERN)</P>
+
+<TD>
+
+<P><A HREF="http://info.cern.ch/hypertext/DataSources/WWW/Servers.html">http://info.cern.ch/hypertext/DataSources/WWW/Servers.html</A></P>
+
+<TR>
+
+<TD>
+
+<P>World (from Colorado)</P>
+
+<TD>
+
+<P><A HREF="http://www.cs.colorado.edu/homes/mcbryan/public_html/bb/14/summary.html">http://www.cs.colorado.edu/homes/mcbryan/public_html/bb/14/summary.html</A></P></TABLE>
+
+<H4><A ID="I11" NAME="I11">
+
+<FONT SIZE=3><B>New Web Sites</B>
+
+<BR></FONT></A></H4>
+
+<P>The WWW guru keeps abreast of the new pages that are popping up around the Web. The National Center for Supercomputer Applications (NCSA) provides a page that contains announcements of new pages. The page is called &quot;What's New,&quot; and its URL is
+
+
+<BR></P>
+
+<PRE><A HREF="http://www.ncsa.uiuc.edu/SDG/Software/Mosaic/Docs/whats-new.html">http://www.ncsa.uiuc.edu/SDG/Software/Mosaic/Docs/whats-new.html</A></PRE>
+
+<P>Announcements of new sites can be sent to whats-new@ncsa.uiuc.edu.
+
+<BR></P>
+
+<P>However, many interesting new pages never make it into the NCSA list. Therefore, the guru who needs to know about more new sites and has time on his hands can always do additional exploring on his own.
+
+<BR></P>
+
+<P>Many sites keep their own &quot;What's New&quot; page, also. This kind of page, however, usually covers changes on only that one site instead of the whole Web. It is still useful, though, if you use that particular site frequently.
+
+<BR></P>
+
+<H4><A ID="I12" NAME="I12">
+
+<FONT SIZE=3><B>Indexes</B>
+
+<BR></FONT></A></H4>
+
+<P>All of the schemes we have been talking about are known as <I>browsal </I><I>schemes</I>. You look at a page of choices and select some. However at times, it is even more useful to be able to search on a word and find pages that have that word in their 
+title or in the page.
+
+<BR></P>
+
+<P>These indexes are generated in several different ways. Some use a person's global history file. Others are built from the Hotlists of a large number of people. With some, the users enter their own pages into the index. Some others use a Spider or Worm, 
+which will be discussed later in this chapter, to capture the information. A handful of the available indexes can be found in Table 18.5.
+
+<BR></P>
+
+<UL>
+
+<LH><B>Table WW.5. Indexes.</B>
+
+<BR></LH></UL>
+
+<TABLE BORDER>
+
+<TR>
+
+<TD>
+
+<PRE><B><I>Name</I></B>
+
+<BR></PRE>
+
+<TD>
+
+<PRE><B><I>URL</I></B>
+
+<BR></PRE>
+
+<TR>
+
+<TD>
+
+<P>ALIWEB</P>
+
+<TD>
+
+<P><A HREF="http://web.nexor.co.uk/aliwebsimple">http://web.nexor.co.uk/aliwebsimple</A></P>
+
+<TR>
+
+<TD>
+
+<P>COMMA Hotlist DB</P>
+
+<TD>
+
+<P><A HREF="http://www.cm.cf.ac.uk/htbin/AndrewW/Hotlist/hot_list_search.csh">http://www.cm.cf.ac.uk/htbin/AndrewW/Hotlist/hot_list_search.csh</A></P>
+
+<TR>
+
+<TD>
+
+<P>EINet Galaxy Search</P>
+
+<TD>
+
+<P><A HREF="http://galaxy.einet.net/www/www.html">http://galaxy.einet.net/www/www.html</A></P>
+
+<TR>
+
+<TD>
+
+<P>Infobot Hotlist</P>
+
+<TD>
+
+<P><A HREF="ftp://ftp.netcom.com/pub/ksedgwic/hotlist/hotlist.html">ftp://ftp.netcom.com/pub/ksedgwic/hotlist/hotlist.html</A></P>
+
+<TR>
+
+<TD>
+
+<P>Joe's Global History</P>
+
+<TD>
+
+<P><A HREF="http://www.galcit.caltech.edu/~joe/cgi-bin/hstsrch-joe">http://www.galcit.caltech.edu/~joe/cgi-bin/hstsrch-joe</A></P>
+
+<TR>
+
+<TD>
+
+<P>Jumpstation</P>
+
+<TD>
+
+<P><A HREF="http://www.stir.ac.uk/jsbin/js">http://www.stir.ac.uk/jsbin/js</A></P>
+
+<TR>
+
+<TD>
+
+<P>Nomad</P>
+
+<TD>
+
+<P><A HREF="http://www.rns.com/www_index/intro.html">http://www.rns.com/www_index/intro.html</A></P>
+
+<TR>
+
+<TD>
+
+<P>NorthStar</P>
+
+<TD>
+
+<P><A HREF="http://comics.scs.unr.edu:7000/top.html">http://comics.scs.unr.edu:7000/top.html</A></P>
+
+<TR>
+
+<TD>
+
+<P>RBSE's URL Database</P>
+
+<TD>
+
+<P><A HREF="http://rbse.jsc.nasa.gov/eichmann/urlsearch.html">http://rbse.jsc.nasa.gov/eichmann/urlsearch.html</A></P>
+
+<TR>
+
+<TD>
+
+<P>SIMON</P>
+
+<TD>
+
+<P><A HREF="http://web.elec.qmw.ac.uk:12121/server/search.html">http://web.elec.qmw.ac.uk:12121/server/search.html</A></P>
+
+<TR>
+
+<TD>
+
+<P>SURANetGuide-All</P>
+
+<TD>
+
+<P>wais://nic.sura.net:210/SURAnetGuide-All</P>
+
+<TR>
+
+<TD>
+
+<P>W3 Search Engines</P>
+
+<TD>
+
+<P><A HREF="http://cui_www.unige.ch/meta-index.html">http://cui_www.unige.ch/meta-index.html</A></P>
+
+<TR>
+
+<TD>
+
+<P>WebCrawler</P>
+
+<TD>
+
+<P><A HREF="http://www.biotech.washington.edu/WebCrawler/WebQuery.html">http://www.biotech.washington.edu/WebCrawler/WebQuery.html</A></P></TABLE>
+
+<H3><A ID="I13" NAME="I13">
+
+<FONT SIZE=4><B>Your Own Home Page</B>
+
+<BR></FONT></A></H3>
+
+<P>Most WWW gurus have their own Home Page that describes themselves and has links off to items they find interesting in the Web. Gurus, therefore, must either learn HTML or find a program that can convert from their favorite format to HTML. A list of 
+available HTML converter programs and editors can be found at the URL
+
+<BR></P>
+
+<PRE><A HREF="http://info.cern.ch/hypertext/WWW/Tools/Filters.html">http://info.cern.ch/hypertext/WWW/Tools/Filters.html</A></PRE>
+
+<HR ALIGN=CENTER>
+
+<NOTE>
+
+<IMG SRC="note.gif"><B>Note: </B>BBEDIT (shareware) for the Macintosh also supports HTML extensions and is easy to use to create HTML documents. The shareware version is available on world.std.com in /ftp/pub/bbedit as well as on sumex-aim.stanford.edu in 
+/info-mac/TextProcessing.
+
+<BR></NOTE>
+
+<HR ALIGN=CENTER>
+
+<P>Even if a converter can be found, a guru may wish to learn HTML. An easy to learn introduction to HTML can be found in a document called &quot;Beginner's Guide to HTML,&quot; which is available as
+
+<BR></P>
+
+<PRE><A HREF="http://www.ncsa.uiuc.edu/General/Internet/WWW/HTMLPrimer.html">http://www.ncsa.uiuc.edu/General/Internet/WWW/HTMLPrimer.html</A></PRE>
+
+<P>The official HTML specification can be found at
+
+<BR></P>
+
+<PRE><A HREF="http://info.cern.ch/hypertext/WWW/MarkUp/MarkUp.html">http://info.cern.ch/hypertext/WWW/MarkUp/MarkUp.html</A></PRE>
+
+<P>Finally, there is a HTML Developer's Page that can be accessed at
+
+<BR></P>
+
+<PRE><A HREF="http://oneworld.wa.com/htmldev/devpage/dev-page.html">http://oneworld.wa.com/htmldev/devpage/dev-page.html</A></PRE>
+
+<P>After learning to use one of the HTML converters or learning HTML, creating your own home page should be fairly easy to do. Before designing your own page, however, you might want to look at the home pages of some other people on the Internet to get an 
+idea of what some look like (see Table 18.6).
+
+<BR></P>
+
+<UL>
+
+<LH><B>Table 18.6. Example home pages.</B>
+
+<BR></LH></UL>
+
+<TABLE BORDER>
+
+<TR>
+
+<TD>
+
+<PRE><B><I>Name</I></B>
+
+<BR></PRE>
+
+<TD>
+
+<PRE><B><I>URL of Home Pages</I></B>
+
+<BR></PRE>
+
+<TR>
+
+<TD>
+
+<P>Aurelius Prochazka</P>
+
+<TD>
+
+<P><A HREF="http://www.galcit.caltech.edu/~joe/coolpage.html">http://www.galcit.caltech.edu/~joe/coolpage.html</A></P>
+
+<TR>
+
+<TD>
+
+<P>Billy Barron</P>
+
+<TD>
+
+<P><A HREF="http://www.utdallas.edu/acc/billy.html">http://www.utdallas.edu/acc/billy.html</A></P>
+
+<TR>
+
+<TD>
+
+<P>Brandon Plewe</P>
+
+<TD>
+
+<P><A HREF="http://wings.buffalo.edu/staff/plewe/home.html">http://wings.buffalo.edu/staff/plewe/home.html</A></P>
+
+<TR>
+
+<TD>
+
+<P>CMU CS students</P>
+
+<TD>
+
+<P><A HREF="http://www.cs.cmu.edu:8001/web/personal.homes.html">http://www.cs.cmu.edu:8001/web/personal.homes.html</A></P>
+
+<TR>
+
+<TD>
+
+<P>Dave Brennan</P>
+
+<TD>
+
+<P><A HREF="http://www-external.hal.com/~brennan/index.html">http://www-external.hal.com/~brennan/index.html</A></P>
+
+<TR>
+
+<TD>
+
+<P>Eriq Neale</P>
+
+<TD>
+
+<P><A HREF="http://lipsmac.acs.unt.edu/">http://lipsmac.acs.unt.edu/</A></P>
+
+<TR>
+
+<TD>
+
+<P>Kevin Hughes</P>
+
+<TD>
+
+<P><A HREF="http://www.eit.com/people/kev.html">http://www.eit.com/people/kev.html</A></P>
+
+<TR>
+
+<TD>
+
+<P>Meng Weng Wong</P>
+
+<TD>
+
+<P><A HREF="http://www.seas.upenn.edu/~mengwong/meng.html">http://www.seas.upenn.edu/~mengwong/meng.html</A></P>
+
+<TR>
+
+<TD>
+
+<P>Rob Hartill</P>
+
+<TD>
+
+<P><A HREF="http://www.cm.cf.ac.uk/People/Robert_Hartill.html">http://www.cm.cf.ac.uk/People/Robert_Hartill.html</A></P>
+
+<TR>
+
+<TD>
+
+<P>Tim Berners-Lee</P>
+
+<TD>
+
+<P><A HREF="http://info.cern.ch/hypertext/WWW/People/Berners-Lee-Bio.html">http://info.cern.ch/hypertext/WWW/People/Berners-Lee-Bio.html</A></P>
+
+<TR>
+
+<TD>
+
+<P>Various</P>
+
+<TD>
+
+<P><A HREF="http://www.cs.colorado.edu/homes/mcbryan/public_html/bb/58/summary.html">http://www.cs.colorado.edu/homes/mcbryan/public_html/bb/58/summary.html</A></P></TABLE>
+
+<P>After looking at some of these home pages, you will hopefully notice the different design philosophies that people use. Some people include their pictures while others do not (likely because they do not want people to know what they look like or they do 
+not have access to a scanner). Some people are very serious and include resumes, current projects, and other such things while others have made their page totally for fun. Others still, such as myself, combine the serious and the fun together.
+
+<BR></P>
+
+<H3><A ID="I14" NAME="I14">
+
+<FONT SIZE=4><B>Server Software</B>
+
+<BR></FONT></A></H3>
+
+<P>Many different Web server packages exist as listed in Table 18.7. The guru needs to look at the features of each package and then decide which is the best for him or her.
+
+<BR></P>
+
+<P>In fact, the guru may end up deciding that a server package is unnecessary because other alternatives exist. It is possible to serve up HTML documents from other types of Internet servers, such as anonymous FTP and Gopher. However, by doing this you 
+lose some of the more advanced features that the server provides, such as image maps and CGI scripts, both of which will be discussed later in this chapter. Also, using FTP is less efficient, slower, and limits your security options in some cases.
+
+<BR></P>
+
+<P>If a WWW server package is needed, you will need to first pick a platform. It will generally be in your best interest to choose UNIX if possible, unless you do not have the ability to use it or there is an overriding reason why another platform suits 
+you better. The UNIX servers are the most popular, almost always the most current, and tend to have good performance.
+
+<BR></P>
+
+<UL>
+
+<LH><B>Table 18.7. Web Server Software.</B>
+
+<BR></LH></UL>
+
+<TABLE BORDER>
+
+<TR>
+
+<TD>
+
+<PRE><B><I>Software</I></B>
+
+<BR></PRE>
+
+<TD>
+
+<PRE><B><I>Platform</I></B>
+
+<BR></PRE>
+
+<TD>
+
+<PRE><B><I>URL</I></B>
+
+<BR></PRE>
+
+<TR>
+
+<TD>
+
+<P>CERN HTTPD</P>
+
+<TD>
+
+<P>UNIX</P>
+
+<TD>
+
+<P><A HREF="ftp://info.cern.ch/">ftp://info.cern.ch/</A></P>
+
+<TR>
+
+<TD>
+
+<P>CERN HTTPD</P>
+
+<TD>
+
+<P>VMS</P>
+
+<TD>
+
+<P><A HREF="ftp://info.cern.ch/pub/www/src/www2161betavms.tar_Z">ftp://info.cern.ch/pub/www/src/www2161betavms.tar_Z</A></P>
+
+<TR>
+
+<TD>
+
+<P>GN</P>
+
+<TD>
+
+<P>UNIX</P>
+
+<TD>
+
+<P><A HREF="ftp://hopf.math.nwu.edu:70/9/gn2.11.tar.gz">ftp://hopf.math.nwu.edu:70/9/gn2.11.tar.gz</A></P>
+
+<TR>
+
+<TD>
+
+<P>HTTPS</P>
+
+<TD>
+
+<P>Windows NT</P>
+
+<TD>
+
+<P><A HREF="ftp://emwac.ed.ac.uk/pub/https">ftp://emwac.ed.ac.uk/pub/https</A></P>
+
+<TR>
+
+<TD>
+
+<P>MacHTTP</P>
+
+<TD>
+
+<P>Mac</P>
+
+<TD>
+
+<P><A HREF="ftp://oac.hsc.uth.tmc.edu/public/mac/MacHTTP/machttp_beta.sit.hqx">ftp://oac.hsc.uth.tmc.edu/public/mac/MacHTTP/machttp_beta.sit.hqx</A></P>
+
+<TR>
+
+<TD>
+
+<P>NCSA HTTPD</P>
+
+<TD>
+
+<P>UNIX, VMS</P>
+
+<TD>
+
+<P><A HREF="ftp://ftp.ncsa.uiuc.edu/pub/web">ftp://ftp.ncsa.uiuc.edu/pub/web</A></P>
+
+<TR>
+
+<TD>
+
+<P>NCSA HTTPD</P>
+
+<TD>
+
+<P>Windows</P>
+
+<TD>
+
+<P><A HREF="ftp://ftp.ncsa.uiuc.edu/Web/ncsa_httpd/contrib/winhttpd/whtp13p1.zip">ftp://ftp.ncsa.uiuc.edu/Web/ncsa_httpd/contrib/winhttpd/whtp13p1.zip</A></P>
+
+<TR>
+
+<TD>
+
+<P>Plexus</P>
+
+<TD>
+
+<P>UNIX</P>
+
+<TD>
+
+<P><A HREF="ftp://austin.bsdi.com/plexus/2.2.1/dist/Plexus2.2.1.tar.Z">ftp://austin.bsdi.com/plexus/2.2.1/dist/Plexus2.2.1.tar.Z</A></P>
+
+<TR>
+
+<TD>
+
+<P>Region 6</P>
+
+<TD>
+
+<P>VMS</P>
+
+<TD>
+
+<P><A HREF="http://kcgl1.eng.ohio-state.edu/www/http_server_13.tar">http://kcgl1.eng.ohio-state.edu/www/http_server_13.tar</A></P>
+
+<TR>
+
+<TD>
+
+<P>SerWeb</P>
+
+<TD>
+
+<P>Windows</P>
+
+<TD>
+
+<P><A HREF="ftp://winftp.cica.indiana.edu/pub/pc/win3/winsock/serweb03.zip">ftp://winftp.cica.indiana.edu/pub/pc/win3/winsock/serweb03.zip</A></P>
+
+<TR>
+
+<TD>
+
+<P>SerWeb</P>
+
+<TD>
+
+<P>Windows NT</P>
+
+<TD>
+
+<P><A HREF="ftp://emwac.ed.ac.uk/pub/serweb/serweb_i.zip">ftp://emwac.ed.ac.uk/pub/serweb/serweb_i.zip</A></P>
+
+<TR>
+
+<TD>
+
+<P>WEB4HAM</P>
+
+<TD>
+
+<P>Windows</P>
+
+<TD>
+
+<P><A HREF="ftp://ftp.informatik.uni-hamburg.de/pub/net/winsock/web4ham.zip">ftp://ftp.informatik.uni-hamburg.de/pub/net/winsock/web4ham.zip</A></P></TABLE>
+
+<P>Also, many gateways available for the various Web servers enable you to tie into other software or databases. These gateways are documented on the page
+
+<BR></P>
+
+<PRE><A HREF="http://info.cern.ch/hypertext/WWW/Daemon/Gateways.html">http://info.cern.ch/hypertext/WWW/Daemon/Gateways.html</A></PRE>
+
+<P>In addition, you can write your own gateways using CGI (Common Gateway Interface), which we will discuss in a little bit.
+
+<BR></P>
+
+<P>There is always the choice of writing your own server. This should only be done when you have a particular reason for doing so. Information on writing servers can be found on the page
+
+<BR></P>
+
+<PRE><A HREF="http://info.cern.ch/hypertext/WWW/Daemon/Overview.html">http://info.cern.ch/hypertext/WWW/Daemon/Overview.html</A></PRE>
+
+<P>After your server is installed and it is getting usage, you may want to see how much and what kind of usage it is getting. First, you must turn on the logging function of your server if it has one. After that, you can either write your own programs for 
+generating statistics or acquire a Web statistics package. Several packages are available and listed in Table WW.8.
+
+<BR></P>
+
+<UL>
+
+<LH><B>Table 18.8. WWW server statistics packages.</B>
+
+<BR></LH></UL>
+
+<TABLE BORDER>
+
+<TR>
+
+<TD>
+
+<PRE><B><I>Software</I></B>
+
+<BR></PRE>
+
+<TD>
+
+<PRE><B><I>URL</I></B>
+
+<BR></PRE>
+
+<TR>
+
+<TD>
+
+<P>getstats</P>
+
+<TD>
+
+<P><A HREF="ftp://ftp.eit.com/pub/web.software/getstats/">ftp://ftp.eit.com/pub/web.software/getstats/</A></P>
+
+<TR>
+
+<TD>
+
+<P>wusage</P>
+
+<TD>
+
+<P><A HREF="http://siva.cshl.org/wusage.html">http://siva.cshl.org/wusage.html</A></P>
+
+<TR>
+
+<TD>
+
+<P>wwwstat</P>
+
+<TD>
+
+<P><A HREF="ftp://liege.ics.uci.edu/pub/arcadia/wwwstat/">ftp://liege.ics.uci.edu/pub/arcadia/wwwstat/</A></P></TABLE>
+
+<H3><A ID="I15" NAME="I15">
+
+<FONT SIZE=4><B>Page Design Issues</B>
+
+<BR></FONT></A></H3>
+
+<P>A well-known problem with hypertext systems, such as WWW, is that most people do not know how to write good hypertext documents. In general, the worse hypertext documents are those where the author uses graphics and different types of links just to show 
+off his/her ability in using the technology.
+
+<BR></P>
+
+<P>While I will be the first to admit that I am not an expert at writing good hypertext documents, I have learned over time how to avoid some bad techniques. In addition, I have picked up some good techniques to use. I will show you them here because they 
+should be known to gurus of WWW. Other suggestions can be found in the pages
+
+<BR></P>
+
+<PRE><A HREF="http://info.cern.ch/hypertext/WWW/Provider/Style/Overview.html">http://info.cern.ch/hypertext/WWW/Provider/Style/Overview.html</A></PRE>
+
+<P>and
+
+<BR></P>
+
+<PRE><A HREF="http://www.willamette.edu/html-composition/strict-html.html">http://www.willamette.edu/html-composition/strict-html.html</A></PRE>
+
+<H4><A ID="I16" NAME="I16">
+
+<FONT SIZE=3><B>Lists versus Full-Text</B>
+
+<BR></FONT></A></H4>
+
+<P>Hopefully, when you were learning about HTML by reading &quot;The Beginner's Guide to HTML,&quot; you noticed that HTML enables you to make lists of links as well as place links in the body of a paragraph. Both techniques are useful, but both can also 
+be misused. Care must be taken to use them appropriately.
+
+<BR></P>
+
+<P>While WWW is much more flexible and powerful than a paper book, many of the good book writing techniques apply equally as well to hypertext as they do to books. First of all, books typically have a table of contents. A good collection of related HTML 
+documents in the Web should also have the equivalent to a table of contents. Otherwise, it is difficult for the reader to grasp the structure of the document collection effectively. A table of contents can be easily developed using a list of links.
+
+<BR></P>
+
+<P>However, once you get past the overview level(s), such as the table of contents, and on to the actual guts of the material, adjustments need to be made. Lists of links should generally be abandoned to define structure. Instead, paragraphs with links at 
+appropriate places is much more effective in most cases.
+
+<BR></P>
+
+<H4><A ID="I17" NAME="I17">
+
+<FONT SIZE=3><B>Number of Links</B>
+
+<BR></FONT></A></H4>
+
+<P>A common mistake by new HTML authors is to use too many links or not enough. In theory, it is possible to define every part of a document as being a link to other documents. However, the user of this document would find it useless and frustrating.
+
+<BR></P>
+
+<P>In a good hypertext document, the links only take the user to important associated topics and not to irrelevant ones. To put this another way, by specifying a link, the author is telling the reader what the important related topics are. By not 
+specifying a link, the author is saying that the topic is not that important or that no additional information exists on that particular topic.
+
+<BR></P>
+
+<P>On the other end of the spectrum, if the document has too few links, the author limits the ability of the reader to find related information. In fact, if all documents are like this, there is no point in using a hypertext system such as the Web at all, 
+because its major strength is being ignored. In this case, Gopher is probably a superior system to use because it is easier to implement.
+
+<BR></P>
+
+<P>There are no hard and fast rules as far as the number of links per paragraph. It is dependent on the content of the individual document. The best way to learn what is an appropriate number is to browse around the Web and find some good and bad examples 
+to learn from. You will know when you are looking at a document with too few, too many, or just the right number of links.
+
+<BR></P>
+
+<H4><A ID="I18" NAME="I18">
+
+<FONT SIZE=3><B>Links Back</B>
+
+<BR></FONT></A></H4>
+
+<P>Most good hypertext pages have a link back to their &quot;official&quot; parent page at the end of the page. The reason is that readers may get to the page from any other page in the Web or from an index. Once there however, the reader may be interested 
+in other documents in the same collection. If no link is provided, it is difficult to see the rest of the collection.
+
+<BR></P>
+
+<P>One example is that a link takes you to the page for the printer products by company XYZ. However, then you want to see other information about XYZ. It is very easy to do if a link taking you back to the parent page or XYZ's home page is available. 
+Without the link, it requires some searching on the guru's part to find the parent page. For the novice, it is nearly impossible.
+
+<BR></P>
+
+<H4><A ID="I19" NAME="I19">
+
+<FONT SIZE=3><B>Inline Graphics</B>
+
+<BR></FONT></A></H4>
+
+<P>In a perfect world, readers would not take a noticeable performance hit when viewing HTML documents with inline graphics. However, at the current time, almost all readers notice a significant slowdown due to online graphics. Even for those with high 
+speed connections (T1 or higher) to the Internet and fast workstations, the performance problems show up from time to time.
+
+<BR></P>
+
+<P>There are two cases where the performance problems are very bad. The first is a user who is using a SLIP/PPP connection to the Internet. The second is when a slow link exists between the user and the WWW server. One frequent case of this is when the 
+reader and the server are on opposite sides of the Atlantic Ocean. In these cases, hopefully, the user has set up his client to not automatically download images. In addition, some client programs such as Lynx do not display the images because they are 
+geared for ASCII terminals and, therefore, will be faster.
+
+<BR></P>
+
+<P>The author of an HTML document needs to take these problems into account. First, the author needs to decide whether his/her audience has fast network links and a reasonably fast computer. If they do, using inline graphics will make the page prettier 
+and, if used appropriately, are easier to understand. On the other hand, if the users of a page have slow links, then inline graphics should be kept to a bare minimum. Otherwise, the response time will make the pages unusable. A frequently used and good 
+technique is to shrink the images and include them as small inline images. Then allow the user to click on the inline images to get the full image.
+
+<BR></P>
+
+<P>For most of us though, we will have some users in both categories. At the present time, in most cases, it is better to err on the side of too few graphics than too many. Over the course of the next few years, this balance will change as computers and 
+networks get faster so that it will be better on average to include more graphics.
+
+<BR></P>
+
+<P>A related note is that some people are using ASCII based clients or have the inline images turned off in their client. Therefore, overdependence on unnecessary graphics will disenfranchise these users. However, at these times though, graphics are 
+critical to the presentation of certain material. When this occurs, by all means, use graphics.
+
+<BR></P>
+
+<H4><A ID="I20" NAME="I20">
+
+<FONT SIZE=3><B>Client Independence</B>
+
+<BR></FONT></A></H4>
+
+<P>The Web and HTML in particular are built around the idea of client independence and being format-free. If you look at HTML, you will find no markers to specify exact font sizes. Also, you will find no way to hardcode locations on the screen in the 
+language. This was intentional in the design of the WWW system.
+
+<BR></P>
+
+<P>Users of the system will be on various machines. Some will be able to handle advanced graphics, while others will not be able to handle graphics at all. Some will have very large windows for their WWW clients while others will be limited to 24 rows and 
+80 columns. Therefore, any attempt on the part of the server or the author to specify more than the most general formatting options, such as bolding and a relative heading size, will run into difficulties.
+
+<BR></P>
+
+<P>It is a common mistake on the part of the novice HTML author to try to make his page look nice on a particular client package, usually Mosaic. However, this time is basically wasted because any of the work that goes into this will be useless on any 
+other client. In fact, it is often the case that the more effort spent in customizing for the screen for one client the worse it will look on other clients.
+
+<BR></P>
+
+<P>Also, HTML authors need to be careful about checking to see what advanced features his audience's client package supports. For example, while forms are a very useful feature of the Web, many clients have yet to support it. Also, the image map 
+functionality, which will be explained later in this chapter, only works on graphical clients and by definition cannot work on ASCII based client packages.
+
+<BR></P>
+
+<P>Finally, it is very important that the author consider what file formats his readers can process when selecting the file format of graphics, sound, and video. Almost all WWW client packages will call external programs to process this kind of data. 
+However, it is always an unknown whether or not the reader has installed these external programs or not. For inline graphics, the client packages can only handle very few types of graphics files, such as GIF.
+
+<BR></P>
+
+<H4><A ID="I21" NAME="I21">
+
+<FONT SIZE=3><B>CGI Scripts</B>
+
+<BR></FONT></A></H4>
+
+<P>Many WWW servers support the ability of the server to call scripts. These scripts allow the Web guru to design custom Web functionality. For those familiar with Gopher and the go4gw system, CGI (Common Gateway Interface) serves similar purposes. 
+Sometimes you may see references to another script system known as HTBIN. HTBIN is an older system than has been superseded by CGI. You should write any new scripts for the CGI interface specification and not HTBIN. Also, any HTBIN script should be 
+upgraded to use CGI.
+
+<BR></P>
+
+<P>The method of implementing the CGI functionality is somewhat dependent on your server package. However, the programming interface that a CGI script uses remains the same with any server package that supports CGI. Therefore, once you have written a CGI 
+script, it will work with any server that supports CGI&#151;but you may have to spend some time figuring out how to best tie it into the server.
+
+<BR></P>
+
+<P>Writing a CGI script requires understanding something about the HTTP protocol. Therefore, you should read up on that first if you haven't already. After that, take a look at the page <A 
+HREF="http://hoohoo.ncsa.uiuc.edu/cgi/">http://hoohoo.ncsa.uiuc.edu/cgi/</A>, which describes CGI in detail.
+
+<BR></P>
+
+<H4><A ID="I22" NAME="I22">
+
+<FONT SIZE=3><B>Forms</B>
+
+<BR></FONT></A></H4>
+
+<P>Many of the newer Web clients support forms. Forms are a wonderful addition to the Web because they allow the user to give information back to the server besides just simple mouse clicks. Forms support text fields, password fields (the text does not 
+show up on the screen), checkboxes, radio buttons, menus, reset buttons, and submit buttons. They are quite powerful and can replace almost any paper form. Unfortunately, at the present time not all Web clients can support forms, so care must be taken when 
+using forms for a particular application.
+
+<BR></P>
+
+<P>For help on using forms, a good page exists at
+
+<BR></P>
+
+<PRE><A HREF="http://nearnet.gnn.com/forms/help/form-help.html">http://nearnet.gnn.com/forms/help/form-help.html</A></PRE>
+
+<P>A more formal description of HTML forms can be found in
+
+<BR></P>
+
+<PRE><A HREF="http://www.ncsa.uiuc.edu/SDG/Software/Mosaic/Docs/fill-out-forms/overview.html">http://www.ncsa.uiuc.edu/SDG/Software/Mosaic/Docs/fill-out-forms/overview.html</A></PRE>
+
+<H4><A ID="I23" NAME="I23">
+
+<FONT SIZE=3><B>Image Maps</B>
+
+<BR></FONT></A></H4>
+
+<P>One of the more advanced design features that can be used is known as <I>image maps</I>. The more commonly used term, especially among novices, is a <I>clickable</I> map. It enables you to design Web screens so that users can use your Web page as a GUI 
+interface. Instead of a link being a text phrase or a whole image, it can be a part of a graphic image. Therefore, it is possible to have maps with different countries, click on a country, and then get a page on that country. However, it is important to 
+remember that this is advanced functionality that is not available in all client packages and, therefore, some people will be unable to use it.
+
+<BR></P>
+
+<P>A tutorial on using image maps can be found at <A HREF="http://wintermute.ncsa.uiuc.edu:8080/map-tutorial/image-maps.html">http://wintermute.ncsa.uiuc.edu:8080/map-tutorial/image-maps.html</A>. This document only covers how to configure the maps for 
+users of the NCSA HTTPD server. If you are using another type of server, you will have to look at the documentation of the server for additional instructions. Also, some examples are helpful in designing maps (see Table 18.9). In addition, many of the 
+geographical organizational schemes use image maps and are good examples.
+
+<BR></P>
+
+<UL>
+
+<LH><B>Table 18.9. Examples of maps.</B>
+
+<BR></LH></UL>
+
+<TABLE BORDER>
+
+<TR>
+
+<TD>
+
+<PRE><B><I>Name</I></B>
+
+<BR></PRE>
+
+<TD>
+
+<PRE><B><I>URL</I></B>
+
+<BR></PRE>
+
+<TR>
+
+<TD>
+
+<P>Europe</P>
+
+<TD>
+
+<P><A HREF="http://s700.uminho.pt/europa.html">http://s700.uminho.pt/europa.html</A></P>
+
+<TR>
+
+<TD>
+
+<P>Honolulu Community College</P>
+
+<TD>
+
+<P><A HREF="http://www.hcc.hawaii.edu/hccmap/hccmap.html">http://www.hcc.hawaii.edu/hccmap/hccmap.html</A></P>
+
+<TR>
+
+<TD>
+
+<P>Icon Browser</P>
+
+<TD>
+
+<P><A HREF="http://www.di.unipi.it/iconbrowsers/icons.html">http://www.di.unipi.it/iconbrowsers/icons.html</A></P>
+
+<TR>
+
+<TD>
+
+<P>London Underground</P>
+
+<TD>
+
+<P><A HREF="http://web.cs.city.ac.uk/london/travel/underground/map?central">http://web.cs.city.ac.uk/london/travel/underground/map?central</A></P>
+
+<TR>
+
+<TD>
+
+<P>Museum of Paleontology</P>
+
+<TD>
+
+<P><A HREF="http://ucmp1.berkeley.edu/">http://ucmp1.berkeley.edu/</A></P>
+
+<TR>
+
+<TD>
+
+<P>Planet Earth Home Page</P>
+
+<TD>
+
+<P><A HREF="http://white.nosc.mil/pehp.html">http://white.nosc.mil/pehp.html</A></P>
+
+<TR>
+
+<TD>
+
+<P>SWISS2DPAGE Map Selection</P>
+
+<TD>
+
+<P><A HREF="http://expasy.hcuge.ch/htbin/map2">http://expasy.hcuge.ch/htbin/map2</A></P>
+
+<TR>
+
+<TD>
+
+<P>Syracuse University</P>
+
+<TD>
+
+<P><A HREF="http://www.syr.edu/">http://www.syr.edu/</A></P>
+
+<TR>
+
+<TD>
+
+<P>Univ Cal Berkeley</P>
+
+<TD>
+
+<P><A HREF="http://server.berkeley.edu/htbin/imagemap/campus">http://server.berkeley.edu/htbin/imagemap/campus</A></P>
+
+<TR>
+
+<TD>
+
+<P>World Map</P>
+
+<TD>
+
+<P><A HREF="http://wings.buffalo.edu/world">http://wings.buffalo.edu/world</A></P></TABLE>
+
+<P>Also, a couple of different map editing programs exist that can help speed the development of image maps along. mapedit is an X based editor from image maps that can be found at
+
+<BR></P>
+
+<PRE><A HREF="http://sunsite.unc.edu/boutell/mapedit/mapedit.html">http://sunsite.unc.edu/boutell/mapedit/mapedit.html</A></PRE>
+
+<P>For the Macintosh, a product known as HyperMap is available. It can be found at
+
+<BR></P>
+
+<PRE><A HREF="http://libertynet.upenn.edu/~gasser/projects/hypermap.html">http://libertynet.upenn.edu/~gasser/projects/hypermap.html</A></PRE>
+
+<H3><A ID="I24" NAME="I24">
+
+<FONT SIZE=4><B>Client Configuration</B>
+
+<BR></FONT></A></H3>
+
+<P>The more powerful WWW clients, such as Mosaic, contain many client configuration options. A guru will know the options available with his/her package. If the package does not support the particular option needed, the guru can locate a separate utility 
+that will accomplish the function if necessary.
+
+<BR></P>
+
+<H4><A ID="I25" NAME="I25">
+
+<FONT SIZE=3><B>Performance</B>
+
+<BR></FONT></A></H4>
+
+<P>The Web can be slow at times. There are several ways that the guru can maximize his/her performance by using a few tricks.
+
+<BR></P>
+
+<P>First of all, if he/she is coming into the Internet via a slow speed modem connection, it is best if automatic inline imaging download is disabled (in Mosaic, this is the turn off image download option) except when absolutely necessary. The guru also 
+disables this option when downloading a page from a server that is known to be slow or one that is far away (usually defined as across an ocean). The guru may sometimes disable this option when downloading a page with a large amount of inline graphics. 
+Finally, the guru may just use this option anytime the graphics are unneeded and speed is of the essence.
+
+<BR></P>
+
+<P>Most Web servers are typically least busy between midnight and 6 a.m. using the server's local time. Also, the busy transatlantic links tend to be least used between about 7 p.m. and 4 a.m. Eastern Standard Time (EST). Additionally, any time on a 
+weekend, servers and links are less used. A WWW guru may use these times to access slow servers or servers across slow links so that the server responsds faster, and his/her usage does not slow down other Internet users as much.
+
+<BR></P>
+
+<H4><A ID="I26" NAME="I26">
+
+<FONT SIZE=3><B>Mirroring Pages</B>
+
+<BR></FONT></A></H4>
+
+<P>Another trick that WWW gurus often use to improve reliability and performance is to mirror HTML pages locally. In other words, the guru uses a particular Web page or set of pages frequently. Instead of repeatedly connecting across the Internet to access 
+the page, the guru will copy (mirror) the page(s) to his/her local Web server. Then the guru can use this copy of the page(s) and receive faster response. Also, this can help lessen the load on a busy remote Web server (like CERN or NCSA) and overloaded 
+network links.
+
+<BR></P>
+
+<P>An important part of the mirror process is figuring out how often the mirrored page should be refreshed. For very volatile pages, once a day may be good, though the mirror itself should occur at night if possible. For pages that are infrequently 
+updated, getting a new copy once a week is acceptable. It just depends on the situation. In general, though, I would say that the refresh time should be between one day and one month.
+
+<BR></P>
+
+<P>Several different packages and methods for mirroring are available. There are basically three different methods of mirroring. The most straight forward is mirroring a single page exactly like it is. Next, a page can be mirrored, but all of the relative 
+URLs in it are converted to be absolute URLs. The benefit of this method is that the links on the page will continue to work in all cases, whereas sometimes with the straight forward copy, they do. Finally, a page can be mirrored recursively. In this 
+method, when a page is mirrored, it is parsed to see what pages it references in the same directory structure. These pages are then also downloaded and parsed. This continues until no more pages in the directory structure can be found.
+
+<BR></P>
+
+<P>Three popular mirroring tools are w3get, htget, and the Web client Lynx. Lynx only supports straight forward mirroring. This function can be accessed by typing lynx -source URL &gt; output-file. w3get performs only recursive mirroring. htget is a later 
+version of a script originally known as hget. htget is the most powerful of the three tools mentioned here and supports all three types of mirroring. It can be found at
+
+<BR></P>
+
+<PRE><A HREF="http://cui_www.unige.ch/ftp/PUBLIC/oscar/scripts/README.html">http://cui_www.unige.ch/ftp/PUBLIC/oscar/scripts/README.html</A></PRE>
+
+<P>The htget syntax is very simple. For straightforward mirroring, just type htget URL. For converting to absolute format, it is htbin -abs URL. Finally, for recursive copying, use the command htbin -r URL.
+
+<BR></P>
+
+<P>Another alternative to mirroring is a caching Web server. In the cache system, the client first checks to see if the cache server has the document. If so, the cache server gives the document to the client at faster than normal speed because the cache 
+server should be local. If not, the cache server will download the document to keep a copy for caching purposes.
+
+<BR></P>
+
+<P>An experimental caching server has been developed. At the time of this writing, it had not been publicly released. Hopefully, it will be in the near future. To acquire more information, look at the page
+
+<BR></P>
+
+<PRE><A HREF="http://www.hensa.ac.uk/hensa.unix.html">http://www.hensa.ac.uk/hensa.unix.html</A></PRE>
+
+<P>In addition to mirroring, it is often a good idea to occasionally check to see if the links in your pages are still good. A package called &quot;checkweb&quot; is available for doing this. Unfortunately, it does not have a URL on the network from which 
+you can download it. Instead, ask around or try to find a copy of the February 17, 1994 posting of it on the newsgroup comp.infosystems.www.
+
+<BR></P>
+
+<P>However, you should probably test suspected dead links more than once. It is often the case on the Web that a link will be dead for minutes or hours and then reappear. This is often due to network connectivity problems or the WWW server crashing.
+
+<BR></P>
+
+<H4><A ID="I27" NAME="I27">
+
+<FONT SIZE=3><B>Related Viewers</B>
+
+<BR></FONT></A></H4>
+
+<P>Most Web clients by default can render a small number of file types by themselves. For example, they all know how to render HTML. Most can render Gopher menus and FTP directories. Many can view small inline graphics. However, it is commonly known wisdom 
+in the computer programming arena that no one package can do everything well. As it is, many people complain that Mosaic and some other Web clients do too much already, and you can see warts if you look closely for them. Therefore, all Web clients, 
+including Mosaic, draw a line on what is directly included and what must be supported externally.
+
+<BR></P>
+
+<P>To deal with other types, most Web clients have the ability to call other utilities, often called <I>viewers</I>, to render types that the client itself cannot deal with. Therefore, with most clients, it is important for the guru to install a good set 
+of viewers (see Table 18.10). For starters, viewers for graphic files, sound, and video are needed in addition to the client.
+
+<BR></P>
+
+<UL>
+
+<LH><B>Table 18.10. Associated Viewers.</B>
+
+<BR></LH></UL>
+
+<TABLE BORDER>
+
+<TR>
+
+<TD>
+
+<PRE><B><I>Viewers</I></B>
+
+<BR></PRE>
+
+<TD>
+
+<PRE><B><I>URL</I></B>
+
+<BR></PRE>
+
+<TR>
+
+<TD>
+
+<P>Quicktime for Unix</P>
+
+<TD>
+
+<P><A HREF="ftp://public.x.org/R5contrib/xanim264.tar.Z">ftp://public.x.org/R5contrib/xanim264.tar.Z</A></P>
+
+<TR>
+
+<TD>
+
+<P>Various Unix</P>
+
+<TD>
+
+<P><A HREF="ftp://ftp.ncsa.uiuc.edu/Web/Mosaic-viewers">ftp://ftp.ncsa.uiuc.edu/Web/Mosaic-viewers</A></P>
+
+<TR>
+
+<TD>
+
+<P>Various Windows</P>
+
+<TD>
+
+<P><A HREF="ftp://ftp.ncsa.uiuc.edu/PC/Mosaic/viewers">ftp://ftp.ncsa.uiuc.edu/PC/Mosaic/viewers</A></P></TABLE>
+
+<H4><A ID="I28" NAME="I28">
+
+<FONT SIZE=3><B>Downloading Images/Icons</B>
+
+<BR></FONT></A></H4>
+
+<P>On occasion, the guru may see a picture, sound clip, movie, or icon that is particularly interesting. He/she might decide to make a local copy of this file. There are several ways to accomplish this, but first the guru must tackle the ethical issues. 
+Often, these files are of copyrighted material. Remember that in many countries, including the U.S., a work is copyrighted until the author declares it is public domain. Even if the work is copyrighted, the author will often allow use of the work without 
+charge if nicely asked.
+
+<BR></P>
+
+<P>If the guru is making a copy for his/her own personal use, it is usually safe in the U.S. at least to make a copy of the work under the Fair Use Doctrine. If the guru wants to use the file on his/her Web page or in another work, the guru needs to 
+contact the author for permission. Unfortunately, most of these image files in the Web have not been accredited to an author. Therefore, it is often difficult to gain proper permission.
+
+<BR></P>
+
+<P>However, fortunately a few Icon libraries are available on the Web (see Table 18.11). The images available in these libraries should all be public domain and can probably be used in the design of your Web pages.
+
+<BR></P>
+
+<UL>
+
+<LH><B>Table 18.11. Available icon libraries.</B>
+
+<BR></LH></UL>
+
+<TABLE BORDER>
+
+<TR>
+
+<TD>
+
+<PRE><B><I>Name</I></B>
+
+<BR></PRE>
+
+<TD>
+
+<PRE><B><I>URL</I></B>
+
+<BR></PRE>
+
+<TR>
+
+<TD>
+
+<P>Anthony's Icon Library</P>
+
+<TD>
+
+<P><A HREF="http://www.cit.gu.edu.au/~anthony/icons/">http://www.cit.gu.edu.au/~anthony/icons/</A></P>
+
+<TR>
+
+<TD>
+
+<P>General Icons</P>
+
+<TD>
+
+<P><A HREF="http://www.ncsa.uiuc.edu/General/Icons/">http://www.ncsa.uiuc.edu/General/Icons/</A></P>
+
+<TR>
+
+<TD>
+
+<P>Gopher Icons</P>
+
+<TD>
+
+<P><A HREF="http://eitech.com/web/gopher.icons/gopher.html">http://eitech.com/web/gopher.icons/gopher.html</A></P>
+
+<TR>
+
+<TD>
+
+<P>Icon Browser</P>
+
+<TD>
+
+<P><A HREF="http://www.di.unipi.it/iconbrowsers/icons.html">http://www.di.unipi.it/iconbrowsers/icons.html</A></P>
+
+<TR>
+
+<TD>
+
+<P>Icon Leiste</P>
+
+<TD>
+
+<P><A HREF="http://www.cosy.sbg.ac.at/www-doku/iconbar.html">http://www.cosy.sbg.ac.at/www-doku/iconbar.html</A></P>
+
+<TR>
+
+<TD>
+
+<P>WWW Icons</P>
+
+<TD>
+
+<P><A HREF="http://bsdi.com/icons/">http://bsdi.com/icons/</A></P></TABLE>
+
+<P>Downloading images and icons can be tricky. For images that are not inline, usually the easiest way is to tell your external viewer to save the image when it is displaying the image. However, not all external viewers are capable of doing this. When this 
+fails, you can try to find an option in your client called something like &quot;load to local disk.&quot; Enable it and then try to view the image. A dialog box asking you for a file name to save it under should appear. If your client does not have this 
+option, look at using the software discussed in the mirroring section of this chapter to save the images.
+
+<BR></P>
+
+<P>Inline images are a little more difficult to deal with. The first way is to use the &quot;load to local disk&quot; option and then reload the page you are on. Alternatively, you can use the &quot;view source&quot; option in your client to find the URL 
+of the inline image, and then use an external viewer as discussed above. If your external viewer cannot save, still use the &quot;view source&quot; option and then use mirroring software to pull down the inline image.
+
+<BR></P>
+
+<H3><A ID="I29" NAME="I29">
+
+<FONT SIZE=4><B>Spiders</B>
+
+<BR></FONT></A></H3>
+
+<P><I>Spiders</I>, sometimes also known as <I>robots</I>, <I>knowbots</I>, or <I>worms</I>, are programs that transverse the Web in search of something. Some build indices of the Web. Others measure the growth of the Web, measure throughput and latency in 
+the net, and do textual analysis. Spiders hold the possibility of doing all kinds of other useful analysis of the Web. However, they can also be a large resource drain on the network if not used properly.
+
+<BR></P>
+
+<P>Programming a Spider is a task only for a guru of the Web. Programming one requires knowledge of HTML and the HTTP protocol. Without accurate knowledge of both and careful debugging, many Spiders will put a strain on the Web, due to an infinite loop or 
+downloading too many documents too quickly. Fortunately, Martijn Koster took on the task of defining what a good Spider should and should not do. This definition can be found at <A 
+HREF="http://www.nexor.co.uk/mak/doc/robots/robots.html">http://www.nexor.co.uk/mak/doc/robots/robots.html</A>. Any new Spider needs to follow these rules to be Web-friendly.
+
+<BR></P>
+
+<P>If you as a guru are thinking about writing a Spider, please look at the other Spiders first to make sure nobody else is doing the same thing. The Web is huge, and the fewer unnecessary Spiders running the better.
+
+<BR></P>
+
+<P>If you are a server administrator and do not want Spiders transversing your Web server, a method for telling a Spider to leave you alone exists and is documented on
+
+<BR></P>
+
+<PRE><A HREF="http://www.nexor.co.uk/mak/doc/robots/norobots.html">http://www.nexor.co.uk/mak/doc/robots/norobots.html</A></PRE>
+
+<P>It is up to the individual robot to support this function. Some do and some do not. If it does not, try to find the Spider author and ask him to stop running his Spider against your server. Finally, if absolutely necessary, you can tell your HTTP daemon 
+to not allow connections from the Spider site.
+
+<BR></P>
+
+<H3><A ID="I30" NAME="I30">
+
+<FONT SIZE=4><B>Keeping Current with Future Development</B>
+
+<BR></FONT></A></H3>
+
+<P>It is critical that the guru remember that the Web is in its infancy, and that to stay a guru requires a significant investment in time to keep up with all the new developments. Much discussion is underway about important topics like a new version of 
+HTML called HTML+.
+
+<BR></P>
+
+<P>HTML+ is documented in
+
+<BR></P>
+
+<PRE><A HREF="ftp://ds.internic.net/internet-drafts/draft-raggett-www-html00.txt">ftp://ds.internic.net/internet-drafts/draft-raggett-www-html00.txt</A></PRE>
+
+<P>HTML+ will be a superset of HTML so that all current HTML documents will continue to be valid. HTML+ will probably have better table support and add in a few formatting features, such as right-justification. These discussions will lead to major changes 
+in the WWW system over the next few years.
+
+<BR></P>
+
+<P>Many exciting rumors about the future of Web clients and servers abound. As I was writing, an enhanced commercial version of Mosaic was released. From various commercial client vendors, there is talk of adding security features such as authentication 
+and encryption. Others are talking about more business oriented versions of the Web.
+
+<BR></P>
+
+<P>The Web is discussed on the USENET newsgroups comp.infosystems.www.misc, comp.infosystems.www.providers, and comp.infosystems.www.users. In addition, monitoring the group comp.infosystems.announce is useful because announcements of new software and 
+sites are posted regularly. These sites include Web sites as well as sites using other protocols such as Gopher and WAIS.
+
+<BR></P>
+
+<P>The Web also contains many resources for WWW developers that were not covered in this chapter. A good starting point for finding out about these resources is a system known as CyberWeb. The CyberWeb can be accessed at
+
+<BR></P>
+
+<P><A HREF="http://nyx10.cs.du.edu:8001/~arichmon/Web.html">http://nyx10.cs.du.edu:8001/~arichmon/Web.html</A></P>
+
+<P><A HREF="tig09.htm"><IMG SRC="bluprev.gif" WIDTH = 32 HEIGHT = 32 BORDER = 0 ALT="Previous Page"></A>
+
+<A HREF="httoc.htm"><IMG SRC="blutoc.gif" WIDTH = 32 HEIGHT = 32 BORDER = 0 ALT="TOC"></A>
+
+<A HREF="htindex.htm"><IMG SRC="bluindex.gif" WIDTH = 32 HEIGHT = 32 BORDER = 0 ALT="Index"></A>
+
+<A HREF="tigp3.htm"><IMG SRC="blunext.gif" WIDTH = 32 HEIGHT = 32 BORDER = 0 ALT="Next Page"></A>
+
+<A HREF="httoc.htm"><IMG SRC="bluprev.gif" WIDTH = 32 HEIGHT = 32 BORDER = 0 ALT="Home"></A>
+
+</P></BODY></HTML>
+

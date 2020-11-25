@@ -1,0 +1,730 @@
+<HTML>
+
+<HEAD>
+
+<TITLE>Tricks of the Internet Gurus tig15.htm</TITLE>
+
+<LINK REL="ToC" HREF="httoc.htm">
+
+<LINK REL="Index" HREF="htindex.htm">
+
+<LINK REL="Next" HREF="tig16.htm">
+
+<LINK REL="Previous" HREF="tigp4.htm"></HEAD>
+
+<BODY TEXT="#000000" LINK="#0000FF" VLINK="#800080" bgcolor=white>
+
+<P><A HREF="tigp4.htm"><IMG SRC="bluprev.gif" WIDTH = 32 HEIGHT = 32 BORDER = 0 ALT="Previous Page"></A>
+
+<A HREF="httoc.htm"><IMG SRC="blutoc.gif" WIDTH = 32 HEIGHT = 32 BORDER = 0 ALT="TOC"></A>
+
+<A HREF="htindex.htm"><IMG SRC="bluindex.gif" WIDTH = 32 HEIGHT = 32 BORDER = 0 ALT="Index"></A>
+
+<A HREF="tig16.htm"><IMG SRC="blunext.gif" WIDTH = 32 HEIGHT = 32 BORDER = 0 ALT="Next Page"></A>
+
+<A HREF="httoc.htm"><IMG SRC="bluprev.gif" WIDTH = 32 HEIGHT = 32 BORDER = 0 ALT="Home"></A>
+
+</P><UL>
+
+<LI>
+
+<A HREF="#I1">15</A></LI>
+
+<UL>
+
+<LI>
+
+<A HREF="#I3">Life with Archie</A></LI>
+
+<UL>
+
+<UL>
+
+<UL>
+
+<LI>
+
+<A HREF="#I4">--by Kevin M. Savetz
+
+<LI>
+
+<A HREF="#I5">The Birth of Archie</A></LI>
+
+<LI>
+
+<A HREF="#I6">Using Archie</A></LI>
+
+<LI>
+
+<A HREF="#I7">Archie's Commands</A></LI>
+
+<UL>
+
+<LI>
+
+<A HREF="#I8">Searching</A></LI>
+
+<LI>
+
+<A HREF="#I9">Sorting</A></LI>
+
+<LI>
+
+<A HREF="#I10">Limiting Your Search</A></LI>
+
+<LI>
+
+<A HREF="#I11">What is whatis?</A></LI></UL>
+
+<LI>
+
+<A HREF="#I12">Telnet Tidbits</A></LI>
+
+<LI>
+
+<A HREF="#I13">Using Archie via Electronic Mail</A></LI>
+
+<LI>
+
+<A HREF="#I14">Using Archie with a Local Client</A></LI>
+
+<LI>
+
+<A HREF="#I15">Setting Up Your Own Archie Server and Getting Your FTP Site Listed</A></LI>
+
+<LI>
+
+<A HREF="#I16">Why Archie Isn't Perfect</A></LI>
+
+<LI>
+
+<A HREF="#I17">What's Next?</A></LI>
+
+<UL>
+
+<LI>
+
+<A HREF="#I18">For More Information</A></LI></UL></UL></UL></UL></ul></ul>
+
+
+
+<H1><A ID="I1" NAME="I1">
+
+<BR>
+
+<FONT SIZE=5><A ID="I2" NAME="I2"></A><B>15</B>
+
+<BR></FONT></A></H1>
+
+<H2><A ID="I3" NAME="I3">
+
+<FONT SIZE=5><B>Life with Archie</B>
+
+<BR></FONT></A></H2>
+
+<H5><A ID="I4" NAME="I4">
+
+<FONT SIZE=3><B>
+
+<a href="savetz.gif">--by Kevin M. Savetz</a>
+
+</B>
+
+<BR></FONT></A></H5>
+
+<P>There probably aren't many long-time Internet users who haven't heard of&#151;or more likely used&#151;Archie, a program for searching for files at anonymous FTP sites.
+
+<BR></P>
+
+<P>Archie is an information system that works as an electronic directory service for locating information on the Internet. It is most widely used for its unique ability to quickly scan for files available via anonymous FTP. If you know the name of a file, 
+but you aren't sure where to get it on the Net, chances are good that Archie can tell you. For instance, if you've got a hankering to play the (low-tech but highly nifty) game Nethack, but haven't the faintest idea where to find it, Archie will point you 
+to a few (well, actually more than a thousand) FTP sites harboring that program.
+
+<BR></P>
+
+<P>Although the program was first written in mid-1990, and didn't come into popular use until 1991, Archie quickly found a niche in the hearts of Internet users. Archie was originally intended simply to track the contents of anonymous FTP sites, but is 
+being expanded to include a variety of other on-line directories and resource listings.
+
+<BR></P>
+
+<P>At last count, Archie's database consisted of more than 2,100,000 file names (totaling some 170 gigabytes of information!) on well over 1,200 anonymous FTP sites.
+
+<BR></P>
+
+<H3><A ID="I5" NAME="I5">
+
+<FONT SIZE=4><B>The Birth of Archie</B>
+
+<BR></FONT></A></H3>
+
+<P>Peter Deutsch is one of the people behind the scenes of the Archie program. He is president of Bunyip Information Systems Inc., a startup company specializing in Internet-based information tools. Bunyip, based in Montreal, Canada, was founded in early 
+1992 by the creators of Archie.
+
+<BR></P>
+
+<P>Archie began in 1986 when Deutsch was systems manager for the School of Computer Science at McGill University in Montreal. His predecessor had tried to convince the university to connect to the Internet, but because of the high cost&#151;about $35,000 
+annually for a slow link to Boston&#151;it was hard to convince the right people that the investment was worth it.
+
+<BR></P>
+
+<P>As he took over, Deutsch found himself with several temporary Net links and a load of old equipment. With a little pressure on the administration, they set up electronic mail gateways, newsfeeds, and other Internet resources. Deutsch shook the right 
+trees and managed to pay the bills.
+
+<BR></P>
+
+<P>He calls the birth of Archie a &quot;classic example of serendipity.&quot; One of Deutsch's associates, the &quot;resident pack rat,&quot; was in charge of tracking useful free software on the Net. In June of 1990, he wrote some simple scripts to go out 
+and fetch listings of anonymous FTP site holdings for him, so he wouldn't have to check the contents to each site manually. Outsiders became interested in the service, so they added a front end to the software so others could do their own software 
+searches.
+
+<BR></P>
+
+<P>The service was a hit immediately. &quot;Within a couple of days we were seeing as many as 20 queries a day,&quot; Deutsch said. Deutsch promised his partners that he'd &quot;buy them lunch when it hit 30 a day.&quot; Last I checked with him, he hadn't 
+yet to deliver on that promise, although today 40 Archie servers (about 20 of them are open to the public) service around 200,000 queries every day. (Sounds like Deutsch owes his buddies lunch in the South of France!)
+
+<BR></P>
+
+<P>Deutsch and his partners formed Bunyip Information Systems, Inc. in January, 1992, &quot;to support new versions of Archie and to and allow us to pursue our own particular vision of how the new crop of Internet services should all be put together.&quot; 
+The first commercially-supported version of Archie&#151;a complete rewrite of the software&#151;was made available in October of 1992.
+
+<BR></P>
+
+<HR ALIGN=CENTER>
+
+<NOTE>
+
+<IMG SRC="note.gif"><B>Note: </B>What's a Bunyip, anyway? &quot;A Bunyip is any one of several things,&quot; Deutsch said. &quot;Before we came along it was, among others, a creature from Australian Aboriginal mythology, a character from a popular 
+Australian children's story, a four-person skydiving maneuver and&#151;I think&#151;a kid's show in somewhere like Philadelphia. We chose the name because I am in fact half Australian and as a kid I read the book I mentioned. The name kind of stuck in my 
+head.&quot;
+
+<BR></NOTE>
+
+<HR ALIGN=CENTER>
+
+<H3><A ID="I6" NAME="I6">
+
+<FONT SIZE=4><B>Using Archie</B>
+
+<BR></FONT></A></H3>
+
+<P>There are plenty of ways you can access Archie&#151;all you need is an Archie client, the front-end to the database itself. If you have a shell account, your service provider may have installed Archie on your system. If so, that will likely give you 
+quickest access to the system. (Type archie to find out if it's there.)
+
+<BR></P>
+
+<P>If it isn't, don't fret. You can also access Archie by telneting to a public Archie server. There are 20 or so public servers scattered around the globe. Or, if you prefer (or if you don't have access to telnet), you can send your Archie search requests 
+via electronic mail. Both methods are quick and painless.
+
+<BR></P>
+
+<HR ALIGN=CENTER>
+
+<NOTE>
+
+<IMG SRC="note.gif"><B>Note: </B>There are other ways of accessing Archie as well. For instance, there's a wonderful shareware program called Anarchie&#151;that's pronounced &quot;anarchy&quot;&#151;for Macintosh users with IP connections. Anarchie 
+integrates the functions of Archie and FTP. You can search for a file name, and it will quickly list matches on-screen. Just point-and-click on one of the files, and it is transferred right to your computer in one fell swoop. Or, if you use the X operating 
+system, you can use the Xarchie program. But back to traditional Archie clients. . .
+
+<BR></NOTE>
+
+<HR ALIGN=CENTER>
+
+<P>We'll look at the three main methods of accessing Archie separately. Although they are similar on the surface, each method has its quirks, strengths, and weaknesses.
+
+<BR></P>
+
+<P>Internally, Archie works the same way no matter what client you use. As you might expect, when you start an Archie search, the program doesn't try to log into 1,000 anonymous FTP sites at once to look for your file. Instead, Archie does its magic by 
+searching from a pre-compiled list of files (a database that weighs in at about 250 megabytes). About once a month, the Archie server trolls the Internet's FTP sites, searching for new file listings. (If you must know, the program that actually does that 
+is called the &quot;Archie Data Gathering Component.&quot; Yikes.) So when you do your search, the hardest work has already been done. All Archie needs to do is poke around its list and show you want it finds.
+
+<BR></P>
+
+<H3><A ID="I7" NAME="I7">
+
+<FONT SIZE=4><B>Archie's Commands</B>
+
+<BR></FONT></A></H3>
+
+<P>No matter which interface you use, Archie uses one basic set of commands. The telnet and e-mail interfaces each have a few extra commands, which we'll look at separately.
+
+<BR></P>
+
+<P>Find is the Archie command that does Archie's real work&#151;searching the database for the name you're looking for. It works simply enough: Just type find pattern and you're in business; Archie will search its database and show you the files that match 
+your query. (There's also a prog command, which works identically to find.)
+
+<BR></P>
+
+<P>Archie's true power to search for files is brought out with careful use of its flexible searching, sorting, and limiting functions.
+
+<BR></P>
+
+<H4><A ID="I8" NAME="I8">
+
+<FONT SIZE=3><B>Searching</B>
+
+<BR></FONT></A></H4>
+
+<P>Archie includes a command for changing how it matches filenames when searching its database. The command, appropriately enough, is called set search.
+
+<BR></P>
+
+<P>Set search sub, the default searching mode, performs a case-insensitive substring search. A match occurs if any part of filename contains the item in your find command, without regard to case. For instance, searching for orange would hit orange-juice 
+and MR.ORANGE.
+
+<BR></P>
+
+<P>The set search subcase command works like set search sub but is case-sensitive. Searching for the pattern TeX will match LaTeX but not latex or Texas.
+
+<BR></P>
+
+<P>Set search sub regex allows your search to take the forms of UNIX-style <I>regular expressions</I>. Regular expressions (similar to <I>wild cards</I> in the DOS world) give you more control over what names Archie will match. In this mode, you can do 
+<I>fuzzy</I> matches or specify that your search word must be at the beginning or the end of the filename. For instance, searching for ^.ail$ will hit on bail and tail, but not dogtail or tailwag. (I'm not going to give complete instructions on how to 
+compose regular expressions here&#151;that could be a chapter of its own.)
+
+<BR></P>
+
+<P>The set search exact mode will only hit on files that exactly match your search word, no questions asked. It's case-sensitive, so searching for Waffle.zip will hit on Waffle.zip but nothing else. Incidentally, the set search exact mode is the fastest 
+search mode.
+
+<BR></P>
+
+<P>There are three more search modes: exact regex, exact sub, and exact subcase. These three search types cause Archie to try an exact match first, then fall back to a regex, sub, or subcase search.
+
+<BR></P>
+
+<H4><A ID="I9" NAME="I9">
+
+<FONT SIZE=3><B>Sorting</B>
+
+<BR></FONT></A></H4>
+
+<P>You can ask Archie to sort its hits before it shows them to you. If you choose a sorting method, Archie can (once it has searched its database) present its information in the manner that is most useful to you. Using the set sortby command, you can pick 
+the method Archie uses to sort its output.
+
+<BR></P>
+
+<P>Set sortby none doesn't sort the hits&#151;Archie will show them to you in whichever order it found them. Oddly, set sortby none is the default, although it is clearly the least useful way for Archie to sort. Not doing a sort is, however, faster than 
+doing one.
+
+<BR></P>
+
+<P>Set sortby filename sorts files alphabetically by name. If you should want them sorted backwards alphabetically (but why?), you can set sortby rfilename.
+
+<BR></P>
+
+<P>Set sortby hostname sorts by the FTP site's host name, in alphabetical order. Again, to sort them backwards, do set sortby rhostname.
+
+<BR></P>
+
+<P>Set sortby size sorts the files by size&#151;largest first. Set sortby rsize (you saw this coming, right?) sorts them from smallest to largest.
+
+<BR></P>
+
+<P>Set sortby time sorts the files by their modification date, with the most recently changed files first. On the other hand, you can see the oldest matching files at the top of the list with set sortby rtime command.
+
+<BR></P>
+
+<H4><A ID="I10" NAME="I10">
+
+<FONT SIZE=3><B>Limiting Your Search</B>
+
+<BR></FONT></A></H4>
+
+<P>Normally, Archie searches all of those sites when you do a search. After being inundated with information overload by a few 100-hit searches, you'll probably find that you want to limit Archie's search scope a bit.
+
+<BR></P>
+
+<P>One way to do this is by limiting the number of hits you'll be shown. The set maxhits command forces Archie to only show you up to a specified number of matches. By default, Archie will show you the first 100 matches&#151;if you want to see more, you 
+can type a higher number, up to set maxhits 1000. On the other hand, you can speed the search by setting maxhits to as low as 1.
+
+<BR></P>
+
+<P>Another command, set maxhitspm, limits the number of files with the exact same name. If you type set maxhitspm 10 followed by find nethack, Archie will only show you the first 10 hits of each filename containing the word nethack. This is a good way to 
+shorten searches and weed out unwanted version numbers. A related command, set maxmatch, limits the number of distinct filenames returned. For example, imagine maxmatch is set to 2 and you search for grape&#151;files in the database are grapefruit, 
+grape-nuts, and grapejuice. Only grapefruit and grape-nuts are displayed.
+
+<BR></P>
+
+<P>The list produces a list of sites whose contents are contained in the Archie database. With no argument, all the sites are listed (watch out, this is a very long list). If you follow the list keyword with a regular expression pattern, Archie lists only 
+sites that match your search. For instance, typing list .fi$ lists all the Finnish sites in the database.
+
+<BR></P>
+
+<P>So, what if you're looking for a program (like nethack) that you're sure is on the Internet hundreds or thousands of times, but you just want to find it on a nearby FTP site; you don't care if it is available on a server half the world away. Enter the 
+set match domain command, probably one of the most useful, but underutilized, Archie tools. It enables you to restrict the scope of your search based upon the domain names of the anonymous FTP sites being searched. For example, you can type set match 
+domain wustl.edu to limit your searches to that single domain. Or, you can set match domain ca to search only sites in California. You can ask Archie to search multiple domain names by putting colons between them, for instance: set match domain 
+ca:apple.com:harvard.edu will search all of California, plus Harvard and any anonymous FTP sites at Apple computer.
+
+<BR></P>
+
+<P>Archie includes the concept of &quot;pseudo-domains&quot; which are used as a shorthand for specifying domain names in certain geographic areas. (ca in the preceding example isn't a true fully qualified domain name, but Archie treats it as one.) Here's 
+a partial list of Archie's pseudo-domains. Type domains for a list of the ones in your Archie server.
+
+<BR></P>
+
+<PRE>africa               Africa
+
+anzac                OZ &amp; New Zealand
+
+asia                 Asia
+
+ca                   California
+
+centralamerica       Central America
+
+easteurope           Eastern Europe
+
+mideast              Middle East
+
+northamerica         North America
+
+scandinavia          Scandinavia
+
+southamerica         South America
+
+usa                  United States
+
+westeurope           Western Europe
+
+world                The World</PRE>
+
+<P>What if you're looking for a popular program that works on many computer systems? If you want, for example, a uudecoder for your DOS machine, but don't want to know where to know about uudecoders for Macintosh, UNIX, Vax, and a dozen other machines, you 
+can try the set match path command. It enables you to limit Archie's hits to files that live in a directory that contain the specified phrase. Why is this useful? Many anonymous FTP site administrators put software packages for DOS PCs in a directory path 
+containing the name pc. Armed with that knowledge, you can set match path pc before you type find uudecode. Archie then shows you /pub/systems/pc/uudecode.c but not /info-mac/util/uudecode.sit.hqx or /pub/unix/uudecode.
+
+<BR></P>
+
+<P>You can tell Archie to allow more than one path matches through the gates by separating the parameters with colons. For instance, set match path pc:dos:windows will show you files in directories containing the words pc, dos, or windows.
+
+<BR></P>
+
+<H4><A ID="I11" NAME="I11">
+
+<FONT SIZE=3><B>What is whatis?</B>
+
+<BR></FONT></A></H4>
+
+<P>Wouldn't it be great if Archie could search for programs by what they do, not just by their filenames? I'd like to be able to say, &quot;Hey, Archie, make me a list of text editors for the Macintosh.&quot; Well, in a limited scope, Archie can do this.
+
+<BR></P>
+
+<P>In addition to offering access to anonymous FTP listings, Archie permits access to the whatis description database. The whatis database, in addition to filenames and directories, contains brief descriptions of files, which can be searched. Although it's 
+a wonderful concept, the database contains descriptions of only about 3,500 software packages and documents, a far cry from the 2,100,000 files available via anonymous FTP.
+
+<BR></P>
+
+<P>Additional whatis databases are scheduled to be added in the coming months. Planned offerings include listings for online library catalogue programs, electronic mailing lists, Frequently Asked Questions lists, and archive sites for the most popular 
+Usenet newsgroups. (Then again, these have been in the &quot;planning stage&quot; for two years or so and seem no closer than they did back then.)
+
+<BR></P>
+
+<P>You can try it for yourself: type whatis followed by a word. Try whatis RFC or whatis UUCP to see how it works. Here's an example&#151;the descriptions certainly make the purpose of the files much clearer.
+
+<BR></P>
+
+<PRE>archie&gt; <B>whatis rfc</B>
+
+RFC 1                     Crocker, S.D.  Host software 1969 April 7; 7 p.
+
+RFC 10                    Crocker, S.D. Documentation conventions. 1969 July
+
+                          29; 3 p. (Obsoletes RFC 3; Obsoleted by RFC 16)
+
+RFC 100                   Karp, P.M. Categorization and guide to NWG/RFCs 1971
+
+                          February 26; 43 p.
+
+RFC 1000                  Reynolds, J.K.; Postel, J.B. Request For Comments
+
+                          reference guide. 1987 August; 149 p. (Obsoletes RFC
+
+                          999)
+
+RFC 1001                  Defense Advanced Research Projects Agency, Internet
+
+                          Activities Board, End-to-End Services Task Force,
+
+                          NetBIOS Working Group. Protocol standard for a
+
+                          NetBIOS service on a TCP/UDP transport: Concepts and
+
+                          methods. 1987 March; 68 p.
+
+RFC 1002                  Defense Advanced Research Projects Agency, Internet
+
+                          Activities Board, End-to-End Services Task Force,
+
+                          NetBIOS Working Group. Protocol standard for a
+
+                          NetBIOS service on a TCP/UDP transport: Detailed
+
+                          specifications. 1987 March; 85 p.
+
+RFC 1003                  Katz, A.R. Issues in defining an equations
+
+                          representation standard. 1987 March; 7 p.
+
+RFC 1004                  Mills, D.L. Distributed-protocol authentication
+
+                          scheme. 1987 April; 8 p.</PRE>
+
+<H3><A ID="I12" NAME="I12">
+
+<FONT SIZE=4><B>Telnet Tidbits</B>
+
+<BR></FONT></A></H3>
+
+<P>As noted earlier, you can telnet to a public Archie client to access the database. Select your nearest Archie client from the list (see the sidebar) and telnet to that site. Login as archie and, if you are asked for a password, type archie again. Once 
+you're connected, you can do a basic search by typing find followed by a program name.
+
+<BR></P>
+
+<HR ALIGN=CENTER>
+
+<NOTE>
+
+<IMG SRC="note.gif"><B>Archie Servers You Can Telnet To: </B>Here's a list of public servers and where they're located. Please use the server closest to you. Give Archie the servers command for a current list of all public Archie servers worldwide.
+
+<BR>
+
+<BR>archie.unl.edu              129.93.1.14     USA (NE)
+
+<BR>archie.internic.net         198.48.45.10    USA (NJ)
+
+<BR>archie.rutgers.edu          128.6.18.15     USA (NJ)
+
+<BR>archie.ans.net              147.225.1.10    USA (NY)
+
+<BR>archie.sura.net             128.167.254.179 USA (MD)
+
+<BR>archie.au                   139.130.4.6     Australia
+
+<BR>archie.univie.ac.at         131.130.1.23    Austria
+
+<BR>archie.cs.mcgill.ca         132.206.51.250  Canada
+
+<BR>archie.uqam.ca              132.208.250.10  Canada
+
+<BR>archie.funet.fi             128.214.6.100   Finland
+
+<BR>archie.th-darmstadt.de      130.83.22.60    Germany
+
+<BR>archie.ac.il                132.65.6.15     Israel
+
+<BR>archie.unipi.it             131.114.21.10   Italy
+
+<BR>archie.wide.ad.jp           133.4.3.6       Japan
+
+<BR>archie.kr                   128.134.1.1     Korea
+
+<BR>archie.sogang.ac.kr         163.239.1.11    Korea
+
+<BR>archie.rediris.es           130.206.1.2     Spain
+
+<BR>archie.luth.se              130.240.18.4    Sweden
+
+<BR>archie.switch.ch            130.59.1.40     Switzerland
+
+<BR>archie.ncu.edu.tw           140.115.19.24   Taiwan
+
+<BR>archie.doc.ic.ac.uk         146.169.11.3    United Kingdom
+
+<BR></NOTE>
+
+<HR ALIGN=CENTER>
+
+<P>By default, Archie prints your search results on your screen as quickly as it can. On searches with many hits, this means it will &quot;spam&quot; your terminal with screen after screen of information. I don't know about you, but I can't read that 
+quickly. Use the set pager command to tell Archie to give you search results one screenful at a time.
+
+<BR></P>
+
+<P>For the pager to work properly, Archie needs to know what kind of terminal you're using. Archie assumes you are using a dumb terminal unless you tell it otherwise. You can use the set term command:
+
+<BR></P>
+
+<PRE>set term <I>terminal-type</I> <I>rows</I> <I>columns</I></PRE>
+
+<P>If you are using a vt100 terminal, you can type set term vt100 and, henceforth, the pager will work properly. The rows and columns fields are optional. If you're working on an oversized screen, you might type set term vt100 50 132 to tell Archie your 
+terminal's dimensions.
+
+<BR></P>
+
+<P>Even though you're using the interactive telnet interface, you may find that you would like a command's output of a command to be e-mailed to you. Using the mail command, you can do just that. If, for instance, you do a particularly useful search that 
+you'd like to save for later, type mail followed by your e-mail address. Lo and behold, the output of your last successful command is sent to you.
+
+<BR></P>
+
+<H3><A ID="I13" NAME="I13">
+
+<FONT SIZE=4><B>Using Archie via Electronic Mail</B>
+
+<BR></FONT></A></H3>
+
+<P>You can also send your query by electronic mail to an Archie database, which will dutifully mail the results back to you. Although this method can be used by just about everyone on the Net, electronic mail searches seem to take a lot longer than 
+interactive ones.
+
+<BR></P>
+
+<P>To use Archie via electronic mail, send a message to archie@archie.cs.mcgill.ca with your search request in the message body. In fact, you should be able to send e-mail to any of the Archie servers listed in the sidebar. For instance, if you're just 
+down the road from Rutgers University, there's no point in querying a server in Canada. Instead, send e-mail to archie@archie.rutgers.edu.
+
+<BR></P>
+
+<P>Thankfully, Archie's e-mail interface uses the same basic set of commands as the telnet interface (except e-mail users don't need to worry about the set pager and set term commands). There only a few notable additions.
+
+<BR></P>
+
+<P>path <I>address</I> tells Archie to where it should send its e-mail reply. Although it should be able to tell by looking at the return address on your e-mail, some funky mailers don't report a valid return address. Hence, you might enter path 
+dopey@dwarves.com to force Archie's reply to go to that address. (By the way, the path command functions identically to the set mailto command.)
+
+<BR></P>
+
+<P>The set max split command tells Archie the maximum size, in bytes, of a file to be mailed to you. Any output larger than this will be split into pieces. You can set max split to any size from 1KB to 2 gigabytes. The default is about 50KB.
+
+<BR></P>
+
+<P>Another way to limit your incoming e-mail's size is to have Archie compress your search results before sending them. Use the command set compress compress followed by set encode uuencode to force Archie to compress (using the UNIX compress routine) and 
+uuencode mail before sending it to you. By default, Archie sends e-mail uncompressed and not encoded.
+
+<BR></P>
+
+<P>The quit command tells Archie to ignore all further lines of your e-mail message. Although this isn't incredibly useful, you can use the quit command to prevent Archie from trying to interpret your 1000-line .sig file as a command.
+
+<BR></P>
+
+<H3><A ID="I14" NAME="I14">
+
+<FONT SIZE=4><B>Using Archie with a Local Client</B>
+
+<BR></FONT></A></H3>
+
+<P>If you typed archie at your command-line prompt and were delighted to see a program rather than command not found, you can use the Archie client that's already installed on your system.
+
+<BR></P>
+
+<P>The most basic use of Archie from the command line is:
+
+<BR></P>
+
+<PRE>archie nethack</PRE>
+
+<P>which will list about a billion occurrences of nethack. Archie's power comes when you use the command-line options. Type man archie for the full list of Archie commands available on your system. The command-line options let you search and sort in the 
+same ways as using the telnet and electronic mail interfaces, although the command structure is different. To complicate matters, there are several different command-line archie clients. Here are the most important options on the Archie program I use:
+
+<BR></P>
+
+<PRE>-case             Case sensitive search
+
+-nocase           Case insensitive search
+
+-exact            Exact match
+
+-reg              Regular expression match
+
+-match #          Maximum number of hits
+
+-sort date        Sort by date
+
+-sort host        Sort by host
+
+-reverse          Reverse sorting order</PRE>
+
+<P>Typing archie -exact nethack is the same as doing set sortby exact followed by find nethack with the telnet or e-mail interfaces.
+
+<BR></P>
+
+<P>Also, if you're not doing a sort along with your search, make use of the -along option, which causes Archie to print hits as soon as they are available rather than waiting until it finishes searching.
+
+<BR></P>
+
+<H3><A ID="I15" NAME="I15">
+
+<FONT SIZE=4><B>Setting Up Your Own Archie Server and Getting Your FTP Site Listed</B>
+
+<BR></FONT></A></H3>
+
+<P>The early Archie software was free for service providers to obtain and use. Today, Archie is commercial software: every site that offers the Archie service pays annual license and support fees. Service providers may then make their Archie server private 
+or open to the public. For pricing information, send e-mail to info@bunyip.com.
+
+<BR></P>
+
+<P>If you run an anonymous FTP site and would like it to be included in the Archie database, send e-mail to archie-admin@bunyip.com.
+
+<BR></P>
+
+<H3><A ID="I16" NAME="I16">
+
+<FONT SIZE=4><B>Why Archie Isn't Perfect</B>
+
+<BR></FONT></A></H3>
+
+<P>Like most things in life, Archie is not perfect. Although it does an admirable job of creating an enormous database of Archie information and searching that database, the program really doesn't have much to go on. For each file holed away in an FTP 
+site, Archie knows the filename, modification date, directory path, and FTP site name.
+
+<BR></P>
+
+<P>What doesn't Archie know? It doesn't know about software version numbers. If you want Archie to only tell you where to find the latest, greatest, feature-laden version of MacPuke (or whatever), you're out of luck. Archie will happily list for you 
+<I>all</I> occurrences of that fine program, though, if you don't mind sifting through them yourself. Alas, Archie doesn't know how to ignore old versions of software.
+
+<BR></P>
+
+<P>Sometimes, sifting through the filenames yourself to find the most recent version isn't so bad: some anonymous FTP sites give file names like macpuke2-6.sit.hqx, from which you can safely infer that they've got version 2.6.
+
+<BR></P>
+
+<P>Another way to tell how old a file is is by looking at the date. Here's the good news: Archie's database contains the modification time for each listed file. Here's the bad news: that date isn't when the file was actually created or compiled; it's when 
+it was placed in that particular anonymous FTP directory. You can use the dates to tell how long a particular file has been rotting on someone's hard disk (making it pretty easy to avoid obsolete software). But just because it was placed there recently 
+doesn't mean the file is new: the software could be as old as the hills, but recently placed in or moved to that directory.
+
+<BR></P>
+
+<P>To make matters worse, Archie doesn't have a function for excluding files older than a certain age. Wouldn't it be nice if you could look for nethack and limit Archie's search to files with creation dates less than 120 days ago? Well, you can't, 
+although you can ask Archie to show the most recently modified files first.
+
+<BR></P>
+
+<P>Finally, although Archie offers a variety of powerful searching methods, it is still pretty unforgiving. If you search for a program called peace-and-love but the file is stored in all the archives as just p&amp;l, you won't find it.
+
+<BR></P>
+
+<H3><A ID="I17" NAME="I17">
+
+<FONT SIZE=4><B>What's Next?</B>
+
+<BR></FONT></A></H3>
+
+<P>So, is there life after Archie? Peter Deutsch thinks that this is just the beginning. &quot;People are starving for information,&quot; he said. &quot;Once we have more valuable information&#151;not just better formatted filenames in Archie, I mean 
+quality reference works and so on&#151;you're going to find people will be willing to pay something for tools that help them tame Cyberspace. This in turn will bring in more information, which will feed the cycle. . .and we're off to the races. It's 
+breathtaking to watch it happen right before our eyes. It's like the PC revolution all over again, only this time I find myself helping to make it happen. This is without a doubt the most fun I've ever had.&quot;
+
+<BR></P>
+
+<P>Bunyip's current project, currently being tested, consists of an information publishing and distribution service based on Archie. The initial pilot will concentrate on offering a basic set of system information offerings, including the existing Archie, 
+an index of Gopherspace, a Yellow Pages service (for finding services throughout the Internet), an index of mailing lists, and &quot;a whole bunch more,&quot; Deutsch said. The software, which insiders tell me is called Artemis, should be released by the 
+end of 1994.
+
+<BR></P>
+
+<H4><A ID="I18" NAME="I18">
+
+<FONT SIZE=3><B>For More Information</B>
+
+<BR></FONT></A></H4>
+
+<P>If you have any questions about Archie, you can send e-mail to the developers at info@bunyip.com. Send comments, suggestions, and bug reports to archie-l@cs.mcgill.ca.
+
+<BR></P>
+
+<P>There's also a mailing list for discussion of the Archie software. To subscribe, send a request to archie-people-request@bunyip.com.</P>
+
+<P><A HREF="tigp4.htm"><IMG SRC="bluprev.gif" WIDTH = 32 HEIGHT = 32 BORDER = 0 ALT="Previous Page"></A>
+
+<A HREF="httoc.htm"><IMG SRC="blutoc.gif" WIDTH = 32 HEIGHT = 32 BORDER = 0 ALT="TOC"></A>
+
+<A HREF="htindex.htm"><IMG SRC="bluindex.gif" WIDTH = 32 HEIGHT = 32 BORDER = 0 ALT="Index"></A>
+
+<A HREF="tig16.htm"><IMG SRC="blunext.gif" WIDTH = 32 HEIGHT = 32 BORDER = 0 ALT="Next Page"></A>
+
+<A HREF="httoc.htm"><IMG SRC="bluprev.gif" WIDTH = 32 HEIGHT = 32 BORDER = 0 ALT="Home"></A>
+
+</P></BODY></HTML>
+

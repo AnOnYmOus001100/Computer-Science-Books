@@ -1,0 +1,1032 @@
+<HTML>
+
+<HEAD>
+
+<TITLE>Tricks of the Internet Gurus tigxb.htm</TITLE>
+
+<LINK REL="ToC" HREF="httoc.htm">
+
+<LINK REL="Index" HREF="htindex.htm">
+
+<LINK REL="Next" HREF="tigxc.htm">
+
+<LINK REL="Previous" HREF="tigxa.htm"></HEAD>
+
+<BODY TEXT="#000000" LINK="#0000FF" VLINK="#800080" bgcolor=white>
+
+<P><A HREF="tigxa.htm"><IMG SRC="bluprev.gif" WIDTH = 32 HEIGHT = 32 BORDER = 0 ALT="Previous Page"></A>
+
+<A HREF="httoc.htm"><IMG SRC="blutoc.gif" WIDTH = 32 HEIGHT = 32 BORDER = 0 ALT="TOC"></A>
+
+<A HREF="htindex.htm"><IMG SRC="bluindex.gif" WIDTH = 32 HEIGHT = 32 BORDER = 0 ALT="Index"></A>
+
+<A HREF="tigxc.htm"><IMG SRC="blunext.gif" WIDTH = 32 HEIGHT = 32 BORDER = 0 ALT="Next Page"></A>
+
+<A HREF="httoc.htm"><IMG SRC="bluprev.gif" WIDTH = 32 HEIGHT = 32 BORDER = 0 ALT="Home"></A>
+
+</P><UL>
+
+<LI>
+
+<A HREF="#I1">Appendix B</A></LI>
+
+<UL>
+
+<LI>
+
+<A HREF="#I3">Signature Files</A></LI>
+
+<UL>
+
+<UL>
+
+<UL>
+
+<LI>
+
+<A HREF="#I4">--by Max Metral
+
+<LI>
+
+<A HREF="#I5">What Are Signature Files?</A></LI>
+
+<LI>
+
+<A HREF="#I6">How to Write Your Own Signature File</A></LI>
+
+<UL>
+
+<LI>
+
+<A HREF="#I7">The Basics</A></LI>
+
+<LI>
+
+<A HREF="#I8">Enhancements: Humor</A></LI>
+
+<LI>
+
+<A HREF="#I9">Introduction to Graphics</A></LI>
+
+<LI>
+
+<A HREF="#I10">Full-Blown ASCII-Art</A></LI>
+
+<LI>
+
+<A HREF="#I11">The alt.ascii-art and rec.ascii.art Newsgroups</A></LI>
+
+<LI>
+
+<A HREF="#I12">World Wide Web Pages</A></LI>
+
+<LI>
+
+<A HREF="#I13">Gifscii</A></LI>
+
+<LI>
+
+<A HREF="#I14">cmellow@world.std.com</A></LI>
+
+<LI>
+
+<A HREF="#I15">Ed Hammond (spock@media.mit.edu)</A></LI>
+
+<LI>
+
+<A HREF="#I16">Nasser Hasian (nhasian@eis.calstate.edu)</A></LI>
+
+<LI>
+
+<A HREF="#I17">Josh (hades@u.washington.edu)</A></LI>
+
+<LI>
+
+<A HREF="#I18">Christopher King</A></LI>
+
+<LI>
+
+<A HREF="#I19">Richard Lachman</A></LI>
+
+<LI>
+
+<A HREF="#I20">Thomas Langberg</A></LI>
+
+<LI>
+
+<A HREF="#I21">Shawn Lee</A></LI>
+
+<LI>
+
+<A HREF="#I22">Tai Nguyen (thn1@cornell.edu)</A></LI>
+
+<LI>
+
+<A HREF="#I23">vampyr@bu.edu: Design for &quot;Jafar&quot;</A></LI>
+
+<LI>
+
+<A HREF="#I24">vandal@netcom.com</A></LI>
+
+<LI>
+
+<A HREF="#I25">Wayne</A></LI>
+
+<LI>
+
+<A HREF="#I26">vampyr@bu.edu for hry@cs.pdx.edu</A></LI>
+
+<LI>
+
+<A HREF="#I27">boba@wwa.com, a.k.a. Scarecrow</A></LI></UL></UL></UL></UL></ul></ul>
+
+
+
+<H1><A ID="I1" NAME="I1">
+
+<BR>
+
+<FONT SIZE=5><A ID="I2" NAME="I2"></A><B>Appendix B</B>
+
+<BR></FONT></A></H1>
+
+<H2><A ID="I3" NAME="I3">
+
+<FONT SIZE=5><B>Signature Files</B>
+
+<BR></FONT></A></H2>
+
+<H5><A ID="I4" NAME="I4">
+
+<FONT SIZE=3><B>
+
+
+
+<a href="max.gif">--by Max Metral</a></B>
+
+<BR></FONT></A></H5>
+
+<H3><A ID="I5" NAME="I5">
+
+<FONT SIZE=4><B>What Are Signature Files?</B>
+
+<BR></FONT></A></H3>
+
+<P><I>Signature files</I> are pieces of text appended to a user's communication, usually e-mail or news postings. Originally, they were intended as a simplification to relieve users of typing the same thing over and over again. Of late, they have become 
+artistic expressions, advertisements, and electronic business cards. Not everyone likes signature files, though. Take Steve Strassmann, coauthor of <I>The Unix-Haters Handbook</I> (IDG Books: Indianapolis, 1994), who writes the following:
+
+<BR></P>
+
+<P>&quot;.sigs were invented because of sendmail and other cretinous unix mail 'tools' that violate all sorts of Internet standards. People had to put their real addresses at the bottom of messages, because the headers were so likely to be worthless. If 
+those systems actually worked as they should (and once did), nobody would ever have needed .sigs.
+
+<BR></P>
+
+<P>A UNIX signature isn't a return address; it's the ASCII equivalent of a black velvet clown painting. It's a rectangle of carets surrounding a quote from a literary giant of weeniedom like Heinlein or Dr. Who.
+
+<BR></P>
+
+<P>.sigs are the perfect source of thoughts for people on junk information diets; myopic bottom-feeders who eat whatever information McNuggets are squirted into their face by passersby. Ultimately, .sigs are for people with snack food where their brains 
+should be.&quot;
+
+<BR></P>
+
+<P>If that hasn't discouraged you from designing your own signature, read on.
+
+<BR></P>
+
+<H3><A ID="I6" NAME="I6">
+
+<FONT SIZE=4><B>How to Write Your Own Signature File</B>
+
+<BR></FONT></A></H3>
+
+<P>To start, please insert tongue in cheek. Also, consider the following issues when designing:
+
+<BR></P>
+
+<UL>
+
+<LI><I>Number of lines.</I> Some mailers require your .sig to be less that a certain number of lines. Check the documentation for your mailer.
+
+<BR>
+
+<BR></LI>
+
+<LI><I>Angry Sysadmins.</I> Remember that the longer your sig, the bigger your message. Sysadmins tend to get upset when their disks overflow. These days, however, one full screen .gif in a message would take the same space as about 100 signatures.
+
+<BR>
+
+<BR></LI>
+
+<LI><I>Angry users.</I> While the Sysadmins have gigabyte drives to play with, the people you're sending mail to may not. The space problem has merit for individual users.
+
+<BR>
+
+<BR></LI></UL>
+
+<H4><A ID="I7" NAME="I7">
+
+<FONT SIZE=3><B>The Basics</B>
+
+<BR></FONT></A></H4>
+
+<P>The functional point of a signature file is to give the reader contact information. Think of what you would put on a business card, and those things should go in the signature. For example:
+
+<BR></P>
+
+<PRE>--==&lt;Max&gt;==--
+
+General Magic, Inc.                     Phone: 415.XXX.XXXX
+
+2465 Latham St.                         Fax:   415.XXX.XXXX
+
+Mountain View, CA 94040                 Email: memetral@mit.edu</PRE>
+
+<P>Note the double-column structure, a very popular format. These days, a lot of people are adding their World Wide Web home pages to their signatures as a &quot;Badge of Honor.&quot; For example, Tyler Jones:
+
+<BR></P>
+
+<PRE>/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\
+
+Tyler Jones, tjones@willamette.edu                     KILL        /--------\
+
+&lt;a href=&quot;http://www.willamette.edu/~tjones/&quot;&gt;TVJ&lt;/a&gt;    YOUR      &lt; Amethyst &gt;
+
+If you want to impress me, accomplish something.          CAR      \--------/</PRE>
+
+<H4><A ID="I8" NAME="I8">
+
+<FONT SIZE=3><B>Enhancements: Humor</B>
+
+<BR></FONT></A></H4>
+
+<P>After you've mastered the informational aspects of the signature, you're ready to move on to the next level: diversionary information. Many people use humorous quotes to add some life to their messages. There are advantages and disadvantages to this 
+approach. While your joke may make someone laugh, will it work for 100 mail messages? Select a joke or quote that expresses a part of you. For example, cynthia@ncd.com, a clear Simpson's fan, has chosen:
+
+<BR></P>
+
+<PRE>~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Cynthia Virtue                                    cynthia@ncd.com
+
+Network Computing Devices                         Tel: xxx-xxx-xxxx
+
+Mountain View, California, USA                    Fax: xxx-xxx-xxxx
+
+I am Homer of Borg.  Prepare to be --- Oooh! Donuts!
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~</PRE>
+
+<P>Note the use of the ~ character to frame the signature. We'll see more of that later.
+
+<BR></P>
+
+<H4><A ID="I9" NAME="I9">
+
+<FONT SIZE=3><B>Introduction to Graphics</B>
+
+<BR></FONT></A></H4>
+
+<P>Humor, information, blah, blah, blah. . .. You want your signatures to look like all those cool ones in the techie magazines. The only way to do that is to whip out the old character-based graphics. Start simple, like will@panix.com:
+
+<BR></P>
+
+<PRE>___
+
+  / /  /  /  /   /  _  __/
+
+ (_/__/  /  (__ (__  ___/</PRE>
+
+<P>Then add your knowledge from the previous lesson:
+
+<BR></P>
+
+<PRE>   ||\  /||   |||   ||\\\\  \\\\\\\  || ||\   ||  ** Cyber Space Cowboy **
+
+  || \/ ||  || ||  ||  ||     ||    || || \  ||  ** President, Alt.Flame **
+
+ ||    ||  |||||  |||||      ||    || ||  \ ||  ** The MoFo Integrator **
+
+||    ||  || ||  ||   \     ||    || ||   \||       Just the s**t....</PRE>
+
+<P>or:
+
+<BR></P>
+
+<PRE> ~*-,._.,-*~'`^`'~*-,._.,-*~'`^`'~*-,._.,-*~'`^`'~*-,._.,-*~'`^`'~*-,._.,-*~
+
+     WinJunkie aka Brad Spry    winjunki@vnet.net    webmaster@vnet.net
+
+ ~*-,._.,-*~'`^`'~*-,._.,-*~'`^`'~*-,._.,-*~'`^`'~*-,._.,-*~'`^`'~*-,._.,-*~</PRE>
+
+<P>Dave Carhart (stilwatr@tiac.net) has incorporated information, humor, and simple but effective graphics. Way to go, Dave!
+
+<BR></P>
+
+<PRE>                                \|/
+
+                               (@ @)
+
+---------------------------oOO--(_)--OOo-----------------------------------
+
+                           ```       '''
+
+  &quot;Always code as if the guy who ends up maintaining, or testing your
+
+     code will be a violent psychopath who knows where you live.&quot;
+
+---------------------------------------------------------------------------
+
+Dave Carhart                         Voice: 508-XXX-XXXX
+
+Stillwater Consultants Inc.          Internet: stilwatr@tiac.net
+
+---------------------------------------------------------------------------</PRE>
+
+<H4><A ID="I10" NAME="I10">
+
+<FONT SIZE=3><B>Full-Blown ASCII-Art</B>
+
+<BR></FONT></A></H4>
+
+<P>Now that you've mastered the basics, time to let loose. Think of images, designs, slogans, and other formats that appeal to you. To help in your design, you can turn to the following sources.
+
+<BR></P>
+
+<H4><A ID="I11" NAME="I11">
+
+<FONT SIZE=3><B>The </B><B><I>alt.ascii-art</I></B><B> and </B><B><I>rec.ascii.art</I></B><B> Newsgroups</B>
+
+<BR></FONT></A></H4>
+
+<P>Loads of interesting information about ASCII-art. You will be amazed at what can be done with ASCII. Heck, we can just skip this multimedia business. You can even produce those highly annoying 3-D stereograms with ASCII!!!
+
+<BR></P>
+
+<H4><A ID="I12" NAME="I12">
+
+<FONT SIZE=3><B>World Wide Web Pages</B>
+
+<BR></FONT></A></H4>
+
+<P><A HREF="http://gagme.wwa.com/~boba">http://gagme.wwa.com/~boba</A> contains numerous resources and informational documents from the ASCII-art guru, Scarecrow. You will feel very strange viewing all ASCII pages in a medium (the Web) that is famous for 
+multimedia.
+
+<BR></P>
+
+<H4><A ID="I13" NAME="I13">
+
+<FONT SIZE=3><B>Gifscii</B>
+
+<BR></FONT></A></H4>
+
+<P>Gifscii is a program that can convert GIF images to ASCII. While Steve Strassman would be sick if he knew you were putting screensful of characters at the end of your messages, Gifscii may come in handy for smaller images. You can find Gifscii at 
+ftp.wwa.com in pub/Scarecrow/Gifscii. The file you retreive will depend on the desired platform:
+
+<BR></P>
+
+<TABLE BORDER>
+
+<TR>
+
+<TD>
+
+<P>MSDOS</P>
+
+<TD>
+
+<P>Gifscii.exe</P>
+
+<TR>
+
+<TD>
+
+<P>UNIX (Sun)</P>
+
+<TD>
+
+<P>Gifscii.ux</P>
+
+<TR>
+
+<TD>
+
+<P>Macintosh</P>
+
+<TD>
+
+<P>MacGifscii.hqx</P>
+
+<TR>
+
+<TD>
+
+<P>Amiga</P>
+
+<TD>
+
+<P>Gifscii.lha</P>
+
+<TR>
+
+<TD>
+
+<P>Unix/Alpha</P>
+
+<TD>
+
+<P>ALPHAGifscii.exe</P>
+
+<TR>
+
+<TD>
+
+<P>VAX</P>
+
+<TD>
+
+<P>VAXGifscii.exe</P>
+
+<TR>
+
+<TD>
+
+<P>c-source</P>
+
+<TD>
+
+<P>Gifsciiv2.2src</P></TABLE>
+
+<P>With no further ado, we get to some of the best sigs on the Internet:
+
+<BR></P>
+
+<H4><A ID="I14" NAME="I14">
+
+<FONT SIZE=3><B><I>cmellow@world.std.com</I></B>
+
+<BR></FONT></A></H4>
+
+<PRE>                  .-'~~~-.
+
+  vibrate       .'o  oOOOo`.   ......sQuiShy Designs......
+
+  your         :~~~-.oOo   o`.
+
+  skull         `. \ ~-.  oOOo.6  1  7  4  9  9  1  9  2  5
+
+                  `.; / ~.  OO:         info-flo
+
+                  .'  ;-- `.o.'
+
+ this'll stop    ,'  ; ~~--'~ ftp: ftp.std.com /pub/cmellow
+
+ them shakes.    ;  ;         ftp: amt.mit.edu /pub/jshiple
+
+            ___\\;_\\//_______WWW: http://bazaar.com/dj/Cmellow/cmellow.html
+
+            fingerforPGPpubkey</PRE>
+
+<H4><A ID="I15" NAME="I15">
+
+<FONT SIZE=3><B>Ed Hammond (</B><B><I>spock@media.mit.edu</I></B><B>)</B>
+
+<BR></FONT></A></H4>
+
+<PRE>                                      _
+
+                                    _|_|_
+
+                                  ^/ . ..\^
+
+                              ___[=========]___
+
+                   ___-==++&quot;&quot;&quot; .  /. . .  \ .  &quot;&quot;&quot;++==-___
+
+             __-+&quot;&quot; __\   .. . .  | ..  . |  . .  .   /__ &quot;&quot;+-__
+
+            /\__+-&quot;&quot;   `-----=====\_ &lt;O&gt; _/=====-----'   &quot;&quot;-+__/\
+
+          _/_/                      &quot;&quot;=&quot;&quot;                      \_\_
+
+         /_/                                                     \_\
+
+        //                                                         \\
+
+       /&quot;)                                                         (&quot;\
+
+       \o\                  Live Long and Prosper,                 /o/
+
+        \_)                                                       (_/
+
+                                    Spock</PRE>
+
+<H4><A ID="I16" NAME="I16">
+
+<FONT SIZE=3><B>Nasser Hasian (</B><B><I>nhasian@eis.calstate.edu</I></B><B>)</B>
+
+<BR></FONT></A></H4>
+
+<PRE>             ___
+
+            /  /\        Nasser Hasian   1:205/40.4
+
+           /  / /_       Nhasian@eis.Calstate.edu
+
+          /__/ /\/\_________________________________________
+
+         _\_ \  / /  ______   __   __   /  __   /  _   _   /\
+
+        /__/\ \  /  /\____/  /\/  /\/  /  /\/  /  //  //  / /
+
+       _\__\ \_\/___   /\/  / /  / /  /     __/  //__//  / /
+
+      /__/\/  \_\__/  / /  / /  /_/  /  /\  \/  / \__/  / /
+
+     _\  \  /\/______/ /__/ /_______/__/ \\  \_/ /  /__/ /
+
+    /  /\ \ \/\______\/\__\/\_______\__\/ \\_/\\/   \__\/
+
+   /  / /__\/                              \_\/
+
+  /__/  \               _   _   _           _
+
+  \__\/\ \         | o  _| | | |_   / |_|_ | |   |_|_
+
+     \__\/         | o |_  |_|  _| /    |  |_| o   |</PRE>
+
+<H4><A ID="I17" NAME="I17">
+
+<FONT SIZE=3><B>Josh (</B><B><I>hades@u.washington.edu</I></B><B>)</B>
+
+<BR></FONT></A></H4>
+
+<PRE>_______________________________________________________________________________
+
+ ______ `:::::::::::::::::::::::::::::::::::::::'__/\__&lt;hades@u.washington.edu&gt;
+
+(  ____) __`:'__`:'____ `::::::::::::::::::::'`'.\    /.:'`::::::::::::::::::::
+
+ \____ \/  \_/  \ / __ \ :::::::::::::::::'__/\__/    \__/\__`:::::::::::::::::
+
+ / ____/  _   _  Y /_/ | :::::::::::::::::`\                / '::::::::::::::::
+
+(________/ \_/ \ | |__/ ,:::::::::::::::::'/_              _\ `::::::::::::::::
+
+ ______________| | |___ `::::::::'`:::::::`. \            / .':::::::'`::::::::
+
+(______________| | |___) :::::'__/\__`::::'__/            \__`::::'__/\__`:::::
+
+ Empath on IRC \___/   .::::::.\    / .::. \                / .::. \    / .::::
+
+___________________________/\__/    \__/\__/     Fnord!     \__/\__/    \__/\__</PRE>
+
+<H4><A ID="I18" NAME="I18">
+
+<FONT SIZE=3><B>Christopher King</B>
+
+<BR></FONT></A></H4>
+
+<PRE>                                                              Chris
+
+ __^__                                                        __^__
+
+( ___ )------------------------------------------------------( ___ )
+
+ | / |   Christopher King             NCSU Computing Center   | \ |
+
+ | / |   208 Hillsborough Building            (919)XXX-XXXX   | \ |
+
+ | / |   WWW URL&gt;http://www2.ncsu.edu/unity/users/c/chking/   | \ |
+
+ |___|   &quot;Calm down. It's only ones and zeros.&quot; -- Sam Kass   |___|
+
+(_____)--------------E-mail:chris_king@ncsu.edu--------------(_____)</PRE>
+
+<H4><A ID="I19" NAME="I19">
+
+<FONT SIZE=3><B>Richard Lachman</B>
+
+<BR></FONT></A></H4>
+
+<PRE>                       __
+
+                      /  \           Sit, Ubu, Sit.
+
+                     / ..|\             Good Dog.
+
+                    (_\  |_)
+
+                    /  \@'              *WOOF*
+
+                   /     \
+
+              _   /  `   |
+
+              \\/  \  | _\
+
+               \   /_ || \\_
+
+                \____)|_) \_)
+
+                                 _ __
+
+                                ' )  )      /              /
+
+                            --   /--' o _. /_  __.  __  __/
+
+                                /  \_&lt;_(__/ /_(_/|_/ (_(_/_
+
+                                richlach@athena.mit.edu
+
+                                richlach@media.mit.edu</PRE>
+
+<H4><A ID="I20" NAME="I20">
+
+<FONT SIZE=3><B>Thomas Langberg</B>
+
+<BR></FONT></A></H4>
+
+<PRE>----------------------------------------------------------------------
+
+--        --  Thomas Langberg   --  Email: tll@swl.msd.ray.com      --
+
+--  ///\  --  Raytheon Company  --  Phone: 508-XXX-XXXX (direct)    --
+
+--  c-oo  --  50 Applehill Dr.  --  Disclaimer: My opinions are my  --
+
+--  \  ^  --  Tewksbury, MA     --  own, any similarity to another  --
+
+--   \_U  --         01876-0901 --  is purely coincidental          --
+
+----------------------------------------------------------------------
+
+--        Q: Why did the chicken cross the Moebius strip?           --
+
+--        A: To get to the other ... er, um ...                     --
+
+----------------------------------------------------------------------</PRE>
+
+<H4><A ID="I21" NAME="I21">
+
+<FONT SIZE=3><B>Shawn Lee</B>
+
+<BR></FONT></A></H4>
+
+<PRE>          __  _-==-=_,-.
+
+         /--`' \_@-@.--&lt;
+
+         `--'\ \   &lt;___/.
+
+              \ \\   &quot; /
+
+               &gt;=\\_/`&lt;
+
+   ____       /= |  \_|/
+
+ _'    `\   _/=== \___/
+
+= -_ __/=====================================================================
+
+|    Shawn P. Lee  (612)XXX-XXXX         |       Winnie The Pooh,           |
+
+|  ChriShawn@tigger.stcloud.msus.edu     |              and                 |
+
+|  St. Cloud State University, MSUS      |         TIGGER too!!             |
+
+=============================================================================</PRE>
+
+<H4><A ID="I22" NAME="I22">
+
+<FONT SIZE=3><B>Tai Nguyen (</B><B><I>thn1@cornell.edu</I></B><B>)</B>
+
+<BR></FONT></A></H4>
+
+<PRE>        ___
+
+(:)====/__/\=(:)(:)===========================(:)=====================(:)
+
+|\|   _\_ \ \|\||=|  Tai Nguyen               |\| official sponsor of |=|
+
+|=|  /__/\_\ \=||\|  resident wise-ass        |=|   SoNiC ToNiC(tm)   |\|
+
+|\| /  /\  __/\|(:)===========================(:)=====================(:)
+
+|=|/  / /\ \ |=||=|  &quot;Nature has been made possible by a grant from   |=|
+
+|\/__/  \_\/ |\||\|   the Corporation for Public Broadcasting.&quot;       |\|
+
+|=\__\/\ \   |=||=|                                - PBS              |=|
+
+(:)==\__\/===(:)(:)===================================================(:)</PRE>
+
+<H4><A ID="I23" NAME="I23">
+
+<FONT SIZE=3><B><I>vampyr@bu.edu</I></B><B>: Design for &quot;Jafar&quot;</B>
+
+<BR></FONT></A></H4>
+
+<PRE>       .od8888bo.               88  .d888888  888888888  .d888888  888888ba
+
+    .d%::::88::888b.            88 d8'    88  88        d8'    88  88    `8b
+
+  .d888::::::::8:888%.          88 88aaaaa88a 88aaaa    88aaaaa88a 88aaaa8P'
+
+  88888:::::::88888::%.         88 88     88  88        88     88  88   `8b.
+
+ d888888:::88;888888::b  88,  ,d88 88     88  88        88     88  88     88
+
+ 888888888:888888888888 ..`Y888P'..88.....88..88........88.....88..88.....88....
+
+ Y8888888::::::888888%P ........................................................
+
+ `8888888:::::::8888:%'.::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+  `88888888:::888888%'.iiiiiiiiiiiiiiiiiiiiiiiii http://192.107.38.20:1999/ iiii
+
+ !. `8888888::88888' .!!!!!!! &quot;to be a rock and not to roll&quot; - Led Zeppelin !!!!
+
+ |||.. `&quot;Y88%8P&quot;' ..||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||</PRE>
+
+<H4><A ID="I24" NAME="I24">
+
+<FONT SIZE=3><B><I>vandal@netcom.com</I></B>
+
+<BR></FONT></A></H4>
+
+<PRE>                        Y o u r s    I n    C h a o s
+
+               __  __                       __            ___
+
+              /\ \/\ \                     /\ \          /\_ \
+
+              \ \ \ \ \     __      ___    \_\ \     __  \//\ \
+
+               \ \ \ \ \  /'__`\  /' _ `\  /'_` \  /'__`\  \ \ \
+
+                \ \ \_/ \/\ \L\.\_/\ \/\ \/\ \L\ \/\ \L\.\_ \_\ \_
+
+                 \ `\___/\ \__/.\_\ \_\ \_\ \___,_\ \__/.\_\/\____\
+
+                  `\/__/  \/__/\/_/\/_/\/_/\/__,_ /\/__/\/_/\/____/
+
+                     vandal@netcom.com                    [DnA/LaW]
+
+          Kingdom Of The Blind BBS 714-842-7170      Finger Me For PGP Key</PRE>
+
+<H4><A ID="I25" NAME="I25">
+
+<FONT SIZE=3><B>Wayne</B>
+
+<BR></FONT></A></H4>
+
+<PRE>wayne's world
+
+          \\\\\\\\\\\\           /XXXXXXXXXXX\            ////////////
+
+           \\\\\\\\\\\\         ///XXXXXXXXX\\\          ////////////
+
+            \\\\\\\\\\\\       /////XXXXXXX\\\\\        ////////////
+
+ *****************************************************************************
+
+       /////     \\\\\  ncam@helix.watstar.uwaterloo.ca  \\\\\     /////
+
+  /////     \\\\\     /////     \\\\\     /////     \\\\\     /////     \\\\\
+
+ W        A        Y        N        E | W        O        R         L       D
+
+  \\\\\     /////     \\\\\     /////     \\\\\     /////     \\\\\     /////
+
+       \\\\\     ///// rEmiNisCEnCeiSakINdoFabStruSeNesS /////     \\\\\
+
+ *****************************************************************************
+
+ sig credit:        \\\\XXXXXXX/////         \\\\XXXXXXX/////
+
+    &lt;kerofaye&gt;       \\XXXXXXXXX///           \\XXXXXXXXX///
+
+    1994 (C)          XXXXXXXXXXX/             XXXXXXXXXXX/</PRE>
+
+<H4><A ID="I26" NAME="I26">
+
+<FONT SIZE=3><B><I>vampyr@bu.edu</I></B><B> for </B><B><I>hry@cs.pdx.edu</I></B>
+
+<BR></FONT></A></H4>
+
+<PRE> 88          88                                       _
+
+ 88          &quot;&quot;                                      oo\
+
+ 88                                                 (__)\       __
+
+ 88,dPPYbo,  88 8b,dPPYbo,  ,od888bo,  8b       d8  ,o\  \bo, .'  `.
+
+ 88P'    &quot;8a 88 88P'   &quot;Y8 d8P'   `Y8b `8b     d8' d8P'\  `Y8b      \
+
+ 88       88 88 88         88       88  `8b   d8'  88   \  '88       \
+
+ 88       88 88 88         Y8b.   .d8P   `8b,d8'   Y8b.  \.d8&quot;   (  ) \
+
+ 88       88 88 88          `Y88888P'      Y88'     `Y88888P' )__| :.  \
+
+                                           d8'              | |  | | \  '.
+
+                                          d8'              c__; c__;  '-..'&gt;.__</PRE>
+
+<H4><A ID="I27" NAME="I27">
+
+<FONT SIZE=3><B><I>boba@wwa.com</I></B><B>, a.k.a. Scarecrow</B>
+
+<BR></FONT></A></H4>
+
+<P>While wandering the Net for signatures, I came across the address boba@wwa.com a ridiculous number of times. Setting out on a quest to find this 7-bit god, I asked him how he got into ASCII-art:
+
+<BR></P>
+
+<P>&quot;People ask me, 'How did I end up moderating rec.arts.ascii, maintaining the ASCII ART FAQ, tending the Scarecrow's FTP site, keeping the Scarecrow's ASCII Art Archives, running the Scarecrow's ASCII Art WWW Link?'
+
+<BR></P>
+
+<P>The answer is, it just sort of happened. Since I liked it and collected it, and there was no big collections of it, I just formatted my edited collection, added comments, put a logo on it and offered it to the Net. I wasn't prepared for the response. I 
+got bombarded with requests. After that, I made a FAQ, again because there wasn't one. Then came the rec.arts.ascii, the FTP site, and the WWW site.&quot;
+
+<BR></P>
+
+<P>His work is truly incredible, and here is a small sampling.
+
+<BR></P>
+
+<PRE>  -:-:--  :--=-  =-==-=  =#=###=  ######  ##=#= =##-=#-   ==-=--  -=-  -:-  -:-
+
+ ::-:--: :--=-= -=-====# =#=##=#= ###### ##=##= #=#==-#= -=-==--- =-:  --:  :-:
+
+ :-:     :--    =-=  =-= -==  =## ###    ##=    =#=  =-= ==-  =-- -=-  -:-  -::
+
+ :-::--  -:-    -=-==-== =#==##=  #####  ##=    #===#=-  -=-  -=- =-=  -:-  ::-
+
+  ::-:-- -:-    --==--== ==###=   #####  ##=    =#=#=-   ==-  --= -=-  --:  :-:
+
+     :-- :--    -==  =-= #=# =##  ###    #=#    #=# =-=  =--  -=- =-:  -:-  -::
+
+ ::-::-- -:--=- =-=  -== =#=  ##= ###### ##=#=# =#=  #=- ==--=--- -=--:--:-:-::
+
+ :::-:-   -:-== -=-  =-= =##  =## ######  ##=#= ##=  =#=  -==--=   =-=--:--:::
+
+ .eeeeee..eeeee..eeeeee..eeeeeee..eeeeee..eeeee.eeeeeee...eeeeee..eee..eee..eee
+
+ @@@@@@@:@@@@@@:@@@@@@@@:@@@@@@@@:@@@@@@:@@@@@@:@@@@@@@@:@@@@@@@@:@@@::@@@::@@@
+
+ %%%-----%%%----%%%--%%%-%%%--%%%-%%%----%%%----%%%--%%%-%%%--%%%-%%%--%%%--%%%
+
+ &amp;&amp;&amp;&amp;&amp;&amp;++&amp;&amp;&amp;++++&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;+&amp;&amp;&amp;&amp;&amp;&amp;&amp;++&amp;&amp;&amp;&amp;&amp;++&amp;&amp;&amp;++++&amp;&amp;&amp;&amp;&amp;&amp;&amp;++&amp;&amp;&amp;++&amp;&amp;&amp;+&amp;&amp;
+&amp;++&amp;&amp;&amp;++&amp;&amp;&amp;
+
+ *||||||*|||****||||||||*||||||***|||||**|||****||||||***|||**|||*|||**|||**|||
+
+ ====!!!=!!!====!!!==!!!=!!!=!!!==!!!====!!!====!!!=!!!==!!!==!!!=!!!==!!!==!!!
+
+ :::::::#::::::#:::##:::#:::##:::#::::::#::::::#:::##:::#::::::::#:::::::::::::
+
+ ......@@@.....@...@@...@...@@...@......@@.....@...@@...@@......@@@...........@
+
+    __      __      __      __      __      __      __      __      __
+
+   / /\    / /\    / /\    / /\    / /\    / /\    / /\    / /\    /_/\
+
+  / / /_  / / /   / /  \  / /  \  / / /   / / /   / /  \  / /  \  /_/\ \
+
+ /_/ / /\/_/ /   /_/ /\ \/_/ /\ \/_/ /_  /_/ /   /_/ /\ \/_/ /\ \/_/\ \ \
+
+ \ \ \/  \ \ \  _\ \ \/  \ \ \/ /\ \ \/\_\ \ \  _\ \ \/ /\ \ \ \ \ \ \ \ \
+
+  \ \  /\ \ \ \/ /\ \  /\ \ \  __ \ \  / /\ \ \/ /\ \  __ \ \ \_\ \ \ \ \ \
+
+   \_\/ / /\ \ \/ /\ \ \_\/\ \ \_\/\ \ \/ /\ \ \/ /\ \ \_\/\ \ \/ /\ \ \  /
+
+     /_/ /  \ \  /  \ \ \   \ \ \   \ \  /  \ \  /  \ \ \   \ \  /  \ \  /
+
+     \_\/    \_\/    \_\/    \_\/    \_\/    \_\/    \_\/    \_\/    \_\/
+
+                     |\                         __3__         |
+
+____|\_______________|\\_______________|_______'__|__`___|____|___|___________
+
+____|/___3_|________@'_\|__|_____|_____|___|___|__|__|___|_|_@'___|___|____|__
+
+___/|____-_|____________|__|_____|____@'___|__@'_@'_@'___|_|_____@'___|____|__
+
+__|_/_\__4_|___|_______@'__|____O'_________|____________@'_|_________@'____|__
+
+___\|/_____|___|___________|_______________|_______________|_______________|__
+
+    /         O'                                                  boba@wwa.com
+
+ ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+ ::::::::::::::::::''  ''::'      '::::::  `:::::::::::::'.::::::::::::::::::::
+
+ ::::::::::::::::' :. :  :.        ::::::  .::::::::::.:::'::::::::::::::::::::
+
+ :::::::::::::::::  :   :::.       :::::::::::::..::::'     '::: : ::::::::::::
+
+ :::::::::::::::'   :':  &quot;::'     '&quot;::::::::::::: :'           '' '::::::::::::
+
+ ::::::::'        : '   :  ::    .::::::::'    '                        .::::::
+
+ ::::::::               :  .:: .::. ::::'                              ::::::::
+
+ ::::::::. .,.        :::  ':::::::::::.: '                      .:...:::::::::
+
+ :::::::##### ::####   #### ::##### ::#####  ####  #####    ####   ## :## :## :
+
+ :::::## :::::##     ## :## :## :## :##    ##     ## :##  ##  ##  ## :## :## ::
+
+ :::::#### ::## ::  ###### :##### ::####  ##     ##### : ## :## :## :## :## :::
+
+ :::::::## :## ::::## :## :## ## ::## :  ##     ## ## : ## :## :## :## :## ::::
+
+ ::##### :::#### :## :## :## :## :#####  ####  ## :## : ####  ::######## ::::::
+
+ ::::::::::::::::::::::. '  '::::::.  '  '     :::::.:.:.:.:.::::::::::::::::::
+
+ ::::::::::::::::::::::: :     '::::::::.   ' ,:::::::::: : :.:':::::::::::::::
+
+ :::::::::::::::::::::::: '    .:::::::::   . :'::::::::::::::' '::::::::::::::
+
+ :::::::::::::::::::::::::''  .:::::::::: :' :'::::::::::::'      '::::::::::::
+
+ ::::::::::::::::::::::::'   .:::::::::::. .::::::::::::::::       ::::::::::::
+
+ ::::::::::::::::::::::::. .::::::::::::::::::::::::::::::::.:::..:::::::::::::
+
+ ::::::::::::::::::::::::'.::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+ ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+    _--_      ____                                                .
+
+   ||          ||  ||_   _                                       /:\
+
+   ||          ||  || | (/_                                     /;:.\
+
+   ||__.        _                                              //;:. \
+
+    ~  ||  /'\\&lt; \,,._-_ /'\\ /'\\,._-_ /'\\ \\ \\ \\         ///;:.. \
+
+       || ||   /-|| ||  || / ||    ||  || || || || ||   __--&quot;////;:... \&quot;--__
+
+       || ||  (( || ||  ||/  ||    ||  || || || || || --__   &quot;--_____--&quot;   __--
+
+  ,-___-  \\,/ \/\\ \\, \\,/ \\,/  \\, \\,/  \\//\//      &quot;&quot;&quot;--_______--&quot;&quot;&quot;
+
+     _mm_   _am,   _am,   _g_ag,  _am,   _am,  _g_ag,  _am,   .g,   g,   g,
+
+    qK. &quot; ,gF  @._gF  @  ^ NX  #_gF ,@ ,gF  @,^ NX  #vgF  @_-d8#   g#   g@
+
+     *b,  8Y     8Y   d   dY    8Ew*&quot;  8Y      dY    8Y   d  j#  _j#  _d#
+
+   ,  dN.jK   , jK  ,Z&quot; ,jF    jK   , jK   ,  jF    jK  ,N  jN _*jN _*jN&quot;,'
+
+   *h,W&quot;  NbpP   NbpY&quot;V^dF      NbpP   NbpP  dF      NbpP   V#^  V#^  *V^
+
+&gt;&gt;&gt; boba@wwa.com &lt;&lt;&lt;
+
+     _
+
+    / )
+
+   / /
+
+ _( (_    _     ________________________________________________
+
+(((\ \&gt;  /_&gt;   /                                                \
+
+(\\\\ \_/ /   |       This guy here.  He's a troublemaker.       |
+
+ \       /    |     Always sticking his nose into how things     |
+
+  \    _/     |    like government, media, ads, PR, etc works.   |
+
+  /   /        \___  ___________________________________________/
+
+ /   /             |/
+
+/   /              /</PRE>
+
+<P>Remember, don't be a junk food information provider. The sigs featured here, for the most part, have clear artistic value. I think even the most avid UNIX haters could agree with that!</P>
+
+<P><A HREF="tigxa.htm"><IMG SRC="bluprev.gif" WIDTH = 32 HEIGHT = 32 BORDER = 0 ALT="Previous Page"></A>
+
+<A HREF="httoc.htm"><IMG SRC="blutoc.gif" WIDTH = 32 HEIGHT = 32 BORDER = 0 ALT="TOC"></A>
+
+<A HREF="htindex.htm"><IMG SRC="bluindex.gif" WIDTH = 32 HEIGHT = 32 BORDER = 0 ALT="Index"></A>
+
+<A HREF="tigxc.htm"><IMG SRC="blunext.gif" WIDTH = 32 HEIGHT = 32 BORDER = 0 ALT="Next Page"></A>
+
+<A HREF="httoc.htm"><IMG SRC="bluprev.gif" WIDTH = 32 HEIGHT = 32 BORDER = 0 ALT="Home"></A>
+
+</P></BODY></HTML>
+

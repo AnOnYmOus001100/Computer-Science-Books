@@ -1,0 +1,1619 @@
+<HTML>
+
+<HEAD>
+
+<TITLE>Tricks of the Internet Gurus tig07.htm</TITLE>
+
+<LINK REL="ToC" HREF="httoc.htm">
+
+<LINK REL="Index" HREF="htindex.htm">
+
+<LINK REL="Next" HREF="tig08.htm">
+
+<LINK REL="Previous" HREF="tig06.htm"></HEAD>
+
+<BODY TEXT="#000000" LINK="#0000FF" VLINK="#800080" bgcolor=white>
+
+<P><A HREF="tig06.htm"><IMG SRC="bluprev.gif" WIDTH = 32 HEIGHT = 32 BORDER = 0 ALT="Previous Page"></A>
+
+<A HREF="httoc.htm"><IMG SRC="blutoc.gif" WIDTH = 32 HEIGHT = 32 BORDER = 0 ALT="TOC"></A>
+
+<A HREF="htindex.htm"><IMG SRC="bluindex.gif" WIDTH = 32 HEIGHT = 32 BORDER = 0 ALT="Index"></A>
+
+<A HREF="tig08.htm"><IMG SRC="blunext.gif" WIDTH = 32 HEIGHT = 32 BORDER = 0 ALT="Next Page"></A>
+
+<A HREF="httoc.htm"><IMG SRC="bluprev.gif" WIDTH = 32 HEIGHT = 32 BORDER = 0 ALT="Home"></A>
+
+</P><UL>
+
+<LI>
+
+<A HREF="#I1">7</A></LI>
+
+<UL>
+
+<LI>
+
+<A HREF="#I2">FTP</A></LI>
+
+<UL>
+
+<UL>
+
+<UL>
+
+<LI>
+
+<A HREF="#I5">Those Pesky FTP Servers</A></LI>
+
+<LI>
+
+<A HREF="#I6">Batching It</A></LI>
+
+<UL>
+
+<LI>
+
+<A HREF="#I7">Batch FTP on VMS</A></LI>
+
+<LI>
+
+<A HREF="#I8">Batch FTP on UNIX</A></LI></UL>
+
+<LI>
+
+<A HREF="#I9">Gopher FTP</A></LI>
+
+<UL>
+
+<LI>
+
+<A HREF="#I10">Some Gopherable FTP Sites</A></LI>
+
+<LI>
+
+<A HREF="#I11">A Final Word on Gopher FTP</A></LI></UL>
+
+<LI>
+
+<A HREF="#I12">FTP Through a WWW Browser</A></LI>
+
+<LI>
+
+<A HREF="#I13">The File's in the Mail</A></LI>
+
+<UL>
+
+<LI>
+
+<A HREF="#I15">BitFTP</A></LI>
+
+<LI>
+
+<A HREF="#I16">FTPMail</A></LI></UL>
+
+<LI>
+
+<A HREF="#I17">NcFTP: An Alternate Unix Client</A></LI>
+
+<LI>
+
+<A HREF="#I18">Wuarchive FTPD</A></LI>
+
+<UL>
+
+<LI>
+
+<A HREF="#I19">The Future of FTP</A></LI></UL></UL></UL></UL></ul></ul>
+
+
+
+
+
+
+
+<H1><A ID="I1" NAME="I1">
+
+<BR>
+
+<FONT SIZE=5><B>7</B>
+
+<BR></FONT></A></H1>
+
+<H2><A ID="I2" NAME="I2">
+
+<FONT SIZE=5><B>FTP</B>
+
+<BR></FONT></A></H2>
+
+<H5><A ID="I3" NAME="I3">
+
+<FONT SIZE=3><B>
+
+
+
+<a href="philip.gif">--by Philip Baczewski</a>
+
+
+
+</B>
+
+<BR></FONT></A></H5>
+
+<H3><A ID="I5" NAME="I5">
+
+<FONT SIZE=4><B>Those Pesky FTP Servers</B>
+
+<BR></FONT></A></H3>
+
+<P>Anonymous FTP is one of the most useful Internet services, and at the same time it can be one of the most frustrating. Because some anonymous FTP servers are so comprehensive, they are also very popular. As you may have already found out the hard way, 
+sites like wuarchive.wustl.edu often are inaccessible during daylight hours, even though some support as many as 200 simultaneous connections. Even mirror sites are often quite busy, and because the organizational structure may be different, it's not 
+always easy to find your way around. Fortunately, there are several solutions for retrieving files from popular sites, or even obscure ones. The simplest solution is to stay up late to do your FTP sessions. However, for those who do sleep, some other ideas 
+are offered here.
+
+<BR></P>
+
+<HR ALIGN=CENTER>
+
+<NOTE>
+
+<IMG SRC="note.gif"><B>Stupid UNIX FTP Tricks: </B>The following commands, which will work on most UNIX systems, let you enjoy some shortcuts and time-savers during an FTP session:
+
+<BR>
+
+<BR>1. Display text files to the terminal.
+
+<BR>
+
+<BR>It's very handy sometimes to be able to display a short readme file directly to your terminal, rather than downloading it and then invoking a file viewer. The following command will get a file and transfer it to the console rather than to the directory 
+space:
+
+<BR>
+
+<BR>ftp&gt;<B> get readme.txt -</B>
+
+<BR>
+
+<BR>This command is a normal ASCII transfer, but the hyphen represents the console as the file's destination.
+
+<BR>
+
+<BR>2. Browse text files within FTP.
+
+<BR>
+
+<BR>&quot;Ah yes,&quot; you say, &quot;but what if I want to examine a longer text file and I don't want it to scroll off my screen?&quot; The following command enables you to pipe a transferred file to the more program, which enables you to page up, page 
+down, and search within the file.
+
+<BR>
+
+<BR>ftp&gt; <B>get readme.txt |more</B>
+
+<BR>
+
+<BR>There is no space between the pipe symbol and more.
+
+<BR>
+
+<BR>3. Browse a directory within FTP.
+
+<BR>
+
+<BR>If you have ever stumbled across a directory with hundreds of entries, you will understand the significance of the following command:
+
+<BR>
+
+<BR>ftp&gt; <B>get . |more</B>
+
+<BR>
+
+<BR>This transfers the listing of the current directory (.) and pipes the output to more. Instead of watching those filenames scroll off your screen for a couple of minutes, you can search the listing for a particular file or scroll the file at your own 
+pace.
+
+<BR></NOTE>
+
+<HR ALIGN=CENTER>
+
+<H3><A ID="I6" NAME="I6">
+
+<FONT SIZE=4><B>Batching It</B>
+
+<BR></FONT></A></H3>
+
+<P>One method for retrieving files from busy sites (while still getting some sleep) is to make use of the <I>batch</I>, or <I>timed-execution</I>, facility of your host computer system. This is possible on most UNIX and DEC VMS systems, but check with your 
+system administrator (if that's not you) to be sure. The following examples are not necessarily the only or most elegant solutions, but they may give you some ideas to build upon.
+
+<BR></P>
+
+<H4><A ID="I7" NAME="I7">
+
+<FONT SIZE=3><B>Batch FTP on VMS</B>
+
+<BR></FONT></A></H4>
+
+<P>On VMS, a DCL script can be used to submit and schedule a batch job to accomplish an FTP session. The following example uses a VMS DCL script to invoke FTP and a data file that contains the FTP commands you want to execute. As you can see, it doesn't 
+take many lines to get the job done. This script was created on a system running Wollongong TCP/IP, so a version for your system might vary slightly depending upon the TCP/IP software that's installed.
+
+<BR></P>
+
+<P>The following statements should be saved in an executable file named FTP.COM. Comments begin with an exclamation point.
+
+<BR></P>
+
+<P>$!FTP.COM  - Batch FTP on a VMS System</P>
+
+<P>$!Change to the download directory</P>
+
+<P>$ SET DEFAULT <U>DUA0</U>:[myid.kermit]</P>
+
+<P>$!FTP command input comes from a file in the ftpbat directory</P>
+
+<P>$ DEFINE/USER SYS$INPUT <U>DUA0</U>:[myid.ftpbat]FTP.DAT</P>
+
+<P>$!Set the path to the ftp application</P>
+
+<P>$ ftp :== $twg$tcp:[netapps.user]ftp ftp</P>
+
+<P>$!Invoke the FTP command with a target address</P>
+
+<P>$!This example is the server at Columbia University</P>
+
+<P>$!(ftp.cc.columbia.edu)</P>
+
+<P>$ FTP 128.59.39.2</P>
+
+<P>A typical data file with your FTP commands might be as follows. This file would be named FTP.DAT, as seen in the preceding script example. The QUIET and NOINTER commands turn off verbose messages and suppress prompting, respectively.
+
+<BR></P>
+
+<PRE>anonymous
+
+myid@mynode.edu
+
+CD kermit/b
+
+QUIET
+
+NOINTER
+
+mget ikc*
+
+QUIT</PRE>
+
+<P>As you can see, the script simply sets the download path, points to the FTP command file, sets a logical variable for the FTP program, and executes a connection. The FTP.COM file can be scheduled for batch execution with a command like the following:
+
+<BR></P>
+
+<PRE>submit/noprint/log=DUA0:[myid.ftpbat]ftp.log/queue=batch/after=&quot;21:00&quot; ftp</PRE>
+
+<P>Because this command is rather long, you could create a .COM file for it as well, using a hyphen as a continuation character to the next line if necessary. The content of such a file might appear as follows:
+
+<BR></P>
+
+<PRE>$submit/noprint/log=DUA0:[myid.ftpbat]ftp.log/queue=batch/after=&quot;21:00&quot;-
+
+ ftp</PRE>
+
+<P>Any output from the FTP session will be stored in the file FTP.LOG, in this case located in the ftpbat directory. The FTP.COM file will be executed after 11:00 p.m. You will probably need to check with your VMS system administrator for the name and 
+availability of a batch queue; however, it is likely that such a facility does exist on your VMS system.
+
+<BR></P>
+
+<H4><A ID="I8" NAME="I8">
+
+<FONT SIZE=3><B>Batch FTP on UNIX</B>
+
+<BR></FONT></A></H4>
+
+<P>A facility similar to the preceding VMS example is available to you on UNIX when you schedule a shell script to do your FTP commands after business hours. The following example employs a script to initiate the FTP session and another file to hold the 
+actual FTP commands. These two files combine to operate as a batch FTP session on UNIX systems.
+
+<BR></P>
+
+<PRE>#bftp -- Batch FTP script thanks to Amos Gouaux (amos@unt.edu) for
+
+#his loan of this example batch ftp shell script.
+
+#!/bin/sh
+
+set e
+
+case $# in
+
+    1)
+
+        if [ ! f $1 ]
+
+        then
+
+            echo &quot;$0: file \&quot;$1\&quot; not found.&quot;
+
+            exit
+
+        fi
+
+        ;;
+
+    *)
+
+        echo 'Usage: bftp site(:ext)'
+
+        echo 'Whereas, &quot;site&quot; is a job file having the same name as the'
+
+        echo 'ftp site and &quot;:ext&quot; is a filename extension that may be'
+
+        echo 'appended to the end of &quot;site&quot;.'
+
+        exit
+
+        ;;
+
+esac
+
+touch bftp.log
+
+echo &quot;Processing script \&quot;$1\&quot;.&quot; &gt;&gt; bftp.log
+
+ftp dinv &lt;&lt; _eof &gt;&gt; bftp.log 2&gt;&amp;1
+
+    open `echo $1 | sed e 's/:.*$//'`
+
+    user anonymous myid@mynode.edu
+
+    `cat $1 | sed e '/^[^az]*\#.*$/d' | sed e 's/\#.*$//'`
+
+    bye
+
+_eof
+
+echo &gt;&gt; bftp.log</PRE>
+
+<P>The following is an example of a data file for the preceding script. The name of this file should be the same as the fully-qualified domain name of the FTP server you are accessing (in this example, ftp.cc.columbia.edu). Comments can be placed in this 
+data file by prefixing the line with a pound sign (#).
+
+<BR></P>
+
+<PRE>cd kermit/b
+
+#turn off verbose messages
+
+verbose
+
+#turn off prompting
+
+prompt
+
+#get all Amiga C-Kermit files
+
+mget ikc*
+
+QUIT</PRE>
+
+<P>This script uses the name of the intended FTP site for the name of the file containing the FTP commands you want to execute at that site. This clever bit of programming (I wish I could say it were mine) saves some lines of code and also can help 
+organize and easily identify command files that will be used on a regular basis (for regularly posted software updates, archive files, and so on).
+
+<BR></P>
+
+<P>On most UNIX systems, you can schedule this batch FTP script to execute at a specified time by using the at command. (Once again, you may need to check with the system administrator to gain authorization to use the at command.) A typical command might 
+be as follows:
+
+<BR></P>
+
+<PRE>at 11:00pm today bftp ftp.cc.columbia.edu</PRE>
+
+<P>Check the at man page for all of the options available with this command. If you want to regularly schedule batch FTP sessions, you may want to take advantage of the UNIX cron facility. The usual caveat applies&#151;you may need to check with your 
+system administrator to gain access to cron (and to create a crontab file).
+
+<BR></P>
+
+<P>One nice thing about computers is that they can work at hours when you don't. If you are a script-programming guru on either VMS or UNIX, you can probably come up with several enhancements to the preceding offerings. If not, however, these scripts can 
+still be quite useful and may be able to save you some time as well as sleep.
+
+<BR></P>
+
+<H3><A ID="I9" NAME="I9">
+
+<FONT SIZE=4><B>Gopher FTP</B>
+
+<BR></FONT></A></H3>
+
+<P>Once again, Gopher comes to the rescue. An anonymous FTP interface is a useful addition to the multitude of Internet services and information available through Gopher. Many popular FTP sites provide access through a Gopher interface. Because of the way 
+Gopher operates, it has become the preferred method of access for a number of sites. An anonymous FTP session establishes a static connection to the FTP server, and as long as you are connected to that server, one connection is unavailable to another FTP 
+user. This will matter to you if the server supports 200 connections and you are connection number 201.
+
+<BR></P>
+
+<P>Gopher works on a dynamic connection model. An Internet connection is made only while the Gopher client is reading requested information, whether that be a Gopher menu, a file, or an FTP-able software archive file. In other words, while you retrieve an 
+FTP directory you are using a connection, but while you are perusing that directory no load is placed on the remote server. Because of the efficiency of accessing FTP archives through Gopher, it's often possible to gain access through that method when all 
+&quot;traditional&quot; FTP ports are occupied.
+
+<BR></P>
+
+<H4><A ID="I10" NAME="I10">
+
+<FONT SIZE=3><B>Some Gopherable FTP Sites</B>
+
+<BR></FONT></A></H4>
+
+<P>A check of the University of Minnesota Gopher (gopher.tc.umn.edu) shows a number of familiar names in the &quot;FTP Searches/Popular FTP Sites via Gopher&quot; menu. The following list includes such esteemed names as Boombox, SUMEX, and wuarchive. (When 
+you can go by one name, you know you've hit it big.) More exploration or a Veronica search may also turn up some of your popular sites.
+
+<BR></P>
+
+<PRE>                          Popular FTP Sites via Gopher
+
+      1.  Read Me First
+
+      2.  Boombox  Home of Gopher and POPmail/
+
+      3.  Case Western Reserve University FREENET/
+
+      4.  Indiana University Mac Gopher Client App (beta)/
+
+      5.  Indiana Windows Archive/
+
+      6.  Interest Group Lists/
+
+      7.  Internet Resource Guide (tar.Z files)/
+
+      8.  Latest Disinfectant (ftp.acns.nwu.edu)/
+
+      9.  Lyrics/
+
+      10. NCSA  Home of NCSA Telnet/
+
+      11. National Science Foundation Gopher (STIS)/
+
+      12. Newton Archives at Johns Hopkins University (bnnrcsrv.med.jhu.edu../
+
+      13. OCF Document Archives/
+
+      14. OSSIS Info Archives (slow)/
+
+      15. SUMEXAIM Archives  (Includes InfoMac: a large collection of Mac../
+
+      16. Scholarly Communications Project of Virginia Tech/
+
+      17. Software Archives at MERIT (University of Michigan)/
+
+      18. Sonata NeXT software archive (sonata.cc.purdue.edu)/
+
+      19. Supreme Court Rulings (CWRU)/
+
+      20. UIUCCSO  Home of the qi server (CSO phonebook software)/
+
+      21. University of Utah Mac Gopher Client App (beta)/
+
+      22. Usenet University/
+
+      23. Washington University Archive (wuarchive)/</PRE>
+
+<P>After you find a Gopher FTP site, you will probably want to add it to your bookmark file. The following might offer you a head start in this regard. Some sample UNIX Gopher bookmarks are provided for some popular sites.
+
+<BR></P>
+
+<PRE>Type=1+
+
+Name=Popular FTP Sites via Gopher
+
+Path=1/FTP Searches/Popular FTP Sites via Gopher
+
+Host=gopher.tc.umn.edu
+
+Port=70
+
+#
+
+Type=1
+
+Name=SUMEXAIM Archives  (Mac software)
+
+Path=
+
+Host=SUMEXAIM.Stanford.EDU
+
+Port=70
+
+#
+
+Type=1
+
+Name=Washington University Archive (SUMEX &amp; other mirror site)
+
+Path=
+
+Host=wuarchive.wustl.edu
+
+Port=70
+
+#
+
+Type=1
+
+Name=OCF (Open Computing Foundation) Document Archives
+
+Path=
+
+Host=ocf.berkeley.edu
+
+Port=70</PRE>
+
+<H4><A ID="I11" NAME="I11">
+
+<FONT SIZE=3><B>A Final Word on Gopher FTP</B>
+
+<BR></FONT></A></H4>
+
+<P>Gopher FTP is not without its limitations. Most archived and ASCII-encoded files will transfer successfully, but executable files may not, depending on the system on which you are using Gopher. Even with a more efficient paradigm, you still might have 
+trouble establishing a connection to some of the more popular sites (in which case, dust off that batch FTP script). On the plus side, however, there are some microcomputer versions of Gopher, like TurboGopher for the Macintosh, that will actually enable 
+you to retrieve and then decode a file all in one operation. The other handy thing about using Gopher as an FTP access method is that you can easily display any text files (like README files, for example) directly to your terminal, eliminating the need to 
+download and view a file as a separate operation.
+
+<BR></P>
+
+<H3><A ID="I12" NAME="I12">
+
+<FONT SIZE=4><B>FTP Through a WWW Browser</B>
+
+<BR></FONT></A></H3>
+
+<P>Don't forget that if you can access an FTP site through Gopher, you can also use your favorite World Wide Web client to access and download files. If you know the host, a URL (Universal Resource Locator) would look similar to the following:
+
+<BR></P>
+
+<PRE>gopher://<I>any</I>.<I>gopher</I>.<I>host</I>.com/</PRE>
+
+<P>This URL will connect at the root starting point, and you can then traverse the Gopher structure. Most Gopher installations use port 70 for incoming connections, but some might use an alternate number. You can specify such a different port as follows 
+(using 9999 as an example):
+
+<BR></P>
+
+<PRE>gopher://<I>any</I>.<I>gopher</I>.<I>host</I>.com:9999/</PRE>
+
+<P>You can also access FTP sites directly using the following URL format:
+
+<BR></P>
+
+<PRE>ftp://<I>any</I>.<I>ftp</I>.<I>host</I>.com/<I>pub</I>/<I>any</I>/<I>directory</I></PRE>
+
+<P>or
+
+<BR></P>
+
+<PRE>file://<I>any</I>.<I>ftp</I>.<I>host</I>.com/<I>pub</I>/<I>any</I>/<I>directory</I></PRE>
+
+<P>Most Web browsers enable you to view text files directly and automatically download any binary files you select.
+
+<BR></P>
+
+<H3><A ID="I13" NAME="I13">
+
+<FONT SIZE=4><B>The File's in the Mail</B>
+
+<BR></FONT></A></H3>
+
+<P>There are two main facilities for retrieving files from anonymous FTP sites. BitFTP is maintained by Princeton University as a service for Bitnet (U.S.), NetNorth (Canada), and EARN (Europe) nodes that do not have TCP/IP access to the Internet. FTPMail 
+is an unsupported facility at gatekeeper.dec.com and several other sites on the Internet. FTPMail was written by Paul Vixie. Both facilities enable you to send a mail message containing FTP commands and have any resulting output mailed to you at your 
+return e-mail address. Both are facilities of last resort.
+
+<BR></P>
+
+<P>In concept, FTP by e-mail sounds good, but some of the charm is taken away when you realize that a 1MB file sent in pieces will generate at least ten separate incoming mail messages. (Both facilities will break large files into multiple mail messages, 
+and both have a limit of about 100,000 characters per file part.) Those mail messages will have to downloaded, merged back together, and then possibly uudecoded. The following notes on both facilities may make your use of them more efficient. More 
+information on either one can be obtained by sending the command HELP <A ID="I14" NAME="I14"></A>to the FTP server address.
+
+<BR></P>
+
+<H4><A ID="I15" NAME="I15">
+
+<FONT SIZE=3><B>BitFTP</B>
+
+<BR></FONT></A></H4>
+
+<P>BitFTP can be accessed by sending mail to the address bitftp@pucc.princeton.edu. It is implemented on an IBM mainframe system, so the commands are a subset of IBM's TCP/IP software. This is an advantage if you need FTP access to a specific mainframe on 
+the Internet, but only have electronic mail as a means of communication. BitFTP supports the ACCT command used on VM/CMS systems, and you can specify EBCDIC as a file transfer mode (to transfer text files from mainframe to mainframe). In addition, BitFTP 
+supports the FTP commands CD, DIR, ASCII, BINARY, GET, LS, MODE (block or stream I/O), PWD, QUIT, SYSTEM (to get the name of the FTP host's operating system), TYPE (a mainframe-specific command supporting various transfer modes), and USER.
+
+<BR></P>
+
+<P>Some items to remember when using BitFTP are the following:
+
+<BR></P>
+
+<UL>
+
+<LI>FTP sessions are begun with the command FTP <I>hostname</I> <I>encoding_type</I>. <I>encoding_type</I> can be NETDATA (used on NJE networks only), uuencode, or xxencode. By default, NETDATA format will be used, so unless you are on a system that can 
+decode NETDATA (an IBM mainframe and some VAX systems), you will probably want to specify uuencode. An alternate FTP port number can be specified following the host-name field.
+
+<BR>
+
+<BR></LI>
+
+<LI>You can specify a username and password by using the command following the FTP command, USER <I>username</I> <I>password</I>. If you specify anonymous as the username, no password is necessary and BitFTP supplies your return e-mail address to the FTP 
+server as the password.
+
+<BR>
+
+<BR></LI>
+
+<LI>A maximum of five GET commands is allowed per BitFTP request.
+
+<BR>
+
+<BR></LI>
+
+<LI>The maximum retrievable file size is 17MB.
+
+<BR>
+
+<BR></LI>
+
+<LI>Uuencoded and xxencoded files will be split into separate mail files containing no more than 1,500 62-byte records each (about 90KB).
+
+<BR>
+
+<BR></LI>
+
+<LI>BitFTP does not provide a PUT capability.
+
+<BR>
+
+<BR></LI></UL>
+
+<P>The following message shows a typical BitFTP log message.
+
+<BR></P>
+
+<PRE>Date:  13Jul94 22:48 EDT
+
+From:  Princeton BITNET FTP Server &gt; INTERNET:BITFTP1@PUCC.PRINCETON.EDU
+
+Subj:  BITFTP Reply
+
+Sender: bitftp1@pucc.princeton.edu
+
+Received: from pucc.Princeton.EDU by dubimg1.compuserve.com
+
+(8.6.4/5.940406sam)
+
+        id WAA26854; Wed, 13 Jul 1994 22:47:23 0400
+
+MessageId: &lt;199407140247.WAA26854@dubimg1.compuserve.com&gt;
+
+Received: from PUCC.PRINCETON.EDU by pucc.Princeton.EDU (IBM VM SMTP V2R2)
+
+   with BSMTP id 8504; Wed, 13 Jul 94 22:47:05 EDT
+
+Received: from PUCC.PRINCETON.EDU (NJE origin VMMAIL@PUCC) by PUCC.PRINCETON.EDU
+
+(LMail V1.1d/1.7f) with BSMTP id 3782; Wed, 13 Jul 1994 22:47:04 0400
+
+Received: by PUCC (Mailer R2.10 ptf008) id 0699; Wed, 13 Jul 94 22:47:03 EDT
+
+Date: Wed, 13 Jul 1994 22:47:02 EDT
+
+From: Princeton BITNET FTP Server &lt;BITFTP1@PUCC.PRINCETON.EDU&gt;
+
+To: XXXXX.XXX@COMPUSERVE.COM
+
+Subject: BITFTP Reply
+
+************************************************************************
+
+* WARNING: Do not download CDIT, which purports to be a utility to    *
+
+* convert an ordinary CDROM drive into a CDRecordable device. It is  *
+
+* a very destructive virus.                                            *
+
+*                                                                      *
+
+* Use the new BITFTP command &quot;HOWTOFTP&quot; to obtain a copy of RFC1635,   *
+
+* &quot;How to Use Anonymous FTP&quot;.                                          *
+
+************************************************************************
+
+&gt; ftp ftp.unt.edu uuencode
+
+&gt; user anonymous
+
+&gt;&gt; FTP.UNT.EDU
+
+&lt;&lt;&lt; Connecting to FTP.UNT.EDU 129.120.1.1, port 21
+
+&lt;&lt;&lt; 220 mercury FTP server (SunOS 4.1) ready.
+
+&lt;&lt;&lt; USER (identify yourself to the host):
+
+&gt;&gt; anonymous
+
+&gt;&gt;&gt; USER anonymous
+
+&lt;&lt;&lt; 331 Guest login ok, send ident as password.
+
+&lt;&lt;&lt; Password:
+
+&gt;&gt; XXXXX.XXX%compuserve.com@pucc.Princeton.EDU
+
+&gt;&gt;&gt; PASS ********
+
+&lt;&lt;&lt; 230 Guest login ok, access restrictions apply.
+
+&gt; cd pub/misc
+
+&gt;&gt; CD pub/misc
+
+&gt;&gt;&gt; CWD pub/misc
+
+&lt;&lt;&lt; 250 CWD command successful.
+
+&gt; binary
+
+&gt;&gt; BINARY VARIABLE
+
+&gt;&gt;&gt; TYPE i
+
+&lt;&lt;&lt; 200 Type set to I.
+
+&gt; get quikkwic.exe
+
+&gt;&gt; GET quikkwic.exe QUIKKWIC.EXE.D ( REPLACE
+
+&gt;&gt;&gt; PORT 128,112,129,99,140,55
+
+&lt;&lt;&lt; 200 PORT command successful.
+
+&gt;&gt;&gt; RETR quikkwic.exe
+
+&lt;&lt;&lt; 150 Binary data connection for quikkwic.exe (128.112.129.99,35895)
+
+    (32032 bytes)
+
+&lt;&lt;&lt; .
+
+&lt;&lt;&lt; 226 Binary Transfer complete.
+
+&lt;&lt;&lt; 32032 bytes transferred. Transfer rate 32.75 Kbytes/sec.
+
+&gt;&gt;&gt;&gt; &quot;quikkwic.exe&quot; sent uuencoded.
+
+&gt; quit
+
+&gt;&gt; CLOSE
+
+&gt;&gt;&gt; QUIT
+
+&lt;&lt;&lt; 221 Goodbye.</PRE>
+
+<H4><A ID="I16" NAME="I16">
+
+<FONT SIZE=3><B>FTPMail</B>
+
+<BR></FONT></A></H4>
+
+<P>The primary FTPMail site can be accessed by sending mail to ftpmail@gatekeeper.dec.com. The help file makes it very clear that FTPMail is not a supported service and that it might be unavailable from time to time. FTPMail supports the following FTP 
+commands: CONNECT, ASCII, BINARY, CHDIR, GET, INDEX, LS, and QUIT.
+
+<BR></P>
+
+<P>Some other options to keep in mind:
+
+<BR></P>
+
+<UL>
+
+<LI>The CONNECT command by itself defaults to anonymous FTP access to the FTPMail host. The CONNECT command can also be specified with host, username, password, and account values, using this format:
+
+<BR>
+
+<BR>CONNECT <I>host</I> <I>username</I> <I>password</I> <I>account</I>
+
+<BR>
+
+<BR></LI>
+
+<LI>An alternate reply address can be specified with this command:
+
+<BR>
+
+<BR>REPLY <I>address</I>
+
+<BR>
+
+<BR></LI>
+
+<LI>There is a limit of ten GET commands per FTPMail request.
+
+<BR>
+
+<BR></LI>
+
+<LI>Several compression and encoding choices are available using the following commands:
+
+<BR>
+
+<BR>COMPRESS&#151;Compresses binary files using Lempel-Ziv encoding.
+
+<BR>
+
+<BR>COMPACT&#151;Compresses binary files using Huffman encoding.
+
+<BR>
+
+<BR>UUENCODE&#151;Binary files will be uuencoded.
+
+<BR>
+
+<BR>BTOA&#151;Binary files will be encoded using BTOA format.
+
+<BR>
+
+<BR></LI>
+
+<LI>The size of the pieces into which long files will be split can be controlled by the command CHUNKSIZE <I>size</I>.
+
+<BR>
+
+<BR>The default size is 64,000 bytes. CompuServe will allow e-mail files of approximately two megabytes to be received from the Internet. Other services may vary in that restriction.
+
+<BR>
+
+<BR></LI>
+
+<LI>There is a limit of ten GET commands per FTPMail request.
+
+<BR>
+
+<BR></LI>
+
+<LI>PUT is not supported.
+
+<BR>
+
+<BR></LI></UL>
+
+<P>The following is a status message received after an FTPMail request was made.
+
+<BR></P>
+
+<PRE>Date:  14Jul94 07:30 CEST
+
+From:  &quot;ftpmail service on ftpgw1.pa.dec.com&quot; &gt; INTERNET:nobody@pa.dec.com
+
+Subj:  your ftpmail request has been received [test]
+
+Sender: nobody@ftpgw1.pa.dec.com
+
+Received: from ftpgw1.pa.dec.com by dubimg2.compuserve.com
+
+(8.6.4/5.940406sam)
+
+        id BAA12825; Thu, 14 Jul 1994 01:30:12 0400
+
+Received: by ftpgw1.pa.dec.com; id AA13753; Wed, 13 Jul 94 22:30:10 0700
+
+Date: Wed, 13 Jul 94 22:30:10 0700
+
+MessageId: &lt;9407140530.AA13753@ftpgw1.pa.dec.com&gt;
+
+From: &quot;ftpmail service on ftpgw1.pa.dec.com&quot; &lt;nobody@pa.dec.com&gt;
+
+To: XXXXX.XXX@compuserve.com
+
+Subject: your ftpmail request has been received [test]
+
+XComplaintsTo: ftpmailadmin@ftpgw1.pa.dec.com
+
+XServiceAddress: ftpmail@ftpgw1.pa.dec.com
+
+XJobNumber: 774163809.13751
+
+Precedence: bulk
+
+ReplyTo: &lt;nobody@ftpgw1.pa.dec.com&gt;
+
+We processed the following input from your mail message:
+
+connect ftp.unt.edu
+
+chdir pub/misc
+
+binary
+
+uuencode
+
+get quikkwic.exe
+
+quit
+
+We have entered the following request into your job queue as job number 774163809.13751:
+
+        connect ftp.unt.edu anonymous ftpmail/XXXXX.XXX@compuserve.com
+
+        reply XXXXX.XXX@compuserve.com
+
+        chdir pub/misc
+
+        get quikkwic.exe binary uncompressed uuencode
+
+There are 57 jobs ahead of this one in our queue.
+
+You should expect the results to be mailed to you within a day or so.
+
+We try to drain the request queue every 30 minutes, but sometimes it
+
+fills up with enough junk that it takes until midnight (Pacific time)
+
+to clear. Note, however, that since ftpmail sends its files out with
+
+&quot;Precedence: bulk&quot;, they receive low priority at mail relay nodes.
+
+Note that the &quot;reply&quot; or &quot;answer&quot; command in your mailer will not work
+
+for this message or any other mail you receive from FTPMAIL. To send
+
+requests to FTPMAIL, send an original mail message, not a reply. As
+
+shown in the header of this message, complaints should be sent to the
+
+ftpmailadmin@ftpgw1.pa.dec.com address rather than to postmaster,
+
+since our postmaster is not responsible for fixing ftpmail problems.
+
+There is no way to delete this request, so be sure that it has failed
+
+before you resubmit it or you will receive multiple copies of anything
+
+you have requested.
+
+There is no way to ask for only certain parts of a file to be sent. If
+
+you receive output from ftpmail that seems to be missing some parts, it
+
+is likely that some mailer between here and there has dropped them. You
+
+can try your request again, but chances are fairly good that if it is
+
+dropped once it will be dropped every time.
+
+There is no way to specify that your request should be tried only during
+
+certain hours of the day. If you need a file from a timerestricted FTP
+
+server, you probably cannot get it via ftpmail.
+
+Ftpmail was written by Paul Vixie while at the DEC Western Research
+
+Laboratory and at the DEC Network Systems Laboratory, from 19891993.
+
+Ftpmail is not a product or service of Digital Equipment Corporation and no
+
+support or warranty is expressed or implied.
+
+   Ftpmail Submission Transcript 
+
+&lt;&lt;&lt; connect ftp.unt.edu
+
+&gt;&gt;&gt; Connect to ftp.unt.edu as anonymous with ftpmail/XXXXX.XXX@compuserve.com
+
+&lt;&lt;&lt; chdir pub/misc
+
+&gt;&gt;&gt; Will chdir to &lt;pub/misc&gt; before I do anything else
+
+&lt;&lt;&lt; binary
+
+&gt;&gt;&gt; Grab files in &quot;binary&quot; mode
+
+&lt;&lt;&lt; uuencode
+
+&gt;&gt;&gt; Mail binaries in &quot;uuencode&quot; format
+
+&lt;&lt;&lt; get quikkwic.exe
+
+&gt;&gt;&gt; get quikkwic.exe binary uncompressed uuencode
+
+&lt;&lt;&lt; quit
+
+&gt;&gt;&gt; Done  rest of message will be ignored
+
+&gt;&gt;&gt; checking security of host `ftp.unt.edu'
+
+&gt;&gt;&gt; host `ftp.unt.edu' has IP addr [129.120.1.1]
+
+&gt;&gt;&gt; host `ftp.unt.edu' is also known as `mercury.unt.edu'
+
+&gt;&gt;&gt; host `ftp.unt.edu' is ok
+
+   End of Ftpmail Transcript 
+
+   Full Mail Header From Request 
+
+From XXXXX.XXX@compuserve.com  Wed Jul 13 22:30:06 1994
+
+Received: by ftpgw1.pa.dec.com; id AA13745; Wed, 13 Jul 94 22:30:06 0700
+
+Received: from pobox1.pa.dec.com by inetgw2.pa.dec.com (5.65/27May94)
+
+        id AA00119; Wed, 13 Jul 94 22:25:21 0700
+
+Received: by pobox1.pa.dec.com; id AA20713; Wed, 13 Jul 94 22:25:19 0700
+
+Received: from dubimg1.compuserve.com by inetgw1.pa.dec.com (5.65/27May94)
+
+        id AA12091; Wed, 13 Jul 94 22:21:54 0700
+
+Received: from localhost by dubimg1.compuserve.com (8.6.4/5.940406sam)
+
+        id BAA06790; Thu, 14 Jul 1994 01:20:38 0400
+
+Date: 14 Jul 94 01:17:11 EDT
+
+From: Philip Baczewski &lt;XXXXX.XXX@compuserve.com&gt;
+
+To: &lt;ftpmail@gatekeeper.dec.com&gt;
+
+Subject: test
+
+MessageId: &lt;940714051711_XXXXX.XXX_HHB453@CompuServe.COM&gt;
+
+   End of Request Mail Header </PRE>
+
+<P>The following is the actual log of the FTP session (received in less than &quot;a day or so&quot;).
+
+<BR></P>
+
+<PRE>Date:  14Jul94 07:58 CEST
+
+From:  &quot;ftpmail service on ftpgw1.pa.dec.com&quot; &gt; INTERNET:nobody@pa.dec.com
+
+Subj:  results of ftpmail request 774163809.13751 [test]
+
+Sender: nobody@ftpgw1.pa.dec.com
+
+Received: from ftpgw1.pa.dec.com by dubimg1.compuserve.com
+
+(8.6.4/5.940406sam)
+
+        id BAA08542; Thu, 14 Jul 1994 01:57:18 0400
+
+Received: by ftpgw1.pa.dec.com; id AA14641; Wed, 13 Jul 94 22:57:02 0700
+
+Date: Wed, 13 Jul 94 22:57:02 0700
+
+MessageId: &lt;9407140557.AA14641@ftpgw1.pa.dec.com&gt;
+
+From: &quot;ftpmail service on ftpgw1.pa.dec.com&quot; &lt;nobody@pa.dec.com&gt;
+
+To: XXXXX.XXX@compuserve.com
+
+Subject: results of ftpmail request 774163809.13751 [test]
+
+XComplaintsTo: ftpmailadmin@ftpgw1.pa.dec.com
+
+XServiceAddress: ftpmail@ftpgw1.pa.dec.com
+
+XJobNumber: 774163809.13751
+
+Precedence: bulk
+
+ReplyTo: &lt;nobody@ftpgw1.pa.dec.com&gt;
+
+Orig messageid: &lt;940714051711_XXXXX.XXX_HHB453@CompuServe.COM&gt;
+
+Orig subject: test
+
+Orig from: Philip Baczewski &lt;XXXXX.XXX@compuserve.com&gt;
+
+Orig date: 14 Jul 94 01:17:11 EDT
+
+ connecting to ftp.unt.edu...
+
+Connecting to ftp.unt.edu
+
+220 mercury FTP server (SunOS 4.1) ready.
+
+ logging in as user=anonymous password=ftpmail/XXXXX.XXX@compuserve.com
+
+account=...
+
+&gt; USER anonymous
+
+331 Guest login ok, send ident as password.
+
+&gt; PASS &lt;somestring&gt;
+
+230 Guest login ok, access restrictions apply.
+
+&gt; TYPE A
+
+200 Type set to A.
+
+ changing working directory to pub/misc...
+
+&gt; CWD pub/misc
+
+250 CWD command successful.
+
+=== getting 'quikkwic.exe'...
+
+&gt; TYPE I
+
+200 Type set to I.
+
+&gt; PORT 16,1,0,6,16,233
+
+200 PORT command successful.
+
+&gt; RETR quikkwic.exe
+
+150 Binary data connection for quikkwic.exe (16.1.0.6,4329) (32032 bytes).
+
+226 Binary Transfer complete.
+
+ mailing...
+
+XXXXX.XXX@compuserve.com... Connecting to mailgate.compuserve.com (tcp)...
+
+XXXXX.XXX@compuserve.com... Sent
+
+quikkwic.exe (pub/misc@ftp.unt.edu) (1 part, 44160 bytes) sent to
+
+XXXXX.XXX@compuserve.com
+
+&gt; (end of ftpmail session)
+
+Ftpmail was written by Paul Vixie while at the DEC Western Research Laboratory
+
+and at the DEC Network Systems Laboratory, from 19891993. Ftpmail is not a
+
+product or service of Digital Equipment Corporation and no support or warranty is expressed or implied.</PRE>
+
+<H3><A ID="I17" NAME="I17">
+
+<FONT SIZE=4><B>NcFTP: An Alternate Unix Client</B>
+
+<BR></FONT></A></H3>
+
+<P>NcFTP is a variation on the standard FTP client that many Internet users have come to know and love (or loathe, as the case may be). NcFTP is produced by a company named NCEMRSoft, which apparently consists primarily of Mike Gleason 
+(mgleason@cse.unl.edu) and Phil Dietz (pdeitz@cse.unl.edu). The program is freely distributed and accessible through anonymous FTP at cse.unl.edu in the /pub/mgleason directory, but an Archie search may also turn up a distribution site closer to you. Once 
+retrieved, the program can be compiled on most UNIX systems. Silicon Graphics IRIX, AIX, SINIX, Ultrix, NeXT, and Pyramid OSx are listed in the README file as supported with no modifications. Additional instructions are included for SunOS/Solaris, HP-UX, 
+SCO Unix, SCO Xenix, Bull DPX/2, and Sequent's DYNIX.
+
+<BR></P>
+
+<P>A list of features will make the frequent FTP user salivate:
+
+<BR></P>
+
+<UL>
+
+<LI>Supports a customizable ncftprc file that enables you to configure NcFTP settings, define entries for your favorite FTP sites, and associate macros with those sites.
+
+<BR>
+
+<BR></LI>
+
+<LI>Maintains a &quot;recent sites&quot; file that enables you to recall and reconnect to recently accessed FTP servers.
+
+<BR>
+
+<BR></LI>
+
+<LI>Supports an FTP &quot;redial,&quot; enabling retries of an open command to particularly busy sites on a configurable time interval.
+
+<BR>
+
+<BR></LI>
+
+<LI>Supports redirection of file transfer or directory output.
+
+<BR>
+
+<BR></LI>
+
+<LI>Allows a one-line command shortcut to retrieve a file from a designated FTP server.
+
+<BR>
+
+<BR></LI>
+
+<LI>Allows redirection of a file, retrieved through a one-line command, to the console or to a file browser.
+
+<BR>
+
+<BR></LI>
+
+<LI>Supports four kinds of file transfer progress indicators.
+
+<BR>
+
+<BR></LI>
+
+<LI>Supports a PDIR command to view a directory listing with a previously configured file browser.
+
+<BR>
+
+<BR></LI>
+
+<LI>Supports a PAGE command to view a remote file with a previously configured file browser.
+
+<BR>
+
+<BR></LI>
+
+<LI>Enables you to retrieve an IP number for a fully qualified domain name.
+
+<BR>
+
+<BR></LI>
+
+<LI>Enables you to customize your prompt.
+
+<BR>
+
+<BR></LI>
+
+<LI>Supports an FTP session log file.
+
+<BR>
+
+<BR></LI></UL>
+
+<P>After some definitions are made in your NcFTP RC file, the amount of work it takes to accomplish an FTP transfer can be greatly reduced. the following example shows one possible file of this type that sets some customization variables, defines one FTP 
+host, and includes a short macro to be executed after a connection is made.
+
+<BR></P>
+
+<P>The following is a typical NcFTP RC file. This file can be named ncftpcr, netrc, .ncftprc, or .netrc. (This last name is also compatible with the standard FTP program.)
+
+<BR></P>
+
+<PRE>#set logfile ~/.ftplog
+
+#set pager &quot;less&quot;
+
+#set progressreports 2
+
+#unset startupmsg
+
+machine ftp.unt.edu
+
+     login anonymous
+
+     password baczewski@unt.edu
+
+     macdef init
+
+          cd /pub/libraries
+
+          dir
+
+(A macro must end with a blank line.)</PRE>
+
+<P>The utility of these statements is seen in the following listing. After the NCFTP command, only the string unt was specified and NcFTP matched the first host it found in the RC file containing that string. Notice that there was no prompting for username 
+and password. Upon connection, a change was made to the /pub/library directory and a DIR command was performed. A PAGE command was used to view a file, and then the file was transferred to the local machine.
+
+<BR></P>
+
+<P>This only scratches the surface of the features of NcFTP, but it is enough to show the utility of this program. After you begin using it, you may never go back to the &quot;old&quot; FTP. For more information on NcFTP, consult the man pages and other 
+documentation files distributed with the software.
+
+<BR></P>
+
+<P>The following shows a typical NcFTP session.
+
+<BR></P>
+
+<PRE>~ % <B>ncftp unt</B>
+
+Guest login ok, send ident as password.
+
+Guest login ok, access restrictions apply.
+
+Logged into ftp.unt.edu.
+
+total 351
+
+drwxrxrx  2 0        1             512 Sep 28  1993 .cap
+
+lrwxrwxrwx  1 0        1              13 Sep 28  1993 libraries.adr &gt; libraries.txt
+
+rrr  1 0        1            1858 Jan  1  1994 libraries.africa
+
+rrr  1 0        1          183584 Jan  1  1994 libraries.americas
+
+rrr  1 0        1           20360 Jan  1  1994 libraries.asia
+
+lrwxrwxrwx  1 0        1              13 Sep 28  1993 libraries.con &gt; libraries.txt
+
+lrwxrwxrwx  1 0        1              13 Sep 28  1993 libraries.contacts &gt; libraries.txt
+
+rrr  1 0        1           89109 Jan  1  1994 libraries.europe
+
+rrr  1 0        1           39063 Aug 12  1993 libraries.instructions
+
+rrr  1 0        1            2884 Aug 11  1993 libraries.intro
+
+lrwxrwxrwx  1 0        1              13 Sep 28  1993 libraries.ps &gt; libraries.txt
+
+lrwxrwxrwx  1 0        1              13 Sep 28  1993 libraries.tx2 &gt; libraries
+
+.txt
+
+rrr  1 0        1             795 Sep 27  1993 libraries.txt
+
+Tip: You can use World Wide Web style paths instead of colonmode paths.
+
+     For example, if the colonmode path was 'cse.unl.edu:pub/mgleason/ncftp',
+
+     the WWWstyle path would be 'ftp://cse.unl.edu/pub/mgleason/ncftp'.
+
+ftp.unt.edu:/pub/library
+
+ncftp&gt;page libraries.txt
+
+The document you tried to retrieve has gone under many changes. Please
+
+read the following:
+
+The Gopher links are located at the following equivalent sites:
+
+Name=Internetaccessible library catalogs
+
+Type=1
+
+Host=yaleinfo.yale.edu
+
+Port=7000
+
+Path=1/Libraries
+
+Or:
+
+Host=gopher.utdallas.edu
+
+Port=70
+
+Path=1/Libraries
+
+Or:
+
+Host=gopher.sunet.se
+
+Port=70
+
+Path=1/libraries/yaleinfo
+
+If you do not have a gopher client, one appropriate for your workstation
+
+can be retrieved via anonymous ftp from the University of Minnesota, at
+
+boombox.micro.umn.edu:/pub/gopher.
+
+The paper document itself, in ASCII format, broken up by continents,
+
+including this introduction and a list of instructions for different
+
+catalogs, can be retrieved by anonymous ftp from
+
+ftp.utdallas.edu:/pub/staff/billy/libguide.
+
+ftp.unt.edu:/pub/library
+
+ncftp&gt;get libraries.txt
+
+Receiving file: libraries.txt
+
+100%  0 <U>|||||||||||||||||||||||||||||||||||||||||||||||||</U> 795 bytes.
+
+ETA:  0:00
+
+libraries.txt: 795 bytes received in 0.10 seconds, 7.76 K/s.
+
+ftp.unt.edu:/pub/library
+
+ncftp&gt;quit
+
+~ %</PRE>
+
+<H3><A ID="I18" NAME="I18">
+
+<FONT SIZE=4><B>Wuarchive FTPD</B>
+
+<BR></FONT></A></H3>
+
+<P>UNIX system managers may be interested in an alternate FTP server software package that is available. Washington University in St. Louis, the folks that brought you Wuarchive, have developed and released Wu-FTPD (probably as a result of bringing you 
+Wuarchive). Wu-FTPD replaces your standard FTP server and adds the following features:
+
+<BR></P>
+
+<UL>
+
+<LI>Logging file transfers
+
+<BR>
+
+<BR></LI>
+
+<LI>Logging FTP commands
+
+<BR>
+
+<BR></LI>
+
+<LI>Compression and archiving on the fly
+
+<BR>
+
+<BR></LI>
+
+<LI>Classifying users by type and location
+
+<BR>
+
+<BR></LI>
+
+<LI>Limits based upon user class
+
+<BR>
+
+<BR></LI>
+
+<LI>Upload permissions at the directory level
+
+<BR>
+
+<BR></LI>
+
+<LI>Restricted guest accounts
+
+<BR>
+
+<BR></LI>
+
+<LI>System-wide and directory-level messages
+
+<BR>
+
+<BR></LI>
+
+<LI>Support of a directory alias
+
+<BR>
+
+<BR></LI>
+
+<LI>A cdpath command to restrict available directories
+
+<BR>
+
+<BR></LI>
+
+<LI>A filename filter
+
+<BR>
+
+<BR></LI></UL>
+
+<P>This software provides a greater degree of flexibility in providing FTP services. This is one way, for example, to limit the number of anonymous FTP users who can simultaneously access the server. You can also provide differing degrees of access based 
+upon who users are or where they are located. For example, local users may be able to view the entire directory structure, whereas anonymous connections might be restricted to a particular directory. The access configuration file shown below will give you 
+some idea of the level of customization that is possible with this package.
+
+<BR></P>
+
+<P>Wu-FTPD is available on <U>wuarchive.wustl.edu</U> in the /packages/wuarchive-ftpd directory. If you want to know more about Wu-FTP or discuss its various features, you can subscribe to two mailing lists. The lists wu-ftpd and wu-ftpd-announce are both 
+maintained on listserv@ <U>wunet.wustl.edu</U>.
+
+<BR></P>
+
+<P>The following is a sample ftpaccess configuration file that is distributed with the Wu-FTPD package.
+
+<BR></P>
+
+<PRE>loginfails 2
+
+class   local   real,guest,anonymous *.domain 0.0.0.0
+
+class   remote  real,guest,anonymous *
+
+limit   local   20  Any                 /etc/msgs/msg.toomany
+
+limit   remote  100 SaSu|Any18000600   /etc/msgs/msg.toomany
+
+limit   remote  60  Any                 /etc/msgs/msg.toomany
+
+readme  README*    login
+
+readme  README*    cwd=*
+
+message /welcome.msg            login
+
+message .message                cwd=*
+
+compress        yes             local remote
+
+tar             yes             local remote
+
+# allow use of private file for SITE GROUP and SITE GPASS?
+
+private         yes
+
+# passwdcheck  &lt;none|trivial|rfc822&gt;  [&lt;enforce|warn&gt;]
+
+passwdcheck    rfc822  warn
+
+log commands real
+
+log transfers anonymous,real inbound,outbound
+
+shutdown /etc/shutmsg
+
+# all the following default to &quot;yes&quot; for everybody
+
+delete          no      guest,anonymous         # delete permission?
+
+overwrite       no      guest,anonymous         # overwrite permission?
+
+rename          no      guest,anonymous         # rename permission?
+
+chmod           no      anonymous               # chmod permission?
+
+umask           no      anonymous               # umask permission?
+
+# specify the upload directory information
+
+upload  /var/ftp  *             no
+
+upload  /var/ftp  /incoming     yes     root    daemon  0600 dirs
+
+upload  /var/ftp  /bin          no
+
+upload  /var/ftp  /etc          no
+
+# directory aliases... [note, the &quot;:&quot; is not required]
+
+alias   inc:    /incoming
+
+# cdpath
+
+cdpath  /incoming
+
+cdpath  /pub
+
+cdpath  /
+
+# pathfilter...
+
+pathfilter  anonymous  /etc/pathmsg  ^[AZaz09_\.]*$  ^\.  ^
+
+pathfilter  guest      /etc/pathmsg  ^[AZaz09_\.]*$  ^\.  ^
+
+# specify which group of users will be treated as &quot;guests&quot;.
+
+guestgroup ftponly
+
+email user@hostname</PRE>
+
+<H4><A ID="I19" NAME="I19">
+
+<FONT SIZE=3><B>The Future of FTP</B>
+
+<BR></FONT></A></H4>
+
+<P>Without doubt, the standard FTP client is going to be useful for some time to come. There is a paradigm shift occurring on the Internet, however, as to how files are accessed for FTP. Services like Gopher and WWW, which do not require a static 
+connection, are gaining favor among system managers, who want to ease the load on their FTP servers. They are also gaining favor among Internet users, because the user interface for those programs tends to be fairly intuitive. Programs like NcFTP provide a 
+greater degree of automation and configuration to the FTP user. The management of FTP servers has been given a greater degree of configurability and control by programs like Wu-FTPD. FTP can only get easier as time goes on.</P>
+
+<P><A HREF="tig06.htm"><IMG SRC="bluprev.gif" WIDTH = 32 HEIGHT = 32 BORDER = 0 ALT="Previous Page"></A>
+
+<A HREF="httoc.htm"><IMG SRC="blutoc.gif" WIDTH = 32 HEIGHT = 32 BORDER = 0 ALT="TOC"></A>
+
+<A HREF="htindex.htm"><IMG SRC="bluindex.gif" WIDTH = 32 HEIGHT = 32 BORDER = 0 ALT="Index"></A>
+
+<A HREF="tig08.htm"><IMG SRC="blunext.gif" WIDTH = 32 HEIGHT = 32 BORDER = 0 ALT="Next Page"></A>
+
+<A HREF="httoc.htm"><IMG SRC="bluprev.gif" WIDTH = 32 HEIGHT = 32 BORDER = 0 ALT="Home"></A>
+
+</P></BODY></HTML>
+

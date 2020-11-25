@@ -1,0 +1,2093 @@
+<HTML>
+
+<HEAD>
+
+<TITLE>Tricks of the Internet Gurus tig12.htm</TITLE>
+
+<LINK REL="ToC" HREF="httoc.htm">
+
+<LINK REL="Index" HREF="htindex.htm">
+
+<LINK REL="Next" HREF="tig13.htm">
+
+<LINK REL="Previous" HREF="tig11.htm"></HEAD>
+
+<BODY TEXT="#000000" LINK="#0000FF" VLINK="#800080" bgcolor=white>
+
+<P><A HREF="tig11.htm"><IMG SRC="bluprev.gif" WIDTH = 32 HEIGHT = 32 BORDER = 0 ALT="Previous Page"></A>
+
+<A HREF="httoc.htm"><IMG SRC="blutoc.gif" WIDTH = 32 HEIGHT = 32 BORDER = 0 ALT="TOC"></A>
+
+<A HREF="htindex.htm"><IMG SRC="bluindex.gif" WIDTH = 32 HEIGHT = 32 BORDER = 0 ALT="Index"></A>
+
+<A HREF="tig13.htm"><IMG SRC="blunext.gif" WIDTH = 32 HEIGHT = 32 BORDER = 0 ALT="Next Page"></A>
+
+<A HREF="httoc.htm"><IMG SRC="bluprev.gif" WIDTH = 32 HEIGHT = 32 BORDER = 0 ALT="Home"></A>
+
+</P><UL>
+
+<LI>
+
+<A HREF="#I1">12</A></LI>
+
+<UL>
+
+<LI>
+
+<A HREF="#I2">Listservs and Mailing Lists</A></LI>
+
+<UL>
+
+<UL>
+
+<UL>
+
+<LI>
+
+<A HREF="#I3"><A HREF="pcb-b&w.gif">--by Philip Baczewski</A></A></LI></UL></UL>
+
+<LI>
+
+<A HREF="#I5">Finding and Configuring Mailing List Software</A></LI>
+
+<UL>
+
+<LI>
+
+<A HREF="#I6">An Overview of the Mercury NLM</A></LI>
+
+<LI>
+
+<A HREF="#I7">List Management Features of the Mercury NLM</A></LI>
+
+<LI>
+
+<A HREF="#I8">Setting up a Mercury Mailing List</A></LI>
+
+<LI>
+
+<A HREF="#I9">More on Mercury</A></LI></UL>
+
+<LI>
+
+<A HREF="#I10">Introducing MajorDomo</A></LI>
+
+<UL>
+
+<LI>
+
+<A HREF="#I11">Majordomo Commands</A></LI>
+
+<LI>
+
+<A HREF="#I12">Defining a Majordomo List</A></LI>
+
+<LI>
+
+<A HREF="#I13">Summing up Majordomo</A></LI></UL>
+
+<LI>
+
+<A HREF="#I14">Listproc</A></LI>
+
+<UL>
+
+<LI>
+
+<A HREF="#I15">Listproc Commands</A></LI>
+
+<LI>
+
+<A HREF="#I17">Installing and Configuring Listproc</A></LI>
+
+<LI>
+
+<A HREF="#I18">One More Word on Listproc</A></LI></UL>
+
+<LI>
+
+<A HREF="#I19">Paco Xander Nathan</A></LI>
+
+<UL>
+
+<UL>
+
+<LI>
+
+<A HREF="#I20">--by Tod Foley</A></LI></UL></UL>
+
+<LI>
+
+<A HREF="#I21">Listserv</A></LI>
+
+<UL>
+
+<LI>
+
+<A HREF="#I22">User Commands</A></LI>
+
+<LI>
+
+<A HREF="#I23">Mailing List Owner Commands</A></LI>
+
+<LI>
+
+<A HREF="#I24">Listserv Installation and Management</A></LI>
+
+<LI>
+
+<A HREF="#I25">A Closing Word on Listserv</A></LI></UL>
+
+<LI>
+
+<A HREF="#I26">Some Aspects of Setting up Your Own List</A></LI>
+
+<UL>
+
+<LI>
+
+<A HREF="#I27">Choosing a Forum</A></LI></UL>
+
+<LI>
+
+<A HREF="#I28">Mailing Lists and Usenet</A></LI>
+
+<UL>
+
+<LI>
+
+<A HREF="#I29">Usenet Digests</A></LI>
+
+<LI>
+
+<A HREF="#I30">Usenet Echoes</A></LI></UL>
+
+<LI>
+
+<A HREF="#I31">For More Information[el]</A></LI></UL></UL></UL>
+
+
+
+<H1><A ID="I1" NAME="I1">
+
+<BR>
+
+<FONT SIZE=5><B>12</B>
+
+<BR></FONT></A></H1>
+
+<H2><A ID="I2" NAME="I2">
+
+<FONT SIZE=5><B>Listservs and Mailing Lists</B>
+
+<BR></FONT></A></H2>
+
+<H5><A ID="I3" NAME="I3">
+
+<FONT SIZE=3><B><A HREF="pcb-b&w.gif">--by Philip Baczewski</A></B>
+
+<BR></FONT></A></H5>
+
+<P>So, you want to run your own mailing list. You too can join a mere 5000-8000 other mailing list owners who provide a unique service to the Internet. Sarcasm aside, it is getting easier to set up and run a mailing list. Not only is the supporting 
+software more sophisticated and readily available, but the choice of host computing platforms has also become more varied. A potential world-wide pool of subscribers provided courtesy of the Internet now makes it possible to sustain mailing list on quite 
+esoteric topics. More and more mailing lists are being created to support specific professional organizations or clubs. It is now likely, then, that if you are involved with using or supporting use of Internet facilities, you may be called upon to start 
+and maintain an on-line mailing list (just like when the person who owned the computer used to end up doing the club newsletter).
+
+<BR></P>
+
+<P>At its simplest, a mailing list can just be a list of e-mail addresses which allows a single message to be sent to a group. To provide automated interaction between multiple subscribed individuals, however, usually requires some piece of software to 
+accept subscription and sign-off requests, redistribute messages, maintain message archives, and possibly maintain a file distribution service. For many years, the Revised Listserv software written by Eric Thomas, was the only program which performed all 
+of the above tasks and more. Listserv was primarily associated with the Bitnet educational and research network, and ran on IBM mainframe systems. The program utilized the IBM RSCS protocol supported on IBM operating systems and emulated by various 
+software offerings on other non-IBM Bitnet nodes. More recently, a version of Listserv has been produced for a diverse set of computer platforms, and several additional programs are available to manage the tasks associated with running a mailing list.
+
+<BR></P>
+
+<P>The first step to starting a mailing list is finding a host to support it. This may be an individual computer workstation that you manage, or it could be an Internet-connected multiuser host system. It may even be a remote system where other mailing 
+lists are maintained. If mailing list software is not installed, then you will either need to install one of the programs that are available, or request that it be installed by your system manager. In either case, you will need to carefully evaluate your 
+requirements for mailing list management and select and acquire the software which best supports those requirements. The following discussion may serve as a head start on the process by offering some information on the most popular mailing list packages 
+currently available.
+
+<BR></P>
+
+<H3><A ID="I5" NAME="I5">
+
+<FONT SIZE=4><B>Finding and Configuring Mailing List Software</B>
+
+<BR></FONT></A></H3>
+
+<P>There are several factors to keep in mind when &quot;shopping&quot; for mailing list software. You must know what kind of computer will be available to run the software. You should have some idea of the size and purpose of your intended mailing list or 
+lists. You need to evaluate what other supporting features are required from your mailing list software (archives, file distribution, and so on). Often, question number one overrides any others. If your only available host is a Novell file server, then 
+that may make the decision for you. However, all of the programs discussed below provide, at least, basic automated list management features and all of them are currently in use at a number of Internet sites.
+
+<BR></P>
+
+<H4><A ID="I6" NAME="I6">
+
+<FONT SIZE=3><B>An Overview of the Mercury NLM</B>
+
+<BR></FONT></A></H4>
+
+<P>David Harris, the programmer from New Zealand who provides many Novell file server installations with an e-mail program named Pegasus Mail (P-Mail), has also written an SMTP mail gateway to go along with that program. His name for that mail delivery 
+gateway is Mercury (surprise) and it runs as a Netware Loadable Module (NLM). Novell types will remember that an NLM is a dynamically loadable extension to the Netware operating system which first appeared with Netware 3.0.
+
+<BR></P>
+
+<P>The Mercury NLM provides an interconnection between a Netware queue and a UNIX mail delivery agent (for example, sendmail), and allows P-Mail users to send Internet mail, if that UNIX system is on the Internet. An additional feature of the Mercury NLM 
+is that it has automated mailing list capabilities built in. This is quite a handy feature for maintaining local discussion lists, but it will also just as easily support Internet mailing lists. Mercury is distributed along with Pegasus mail and is 
+primarily available from risc.ua.edu in the /pub/network/pegasus directory.
+
+<BR></P>
+
+<H4><A ID="I7" NAME="I7">
+
+<FONT SIZE=3><B>List Management Features of the Mercury NLM</B>
+
+<BR></FONT></A></H4>
+
+<P>The Mercury NLM supports the basic commands needed to maintain an automated Internet e-mail discussion list. The part of the software that performs these tasks is referred to as Maiser. The supported commands operate in a similar fashion to some 
+familiar and more established mailing list software packages. Subscribe <I>listname</I> and Unsubscribe <I>listname</I> commands are used to add or delete your name to a list. Mail to be distributed to the list is send to 
+<I>listname</I>@<I>internet</I>.<I>node</I>. Commands such as Subscribe and Unsubscribe are usually sent to maiser@<I>internet</I>.<I>node</I> (<I>maiser</I> is short for <I>mail server</I>). A mail alias can also be defined in place of the name Maiser, 
+if, for example, you wished people to send subscription requests to listmngr@<I>your</I>.<I>internet</I>.<I>node</I>.)
+
+<BR></P>
+
+<HR ALIGN=CENTER>
+
+<NOTE>
+
+<IMG SRC="note.gif"><B>Is it Listserv or isn't it? </B>
+
+<BR>
+
+<BR>In the good old days, there was just one major mailing list software package; it was named Listserv, and it ran on Bitnet. Now a number of different software packages are available and they may be addressed as listserv but they are not always the 
+&quot;real&quot; Listserv. The Revised Listserv, written by Eric Thomas, was, as its name implies, a revision and extension of a mailing list server program written by EDUCOM staff and installed at BITNIC, the Bitnet network information center, under the 
+User ID LISTSERV. Apparently, no one holds a legal trademark on the name &quot;listserv,&quot; but the program written by Thomas has clearly utilized that name for the longest period of time.
+
+<BR>
+
+<BR>So, you say, &quot;Listserv is to mailing lists what the Hershey bar is to chocolate, and Kleenex is to tissue, and Scotch tape is to cellophane tape, and the Internet is to networks. Does it really make a difference?&quot; The answer is a resounding 
+&quot;probably.&quot; Because Listserv is the most established of the mailing list software&#151;and in some ways, one of the most documented&#151;people expect certain commands to work when they address a message to an entity named listserv.
+
+<BR>
+
+<BR>In order to 1) be honest with people, and 2) give them the most efficient use of mailing list facilities, it is probably best to avoid using the name listserv as the alias for one of the non-Listserv packages. This is not a value judgement in relation 
+to any of the software, but more of a practical comment. If people know they are not dealing with a familiar Listserv installation, they are more likely to request a help file (or consult some other reference) before trying to utilize that facility. This 
+will save the headache (not to mention, the possible expense) of having to receive and deal with rejection messages for unsupported commands. While most packages support your basic subscribe command, in some cases the similarity ends there.
+
+<BR>
+
+<BR>Even Brent Chapman (of Majordomo fame) says the following in the readme file distributed with his program: &quot;I used to suggest using listserv, but I don't any more; Majordomo is not compatible with Bitnet Listserv, and calling it listserv confuses 
+people.&quot; The bottom line, from my point of view, is if it's not Listserv, don't call it listserv.
+
+<BR></NOTE>
+
+<HR ALIGN=CENTER>
+
+<P>Maiser supports a number of different list configuration options. Lists can be moderated (only the moderator can post messages), restricted (only members of the list may post), or fully public. Open subscription as well as moderator-controlled 
+subscription options are also available. One installation can support multiple lists, moderated by different people. MAISER supports a number of list user and list management commands, as shown in the following list. You will notice that some commands have 
+one or more variations.
+
+<BR></P>
+
+<TABLE BORDER>
+
+<TR>
+
+<TD>
+
+<PRE><B><I>User Command</I></B>
+
+<BR></PRE>
+
+<TD>
+
+<PRE><B><I>Enables You to</I></B>
+
+<BR></PRE>
+
+<TR>
+
+<TD>
+
+<P>SUBSCRIBE <I>listname</I>
+
+<BR>SUB <I>listname</I></P>
+
+<TD>
+
+<P>Subscribe to the indicated mailing list</P>
+
+<TR>
+
+<TD>
+
+<P>UNSUBSCRIBE <I>listname</I>
+
+<BR>UNSUB <I>listname</I>
+
+<BR>SIGNOFF <I>listname</I></P>
+
+<TD>
+
+<P>Sign off from the mailing list</P>
+
+<TR>
+
+<TD>
+
+<P>ENUMERATE <I>listname</I>
+
+<BR>REVIEW <I>listname</I></P>
+
+<TD>
+
+<P>Receive a listing of mailing list members</P>
+
+<TR>
+
+<TD>
+
+<P>LIST</P>
+
+<TD>
+
+<P>Receive an inventory the mailing lists available at this host</P>
+
+<TR>
+
+<TD>
+
+<P>HELP</P>
+
+<TD>
+
+<P>Receive a copy of the help file defined in the MAISER section of the MERCURY.INI file</P>
+
+<TR>
+
+<TD>
+
+<P>LOOKUP <I>string</I></P>
+
+<TD>
+
+<P>Search the associated host's NetWare bindery for usernames matching <I>string</I>&#151;the string can contain the wild cards * and ? (the file server manager can disable lookup by excluding the LOOKUPFILE entry in the MAISER section of the MERCURY.INI 
+file)</P>
+
+<TR>
+
+<TD>
+
+<P>INDEX</P>
+
+<TD>
+
+<P>Receive a copy of an index to any files associated with this installation (this command sends the file INDEX.TXT from the &quot;files to send&quot; directory of the Mercury installation</P>
+
+<TR>
+
+<TD>
+
+<P>SEND <I>filename</I></P>
+
+<TD>
+
+<P>Receive a copy of a file listed in the index file (the file server manager can disable this feature by excluding the SEND_DIR entry in the MAISER section of the MERCURY.INI file)</P>
+
+<TR>
+
+<TD>
+
+<TD>
+
+<TR>
+
+<TD>
+
+<P><B><I>Moderator Command</I></B></P>
+
+<TD>
+
+<P><B><I>Enables You to</I></B></P>
+
+<TR>
+
+<TD>
+
+<P>ADD <I>listname address</I></P>
+
+<TD>
+
+<P>Add a new user to the indicated list (for moderators only)</P>
+
+<TR>
+
+<TD>
+
+<P>REMOVE <I>listname address</I></P>
+
+<TD>
+
+<P>Remove a user from the indicated list (for moderators only)</P>
+
+<TR>
+
+<TD>
+
+<P>BOUNCE</P>
+
+<TD>
+
+<P>Return a message to the sender, with the headers intact</P>
+
+<TR>
+
+<TD>
+
+<P>VERIFY <I>address</I></P>
+
+<TD>
+
+<P>Returns a message indicating</P>
+
+<TR>
+
+<TD>
+
+<P>whether the address specified is valid on the local host.</P>
+
+<TD></TABLE>
+
+<H4><A ID="I8" NAME="I8">
+
+<FONT SIZE=3><B>Setting up a Mercury Mailing List</B>
+
+<BR></FONT></A></H4>
+
+<P>Once the Mercury NLM is installed on the file server, creating a list is an easy task. This will usually need to be done by the NetWare file server manager or someone with an equivalent level of access. List service configuration statements are added to 
+the mercury.ini file (Mercury's configuration file) and a &quot;list of lists&quot; file will need to be created and reference in the mercury.ini file. The list file contains the definitions for the mailing lists supported by that Mercury installation.
+
+<BR></P>
+
+<P>The following examples show how a mailing list could defined using the Mercury NLM. This mercury.ini example appears courtesy of Eriq Neale (neale@acs.unt.edu), Academic Computing Services file server manager at the University of North Texas. The Maiser 
+section of the file is seen at the end. Statements preceding the Maiser section define the environment for performing the SMTP gateway function.
+
+<BR></P>
+
+<P>Anything after a # to the end of the line is a comment, and # is stripped out before parsing. Trailing and leading white space is also stripped before parsing.
+
+<BR></P>
+
+<PRE>#
+
+[General]
+
+myname:      acs.unt.edu          # Canonical name for this server
+
+timezone:    GMT+6                # Time Zone to add to date fields
+
+mailqueue:   MAILQ                # Where mail should be put for delivery
+
+smtpqueue:   MAILQ                # Where the SMTP client should look for
+
+                                  # mail
+
+                                  # note: smtpqueue and mailqueue can be the
+
+                                  # same
+
+[Mercury]
+
+failfile:    SYS:SYSTEM/MERCURY/FAILURE.MER  # Delivery failure notification
+
+                                             # template
+
+confirmfile: SYS:SYSTEM/MERCURY/CONFIRM.MER  # Delivery confirmation template
+
+aliasfile:   SYS:SYSTEM/MERCURY/ALIAS.MER    # System-wide alias file
+
+synfile:     SYS:SYSTEM/MERCURY/SYNONYM.MER  # User synonym database
+
+listfile:    SYS:SYSTEM/MERCURY/LISTS.LST    # List of lists
+
+logfile:     SYS:SYSTEM/MERCURY/MERCURY.LOG  # Traffic logging file
+
+bitnethost:  ricevm1.rice.edu     # Relay host for &quot;.bitnet&quot; rewrites
+
+poll:        10                   # Seconds between queue polling cycles
+
+gullible:    0
+
+scratch:     SYS:SYSTEM/MERCURY   # Where we can write temp files
+
+switch:      1                    # number of ms to yield per op on heavy I/O
+
+returnlines: 15                   # How many lines of failed messages to
+
+                                  # return
+
+postmaster:  NEALE                # NetWare UIC of postmaster
+
+swapids:     1
+
+[MercuryC]
+
+host:        129.120.1.1          # mail mail host which relays for us
+
+scratch:     SYS:SYSTEM/MERCURY   # Where we can write temp files
+
+poll:        30                   # Seconds between queue polling cycles
+
+switch:      1                    # number of ms to yield per op on heavy I/O
+
+returnlines: 15                   # How many lines of failed messages to
+
+return
+
+failfile:    SYS:SYSTEM/MERCURY/FAILURE.MER  # Delivery failure template
+
+timeout:     300
+
+[MercuryS]
+
+switch:      1
+
+debug:       1                    # Whether or not to show session progress
+
+discard:     20000
+
+[MercuryP]
+
+scratch              :     SYS:SYSTEM/MERCURY
+
+switch               :     2
+
+[Groups]
+
+# Alias for group          Actual NetWare group name
+
+[Domains]
+
+# NetWare Server           Domain name
+
+ACS             :       acs.unt.edu
+
+ACS             :       ACS
+
+[Maiser]
+
+Maiser               :     Maiser
+
+Helpfile             :     SYS:SYSTEM/MERCURY/MAISER.HLP
+
+Lookupfile           :     SYS:SYSTEM/MERCURY/MAISER.LKP
+
+Send_dir             :     SYS:SYSTEM/MERCURY/SENDABLE
+
+Logfile              :     SYS:SYSTEM/MERCURY/MAISER.LOG
+
+Notify               :     SYS:SYSTEM/MERCURY/TMP
+
+Local_only           :     Y</PRE>
+
+<P>The following is an example mailing list definition (gcba-l). &quot;Green Chili Burp and the Aftertaste&quot; are a band playing in a style the author has coined &quot;facetious rock.&quot; Eriq Neale happens to be the band leader (the Burp, as it 
+were).
+
+<BR></P>
+
+<PRE>;   Example entry from a &quot;list of lists&quot;
+
+;
+
+gcba-l
+
+    file:           sys:system/mercury/gcbal.lst
+
+    title:          Green Chili Burp and the Aftertaste List
+
+    welcome:        sys:system/mercury/gcbalw.txt
+
+    moderated:      N
+
+    Public:         Y
+
+    Reply_To_List:  Y
+
+    enumerate:      Y</PRE>
+
+<H4><A ID="I9" NAME="I9">
+
+<FONT SIZE=3><B>More on Mercury</B>
+
+<BR></FONT></A></H4>
+
+<P>Mercury and Maiser work only on Novell file servers, but there are a lot of those around. Mercury provides a robust mailing list management solution within the bounds of a Netware environment. Now when you see &quot;Maiser&quot; referenced in those 
+mailing list announcements, you will know from what kind of system that list originates.
+
+<BR></P>
+
+<H3><A ID="I10" NAME="I10">
+
+<FONT SIZE=4><B>Introducing MajorDomo</B>
+
+<BR></FONT></A></H3>
+
+<P>Majordomo, written by Brent Chapman, is a relative newcomer to the set of mailing list software offerings. Because it is written primarily in Perl, it is usable on UNIX systems only. The primary source for distribution is the site ftp.greatcircle.com, 
+in the directory pub/majordomo. Majordomo is simple to install (on most systems) and is flexible enough to support several mailing list configuration variations.
+
+<BR></P>
+
+<P>Majordomo will need to be installed on a UNIX system by someone with root (su) privilege. The Majordomo manager (who creates the lists and so on) need not be the system manager, however. Each list created will have at least one owner. Majordomo supports 
+both closed and open lists. Being added to a closed list requires the approval of the list owner.
+
+<BR></P>
+
+<P>Majordomo supports a number of different list types, some of which can be utilized in combination. An open list is one to which anyone can subscribe with no restrictions. Addition to a closed list requires approval of the list owner. A private list's 
+members can be listed only by other list members. Messages to a moderated list can be posted only by the list owner. An auto list allows subscription and other commands to be automatically processed without needing any approval by the owner. You can also 
+restrict lists to a specific Internet domain. These various configurations make it possible to define the type of list needed for the particular purpose.
+
+<BR></P>
+
+<H4><A ID="I11" NAME="I11">
+
+<FONT SIZE=3><B>Majordomo Commands</B>
+
+<BR></FONT></A></H4>
+
+<P>The commands supported by Majordomo are similar in concept to those of other mailing list software. They can be sent via an e-mail message to the address majordomo@<I>listsite</I>.<I>internet</I>.<I>site</I> (or to whatever alias has been defined for 
+Majordomo). At the heart of any such software are the subscribe and unsubscribe commands, and Majordomo is no different. It does provide a slight variation on these commands, however.
+
+<BR></P>
+
+<P>The following shows a summary of Majordomo user and list owner commands. The parameters in braces ({}) are optional. A vertical bar (|) stands for OR.
+
+<BR></P>
+
+<P>To add your name to a Majordomo list you can use the format:
+
+<BR></P>
+
+<P>subscribe <I>listname</I> <I>{address}</I></P>
+
+<P>To remove your name from a list, use the following command:
+
+<BR></P>
+
+<P>unsubscribe <I>listname</I> <I>{address}</I>
+
+<BR></P>
+
+<P>Here, <I>listname</I> is the name of the mailing list and <I>address</I> is an optionally specified address different from the one from which the mail is sent.
+
+<BR></P>
+
+<P>Several other commands can provide you with information about a list or about the lists maintained on a Majordomo installation:
+
+<BR></P>
+
+<TABLE BORDER>
+
+<TR>
+
+<TD>
+
+<P>info <I>listname</I></P>
+
+<TD>
+
+<P>Returns information about the specified list</P>
+
+<TR>
+
+<TD>
+
+<P>which <I>{address}</I></P>
+
+<TD>
+
+<P>Returns the listnames to which you are subscribed or to which the optionally specified address is subscribed;</P>
+
+<TR>
+
+<TD>
+
+<P>who <I>listname</I></P>
+
+<TD>
+
+<P>Returns a list of all addresses subscribed to the specified list name</P>
+
+<TR>
+
+<TD>
+
+<P>lists</P>
+
+<TD>
+
+<P>Returns the names of all mailing lists maintained on that particular Majordomo installation</P>
+
+<TR>
+
+<TD>
+
+<P>index <I>listname</I></P>
+
+<TD>
+
+<P>Returns a list of files associated with a particular mailing list.</P>
+
+<TR>
+
+<TD>
+
+<P>get <I>listname filename</I></P>
+
+<TD>
+
+<P>Returns a copy of the requested file name</P></TABLE>
+
+<P>Two additional commands are available to all users:
+
+<BR></P>
+
+<TABLE BORDER>
+
+<TR>
+
+<TD>
+
+<P>help</P>
+
+<TD>
+
+<P>Returns a informational help file;</P>
+
+<TR>
+
+<TD>
+
+<P>end</P>
+
+<TD>
+
+<P>Used to terminate a sequence of one-line Majordomo commands, so that subsequent lines of a message will not be processed (like a signature, for example)</P></TABLE>
+
+<P>In addition to these &quot;general user&quot; commands are some available only to list owners:
+
+<BR></P>
+
+<PRE>approve <I>password</I> subscribe|unsubscribe <I>listname</I> <I>address</I></PRE>
+
+<P>enables a list owner to approve a request to subscribe to, or sign off from, a closed list; the password (set initially by the Majordomo manager) is necessary to validate that the command is coming from the list owner;
+
+<BR></P>
+
+<PRE>passwd <I>listname</I> <I>old_value</I> <I>new_value</I></PRE>
+
+<P>enables list owners to change their password;
+
+<BR></P>
+
+<PRE>newinfo <I>listname</I> <I>password</I></PRE>
+
+<P>enables the list owner to set or change the information returned about list as the result of an info command.
+
+<BR></P>
+
+<P>This may seem like a limited set of commands, but they are enough to maintain your basic Internet mailing list.
+
+<BR></P>
+
+<H4><A ID="I12" NAME="I12">
+
+<FONT SIZE=3><B>Defining a Majordomo List</B>
+
+<BR></FONT></A></H4>
+
+<P>Installing Majordomo involves doing some UID and directory management, compiling some code, customizing a configuration file, and defining some alias values, the details of which are found in the documentation distributed with the package. Once 
+Majordomo is installed, defining a list is relatively simple. At least four aliases are defined for each list: a pointer to the list of subscribers, a pointer to the list owner, a pointer to a handler for list requests, and a pointer to where requests are 
+forwarded for any necessary approval. Sample aliases for a list might appear as follows:
+
+<BR></P>
+
+<PRE>list_name: :include:/majordomo/lists/list_name
+
+owner-list_name: owner@somenode.com
+
+list_name-request: &quot;|/majordomo/wrapper request-answer list_name&quot;
+
+list_name-approval: owner@somenode.com</PRE>
+
+<P>In addition to the aliases, several files must be created. In the previous example, list_name would be a file whose name matches the name of the list. This file will ultimately contain the addresses of the list's members. Along with it would be files 
+named list_name.passwd, containing the approval password, and list_name.info, containing the list's welcoming information. Other variations are described in Majordomo's documentation, and sample configurations are included.</P>
+
+<H4><A ID="I13" NAME="I13">
+
+<FONT SIZE=3><B>Summing up Majordomo</B>
+
+<BR></FONT></A></H4>
+
+<P>Majordomo is a fairly straightforward package and is not at all overwhelming to install or configure. As with any e-mail operation, care must be taken to avoid generating e-mail loops and other nasty conditions. So far on the Internet, Majordomo seems 
+to be proving itself as a useful list-management option.
+
+<BR></P>
+
+<H3><A ID="I14" NAME="I14">
+
+<FONT SIZE=4><B>Listproc</B>
+
+<BR></FONT></A></H3>
+
+<P>Listprocessor (<I>listproc</I> for short) is a UNIX-based Listserv alternative that was developed by Anastasios Kotsikonas (tasos@cs.bu.edu). Its command set is similar but not identical to Listserv. Listproc was a freely distributed program through 
+version 6, and you may still find version 6 on anonymous FTP sites (cs.bu.edu, for one). In 1994, the Corporation for Research and Educational Networking (CREN) purchased the ownership rights to Listproc and eventually issued version 7.0. This version is 
+available at no charge to CREN members, with a yearly licensing fee for other nonprofit or for-profit organizations. More information about the availability of this software can be attained via e-mail from listproc-info@listproc.net or cren@cren.net.
+
+<BR></P>
+
+<H4><A ID="I15" NAME="I15">
+
+<FONT SIZE=3><B>Listproc Commands</B>
+
+<BR></FONT></A></H4>
+
+<P>Listproc is a full-featured mailing list package that includes some list digest features and limited file serving. Both unmoderated and moderated lists are supported. Lists can be private or open. The commands shown in the following list indicate a 
+higher level of complexity (as well as utility) than is seen in the previously discussed alternatives. The commands subscribe and unsubscribe once again show up in this command set. Notice that some of the Listproc commands will be familiar if you have any 
+experience with Listserv (not a coincidence).
+
+<BR></P>
+
+<P>The following is a summary of Listproc 7.0 commands. The parameters in braces ({}) are optional. A vertical bar (|) stands for OR. Where the meaning of a command is not necessarily evident, a brief description is provided in parentheses.
+
+<BR></P>
+
+<P><A ID="I16" NAME="I16"></A><B>Commands to join a list or modify your access:</B>
+
+<BR>
+
+<BR>subscribe <I>listname</I> <I>your name</I> -or- join <I>listname</I> <I>your name</I>
+
+<BR>
+
+<BR>unsubscribe <I>listname</I> -or- signoff <I>listname</I>
+
+<BR></P>
+
+<P>purge <I>password</I>   (Removes your address from all lists)</P>
+
+<P>which   (Finds out to which lists you are subscribed)
+
+<BR>
+
+<BR>set <I>listname</I> {<I>option</I>      <I>arguments</I>}
+
+<BR>                mail           ACK|NOACK|POSTPONE|DIGEST
+
+<BR>                password       <I>old_password</I> <I>new_password</I>
+
+<BR>                address        <I>password</I> <I>new_address</I>
+
+<BR>                conceal        YES|NO
+
+<BR>                preference     <I>preferences</I>
+
+<BR>
+
+<BR>query <I>listname</I>   (Returns your settings)
+
+<BR></P>
+
+<TABLE BORDER>
+
+<TR>
+
+<TD>
+
+<PRE><B><I>Commands to retrieve list or general </I></B><B><I>information:</I></B>
+
+<BR></PRE>
+
+<TD>
+
+<TR>
+
+<TD>
+
+<P>help <I>&lt;topic&gt;</I></P>
+
+<TD>
+
+<TR>
+
+<TD>
+
+<P>help listproc</P>
+
+<TD>
+
+<P>(Receives information on Listproc)</P>
+
+<TR>
+
+<TD>
+
+<P>help live</P>
+
+<TD>
+
+<P>(Receives information on interactive connection)</P>
+
+<TR>
+
+<TD>
+
+<P>lists {local|global {<I>keywords</I>}}</P>
+
+<TD>
+
+<TR>
+
+<TD>
+
+<P>release -or- version</P>
+
+<TD>
+
+<P>(Listproc version)</P>
+
+<TR>
+
+<TD>
+
+<P>information {<I>listname</I>}</P>
+
+<TD>
+
+<TR>
+
+<TD>
+
+<P>recipients <I>listname</I></P>
+
+<TD>
+
+<P>(Lists subscribers)</P>
+
+<TR>
+
+<TD>
+
+<P>review <I>listname</I> {short|description|subscribers}</P>
+
+<TD>
+
+<TR>
+
+<TD>
+
+<P>statistics <I>listname</I> {<I>subscriber_addresses</I> | -all}</P>
+
+<TD>
+
+<TR>
+
+<TD>
+
+<P>run <I>listname</I> {<I>password</I> <I>cmd</I> {<I>arguments</I>}}</P>
+
+<TD>
+
+<P>(Runs a special command)</P></TABLE>
+
+<UL>
+
+<LH><B>Commands to list or retrieve files:</B>
+
+<BR></LH></UL>
+
+<P>index {archive|path} {password} {-all}</P>
+
+<P>search archive|path} {password} {-all} pattern</P>
+
+<P>(pattern can be a regular expression)</P>
+
+<P>get archive|path file {password} {# of parts}</P>
+
+<P>view archive|path} {password} {# of parts} (Views files on the screen when connected interactively)</P>
+
+<P>fax FAX# archive|path file {password} {# of parts}</P>
+
+<P>(FAXes files to specified number)
+
+<BR></P>
+
+<UL>
+
+<LH><B>Commands for list management:</B>
+
+<BR></LH></UL>
+
+<P>{quiet} add listname password address name
+
+<BR></P>
+
+<P>{address name} ...
+
+<BR></P>
+
+<P>(Adds user or users&#151;quiet specifies no notification to address)
+
+<BR></P>
+
+<P>{quiet} delete listname password address {address} ...
+
+<BR></P>
+
+<P>{quiet} set listname {option arguments} for address
+
+<BR></P>
+
+<P>{address} ...
+
+<BR></P>
+
+<P>purge password address {address} ...      (Removes addresses from mailing list)
+
+<BR></P>
+
+<P>approve listname password msg tag # {msg tag #} ...      (Approves messages for a moderated list)
+
+<BR></P>
+
+<P>discard listname password msg tag # {msg tag #} ...
+
+<BR></P>
+
+<P>configuration listname password {option {arguments}} ...      (Sets list configuration options&#151;send help configuration for a list of options and arguments)
+
+<BR></P>
+
+<P>edit listname password file {-nolock}      (Retrieves a list file for editing)
+
+<BR></P>
+
+<P>hold listname password      (suspend list mail delivery)
+
+<BR></P>
+
+<P>free listname password      (resume list mail delivery)
+
+<BR></P>
+
+<P>lock listname password      (suspend list requests)
+
+<BR></P>
+
+<P>unlock listname password     (resume list requests)
+
+<BR></P>
+
+<P>initialize password {alias list_address config_options}
+
+<BR></P>
+
+<P>-or-
+
+<BR></P>
+
+<P>new-list password alias list_address config_options
+
+<BR></P>
+
+<P>put listname password keyword {arguments}
+
+<BR></P>
+
+<P>reports listname password
+
+<BR></P>
+
+<P>system <I>listname</I> <I>password</I> <I>user_address</I> <I>commands</I>      (Issues commands for users)
+
+<BR></P>
+
+<H4><A ID="I17" NAME="I17">
+
+<FONT SIZE=3><B>Installing and Configuring Listproc</B>
+
+<BR></FONT></A></H4>
+
+<P>Installing Listproc does require system manager privileges to accomplish some tasks. Other than setting up the appropriate accounts, aliases must be set up, software must be compiled and configured, and file permissions must be set. A config file 
+defines the parameters of the Listproc system, including elements like organization name, server definition and options, Listproc manager, and list definitions. The total number of parameters is quite numerous.
+
+<BR></P>
+
+<P>Lists are defined in the config file while the server is not running. Elements to define are a list alias (listname), list e-mail address, list owner's address, and a password. After they are defined, lists can be maintained by the Listproc manager 
+through use of a list command supplied with the program distribution. Lists can be changed to moderated, message reply options can be set, message forwarding can be set, and several other parameter changes are possible.
+
+<BR></P>
+
+<H4><A ID="I18" NAME="I18">
+
+<FONT SIZE=3><B>One More Word on Listproc</B>
+
+<BR></FONT></A></H4>
+
+<P>For a number of years, Listproc was the alternative system for UNIX sites that wanted to run a mailing list server. With recent releases the software seems to be coming into its own, and CREN is certainly hoping to establish it in a manner similar to 
+the proliferation of Listserv. As the following sections show, however, it is not without competition, and continual addition of a features may be necessary for this package to catch up to the more firmly established mailing list system.
+
+<BR></P>
+
+<H3><A ID="I19" NAME="I19">
+
+<FONT SIZE=4><B><a href="paco.gif">Paco Xander Nathan</a>
+
+</B>
+
+<BR></FONT></A></H3>
+
+<H5><A ID="I20" NAME="I20">
+
+<FONT SIZE=3><B>--by Tod Foley</B>
+
+<BR></FONT></A></H5>
+
+<P>&quot;Overall, Rover represents an ongoing AI project, intended to explore the use of automated e-mail to help obviate most needs for a marketing department :)
+
+<BR></P>
+
+<P>Seems like OTHER magazines have even copied our research efforts, but we won't mention any names now, ahem, will we WiReD??!?!?!?!??!&quot;
+
+<BR></P>
+
+<P>--Paco Xander Nathan; speaking of the FringeWare Infobot &quot;Rover&quot;
+
+<BR></P>
+
+<P>Paco Xander Nathan, also known as pacoid@io.com, is a programmer, writer, lecturer, and exemplary entrepreneur from 15 minutes into the future. He is perhaps best and most widely known as the cofounder of FringeWare Inc., a decidedly alternative 
+hardware/software vendor and publishing company that does a majority of its business online. FringeWare's customers, clients, and cohorts keep in touch with Paco and his partner Jon Lebkowsky via an e-mail list, an automated file server, an anonymous FTP 
+site, a Gopher site, a conference on The WELL, and a newly-created Mosaic site. But that isn't enough for these fabulous furry fringe brothers&#151;they're currently creating their own virtual building in Steve Jackson Games' &quot;Metaverse&quot; MOO 
+(telnet metaverse.io.com 7777).
+
+<BR></P>
+
+<P>Paco is a master of UNIX and telecommunications programming, and a well-known cyberjournalist as well. He is the creator of a wide variety of programs, from the rudimentary AI &quot;Pets&quot; that serve his online interests to a digital lunar calendar 
+designed to assist in the prediction of menstrual cycles. His written works have appeared in the pages of <B><I>bOING-bOING</I></B>, <B><I>Fringe Ware Review</I></B>, <B><I>Mondo 2000</I></B>, <B><I>PIX-Elation</I></B>, <B><I>Whole </I></B><B><I>Earth 
+Review</I></B>, <B><I>Wired</I></B>,<B><I> </I></B>and <B><I>2600</I></B> magazines.
+
+<BR></P>
+
+<P><B>TF: </B>How did FringeWare Inc. begin, and how is it structured?
+
+<BR></P>
+
+<P><B>PXN: </B>Well, Jon and I noticed a fundamental shift in the nature of media + communities + entreprenuring + art, so we created FW as an experiment/survival-measure. Over the following two years, we've collected a nifty community of talented, 
+like-minded folks&#151;and, very importantly, alienated others whom we felt needed to be alienated. So, on the foundation, we're a Net-savvy publisher. That lends us cachet to maintain &quot;property&quot; within what might otherwise be considered 
+&quot;public&quot; areas: a kind of &quot;news service&quot; (i.e., the e-mail list) with over 1000 primary and perhaps 5000 secondary subscribers worldwide. Plus, we have the worldwide circulation of our magazine, <B><I>Fringe Ware Review</I></B><I>,</I> 
+and these projects have prospered based on our formulation of Net-based economics and behavior. From this base, we've built another pillar: Our publications are registered in the Library of Congress and archived at an anonymous FTP site. On top of that, 
+we've built means for access via Gopher and the Infobot. Atop that, we have an even niftier, more interactive method for access: our WWW pages. Altogether, we'll call this a &quot;structure&quot; :) , at least until we come up with some better name. P'haps 
+it's all the Infobot....
+
+<BR></P>
+
+<P><B>TF: </B>So you've got a built-in base, which covers all available Internet services. How do you make use of this &quot;structure&quot; in day-to-day business?
+
+<BR></P>
+
+<P><B>PXN: </B>We manage to slip in our product catalog at each level, along with public access to product info and discussions. This is all based on info-on-demand and not broadcast or direct marketing, so I don't see it as &quot;evil commercialization of 
+the Net.&quot; Rather, it's a new kind of marketplace; a formalized, nurtured version of what's been going on since the dawn of e-mail anyway. We also manage to slip in feedback loops: (1) the various intelligent agents that comprise our infobot also 
+generate files within our archives; (2) the business itself generates part of the archives, since our product and vendor and store databases are automatically converted into WWW pages; (3) the community develops a narrative about the business and the 
+infobot; and (4) the infobot's agents analyze and publish the narratives and participation within the community. So, due to the feedback and automation issues, this Thing, this Structure falls under the domain of cybernetics; for example, the use of the 
+term &quot;Infobot.&quot;
+
+<BR></P>
+
+<P><B>TF: </B>The InfoBot&#151;a &quot;pet&quot; you refer to as &quot;Rover&quot;&#151;exhibits a high level of interactivity that some might describe as a rudimentary form of &quot;artificial intelligence.&quot; Some of your other &quot;pets&quot; are 
+known to wander around the Net, and to make strange interpolations and collections of words and phrases they encounter, as if attempting to interparse meaning into substance... and yet at root we're talking about a <I>mail server</I>. At what point did you 
+first make that conceptual leap, in which a UNIX mailing list becomes the kernel of an intelligent agent?
+
+<BR></P>
+
+<P><B>PXN: </B>I think the moment is defined when enough interest and attention focus on that mailing list or address as something of worth. Rover really is a pet, in one sense, because I &quot;tend&quot; it and sort of take it for walks&#151;I like to 
+have Rover walk in front and let people deal with it instead of me. Then I watch how they try to interact, and add functions to make Rover smarter. That fulfills a kind of feedback loop, in the sense of Norbert Weiner's definition of cybernetics. Some 
+people have parsed our intentions; some even recognize how this Thing has become my &quot;pet&quot; in nearly every sense. But most haven't yet seen the real subtext of how it's only a half-step away from being interactive TV.
+
+<BR></P>
+
+<P>People try to reach us, and if Rover doesn't understand a message, it sends back a polite &quot;I have no idea what you're saying, but here's what I understand&quot; response. That fulfills another feedback loop. These loops provide the scientific basis 
+for some kind of AI, turning the list+server into something more than a news pipe or TV broadcast. I could quote from Steven Levy's text on <I>ALife </I>[Artificial Life], but basically these lists/servers/agents are starting to fulfill the criteria.
+
+<BR></P>
+
+<P><B>TF: </B>The implications are indeed staggering, especially when you bear in mind that the predominant trend in Net programming these days seems to be integration of services into integrated &quot;environments.&quot; But at this point many people 
+would ask, &quot;Why go to all the trouble? Why hassle to create and continually modify a program that does things humans can do themselves?&quot;
+
+<BR></P>
+
+<P><B>PXN: </B>Because of the level of interest we've generated. There simply is no humanly possible way for us to have a real person answering all the questions. We couldn't afford that&#151;probably ever. If you provide wires, people will pull them. 
+Telemarketing people with their phones and 800 numbers have <I>no </I>idea what's in store for them as the Net grows. We stick in a robot instead; it's a matter of numbers. I could personally respond to only, say, <I>N</I> people with any comprehension and 
+still have time to put food on the table. So I and some associates have a list instead&#151;that reaches <I>N*500</I>. But then even <I>more </I>people try to reach us whenever we get a magazine review, interview, etc., and rather than repeat ourselves 
+silly, we add an intelligent agent. That covers, say, <I>N*5000</I>, provided we supply a help archive of files and hypertext for Rover to draw from.
+
+<BR></P>
+
+<P>I receive hundreds of calls/letters/e-mail each week, mostly from people asking for some kind of assistance. If any of those people really needed help they'd be dialing the local emergency number, or in counseling or somesuch, instead of being wired to 
+a terminal. The volume makes all notions of communication with me&#151;except for maybe a half-dozen of my closest friends&#151;surreal.
+
+<BR></P>
+
+<P>-- from io.com/usr/ftp/pub/fwi/STAFF/pacoid.bio
+
+<BR></P>
+
+<P><B>TF: </B>How do your customers and readers use the InfoBot?
+
+<BR></P>
+
+<P><B>PXN: </B>Here's a summary of commands for Rover:
+
+<BR></P>
+
+<P>  subscribe    to join the list
+
+<BR>  unsubscribe  to leave the list
+
+<BR>  list         to list the available files
+
+<BR>  get FILE     to send you the file name &quot;FILE&quot;
+
+<BR>  find KEY     to send you a list of files containing &quot;KEY&quot;
+
+<BR>  help         to send you the intro file (same as &quot;get readme&quot;)
+
+<BR>  ping         to check whether the list knows your address
+
+<BR>  daily        to receive daily msgs instead of weekly digest
+
+<BR>  digest       to receive weekly digest instead of daily msgs
+
+<BR>  quit         to quit scanning a msg, in case you have a .sig
+
+<BR></P>
+
+<P>For example, if you were to send the following message:
+
+<BR></P>
+
+<P>To: fringeware-request@io.com
+
+<BR></P>
+
+<P>  get prices
+
+<BR></P>
+
+<P>Rover would send back to you a current price list for products listed in our online catalog (which can also be found in the back of <B>Fringe Ware Review</B>).
+
+<BR></P>
+
+<P><B>TF: </B>What are some of your other &quot;pets,&quot; and what do they do?
+
+<BR></P>
+
+<P><B>PXN: </B>Well, there's Spewy and Chewy, who handle the basic mailing-list/news-service functions and digest service, respectively. I have one called Nosey, which uses various means to keep tabs on people I like to keep tabs on. I have another named 
+Snoop, which runs the markov chain synthesis for us and updates our &quot;memes&quot; lexicon. It ends up building a lot of cool new words, which we like to think of as the &quot;memetic interstices&quot; of our discussions&#151;a kind of quick-fix for our 
+group narrative. There's a new one called Dopey, which has been learning how to parse error messages from all over the Net. If you think trying to correspond with N thousand people is weird, just wait until hundreds of those addresses start generating 
+multiple bounces on a given day! I'm not aware of any other project like this, but it's a huge problem. As every new host plugs into the internetwork, more and more error reports and new formats spring up.
+
+<BR></P>
+
+<P>There's another pet, but it's been pulled for bad behavior. That was my personal agent, sniffer, spider, whatever the word is these days. It looks for any references to things I find interesting&#151;great for research :)&#151;but it chewed up too many 
+system resources and locked up matters, and had to be suspended. Of course, we also have our Gopher and WWW and hope to put in a WAIS server (although we do that function via Rover now), which are all agents in a sense. Source code for all our intelligent 
+agents can be found in our archives.
+
+<BR></P>
+
+<P><B>TF: </B>What sort of communications are not handled automatically?
+
+<BR></P>
+
+<P><B>PXN: </B>Well, I have another personal agent called &quot;Ron Lieberman&quot; who gets politely nasty at times with people who bug me via e-mail....
+
+<BR></P>
+
+<P>===============================================================
+
+<BR></P>
+
+<P>You can check out Fringe Ware Inc. using any of these methods:
+
+<BR></P>
+
+<P>FringeWare Email List:</P>
+
+<P>  mail fringeware-request@io.com</P>
+
+<P>In text body:</P>
+
+<P>  subscribe</P>
+
+<P>&quot;Rover&quot; (InfoBot):</P>
+
+<P>  mail fringeware-request@io.com</P>
+
+<P>Include commands in text body.
+
+<BR></P>
+
+<P>Anonymous FTP:</P>
+
+<P>...<A HREF="ftp: io.com /pub/fwi">ftp: io.com /pub/fwi</A>
+
+<BR></P>
+
+<P>Gopher:</P>
+
+<P>  gopher io.com</P>
+
+<P>Look under the &quot;commercial&quot; section.
+
+<BR></P>
+
+<P>The WELL:</P>
+
+<P>  go fringeware
+
+<BR></P>
+
+<P>Mosaic:</P>
+
+<P>...<A HREF="http://io.com/commercial/fringeware/home.html">http://io.com/commercial/fringeware/home.html</A>
+
+<BR></P>
+
+<H3><A ID="I21" NAME="I21">
+
+<FONT SIZE=4><B>Listserv</B>
+
+<BR></FONT></A></H3>
+
+<P>Listserv, written by Eric Thomas, is probably the most widely-used and established mailing-list software. This is true to the extent that many people use <I>listserv</I> as a synonym for any mailing list software, and even in reference to an individual 
+mailing list (for example, &quot;send a message to the Volkswagen owners' Listserv and may be you'll find out whether Beetle or Bug is the official name of that car&quot;). Listserv is the most fully functioning of the packages discussed here. It includes 
+mailing-list management, file services, and database services (not only can you store and distribute archive files, you and your Listserv users can search them using Listserv database capabilities).
+
+<BR></P>
+
+<P>Listserv supports interoperation between installations, allowing the production of a global list of mailing lists and subscriptions to any known mailing list via any Listserv installation. Listserv also has a &quot;distribute&quot; feature, which will 
+send one copy of a message to an installation for distribution to those addresses maintained at (or close to) that installation.
+
+<BR></P>
+
+<P>For many years, Listserv ran only on IBM mainframe VM/CMS operating systems and was primarily associated with members of the Bitnet network. This association changed somewhat, when Dr. Thomas formed a company called L-Soft International, Inc., for the 
+distribution of a new commericial version of Listserv and a VM/CMS mailer package called LMail. L-Soft has provided Listserv availability for those who are not part of Bitnet.
+
+<BR></P>
+
+<P>The first new development on the Listserv front was the release of version 1.8 for VM/CMS, which provided for operation of the Listserv software using TCP/IP protocols. The Bitnet network was originally (and still is, to a great degree) based upon the 
+IBM Remote Spooling Communications Subsystem (RSCS) networking protocols. The Network Job Entry (NJE) portion of RSCS supports the exchange of mail and files on Bitnet for VM/CMS, MVS/SP, and VAX/VMS and other systems running RSCS-emulation software. 
+(Today, most Bitnet traffic is carried via NJE under IP protocols, with transmission occurring mostly over the NSFNet Internet backbone.) The availability of Listserv 1.8 provides the ability to run Listserv independent of an RSCS network (Bitnet, for 
+example).
+
+<BR></P>
+
+<P>The second development was the release of Listserv 1.8 for UNIX. The UNIX version will run on AIX, BSDi, Irix, OSF/1, Solaris, SunOS, and Ultrix systems. This version will interoperate with other versions of Listserv on TCP/IP. Existing lists based on 
+VM/CMS systems can be ported to run under the UNIX version of the product. This release brings the Listserv feature set to platforms other than IBM VM/CMS. Versions for VAX/VMS and Windows NT are also announced. Any questions with regard to the 
+availability of these products can be addressed to sales@lsoft.com.
+
+<BR></P>
+
+<P>The many functions of Listserv are reflected in its command set. Some of these commands may be familiar even if you haven't used Listserv before, since Listserv set a standard in this regard that has been copied by other programs. Because it has been 
+the workhorse of the Bitnet network, Listserv also has the capability to provide information about the node structure of that network (via the SHOW command).
+
+<BR></P>
+
+<P>The following is a summary of Listserv user and owner commands through version 1.8. The parameters in braces ({}) are optional. A vertical bar (|) stands for or. Where the meaning of a command is not necessarily evident, a brief description is provided 
+in parentheses. Portions of the commands or options in uppercase represent the minimal abbreviations possible.
+
+<BR></P>
+
+<H4><A ID="I22" NAME="I22">
+
+<FONT SIZE=3><B>User Commands</B>
+
+<BR></FONT></A></H4>
+
+<UL>
+
+<LH><B>Commands to join a list or modify your access:</B>
+
+<BR></LH></UL>
+
+<PRE>SUBscribe <I>listname</I> <I>First_name Last_name</I>
+
+SIGNOFF   <I>listname</I>
+
+SIGNOFF   *
+
+SIGNOFF   * (NETWIDE
+
+SET       <I>listname</I> (<I>options</I>
+
+                      ACK|NOACK|MSGack
+
+                      CONCEAL|NOCONCEAL
+
+                      Files|NOFiles
+
+                      Mail|NOMail
+
+                      REPro|NOREPro
+
+                      FULLhdr -or- FULLBsmtp
+
+                      IETFhdr
+
+                      SHORThdr -or- SHORTBsmtp
+
+CONFIRM   <I>listname</I> {<I>listname</I>} ...
+
+Query     <I>listname</I>
+
+Query     *
+
+REGister  <I>First_name Last_name</I>
+
+REGister  OFF
+
+Commands to find out information about a list, lists, or BITNET
+
+nodes:
+
+Help
+
+INDex     <I>listname</I>
+
+Info      <I>topic</I>
+
+Lists     {<I>option</I>}
+
+           Detailed
+
+           Global
+
+           Global /<I>string</I>
+
+           SUMmary <I>node</I>
+
+           SUMmary ALL
+
+           SUMmary TOTAL
+
+Query      File <I>fn</I> <I>ft</I> <I>filelist</I> <I>options</I>
+
+Query      FLags
+
+RELEASE
+
+REView     <I>listname</I> {(<I>options</I>}
+
+                        BY <I>sort_field</I>
+
+                           Country
+
+                           Name
+
+                           NODEid
+
+                           Userid
+
+                        BY (<I>sort_field</I> <I>sort_field</I>)
+
+                        Countries
+
+                        LOCal
+
+                        MSG
+
+                        NOHeader
+
+                        Short
+
+SHOW       {<I>function</I>}
+
+            ALIAS <I>node</I> {<I>node</I>} ...
+
+            BITEARN
+
+            DISTribute
+
+            DPATHs <I>node</I> {<I>node</I>} ...
+
+            DPATHs *
+
+            FIXes
+
+            LINKs <I>node</I> {<I>node</I>} ...
+
+            NADs <I>node</I> <I>node</I> ...
+
+            NETwork
+
+            NODEntry <I>node</I> <I>node</I> ...
+
+            NODEntry <I>node</I> /<I>string</I>*/<I>string</I>
+
+            PATHs <I>node</I> <I>node</I> {<I>node</I>} ...
+
+            STATs
+
+SCAN       <I>listname</I> <I>string</I>
+
+STats      <I>listname</I> {(<I>options</I>}
+
+                        LOCal
+
+THANKs    (check status of server)</PRE>
+
+<UL>
+
+<LH><B>Listserv file-server commands:</B>
+
+<BR></LH></UL>
+
+<PRE>AFD        ADD <I>fn</I> <I>ft</I> <I>filelist</I> <I>prolog</I> (Automatic File Distribution)
+
+AFD        DELete <I>fn</I> <I>ft</I> <I>filelist</I>
+
+AFD        List
+
+AFD        FOR <I>address</I> ADD|DEL|LIST      (node administrators only)
+
+FUI     (File Update Information)
+
+GET        <I>fn</I> <I>ft</I> <I>filelist</I> {(<I>options</I>}
+
+                                   PROLOGtext <I>text</I>
+
+GIVE       <I>fn</I> <I>ft</I> <I>filelist</I> {TO} <I>address</I>
+
+INDex      {filelist}
+
+PW         <I>function</I>
+
+            ADD <I>pw</I>
+
+            CHange <I>newpw</I> PW=<I>oldpw</I>
+
+            DELete oldpw
+
+SENDme     <I>fn</I> <I>ft</I> <I>filelist</I> {(<I>options</I>}
+
+                                  PROLOGtext text</PRE>
+
+<UL>
+
+<LH><B>Database and other commands:</B>
+
+<BR></LH></UL>
+
+<PRE>DATAbase   <I>function</I>
+
+           Search DD=<I>ddname</I> {ECHO=NO}
+
+           List
+
+           REFRESH <I>dbname</I>
+
+DBase      <I>function</I>
+
+           Search DD=<I>ddname</I> {ECHO=NO}
+
+           List
+
+           REFRESH <I>dbname</I>
+
+DISTribute <I>type</I>   <I>source</I>  <I>dest</I>    <I>options</I>
+
+           MAIL
+
+           FILE
+
+           RFC822
+
+                    DD=<I>ddname</I>
+
+                              {TO} <I>address</I> {<I>address</I>} ...
+
+                              {TO} DD=<I>ddname</I>
+
+                                        ACK=NOne|MAIL|MSG
+
+                                        CANON=YES
+
+                                        DEBUG=YES
+
+                                        INFORM=MAIL
+
+                                        PRIOR=<I>nn</I>
+
+                                        TRACE=YES
+
+                                        FROM=<I>address</I> 
+
+                                        FROM=DD=<I>ddname</I>
+
+FOR        <I>address</I> <I>command</I>
+
+SERVE      <I>address</I>
+
+UDD        (User Directory Database)</PRE>
+
+<H4><A ID="I23" NAME="I23">
+
+<FONT SIZE=3><B>Mailing List Owner Commands</B>
+
+<BR></FONT></A></H4>
+
+<UL>
+
+<LH><B>Commands used for file management:</B>
+
+<BR></LH></UL>
+
+<PRE>AFD        GET fn ft {<I>filelist</I>}
+
+FUI        GET fn ft {<I>filelist</I>}
+
+GET        <I>fn</I> <I>filelist</I> {<I>options</I>}
+
+                            CTL
+
+                            NOLock
+
+PUT        <I>fn</I> <I>ft</I> {<I>filelist</I> <I>parms</I>}
+
+                                 NODIST
+
+                                 CKDATE=NO
+
+                                 DATE=<I>yymmddhhmmss</I>
+
+                                 PW=<I>pw</I>
+
+                                 RECFM=F {LRECL=<I>nnn</I>
+
+                                 REPLY-TO=<I>address</I>
+
+                                 REPLY-TO=NONE
+
+                                 REPLY-VIA=MSG
+
+                                 TITLE=<I>file</I> <I>title</I>
+
+REFRESH    <I>filelist</I> {(<I>options</I>}
+
+                         NOFLAG
+
+UNLOCK     <I>fn</I> <I>filelist</I></PRE>
+
+<UL>
+
+<LH><B>Commands used for list management:</B>
+
+<BR></LH></UL>
+
+<PRE>{QUIET} ADD        <I>listname</I> <I>address</I> <I>first_name</I> <I>last_name</I>
+
+{QUIET} ADD        <I>listname</I> DD=<I>ddname</I>
+
+{QUIET} ADDHere    <I>listname</I> <I>address</I> <I>first_name</I> <I>last_name</I>
+
+{QUIET} ADDHere    <I>listname</I> DD=<I>ddname</I>
+
+{QUIET} DELete     <I>listname</I> <I>address</I> {(<I>options</I>}
+
+                                          GLobal
+
+                                          LOCal
+
+                                          TEST
+
+{QUIET} MOVE       <I>listname</I> <I>address</I> {TO} <I>node</I>
+
+{QUIET} MOVE       <I>listname</I> DD=<I>ddname</I>
+
+{QUIET} SET        <I>listname</I> <I>options</I> {FOR <I>address</I>}
+
+{QUIET} SET        *          <I>options</I> {FOR <I>address</I>}
+
+                              NORENEW|RENEW
+
+EXPLODE    <I>listname</I> {(<I>options</I>}
+
+                        BESTpeers <I>n</I>
+
+                        Detailed
+
+                        FOR <I>node</I>
+
+                        PREFer <I>node</I>
+
+                        SERVice
+
+                        With(<I>node</I> {<I>node</I>} ...)
+
+                        WITHOut(<I>node</I> {<I>node</I>} ...)
+
+FREE       <I>listname</I> {(<I>options</I>}
+
+                        GLobal
+
+GET        <I>listname</I> {(<I>options</I>}
+
+                        GLobal
+
+                        HEADer
+
+                        NOLock
+
+                        OLD
+
+HOLD       <I>listname</I> {(<I>options</I>}
+
+                        GLobal
+
+PUT        <I>listname</I> LIST
+
+Query      <I>listname</I> FOR <I>address</I>
+
+Query      *          FOR <I>address</I>
+
+STats      <I>listname</I> (RESET
+
+UNLOCK     <I>listname</I></PRE>
+
+<H4><A ID="I24" NAME="I24">
+
+<FONT SIZE=3><B>Listserv Installation and Management</B>
+
+<BR></FONT></A></H4>
+
+<P>After it is acquired, Listserv will need to be installed by the system administrator. A separate individual can be set as the Listserv manager (the LISTSERV POSTMASTER), with the ability to create and modify mailing lists, and, if necessary, shut down 
+and restart the Listserv software. List owners, once defined, also have a great deal of control over their list. A new list is created by the Listserv manager through creation of a file defining the list configuration parameters. The file name matches the 
+mailing list name and the file type (CMS systems) is list. The LSVPUT command is used to create the new list within the Listserv system. Configuration options are the same as seen in the header of a REView command.
+
+<BR></P>
+
+<P>The following shows an example configuration for the Listserv mailing list NETMONTH, used to distribute an electronic periodical.
+
+<BR></P>
+
+<PRE>*  NetMonth Magazine
+
+*
+
+*  Newsgroups= bit.listserv.netmonth
+
+*  Review= Owner     Subscription= Open         Send= Owner
+
+*  Notify= No                                 Files= Yes
+
+*  Validate= Store Only
+
+*  Stats= Extended,Public    Ack=MAIL
+
+*  Errors-To= Owners
+
+*  Reply-To= &quot;Dr. Philip Baczewski &lt;NMONTHED@UNTVM1&gt;&quot;,Respect
+
+*  Renewal= Yearly
+
+*
+
+*  Mail-Via= DISTRIBUTE
+
+*
+
+*  Local= MARIST*
+
+*
+
+*  Notebook= Yes,E,Separate
+
+*
+
+*  Owner=  NMONTHED@UNTVM1  (Dr. Philip Baczewski)
+
+*  Owner=  XXXXX@XXXXXX   (A. Harry Williams)
+
+*  Owner = quiet: &lt;XXXX@UNTVM1&gt; (Dr. Philip Baczewski)
+
+*  Owner = &lt;NMONTHED@vm.acs.unt.edu&gt; (Dr. Philip Baczewski)</PRE>
+
+<H4><A ID="I25" NAME="I25">
+
+<FONT SIZE=3><B>A Closing Word on Listserv</B>
+
+<BR></FONT></A></H4>
+
+<P>Listserv is surely testament to the fact that a good idea, implemented well, will go a long way. With the Listserv mailing list count above 5000, Listserv's place within the arena of international networking is well-established. One factor in the 
+success of Listserv has been its association with the Bitnet network. Bitnet, while in some ways technologically primitive, was easy and inexpensive to connect to and thus grew to include many U.S. colleges and universities. The free access to Listserv 
+software by these sites led to the establishment of a service that has grown far beyond the Bitnet network. It remains to be seen what effect the commercialization of the Listserv software will have on the maintenance of its role as a leader in 
+list-management services. The freeing of the software from the exclusive dominions of IBM's VM/CMS software environment, however, should have a positive effect on Listserv's continued proliferation.
+
+<BR></P>
+
+<H3><A ID="I26" NAME="I26">
+
+<FONT SIZE=4><B>Some Aspects of Setting up Your Own List</B>
+
+<BR></FONT></A></H3>
+
+<P>There are several good discussions about setting up a mailing list available in print or electronic format (the file LISTSERV TIP, available from listserv@bitnic.educom.edu or the file or Diane Kovac's LISTS START-UP file available from 
+listserv@uottawa.bitnet, for example). While these sources provide technical and organizational advice for starting a mailing list, there are several other factors which can be important. One of these is the type of forum you choose for your list.
+
+<BR></P>
+
+<H4><A ID="I27" NAME="I27">
+
+<FONT SIZE=3><B>Choosing a Forum</B>
+
+<BR></FONT></A></H4>
+
+<P>The success of a forum may depend upon the intended audience and can range from the very controlled to the fully open. Your choice may depend upon the ratio of &quot;signal&quot; to &quot;noise&quot; that is tolerable by you and your subscribers. On a 
+mailing list, &quot;signal&quot; is messages and information pertinent to the list topic, while &quot;noise&quot; is inappropriate or inadvertent posts (like signoff commands, messages like &quot;Bill, got your message on the mailing list&#151;How are the 
+kids&#151;,&quot; or comments like &quot;Wow, how about that perfect game by Texas Ranger Kenny Rogers!&quot;&#151;except if that last one is sent to a sports-related mailing list).
+
+<BR></P>
+
+<P>The types of mailing lists, going from most signal to least, can be classified as follows:
+
+<BR></P>
+
+<TABLE BORDER>
+
+<TR>
+
+<TD>
+
+<P>Electronic journal</P>
+
+<TD>
+
+<P>The most signal, because the content is generally controlled by an editor or editorial board; the least spontaneity and serendipity, since general posts are not allowed.</P>
+
+<TR>
+
+<TD>
+
+<P>Mailing list digest</P>
+
+<TD>
+
+<P>Incoming messages are screened, and the most pertinent messages are posted in groups to the mailing list.</P>
+
+<TR>
+
+<TD>
+
+<P>Moderated list</P>
+
+<TD>
+
+<P>Incoming messages are screened by a list moderator and only those pertinent to the list topic are distributed to list subscribers.</P>
+
+<TR>
+
+<TD>
+
+<P>Open list</P>
+
+<TD>
+
+<P>All incoming messages are redistributed to the entire list of subscribers (usually the most noise).</P></TABLE>
+
+<P>Not all open lists are noisy. If you have a group of dedicated and knowledgeable subscribers, the level of signal can be quite high. Some groups, however, will be unable to tolerate even the slightest level of noise. This seems to be true of college 
+professors subscribed to scholarly mailing lists. Perhaps it's because a high signal level in publications is so intrinsic to the academic environment. Obviously, the intentions for which the list was created will also dictate the tolerable level of noise. 
+A general discussion forum provides more leeway than one on a very specific topic.
+
+<BR></P>
+
+<H3><A ID="I28" NAME="I28">
+
+<FONT SIZE=4><B>Mailing Lists and Usenet</B>
+
+<BR></FONT></A></H3>
+
+<P>The interaction of mailing lists and Usenet news is continually on the rise. Often the largest possible audience will be available via both facilities. There are a number of ways that information can be cross-posted. Piping selected information from 
+Usenet can be an important service for those without Usenet access. Providing mailing list access via Usenet allows people to read messages without having to subscribe and receive all messages.
+
+<BR></P>
+
+<H4><A ID="I29" NAME="I29">
+
+<FONT SIZE=3><B>Usenet Digests</B>
+
+<BR></FONT></A></H4>
+
+<P>Perhaps one of the easiest ways to share information between Usenet and a mailing list is via a digest. Interesting Usenet posts can be gathered and redistributed to a mailing list. It takes the work of a digest editor to accomplish this task, but a 
+news system's built-in features can make it a simple one (log or concatenate posts to a single file and redistribute that file to the mailing list, for example). Because of the extra work involved and the one-way flow of information, this technique is 
+usually more appropriate for a special-interest area than a general discussion list.
+
+<BR></P>
+
+<H4><A ID="I30" NAME="I30">
+
+<FONT SIZE=3><B>Usenet Echoes</B>
+
+<BR></FONT></A></H4>
+
+<P>Numerous mailing lists are echoed on Usenet or vice versa (chicken versus egg, you know). The largest single collection of these is located in the bit.listserv news hierarchy, which, as its name indicates, gateways numerous Bitnet Listserv mailing lists 
+to Usenet. Mailing list and Usenet pairs also exist in the alt, comp (numerous), rec, soc, sci, and vmsnet hierarchies. David Lawrence (tale@uunet.uu.net) maintains a list of gatewayed newsgroups that is posted to bit.admin on a monthly basis. Jim McIntosh 
+(jim@american.edu) at The American University runs a gateway for most of the bit.listserv hierarchy. That gateway is bidirectional, but other gateways might be one way only.
+
+<BR></P>
+
+<P>It is possible to set up your own gateway by having your news server subscribe to a mailing list the way a regular user would. There are some procedural items to follow. You will need to get permission from the mailing list manager (if it is not you) 
+and also get appropriate approval from the Usenet hierarchy. It is also advisable to get agreement from the list members before expanding the distribution scope of their messages. More information in this regard can be found in a policy document that is 
+regularly posted to bit.admin or by posting inquiries there or to the mailing list new-admin@american.edu.
+
+<BR></P>
+
+<H3><A ID="I31" NAME="I31">
+
+<FONT SIZE=4><B>For More Information[el]</B>
+
+<BR></FONT></A></H3>
+
+<P>More information on mailing list software or its use can be found via the following Internet services:
+
+<BR></P>
+
+<TABLE BORDER>
+
+<TR>
+
+<TD>
+
+<P>Majordomo-Users on majordomo@greatcircle.com</P>
+
+<TD>
+
+<TR>
+
+<TD>
+
+<P>Majordomo-Announce on majordomo@greatcircle.com</P>
+
+<TD>
+
+<TR>
+
+<TD>
+
+<P>cren-list@yukon.cren.org</P>
+
+<TD>
+
+<P>(Listproc 7 discussion)</P>
+
+<TR>
+
+<TD>
+
+<P>unix-listproc on listproc@avs.com</P>
+
+<TD>
+
+<TR>
+
+<TD>
+
+<P>lstown-l@uga.cs.uga.edu</P>
+
+<TD>
+
+<P>(Listserv mailing-list owners)</P>
+
+<TR>
+
+<TD>
+
+<P>lstrev-l@uga.cs.uga.edu</P>
+
+<TD>
+
+<P>(Listserv Review)</P>
+
+<TR>
+
+<TD>
+
+<P>lstsrv-l@uga.cs.uga.edu</P>
+
+<TD>
+
+<P>(Listserv discussion list)</P>
+
+<TR>
+
+<TD>
+
+<P>lstsrv-e@searn.sunet.se</P>
+
+<TD>
+
+<P>(Listserv evaluation package discussion list)</P>
+
+<TR>
+
+<TD>
+
+<P>lstsrv-m@searn.sunet.se</P>
+
+<TD>
+
+<P>(Listserv maintainer's list)</P>
+
+<TR>
+
+<TD>
+
+<P>sales@lsoft.com</P>
+
+<TD>
+
+<TR>
+
+<TD>
+
+<P>support@lsoft.com</P>
+
+<TD>
+
+<TR>
+
+<TD>
+
+<P>UseNet: bit.admin</P>
+
+<TD>
+
+<P>(Listserv lists posted to Usenet)</P>
+
+<TR>
+
+<TD>
+
+<P>Usenet: news.lists</P>
+
+<TD></TABLE>
+
+<P><A HREF="tig11.htm"><IMG SRC="bluprev.gif" WIDTH = 32 HEIGHT = 32 BORDER = 0 ALT="Previous Page"></A>
+
+<A HREF="httoc.htm"><IMG SRC="blutoc.gif" WIDTH = 32 HEIGHT = 32 BORDER = 0 ALT="TOC"></A>
+
+<A HREF="htindex.htm"><IMG SRC="bluindex.gif" WIDTH = 32 HEIGHT = 32 BORDER = 0 ALT="Index"></A>
+
+<A HREF="tig13.htm"><IMG SRC="blunext.gif" WIDTH = 32 HEIGHT = 32 BORDER = 0 ALT="Next Page"></A>
+
+<A HREF="httoc.htm"><IMG SRC="bluprev.gif" WIDTH = 32 HEIGHT = 32 BORDER = 0 ALT="Home"></A>
+
+</P></BODY></HTML>
+

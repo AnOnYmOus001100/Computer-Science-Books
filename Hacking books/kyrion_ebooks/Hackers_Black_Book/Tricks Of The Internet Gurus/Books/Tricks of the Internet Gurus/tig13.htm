@@ -1,0 +1,795 @@
+<HTML>
+
+<HEAD>
+
+<TITLE>Tricks of the Internet Gurus tig13.htm</TITLE>
+
+<LINK REL="ToC" HREF="httoc.htm">
+
+<LINK REL="Index" HREF="htindex.htm">
+
+<LINK REL="Next" HREF="tig14.htm">
+
+<LINK REL="Previous" HREF="tig12.htm"></HEAD>
+
+<BODY TEXT="#000000" LINK="#0000FF" VLINK="#800080" bgcolor=white>
+
+<P><A HREF="tig12.htm"><IMG SRC="bluprev.gif" WIDTH = 32 HEIGHT = 32 BORDER = 0 ALT="Previous Page"></A>
+
+<A HREF="httoc.htm"><IMG SRC="blutoc.gif" WIDTH = 32 HEIGHT = 32 BORDER = 0 ALT="TOC"></A>
+
+<A HREF="htindex.htm"><IMG SRC="bluindex.gif" WIDTH = 32 HEIGHT = 32 BORDER = 0 ALT="Index"></A>
+
+<A HREF="tig14.htm"><IMG SRC="blunext.gif" WIDTH = 32 HEIGHT = 32 BORDER = 0 ALT="Next Page"></A>
+
+<A HREF="httoc.htm"><IMG SRC="bluprev.gif" WIDTH = 32 HEIGHT = 32 BORDER = 0 ALT="Home"></A>
+
+</P><UL>
+
+<LI>
+
+<A HREF="#I1">13</A></LI>
+
+<UL>
+
+<LI>
+
+<A HREF="#I3">MBone: The Internet's Multimedia Backbone</A></LI>
+
+<UL>
+
+<UL>
+
+<UL>
+
+<LI>
+
+<A HREF="#I4">--by Kevin Mullet
+
+<LI>
+
+<A HREF="#I5">What's a Multimedia Backbone?</A></LI>
+
+<LI>
+
+<A HREF="#I7">In the Beginning. . .</A></LI>
+
+<LI>
+
+<A HREF="#I8">Doing It</A></LI>
+
+<UL>
+
+<LI>
+
+<A HREF="#I9">SD: Session Directory</A></LI>
+
+<LI>
+
+<A HREF="#I10">The Visual Audio Tool</A></LI>
+
+<LI>
+
+<A HREF="#I11">NV: The Network Video Tool</A></LI>
+
+<LI>
+
+<A HREF="#I12">WB: The LBL Whiteboard Tool</A></LI>
+
+<LI>
+
+<A HREF="#I13">IMM: Image Multicaster Client</A></LI></UL>
+
+<LI>
+
+<A HREF="#I14">What's It Run On?</A></LI>
+
+<LI>
+
+<A HREF="#I15">&quot;Hey! Where'd Everybody Go?&quot;: Some MBone Troubleshooting Tips</A></LI>
+
+<UL>
+
+<LI>
+
+<A HREF="#I16">&quot;Are My Expectations Realistic?&quot;</A></LI>
+
+<LI>
+
+<A HREF="#I17">Is mrouted Working?</A></LI></UL>
+
+<LI>
+
+<A HREF="#I18">Where Do You Go from Here?</A></LI>
+
+<UL>
+
+<LI>
+
+<A HREF="#I19">MBONE Home Page</A></LI>
+
+<LI>
+
+<A HREF="#I20">Frequently Asked Questions (FAQ) on the Multicast Backbone (MBONE)</A></LI>
+
+<LI>
+
+<A HREF="#I21">The rem-conf Mailing List</A></LI>
+
+<LI>
+
+<A HREF="#I22">MBone Contact Information</A></LI></UL></UL></UL></UL></ul></UL>
+
+
+
+<H1><A ID="I1" NAME="I1">
+
+<BR>
+
+<FONT SIZE=5><A ID="I2" NAME="I2"></A><B>13</B>
+
+<BR></FONT></A></H1>
+
+<H2><A ID="I3" NAME="I3">
+
+<FONT SIZE=5><B>MBone: The Internet's Multimedia Backbone</B>
+
+<BR></FONT></A></H2>
+
+<H5><A ID="I4" NAME="I4">
+
+<FONT SIZE=3><B>
+
+
+
+<a href="kevin">--by Kevin Mullet</a></B>
+
+<BR></FONT></A></H5>
+
+<H3><A ID="I5" NAME="I5">
+
+<FONT SIZE=4><B>What's a Multimedia Backbone?</B>
+
+<BR></FONT></A></H3>
+
+<P>Everybody's talking about it. Set foot in a trade show or a computer store, and someone will try and convince you that you simply must have it&#151;after all, what's the use of having a computer that doesn't have it?
+
+<BR></P>
+
+<P>What is it? It's multimedia and one by one, it's turning all our computers into interactive televisions, stereos, telephones, shopping malls, arcade-quality video games, and talking, moving whatchamacallits that used to exist only in pulp science 
+fiction. Okay&#151;you could lead a perfectly normal life without it, but multimedia actually is pretty cool. Of the multimedia applications that exist in the here-and-now, real-time video conferencing is probably generating the most interest and industry.
+
+
+<BR></P>
+
+<P>Video conferencing is the ability to hold meetings of two or more people in geographically disparate locations without losing the immediacy, utility, and intimacy of a meeting in a conference room or a classroom. Just about anything you would expect to 
+do in a conference or a class is fair game for video teleconferencing. With a good system, you should expect to see and hear all the other people in a meeting, draw on a whiteboard everyone can see, share documents, and brew a pot of coffee. Well, maybe 
+not the coffee, but just about everything else is doable right now.
+
+<BR></P>
+
+<P>Armed with expectations about what a video conferencing system should do, you could easily drop five or six figures on a behemoth of a system that required specially-equipped conference rooms from which to use it (which might already lead you to say, 
+&quot;Why bother?&quot;), dedicated leased lines, and possibly dedicated staff to cajole the whole thing into functionality. Such a system might be just the ticket for your needs. Some have found another way&#151;<I>the MBone</I>.
+
+<BR></P>
+
+<P>The MBone is an international multimedia network within a network that runs over the Internet. Consisting of a backbone of special IP multicast routers that &quot;tunnel&quot; the multimedia information through the existing Internet infrastructure, the 
+MBone is used every day by Internet users to exchange real-time or prerecorded video and audio&#151;as well as with other, peripheral applications, such as a collaborative, online version of a classroom whiteboard, or a version of NCSA Mosaic customized 
+for distance learning.
+
+<BR></P>
+
+<P>So what's the catch? Well, certainly a high-end system will get you flickerless video of around 20 frames per second, video-conferencing that looks as good as the promotional literature and videos, Hi-Fi sound, and no noticeable impact on your existing 
+data network infrastructure. Great stuff, if you can afford it.
+
+<BR></P>
+
+<P>Compared to the Hollywood-epic quality of a high-end commercial system, the MBone is your aunt Molly's videos of her trip to Yellowstone. A typical MBone session is viewed in a window on the display of someone's desktop UNIX machine, and broadcast from 
+a cheap fixed-focus camera and even cheaper condenser mike sitting on top of their monitor or on a spare corner of their desk. Equally likely is a broadcast of a professional conference or tutorial with views of the audience, the speaker, and the screen in 
+front of the overhead projector. A good average video frame rate might be four or five frames a second, with occasional drops of service lasting from a few seconds to a few minutes, due largely to the fact that the MBone contends for the same physical 
+resources as the rest of the Internet. Your participation in an Internet tutorial given from Tokyo may be interrupted because of a surge of Internet activity anywhere along the route between you and Japan. By the same token, your local telnet session to 
+the host down the hall may take a performance hit because someone in the next office is watching a session in the current IETF meeting.
+
+<BR></P>
+
+<P><A ID="I6" NAME="I6"></A>At this stage, the capacity of the MBone is fairly modest&#151;one of its primary missions is still to serve as a testbed for Internet multicasts from the meetings of the Internet Engineering Task Force. On its main backbone, 
+the MBone has bandwidth to support the equivalent of six audio or four video sessions. That's not six audio or four video sessions per person&#151;that's the shared capacity of the 1200 or so networks that are connected to the MBone. Happily, the 
+combination of existing social convention for restricting wide-area broadcasts to those of the greatest collective benefit&#151;and the technical capability of MBone tools to restrict the effective distance of any given broadcast&#151;makes the network 
+more usable than this threshold might make it sound.
+
+<BR></P>
+
+<P>Did I mention that apart from the cost of maintaining your Internet connection, and the load on your network, the attaching to the MBone and most of the software that uses it are free?
+
+<BR></P>
+
+<H3><A ID="I7" NAME="I7">
+
+<FONT SIZE=4><B>In the Beginning. . .</B>
+
+<BR></FONT></A></H3>
+
+<P>The early seventies saw some of the first research in network-based audio on the ARPAnet. A standardized way of multicasting, the transmission of network data between defined groups of hosts, was needed at the network layer. While multicasting was 
+available on such MAC-layer protocols as Ethernet and FDDI, the standard for multicasting with the network-layer Internet Protocol was defined by Steve Deering in 1989.
+
+<BR></P>
+
+<P>In early 1992 the Internet Engineering Task Force, the standards engineering body of the Internet, adopted Deering's Host Extensions for IP Multicasting for the Virtual Internet Backbone for Multicast IP, which got the name MBone later that year.
+
+<BR></P>
+
+<P>Additional protocols and applications were rapidly prototyped, refined, and put to use in such multicast events as live speeches by speakers ranging from Larry King to President Clinton. The locales of MBone multicasts have ranged from underwater off 
+the coast of Baja, Mexico, to the Space Shuttle as it orbited the earth.
+
+<BR></P>
+
+<P>As 1994 began, 750 networks were attached to the MBone. By August, that number had mushroomed to 1200.
+
+<BR></P>
+
+<H3><A ID="I8" NAME="I8">
+
+<FONT SIZE=4><B>Doing It</B>
+
+<BR></FONT></A></H3>
+
+<P>To participate in the MBone, your local-area network needs to be IP multicast-capable. For that to be true, a router on your local-area network must be an IP multicast router. In most cases, this means that you have a UNIX workstation of some kind 
+running the mrouted program, doing the actual tunneling necessary for MBone sites to interoperate on an Internet of largely non-IP, multicast-aware routers.
+
+<BR></P>
+
+<P>Actual use of the MBone means using one or more clients. Here's a survey of some of them.
+
+<BR></P>
+
+<H4><A ID="I9" NAME="I9">
+
+<FONT SIZE=3><B>SD: Session Directory</B>
+
+<BR></FONT></A></H4>
+
+<P>Developed by Van Jacobson and Steve McCanne at the University of California's Lawrence Berkeley Laboratory, the Session Directory tool is a kind of graphical TV Guide to the MBone (see Figure 13.1). It doesn't necessarily display everything happening on 
+the MBone, but SD does provide an easy-to-use interface for the main MBone applications.
+
+<BR></P>
+
+<P>
+
+<BR><B><A HREF="25tig01.gif">Figure 13.1. The Session Directory window, displaying information about an audio session.</A></B>
+
+<BR></P>
+
+<P>The Session Directory window is split into two main areas and has a row of buttons on the bottom. The top area is a scrollable listing of the current events that are being advertised on the MBone. Events may be advertised any amount of time in advance. 
+The bottom area displays information about selected events from the top area. The buttons permit opening (viewing/listening/participating), editing, and deleting of events.
+
+<BR></P>
+
+<P>Single-clicking on any particular event displays the description, multicast address, time-to-live, lifetime, media, creator, and creation date for that event. The description for an event is put in by the creator at the time of creation. The multicast 
+address is a unique address that is shared by each participant in the event. The time-to-live value governs how far away that particular event will be visible to other persons on the MBone. The media is usually one or more of audio, video, or whiteboard.
+
+<BR></P>
+
+<P>Figure 13.2 shows the effect of selecting either the new or the edit buttons. In this event description window, you can define the parameters of an MBone event. Note the Scope area of the window. This permits you to set the TTL of the session so that it 
+can only be seen at your site, or by the entire world.
+
+<BR></P>
+
+<P>
+
+<BR><B><A HREF="25tig02.gif">Figure 13.2. The session editing window in SD, from which you create new sessions or edit existing ones that you've already created.</A></B>
+
+<BR></P>
+
+<P>Here's a very important point: The viability of the MBone depends, in part, on the ability of its users to exercise discretion and restraint with regard to the TTLs of their sessions. The informal convention for determining if a session you want to 
+broadcast has enough merit to multicast over a wide area is to send a posting to the rem-conf@es.net mailing list and get the opinions of your fellow MBone users.
+
+<BR></P>
+
+<P>The rem-conf mailing list, incidentally, is a good mailing list to be on if your thinking of getting on the MBone. A few weeks of lurking on the list should give you a good idea of whether the MBone is right for you. To join, send an e-mail message with 
+your full name and preferred e-mail address to rem-conf-request@es.net.
+
+<BR></P>
+
+<H4><A ID="I10" NAME="I10">
+
+<FONT SIZE=3><B>The Visual Audio Tool</B>
+
+<BR></FONT></A></H4>
+
+<P>The LBL Visual Audio Tool is used for audio sessions on the MBone. The window consists of a large area, listing the names of everyone else listening to, and optionally participating in, the audio session. On the right side are slider bars to control the 
+volume and level for the speaker and microphone, respectively, as well as mute buttons for the mike, speaker, or both. VU meters dynamically show the output levels. See Figure 13.3.
+
+<BR></P>
+
+<P>
+
+<BR><B><A HREF="25tig03.gif">Figure 13.3. VAT: Lawrence Berkeley Lab's Visual Audio Tool, is used for sending and receiving audio on the MBone.</A></B>
+
+<BR></P>
+
+<P>Each of the names in the participant list has a checkbox next to it. Middle-clicking that checkbox will permit two listeners in a session to carry on a private conversation, out-of-band with regard to the rest of the session. LBL VAT also has the 
+capability to DES encrypt the audio stream with a keyword&#151;anyone attempting to hear what's going on in such a conversation should not be able to do so.
+
+<BR></P>
+
+<P>You can have an arbitrary number of VATs running at once, but because both you and your workstation probably have only one set of audio hardware, you can select which VAT can use your audio hardware at any given time by selecting the title bar of the 
+window. The VAT with an inverse title bar is currently &quot;active.&quot;
+
+<BR></P>
+
+<P>VAT also supports both a lecture and a conference mode. In conference mode, the VATs performance is tuned to be more conducive to interactivity. In lecture mode, VAT is tuned to make the most of the audio stream it's receiving at the expense of 
+interactivity.
+
+<BR></P>
+
+<H4><A ID="I11" NAME="I11">
+
+<FONT SIZE=3><B>NV: The Network Video Tool</B>
+
+<BR></FONT></A></H4>
+
+<P>Ron Frederick's Network Video tool is the principal means of generating and receiving video on the MBone. You will usually run this just as you would run VAT: by selecting a video session from the list of advertised sessions in the session directory 
+tool.
+
+<BR></P>
+
+<P>
+
+<BR><B><A HREF="25tig04.gif">Figure 13.4. NV: Xerox PARC's Network Video tool for the MBone is used for viewing or broadcasting one or more video streams associated with an MBone session.</A></B>
+
+<BR></P>
+
+<P>Once run, NV displays a video control panel with either two or three regions, depending on whether or not you are equipped with a video frame buffer. The top region has a thumbnail version of each of the video streams associated with a particular 
+session. Frequently, there will be a video stream of the speaker, one of a projection screen, and maybe one of the audience. Beneath that is an area showing information about the current session as well as a place to put your name, each of which may be 
+edited. If you are equipped with appropriate video frame grabbing hardware, a third section contains a slider bar that permits you to change your maximum bandwidth utilization while transmitting video, a toggle to switch between gray-scale and color 
+transmission, and a place to pull up a list of people viewing your transmission.
+
+<BR></P>
+
+<P>Clicking in any of the video thumbnails in the control panel will produce a larger video window of the session, complete with a control panel of its own (which drops down if you click anywhere in the window). This control panel permits you to change the 
+overall size of the video window, control brightness and contrast, toggle between grayscale and color, and capture the current image to another window for further processing.
+
+<BR></P>
+
+<P>NV uses a kind of &quot;velocity compression&quot; algorithm that gives priority to updating quickly changing sections of the video over others. The end result is that when you first bring up a video session, it may take a little while to get the entire 
+picture filled in; but once it is, you'll get surprising good performance from relatively little bandwidth.
+
+<BR></P>
+
+<P>If there were seven deadly sins of video production, they probably get committed all the time on MBone video transmissions. A short list of things you can do to improve the professionalism of your video broadcast would include things like the following:
+
+
+<BR></P>
+
+<P><I>Easy does it.</I> Probably the worst thing you can do in a video teleconference is hand-hold the camera, or constantly move it around. This is doubly so on the MBone, because every movement translates to that much more data being pushed around on the 
+network, and that much less functionality for everyone watching a choppy picture on their workstation. Keep the camera on a support or tripod and pan, zoom, or otherwise move the camera only when absolutely necessary.
+
+<BR></P>
+
+<P>If you're multicasting from a conference and you've got one camera, it's probably much better to keep it on the speaker, and pan the microphone back and forth when questions are being asked from the audience instead of panning the camera. You'll miss 
+out on getting the audience members in transmission, but your overall video quality will improve, and your impact on the network will drop significantly as well.
+
+<BR></P>
+
+<P><I>Be enlightened.</I> Although there are situations where you may not be able to help it (such as when using an overhead projector in an otherwise darkened room), try to get the subject as evenly lit as possible. Lighting often seems to be the worst at 
+someone's desk when they're broadcasting from a camera on top of their monitor, and their face is lit only by a reading lamp. You might want to experiment with turning on the overhead lights or by pointing the lamp at a white wall to one side of your desk 
+for better lighting. It might sound trivial, but paying attention to small details of production on &quot;populist&quot; media such as the MBone can vastly improve the end quality of your session.
+
+<BR></P>
+
+<P><I>It's a slide, not a book, dang it!</I> This one is more an issue with slide- and foil-oriented presentations, but when it happens, it's the bane of any otherwise reasonable presentation. An overhead foil with a picture of the state of Texas and a 
+list of every Internet site in the state in 8-point type doesn't do anyone any good. What might be useful information on the printed page is not necessarily useful information on a projected image. If that projected image is, in turn, broadcast on the 
+MBone and viewed in a 320x240 or 384x288 video window on a computer display, the viewer may not even be able to deduce what state's on the slide&#151;let alone that there's any other writing in the image. Reduce any slide to two or three simply stated 
+ideas in large enough print to be readable in the end NV image. It may seem like over-simplification at the time, but the more direct and simply-stated you are, the more your audience is likely to remember the content of your presentation, rather than the 
+fact that it just consisted of a bunch of slides no one could read.
+
+<BR></P>
+
+<P>An ideal answer to this, of course, is to develop your presentation online, then display it from a notebook computer splitting the video output between a display panel for the physical audience and an NTSC or PAL converter to go into a frame buffer. 
+This enables you to display it directly to the Net using NV instead of pointing a camera at the projection screen.
+
+<BR></P>
+
+<H4><A ID="I12" NAME="I12">
+
+<FONT SIZE=3><B>WB: The LBL Whiteboard Tool</B>
+
+<BR></FONT></A></H4>
+
+<P>Like the video and audio tools, WB, the multicast whiteboard, is also primarily written by Steve McCanne and Van Jacobson of the UC Lawrence Berkeley Lab. The whiteboard tool permits numerous persons to share a multipage/color/format virtual whiteboard 
+over the MBone (see Figure 13.5).
+
+<BR></P>
+
+<P>
+
+<BR><B><A HREF="25tig05.gif">Figure 13.5. LBL's Whiteboard Tool, WB, can be used for collaborative renderings.</A></B>
+
+<BR></P>
+
+<P>When you first run WB, it brings up two windows: a drawing window and a participant info window. The drawing window is where the actual whiteboard activity takes place. The smaller participant info window shows a list of everyone participating in the 
+collaborative whiteboard session.
+
+<BR></P>
+
+<P>The participant info window has three main areas. At the top is a display of the most recently active participants. Below that is a list of everyone participating in this particular whiteboard session. Below that is displayed specific information about 
+whichever participant you select in the middle, &quot;participants,&quot; window.
+
+<BR></P>
+
+<P>Each of the participants listed in the middle window has a checkbox next to their name, and may occasionally have a pound-sign between their name and the checkbox indicating that their display hasn't been fully updated yet. If you select one of the 
+names on this scrollable list, the bottom part of the window will display such information as the the originating IP address of the user, the amount of time they've been idle, the number of operations they've performed, and so on. If you check the checkbox 
+next to their name, you will remove all the marks they've made on the current page from the display.
+
+<BR></P>
+
+<P>The drawing window consists of three main areas: the drawing surface, a page manipulation area, and the actual drawing tools. The drawing surface displays one of an arbitrary number of pages that you and your fellow session participants have created 
+during the current session. The remote drawing surface doesn't display your mouse pointer&#151;only the drawings that you've created&#151;so if you want to point to something, you have to indicate what you're pointing at by circling it or drawing an arrow 
+pointing to it.
+
+<BR></P>
+
+<P>The page manipulation area includes buttons to create new pages, import PostScript or plain text, clone a page, or scroll through the pages you've produced so far. When you create a new page, the old one is effectively pushed on a stack, where you can 
+scroll back to it. The postscript import ability permits you to incorporate more complex, higher quality graphics into your session than can be created with WB's drawing tools. Simple text import is convenient, especially for quick-and-dirty presentations 
+where you've prepared text elsewhere. It's important to note that when any session participant scrolls to a given page, all whiteboards scroll to that page. You can suspend this action by clicking on the page number next to the scroll bar. To return to the 
+default behavior, click once again on the page number.
+
+<BR></P>
+
+<P>The drawing tool area of the drawing window contains all the tools necessary for conventional whiteboard sketches. At the top of the area are the drawing tools for doing freestyle lines, straight lines, arrows, rectangles, and ellipses, as well as an 
+eraser tool and tools for moving and copying objects on the whiteboard. Next are two drop-down menus: one to choose the text font, and one to select the brush size. After that is a palette of five brush colors and a set of three icons to permit you to 
+change your overall page orientation.
+
+<BR></P>
+
+<P>Of all the main MBone tools, the whiteboard is the one that probably takes the most getting used to. Although it's analogous to a physical whiteboard, there isn't a common analog to the collaborative nature of the whiteboard&#151;unless it would be a 
+table full of people all drawing on the same pad of paper. It's probably exactly this uniqueness that makes WB one of the really great applications on the MBone. Once you get the hang of sharing the whiteboard with someone, you'll realize it's a real 
+natural next to VAT and NV.
+
+<BR></P>
+
+<H4><A ID="I13" NAME="I13">
+
+<FONT SIZE=3><B>IMM: Image Multicaster Client</B>
+
+<BR></FONT></A></H4>
+
+<P>One thing you're apt to notice as soon as you get LBL's Session Directory application up and running is that it's always populated with sessions that have names like GMS-4 Composite, GOES-7 IR 1, and IMM-Psychedelic Images. The first two are a 
+continuous stream of real-time satellite imagery that is multicasted from Hawaii, and the third is a stream of images from the University of Oslo in Norway simply described as a collection of colorful images. See Figure 13.6.
+
+<BR></P>
+
+<P>
+
+<BR><B><A HREF="25tig06.gif">Figure 13.6. IMM: An image-multicasting client from Winston Dang at the University of Hawaii.</A></B>
+
+<BR></P>
+
+<P>Imagery on the MBone isn't all real-time video for conferences and meetings&#151;some types of data (and yes, some types of recreation) lend themselves well to a fairly low-bandwidth distribution of graphical still images that usually find their way to 
+the root window or background of your display. IMM is the client that receives the multicasts put out by its corresponding server, IMMServe. These transmissions are composed of a series of images in either JPEG or GIF format.
+
+<BR></P>
+
+<P>Usually started from a session advertised in SD, the IMM client's display is quite straightforward. It tells you you the name of the image you're viewing, displays the progress as you download a new image, and tells you approximately when you can expect 
+the next image to be downloaded.
+
+<BR></P>
+
+<P>Although IMM can be told to download the images to a script, or to hang on to the last few files as it receives them, its default is to put the images on your root window.
+
+<BR></P>
+
+<P>There are lots of additional things to do on the MBone, including setting up a World Wide Web multimedia-on-demand server and using a multicast version of NCSA Mosaic for distance learning. Such applications are proof that for a testbed network, the 
+MBone certainly does provide a great deal of functionality.
+
+<BR></P>
+
+<H3><A ID="I14" NAME="I14">
+
+<FONT SIZE=4><B>What's It Run On?</B>
+
+<BR></FONT></A></H3>
+
+<P>Currently, most MBone-connected machines, both mrouters and clients, are some form of UNIX workstation. A large number of those are Sun SPARCstations. A brief list of systems that can interoperate on the MBone includes those running AIX 3.2.5, BSD/386 
+1.1, DEC OSF/1, HP/UX 9.01, IRIX, NetBSD 0.9, Solaris 2.3, SunOS 4.1.n, and some versions of Ultrix. All static lists like this, though, are out of date as soon as they're printed; you should certainly check the more dynamic lists on the Net before making 
+any decisions about getting on the MBone.
+
+<BR></P>
+
+<H3><A ID="I15" NAME="I15">
+
+<FONT SIZE=4><B>&quot;Hey! Where'd Everybody Go?&quot;: Some MBone Troubleshooting Tips</B>
+
+<BR></FONT></A></H3>
+
+<P>The more amazing things get on the Net, the more amazingly convoluted troubleshooting becomes. The MBone is no exception to this rule. To listen to some real MBone jocks dig into these things, you might swear they were speaking in tongues. Multicasting 
+mysticism not withstanding, then, here's some things you might expect to do if you bring up your own IP multicasting subnet.
+
+<BR></P>
+
+<P>Probably the first thing you should do when you start troubleshooting your IP multicasting is to verify your baseline Internet connectivity. Check other services that you know should work and use much the same route. If they're down or performing 
+poorly, you may have a general IP connectivity problem instead of a specific multicasting problem.
+
+<BR></P>
+
+<H4><A ID="I16" NAME="I16">
+
+<FONT SIZE=3><B>&quot;Are My Expectations Realistic?&quot;</B>
+
+<BR></FONT></A></H4>
+
+<P>If you've got a T1 or better route to the Internet backbone, and the machines acting as your multicast routers aren't underpowered, and there's not a great deal of other traffic on the local-area networks around them, and you've gotten better 
+performance in the past, then you've probably got good reason to be suspicious if you suddenly get poor performance. If, however, you just brought up your IP multicasting router for the first time and started watching your first network video session, but 
+it doesn't look like broadcast-quality TV, don't be surprised.
+
+<BR></P>
+
+<P>One of the tricky things with technology like the MBone is to learn to separate your hopes from any reasonable expectations you may have. One way to do this is with the help of your fellow session participants. If your MBone setup is working at all, you 
+can use the statistics present in most of your clients to compare notes with other users. Decorum dictates that when you do so, you ought to wait until a lull in the action, or try and get someone's attention out-of-band through the private-conversation 
+feature of VAT.
+
+<BR></P>
+
+<P>Once you do, you can ask your MBone neighbor if he or she has been getting performance similar to yours, or if your numbers are within the range of reasonable performance. If your numbers are consistent with those of similar sites, that's 
+bad&#151;because that means that your performance has probably gotten about as good as it's going to get. If your performance statistics are uncharacteristically poor, congratulations! You get to go to the next level!
+
+<BR></P>
+
+<H4><A ID="I17" NAME="I17">
+
+<FONT SIZE=3><B>Is mrouted Working?</B>
+
+<BR></FONT></A></H4>
+
+<P>If nothing works at all&#151;if you have a total failure of multicast routing at your site, then you've probably got a problem that's moderately easy to fix. It's the intermittent problems that resist repair.
+
+<BR></P>
+
+<P>A good first step would be to make sure that mrouted is running on your network's multicast router. Mrouted is the software that &quot;tunnels&quot; the IP multicasting traffic through intervening conventional routers on the Internet. It's necessary 
+because very few router vendors provide the IP Multicast routing support necessary to do straightforward multicasting without using tunnels.
+
+<BR></P>
+
+<P>Check and see what the specific syntax is for your system, but here's one possible command to see if your host is currently running the mrouted software.
+
+<BR></P>
+
+<PRE>%ps -uaxw|egrep '(^USER|^root.*mrouted)'
+
+USER       PID %CPU %MEM   SZ  RSS TT STAT START  TIME COMMAND
+
+root     21134  0.0  1.3  400  360 ?  S    Aug  5 99:44 mrouted
+
+%</PRE>
+
+<P>If mrouted isn't running, that's one (but not necessarily all ) of your problems. Restart it or, if you're not the sysadmin, find out if it was stopped on purpose before asking that it be restarted.
+
+<BR></P>
+
+<P>You can also generate a dump of the mrouted's routing table by sending it the signal USR1 with the kill -USR1 command, and examining it to see if mrouted has acquired a healthy number of routes. In the previous example, the process ID number of mrouted 
+is 21134, so the steps of generating a routing table dump and checking it for some real elemental information might go like this:
+
+<BR></P>
+
+<PRE>#kill -USR1 21134
+
+#ps -uax21134
+
+USER       PID %CPU %MEM   SZ  RSS TT STAT START  TIME COMMAND
+
+root     21134  0.0  1.3  412  376 ?  S    Aug  5 99:51 mrouted
+
+#ls -la /usr/tmp/mrouted.dump
+
+-rw-r--r--  1 root       103801 Aug 16 22:31 /usr/tmp/mrouted.dump
+
+#wc -l /usr/tmp/mrouted.dump
+
+    1193 /usr/tmp/mrouted.dump
+
+#head /usr/tmp/mrouted.dump
+
+Virtual Interface Table
+
+ Vif  Local-Address                           Metric  Thresh  Flags
+
+  0   128.241.0.92    subnet: 128.241.0.80       1       1
+
+                      peers : 128.241.0.91
+
+                      groups: 224.0.0.4
+
+  1   128.241.0.92    tunnel: 192.225.25.1       1      64
+
+                      peers : 192.225.25.1
+
+  2   128.241.0.92    tunnel: 129.162.150.145    1      16
+
+  3   128.241.0.92    tunnel: 129.7.1.1          1      64
+
+#</PRE>
+
+<P>In the preceding example, we accomplished the following five steps:
+
+<BR></P>
+
+<UL>
+
+<LI>Used the kill command to send the USR1 signal to the mrouted process to generate a multicast routing table dump
+
+<BR>
+
+<BR></LI>
+
+<LI>Used the ps command to ensure that the same mrouted process is still around and survived the kill command&#151;which it would if it was done correctly, but it never hurts to make sure.
+
+<BR>
+
+<BR></LI>
+
+<LI>Used the ls command to check the date on the mrouted.dump file to ensure that it's the one we just generated&#151;which it is.
+
+<BR>
+
+<BR></LI>
+
+<LI>Used the wc command to count how many lines there are in the mrouted.dump file, which will be roughly analogous to the number of routes known to mrouted. There are 1193 lines in the file, which means there's probably a good healthy routing table.
+
+<BR>
+
+<BR></LI>
+
+<LI>Used the head command to peek at the top of the file to see if the virtual interfaces defined are what we expect from our definitions in the /etc/mrouted.conf configuration file.
+
+<BR>
+
+<BR></LI></UL>
+
+<P>There are a number of things we can learn from this test.
+
+<BR></P>
+
+<P>If mrouted wasn't running, and multicast routing started working after it was restarted, it's likely the problem was that mrouted died for some reason, bringing down your multicast routing. A simple test to see if IP multicast packets are making their 
+way to your subnet is to see if any sessions show up in the session manager.
+
+<BR></P>
+
+<P>If mrouted was running, but your routing table is empty, the kernel modifications to your mrouted host may not have been done properly. Double-check your procedure, or check with the sysadmin to see what kernel you're really running on the host in 
+question. It's also possible that you may not need to modify your kernel to do multicasting&#151;some operating systems are becoming available with multicasting from the factory.
+
+<BR></P>
+
+<P>If you've verified that you're running the right kernel, work your way upstream and see if the mrouted upstream of you is functional. One easy way to accomplish this is to run the MRInfo gateway and use a WWW browser to walk through the MBone, traipsing 
+from one mrouted to another, noting which tunnels are up and which are down.
+
+<BR></P>
+
+<P>In the following example, we use the UNIX curses WWW browser Lynx to retrieve the tunnel information from the multicast router tempeh.sesqui.net:
+
+<BR></P>
+
+<PRE>%lynx -dump &quot;http://www.cl.cam.ac.uk/cgi-bin/mrinfo?tempeh.sesqui.net&quot;
+
+Mrinfo for 128.241.0.92 (tempeh.sesqui.net) [version 2.2] 2 mins 27 secs
+
+ 128.241.0.92 -&gt; 128.241.0.91    vinegar.sesqui.net        1/1
+
+ 128.241.0.92 -&gt; 192.225.25.1    ASBESTOS.MFSDATANET.COM   1/64/tunnel
+
+ 128.241.0.92 -&gt; 129.162.150.145 keiko.space.swri.edu   1/16/tunnel/down
+
+ 128.241.0.92 -&gt; 129.7.1.1       Masala.CC.UH.EDU          1/64/tunnel
+
+ 128.241.0.92 -&gt; 128.83.5.252    janus.gw.utexas.edu       1/64/tunnel
+
+ 128.241.0.92 -&gt; 131.194.132.1   earth.mms.trinity.edu  1/64/tunnel/down
+
+ 128.241.0.92 -&gt; 129.110.10.14   squirrel.utdallas.edu     1/64/tunnel
+
+ 128.241.0.92 -&gt; 192.231.8.130   192.231.8.130             1/64/tunnel
+
+ 128.241.0.92 -&gt; 129.120.1.39    hermes.unt.edu            1/64/tunnel
+
+ 128.241.0.92 -&gt; 128.249.27.73   PAVLOV.SSCTR.BCM.TMC.EDU  1/64/tunnel
+
+ 128.241.0.92 -&gt; 129.118.18.43   sparc5.cs.ttu.edu      1/64/tunnel/down
+
+ 128.241.0.92 -&gt; 198.65.128.14   tattoo.sccsi.com          1/64/tunnel
+
+ 128.241.0.92 -&gt; 198.65.128.11   bsdi.sccsi.com       1/64/tunnel/down</PRE>
+
+<P>According to the above test, four of the configured tunnels are down for some reason. If you did this test on your mrouter and found that a tunnel you expected to be up was down, it would give you a good starting place to make some calls and see what's 
+going on.
+
+<BR></P>
+
+<P>Also, as you can see from the URL above, this demo of the mrinfo gateway is in the UK. It's a good idea, if you expect to use it with any regularity, to download the gateway and run it locally.
+
+<BR></P>
+
+<P>Two other programs should be mentioned because of their usefulness in multicast troubleshooting: ipmcast and ipwatch. Ipmcast dumps continuous output to your screen describing virtually every multicast packet on your network segment in real time&#151;a 
+great utility to see if you've got any multicasting going on at all and, if so, who's doing it. Ipwatch has a much more structured, full-screen display but gives less information&#151;it tells you how much of the traffic on your Net is devoted to what 
+broad category such as multicast, Net news, X Window, Ftp, mail, and so forth. Both of these utilities are well worth keeping in your bag of tricks, to arm yourself against any potential Net problems you encounter in your MBone travels.
+
+<BR></P>
+
+<H3><A ID="I18" NAME="I18">
+
+<FONT SIZE=4><B>Where Do You Go from Here?</B>
+
+<BR></FONT></A></H3>
+
+<P>The first step is probably to find out more about the MBone, its characteristics, and limitations and see if you still want to take the plunge. Here is a list of Internet online resources that will help you do just that.
+
+<BR></P>
+
+<H4><A ID="I19" NAME="I19">
+
+<FONT SIZE=3><B>MBONE Home Page</B>
+
+<BR></FONT></A></H4>
+
+<P>URL: <A HREF="http://www.eit.com/techinfo/mbone/mbone.html"> http://www.eit.com/techinfo/mbone/mbone.html</A>
+
+<BR></P>
+
+<P>This is the top of a considerable tree of information about the MBone. Topics range from a general &quot;What is the MBone?&quot; to specific information on debugging the MBone. If you have time to check out only one resource about the MBone, this would 
+be a good choice. Most of the stuff in this section is actually linked to this page.
+
+<BR></P>
+
+<H4><A ID="I20" NAME="I20">
+
+<FONT SIZE=3><B>Frequently Asked Questions (FAQ) on the Multicast Backbone (MBONE)</B>
+
+<BR></FONT></A></H4>
+
+<P>URL: <A HREF="ftp://isi.edu/mbone/faq.txt">ftp://isi.edu/mbone/faq.txt</A>
+
+<BR></P>
+
+<P>This is good, meaty starting place for essential information on the MBone. A nice down-to-basics document, this FAQ list by Steve Casner doesn't repeat itself. Read it a couple of times. Once you've got the stuff in this document down pat, you've 
+significantly reduced the chance for surprises down the road.
+
+<BR></P>
+
+<H4><A ID="I21" NAME="I21">
+
+<FONT SIZE=3><B>The </B><I>rem-conf</I><B> Mailing List</B>
+
+<BR></FONT></A></H4>
+
+<P>URL: not applicable.
+
+<BR></P>
+
+<P>Membership in this list is pretty much a must-have for folks who want to know what's up on the MBone, what kind of events are likely to be scheduled, and what the various social conventions are in MBone culture. Definately a good lurk list. Send a note 
+to the human being at rem-conf-request@es.net and ask to be added.
+
+<BR></P>
+
+<H4><A ID="I22" NAME="I22">
+
+<FONT SIZE=3><B>MBone Contact Information</B>
+
+<BR></FONT></A></H4>
+
+<P>You don't want to know anything else about the MBone&#151;you know what you want, and it's to get on the MBone yesterday. This is way cool Infobahn stuff, and you want it right now. Okay&#151;here's a list of organizations, e-mail addresses, and phone 
+numbers. Happy multicasting!
+
+<BR></P>
+
+<P>URL: <A HREF="http://www.eit.com/techinfo/mbone/contacts.html"> http://www.eit.com/techinfo/mbone/contacts.html</A></P>
+
+<P><A HREF="tig12.htm"><IMG SRC="bluprev.gif" WIDTH = 32 HEIGHT = 32 BORDER = 0 ALT="Previous Page"></A>
+
+<A HREF="httoc.htm"><IMG SRC="blutoc.gif" WIDTH = 32 HEIGHT = 32 BORDER = 0 ALT="TOC"></A>
+
+<A HREF="htindex.htm"><IMG SRC="bluindex.gif" WIDTH = 32 HEIGHT = 32 BORDER = 0 ALT="Index"></A>
+
+<A HREF="tig14.htm"><IMG SRC="blunext.gif" WIDTH = 32 HEIGHT = 32 BORDER = 0 ALT="Next Page"></A>
+
+<A HREF="httoc.htm"><IMG SRC="bluprev.gif" WIDTH = 32 HEIGHT = 32 BORDER = 0 ALT="Home"></A>
+
+</P></BODY></HTML>
+

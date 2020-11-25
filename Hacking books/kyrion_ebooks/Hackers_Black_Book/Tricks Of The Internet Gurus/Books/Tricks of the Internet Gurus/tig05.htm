@@ -1,0 +1,1794 @@
+<HTML>
+
+<HEAD>
+
+<TITLE>Tricks of the Internet Gurus tig05.htm</TITLE>
+
+<LINK REL="ToC" HREF="httoc.htm">
+
+<LINK REL="Index" HREF="htindex.htm">
+
+<LINK REL="Next" HREF="tig06.htm">
+
+<LINK REL="Previous" HREF="tigp2.htm"></HEAD>
+
+<BODY TEXT="#000000" LINK="#0000FF" VLINK="#800080" bgcolor=white>
+
+<P><A HREF="tigp2.htm"><IMG SRC="bluprev.gif" WIDTH = 32 HEIGHT = 32 BORDER = 0 ALT="Previous Page"></A>
+
+<A HREF="httoc.htm"><IMG SRC="blutoc.gif" WIDTH = 32 HEIGHT = 32 BORDER = 0 ALT="TOC"></A>
+
+<A HREF="htindex.htm"><IMG SRC="bluindex.gif" WIDTH = 32 HEIGHT = 32 BORDER = 0 ALT="Index"></A>
+
+<A HREF="tig06.htm"><IMG SRC="blunext.gif" WIDTH = 32 HEIGHT = 32 BORDER = 0 ALT="Next Page"></A>
+
+<A HREF="httoc.htm"><IMG SRC="bluprev.gif" WIDTH = 32 HEIGHT = 32 BORDER = 0 ALT="Home"></A>
+
+</P><UL>
+
+<LI>
+
+<A HREF="#I1">5</A></LI>
+
+<UL>
+
+<LI>
+
+<A HREF="#I2">E-Mail</A></LI>
+
+<UL>
+
+<UL>
+
+<UL>
+
+<LI>
+
+<A HREF="#I5">Manipulate Your Mailer</A></LI>
+
+<UL>
+
+<LI>
+
+<A HREF="#I6">Mail Options No Guru Does Without</A></LI>
+
+<LI>
+
+<A HREF="#I7">Taking Advantage of Simple Mail Transport Protocol (SMTP)</A></LI></UL>
+
+<LI>
+
+<A HREF="#I8">Exploiting Various Headers</A></LI>
+
+<UL>
+
+<LI>
+
+<A HREF="#I9">Header Elements to Be Aware of</A></LI>
+
+<UL>
+
+<LI>
+
+<A HREF="#I10">Received:</A></LI>
+
+<LI>
+
+<A HREF="#I11">Reply-to:</A></LI>
+
+<LI>
+
+<A HREF="#I12">BCC:</A></LI></UL></UL>
+
+<LI>
+
+<A HREF="#I13">Headers and Rules-Based Mail</A></LI>
+
+<UL>
+
+<LI>
+
+<A HREF="#I14">Concepts of E-mail Rules Facilities</A></LI>
+
+<UL>
+
+<LI>
+
+<A HREF="#I15">Pegasus Mail</A></LI>
+
+<LI>
+
+<A HREF="#I16">Filter</A></LI>
+
+<LI>
+
+<A HREF="#I17">Procmail</A></LI></UL></UL>
+
+<LI>
+
+<A HREF="#I18"><A HREF="borens.gif">Nathaniel Borenstein</A></A></LI>
+
+<UL>
+
+<UL>
+
+<LI>
+
+<A HREF="#I19">by Tod Foley</A></LI></UL></UL>
+
+<LI>
+
+<A HREF="#I20">Anonymous E-Mail and Privacy Issues (PEM, PGP, and So on)</A></LI>
+
+<UL>
+
+<LI>
+
+<A HREF="#I21">The Problem of E-Mail Security</A></LI>
+
+<LI>
+
+<A HREF="#I22">Some E-Mail Privacy Solutions</A></LI>
+
+<UL>
+
+<LI>
+
+<A HREF="#I23">The PEM Standard</A></LI>
+
+<LI>
+
+<A HREF="#I24">Introducing RIPEM</A></LI>
+
+<LI>
+
+<A HREF="#I25">Obtaining RIPEM</A></LI></UL>
+
+<LI>
+
+<A HREF="#I26">An Introduction to Pretty Good Privacy (PGP)</A></LI>
+
+<UL>
+
+<LI>
+
+<A HREF="#I27">Advantages of PGP</A></LI>
+
+<LI>
+
+<A HREF="#I28">Where to Get PGP</A></LI>
+
+<LI>
+
+<A HREF="#I29">How to Use PGP</A></LI>
+
+<LI>
+
+<A HREF="#I30">Caveats: Disadvantages of Using PGP</A></LI></UL>
+
+<LI>
+
+<A HREF="#I31">Finding Out More about PGP and PEM</A></LI></UL>
+
+<LI>
+
+<A HREF="#I32">Subscribing and Staying Current on Listservs and Mailing Lists (How a Guru Is Able to Track So Many Groups)</A></LI>
+
+<UL>
+
+<LI>
+
+<A HREF="#I33">Five Major Guru Rules for Reading All That Mail</A></LI>
+
+<UL>
+
+<LI>
+
+<A HREF="#I34">1. Don't Read It All</A></LI>
+
+<LI>
+
+<A HREF="#I35">2. Read Your Mail Every Day; Suspend Subscriptions When Away</A></LI>
+
+<LI>
+
+<A HREF="#I36">3. Be Selective in Your Subscriptions</A></LI>
+
+<LI>
+
+<A HREF="#I37">4. When Possible, Read News Rather Than Mail</A></LI>
+
+<LI>
+
+<A HREF="#I38">5. Organize Your Reading Process</A></LI></UL></UL></UL></UL></UL>
+
+
+
+
+
+</UL></UL>
+
+
+
+
+
+<H1><A ID="I1" NAME="I1">
+
+<BR>
+
+<FONT SIZE=5><B>5</B>
+
+<BR></FONT></A></H1>
+
+<H2><A ID="I2" NAME="I2">
+
+<FONT SIZE=5><B>E-Mail</B>
+
+<BR></FONT></A></H2>
+
+<H5><A ID="I3" NAME="I3">
+
+<FONT SIZE=3><B><A HREF="pcb-b&w.gif">--by Philip Baczewski</A></B>
+
+<BR></FONT></A></H5>
+
+<P>E-mail is the staple of any Internet habitu&#233;. The effective use of e-mail is particularly important for anyone wishing to take advantage of the Internet for interpersonal communication or information gathering. Experience is probably the best 
+teacher in this regard, and any knowledge of an e-mail program on a particular system will be enhanced by knowledge of the editor employed within the e-mail program and by experience manipulating files on that particular system. There are some e-mail 
+topics that go beyond the basic level of knowledge. Among these are using programs to preprocess and organize your mail, and making the content of your mail messages secure. The following discussion covers both of these areas, along with a number of other 
+tidbits that you might find handy when working with electronic mail from the Internet.
+
+<BR></P>
+
+<H3><A ID="I5" NAME="I5">
+
+<FONT SIZE=4><B>Manipulate Your Mailer</B>
+
+<BR></FONT></A></H3>
+
+<P>The more you know about your mail environment, the more efficient you can be in using electronic mail. The more you can control your mail environment, the more powerful you can be using electronic mail. Here are some items that may help on both 
+accounts.
+
+<BR></P>
+
+<H4><A ID="I6" NAME="I6">
+
+<FONT SIZE=3><B>Mail Options No Guru Does Without</B>
+
+<BR></FONT></A></H4>
+
+<P>No guru does without the options that enable the most efficient possible configuration of mail&#151;unless, of course, those options aren't available. In general, I find the following to be important in the mail programs I use. Sorting&#151;preferably 
+multiple levels of sorting&#151;should always be configurable in a good mail program. Forwarding is another important e-mail function that will be useful or required at some point in your Internet career. Another option to be aware of in your mail package 
+is that of acknowledgements. The level of acknowledgement available from various mail programs varies. As you will see below, however, you can often generate your own acknowledgements via an e-mail preprocessor program. The most powerful automated 
+manipulation of e-mail can be done with the preprocessing filter programs described in this chapter. An overall knowledge of your e-mail environment and a good idea of how you can best organize your incoming mail will ultimately provide you with the basis 
+for using the various tools described below.
+
+<BR></P>
+
+<H4><A ID="I7" NAME="I7">
+
+<FONT SIZE=3><B>Taking Advantage of Simple Mail Transport Protocol (SMTP)</B>
+
+<BR></FONT></A></H4>
+
+<P>The openness of Internet mail exchange can make it easier to identify problems or find information about a particular Internet mail address. A telnet session to port 25 of an SMTP-capable system should get you that system's SMTP interface, which will 
+enable you to perform several handy functions. It is important, however, that this capability be used judiciously. Abuse of any open system will only lead to a more closed future environment. The SMTP verify (VRFY) command can tell you that a user does or 
+doesn't exist at a particular e-mail location (useful for solving delivery problems), and can also provide information about an alternate or forwarding address for that user. The expand (EXPN) command can confirm that an address is a mailing list and 
+provide a membership list. Since VRFY and EXPN sometimes can return a false positive, these commands should be used to confirm other evidence of an address. More information about SMTP can be found in numerous references, including the original 
+specification document, Internet Request for Comment (RFC) 821 (see the following for more information about obtaining RFCs).
+
+<BR></P>
+
+<H3><A ID="I8" NAME="I8">
+
+<FONT SIZE=4><B>Exploiting Various Headers</B>
+
+<BR></FONT></A></H3>
+
+<P>If you haven't done so already and you want to know all about Internet mail headers, find a copy of RFC 822 (just do an Archie search on the string rfc822 and you are sure to find it). If you don't know, RFC 822 is the set of specifications that defines 
+the way information is structured in an Internet e-mail header. You are probably familiar with most of the common elements of a header&#151;From:, To:, Subject:, and so on. If you haven't managed an Internet mailer or had to solve mail-routing problems, 
+you might be unaware of the usefulness of some of the other header elements.
+
+<BR></P>
+
+<H4><A ID="I9" NAME="I9">
+
+<FONT SIZE=3><B>Header Elements to Be Aware of</B>
+
+<BR></FONT></A></H4>
+
+<P>The following are comments on the general usefulness of headers and may be a review or an overview for you. For the technical specifications of these fields, see RFC 822.
+
+<BR></P>
+
+<H5><A ID="I10" NAME="I10">
+
+<FONT SIZE=3><B><I>Received:</I></B>
+
+<BR></FONT></A></H5>
+
+<P>The Received: field enables you to track a message through mail handlers and gateways. One Received: field is present for each delivery transaction. You can examine these to pinpoint gateways as well as to solve delivery problems. You might want to use 
+a mail filter to process mail delivered from a specific site instead of from a specific person.
+
+<BR></P>
+
+<H5><A ID="I11" NAME="I11">
+
+<FONT SIZE=3><B><I>Reply-to:</I></B>
+
+<BR></FONT></A></H5>
+
+<P>Mailing lists usually set the Reply-to: field to the list address so that replies will automatically be redistributed to all subscribers. This stimulates discussion on the list, but as you have probably seen, it also results in messages that were meant 
+for an individual being inadvertently sent to the list. You can usually use your mail program to set a Reply-to: field that will supersede any From: field. Most mail programs also enable you to send your reply specifically to the From: field. When I 
+forward mailing-list mail, though, I sometimes set the Reply-to: to my address to help prevent an accidental reply to the list.
+
+<BR></P>
+
+<H5><A ID="I12" NAME="I12">
+
+<FONT SIZE=3><B><I>BCC:</I></B>
+
+<BR></FONT></A></H5>
+
+<P>BCC: helps ensure e-mail discretion as long as you are aware that you are the blind &quot;copyee.&quot; &quot;BCC&quot; stands for &quot;Blind Carbon Copy&quot; and causes a copy of the message to be sent to the BCC address without that address showing 
+up in the headers of the primary or carbon copies. (Since most computers do not use carbon paper, sometimes &quot;CC&quot; is referred to as a &quot;Complementary Copy.&quot;) A word of advice: Be careful not to inadvertently or inappropriately forward 
+mail that was intended to be discreet. The &quot;reply all&quot; function of your mail program can be dangerous in this situation as well.
+
+<BR></P>
+
+<H3><A ID="I13" NAME="I13">
+
+<FONT SIZE=4><B>Headers and Rules-Based Mail</B>
+
+<BR></FONT></A></H3>
+
+<P>The contents of header fields such as From:, Resent-From:, Subject:, and others can serve as the basis for preprocessing and organizing your mail using a &quot;rules&quot; or filter facility. For example, if you wanted to discard automatically all 
+messages whose subjects contain the word unsubscribe, a mail filter could scan for that word in mail subjects and perform a discard function based on such a match.
+
+<BR></P>
+
+<H4><A ID="I14" NAME="I14">
+
+<FONT SIZE=3><B>Concepts of E-mail Rules Facilities</B>
+
+<BR></FONT></A></H4>
+
+<P>If you are willing to do some work, you can set up your filter to generate automated replies to selected mail messages or even trigger other automated processes. Most people will want to redirect messages to specific folders or forward mail to another 
+location.
+
+<BR></P>
+
+<H5><A ID="I15" NAME="I15">
+
+<FONT SIZE=3><B>Pegasus Mail</B>
+
+<BR></FONT></A></H5>
+
+<P>Several e-mail products in common use support filtering rules in one manner or another. For example, David Harris's Pegasus mail package, which runs on Novell file servers, has a built-in filter rules facility that enables you to perform actions based 
+on the From:, CC:, To:, Subject:, or Reply-to: fields. Pegasus mail can check any of these fields for a specified string and can trigger twelve different functions based upon a match. Rules are defined by a fairly simple interface where you define the 
+action fields, the string to match, the action and any parameters needed for the action. This is a simple, but effective, implementation of mail filter rules and illustrates the general concepts involved. (This concept has also reached commercial products 
+like Lotus' cc:Mail and Novell's GroupWise 4.1, formerly WordPerfect Office mail.)
+
+<BR></P>
+
+<P>The following represents a sample filter rule definition in Pegasus mail.
+
+<BR></P>
+
+<PRE>If this field  :  Cc, To
+
+Contains       : [netmanl                     ]
+
+Then do this   :  Move
+
+      (Using)     Network Managers List</PRE>
+
+<H5><A ID="I16" NAME="I16">
+
+<FONT SIZE=3><B>Filter</B>
+
+<BR></FONT></A></H5>
+
+<P>In the UNIX environment, some even more sophisticated tools are available for mail filtering. If you have the Elm mail package, it probably came with a program named Filter, which performs rules-based mail filtering in conjunction with that mail reader. 
+To make use of the program, you must create a rules file, named filter-rules, in your .elm directory. Rules are rather simple in their construction. The general syntax is as follows:
+
+<BR></P>
+
+<PRE>if (<I>condition</I>) then <I>action</I></PRE>
+
+<P><I>Condition</I> consists of a field, a relation, and a value. The fields include subject, sender, from, to, lines, and contains. For lines, the relation can be any standard numeric equivalence or comparison (&lt;, &gt;, =, &lt;=, and so on). For other 
+fields, contains can be used as a relation. Values are quoted strings for all fields (except lines) where the value is an integer. Nonnumeric values can also be regular expressions enclosed in quotes. Actions include delete, save <I>foldername</I>, 
+savecopy <I>foldername</I>, forward <I>address</I> forwardc <I>address</I>, execute <I>command</I>, executec <I>command</I> leave. Most of these are self-explanatory. Forwardc and executec are commands that leave a copy of the message in your mailbox. 
+Leave is the explicit command to leave the message in your mailbox.
+
+<BR></P>
+
+<P>A rule, for example, to delete all of those pesky subscribe and unsubscribe messages that are sent to mailing lists might look like this:
+
+<BR></P>
+
+<PRE>if (subject contains &quot;subscribe&quot;) then delete</PRE>
+
+<P>To log messages to a particular folder, you might try the following:
+
+<BR></P>
+
+<PRE>if (to contains &quot;MACAV-L&quot; and lines &gt; 15) then save &quot;~/mail/Macintosh&quot;</PRE>
+
+<P>Notice that in the preceding example two conditions are tested and linked via a logical AND operator. To test for the negative of a condition, the field value can be prefixed with NOT. A logical OR condition is not supported in Filter (at least not in 
+Elm version 2.4). Comments can be placed in your filter-rules by starting the line with a pound sign (#).
+
+<BR></P>
+
+<P>Filter is invoked by placing a line in your .forward or equivalent file, which also means that your UNIX system must be running sendmail or some equally functional program. A typical entry in the .forward file might look like the following:
+
+<BR></P>
+
+<PRE>&quot;| /usr/local/bin/filter -o ~/mail/FilterErrors&quot;</PRE>
+
+<P>Because the filter may be run while you are not logged on, Filter includes the option of logging any errors to a file, as specified by the -o option. (You might also log the errors to tmp or scratch space.)
+
+<BR></P>
+
+<P>Whenever mail forwarding is involved, it's best to observe some caution, lest you accidentally create e-mail loops or route all your mail to a null file. Your rules will be processed in the order that they appear in the file, so be sure to evaluate 
+carefully whether the operations performed will be done in a logical and desirable sequence. You can check what rules are in place by using the command filter -r. Before using Filter, read <I>The Elm Filter System Guide</I>, which is distributed with the 
+program. Documentation is also found in the Filter man page distributed with Elm.
+
+<BR></P>
+
+<H5><A ID="I17" NAME="I17">
+
+<FONT SIZE=3><B>Procmail</B>
+
+<BR></FONT></A></H5>
+
+<P>Procmail is another UNIX program that can be used to preprocess your incoming mail based upon the content of the mail message. Procmail is a bit more powerful than Filter, since it can scan both the header and the body of your message. It also enables 
+checking of multiple conditions within each rule definition (or in Procmail parlance, within each &quot;recipe&quot;). Procmail, like Filter, can be invoked via the .forward file, but Procmail can also be installed by the system administrator as the 
+primary mail delivery agent. The latter case makes the configuration process a bit easier for the average user.
+
+<BR></P>
+
+<P>Procmail rules are defined in a file named .procmailrc, usually located in your home directory. The .procmailrc file contains environment variable assignments (some of which are significant to Procmail) and recipes, and both can be freely interspersed 
+within the file. Comments can be placed in the file by starting the line with a pound sign (#).
+
+<BR></P>
+
+<P>Procmail recipes begin with a line starting with a colon (:). Following the colon is an optional number that indicates how many conditions are to be checked within the recipe. Following the number are one or more optional flags that indicate how a 
+recipe will be processed. The last item on a recipe's first line is a colon followed optionally by the name of a local lock file. Specifying the colon by itself will cause Procmail to use a lock file name formed from default values. If several Procmail 
+programs are delivering mail at once, the existence of a lock file will prevent multiple attempts to deliver mail to a mail folder. Following the first line of a Procmail recipe are zero or more conditions, with each condition occupying its own line. A 
+single action line follows any conditions.
+
+<BR></P>
+
+<P>The flags available are as follows:
+
+<BR></P>
+
+<TABLE BORDER>
+
+<TR>
+
+<TD>
+
+<PRE><B><I>Flag</I></B>
+
+<BR></PRE>
+
+<TD>
+
+<PRE><B><I>Function</I></B>
+
+<BR></PRE>
+
+<TR>
+
+<TD>
+
+<P>H</P>
+
+<TD>
+
+<P>Searches the header of the message (the default)</P>
+
+<TR>
+
+<TD>
+
+<P>B</P>
+
+<TD>
+
+<P>Searches the body of the message</P>
+
+<TR>
+
+<TD>
+
+<P>D</P>
+
+<TD>
+
+<P>Distinguishes between case (ignore case is the default)</P>
+
+<TR>
+
+<TD>
+
+<P>A</P>
+
+<TD>
+
+<P>Recipe depends on the completion of the preceding recipe</P>
+
+<TR>
+
+<TD>
+
+<P>a</P>
+
+<TD>
+
+<P>Recipe depends on the successful completion of the preceding recipe</P>
+
+<TR>
+
+<TD>
+
+<P>h</P>
+
+<TD>
+
+<P>Processes (that is, forwards, saves, and so on) the header (default)</P>
+
+<TR>
+
+<TD>
+
+<P>b</P>
+
+<TD>
+
+<P>Processes the body (default)</P>
+
+<TR>
+
+<TD>
+
+<P>f</P>
+
+<TD>
+
+<P>Considers the processing to be a filter</P>
+
+<TR>
+
+<TD>
+
+<P>c</P>
+
+<TD>
+
+<P>Continues processing other recipes even if this recipe matches</P>
+
+<TR>
+
+<TD>
+
+<P>w</P>
+
+<TD>
+
+<P>Waits for processing to finish and checsk a return code</P>
+
+<TR>
+
+<TD>
+
+<P>W</P>
+
+<TD>
+
+<P>Waits for processing to finish, checks the return code, but suppresses any failure message</P>
+
+<TR>
+
+<TD>
+
+<P>i</P>
+
+<TD>
+
+<P>Ignores any write errors for this recipe</P></TABLE>
+
+<P>Since Procmail uses egrep to search the specified portion of a message, conditions are written as egrep regular expressions. If a condition starts with an exclamation point (!), then the condition is inverted. Greater than (&gt;) or less than (&lt;) 
+signs, followed by a decimal integer, can be used to make a condition true only if the size of the mail is greater than or less than the specified number (in bytes). Regular expressions starting with the value ^TO will be replaced with the expresssion 
+^(To|Cc|Apparently-To):.* in order to find all destination specifications. The following condition would match any message sent to the Macintosh AV mailing list:
+
+<BR></P>
+
+<PRE>^TOmacav-l</PRE>
+
+<P>A match of the string subscribe in the subject field would be found by the following:
+
+<BR></P>
+
+<PRE>^Subject:.*subscribe</PRE>
+
+<P>An action can be as simple as specifying a folder name into which a message will be filed. Beginning an action with an exclamation point (!) will cause the message to be forwarded to an immediately following e-mail address. A pipe (|) can be used to 
+initiate some other action regarding the message. The following is an example of a .procmailrc file.
+
+<BR></P>
+
+<PRE>#Example .procmailrc file
+
+#See man procmailex for more examples
+
+LOGFILE=$HOME/mail/.proclog
+
+MAILDIR=$HOME/mail
+
+#Save any messages to &quot;staff&quot; in staff folder
+
+:w:
+
+^TOstaff.*
+
+staff
+
+#Save any message from the Macintosh AV list in the
+
+#macintosh folder
+
+:w:
+
+^TOmacav-l
+
+macintosh
+
+#Save all correspondance with &quot;Bob&quot;
+
+:w:
+
+(^From|^To:|^Cc:).*Bob.*
+
+BobMail
+
+#Forward any mainframe-related mail
+
+:2w:
+
+^TO(mainframe&amp;manager)
+
+^Subject:.*mainframe.*
+
+!myname@mainframe.here.edu
+
+#Add all mail about horses to the horses archive and
+
+#forward a copy to Betty
+
+:wc:
+
+^Subject:.*horse.*
+
+|uncompress horses.Z;cat&gt;&gt;horses;compress horses
+
+  :A
+
+  !Betty@stable.com
+
+#End of .procmailrc example</PRE>
+
+<P>As is the case when dealing with e-mail, great care should be taken in writing your forwarding rules. If you are interested in using Procmail, it would be best to check with your system administrator as to whether it is installed globally or whether it 
+will work with your particular system mailer. For more information on Procmail, see man procmail, man procmailrc, and man procmailex.
+
+<BR></P>
+
+<H3><A ID="I18" NAME="I18">
+
+<FONT SIZE=4><B><A HREF="borens.gif">Nathaniel Borenstein</A></B>
+
+<BR></FONT></A></H3>
+
+<H5><A ID="I19" NAME="I19">
+
+<FONT SIZE=3><B>by Tod Foley</B>
+
+<BR></FONT></A></H5>
+
+<P>Chief Scientist at First Virtual Holdings, Inc., Nathaniel Borenstein is a world-reknowned doctor of computer science and a veritable legend of the online world. His programming work focuses on e-mail encoding/decoding and transport, and it places 
+special emphasis on interoperability issues and the problems associated with multimedia on the Net. Nathaniel's programming credits include such applications as Andrew (a pioneering multimedia messaging application), metamail (a portable MIME 
+implementation used by millions worldwide), and the ATOMICMAIL and Safe-Tcl languages (for safe and portable interactive electronic mail messages); but his most famous work is undoubtably MIME (the Internet standard format for interoperable multimedia 
+data). He is also the founder of the experimental electronic magazine <B><I>Electric </I></B><B><I>Eclectic</I></B>, and the author of <B><I>Programming As If People Mattered: Friendly </I></B><B><I>Programs</I></B><I>,</I><B><I> Software 
+Engineering</I></B><I>,</I><B><I> and Other Noble Delusions</I></B>. Now, with his partners at First Virtual, he continues to forge ahead, developing new answers to the problems of networked information delivery. In a recent e-mail interview, Nathaniel 
+explained the groundbreaking MIME format, and took a look at the future of the pan-platform multimedia world.
+
+<BR></P>
+
+<P><B>TF:</B> These days, many people are familiar with MIME&#151;at least in terms of seeing the word in their e-mail headers&#151;but few people seem to grasp the concept. What is MIME <I>really</I>, and how does it extend the e-mail capabilities of 
+users?
+
+<BR></P>
+
+<P><B>NB:</B> I can tell you what <I>I </I>think MIME really is. This isn't what I thought when we were designing it, but it's what I think now:
+
+<BR>
+
+<BR>I think that the best one-phrase summary of MIME is &quot;ASCII version two.&quot; By this, I mean that it is a data representation format that is totally machine-independent and can be used anywhere, like ASCII. In fact, it is represented entirely 
+<I>in </I>ASCII, so you could view it as a backwards-compatible extension to ASCII. What it comes down to is a well-defined, totally portable way to represent <I>any </I>kind of data inside ASCII. This explains why MIME is rapidly being adopted for so many 
+non-e-mail uses (netnews, WWW, Gopher, and even for X11 cut &amp; paste in the COSE proposals). It turns out that there are <I>lots</I> of applications for a totally platform- and vendor-neutral way to represent any kind of data in the world and 
+encapsulate it in an ASCII byte stream. That's what MIME's turning out to be.
+
+<BR></P>
+
+<P><B>TF:</B> So it's a <I>transparent protocol</I>,not a tool or service. . ..
+
+<BR></P>
+
+<P><B>NB:</B> Well, what MIME becomes is the <I>lingua franca </I>for communication between multimedia applications, even though users never need to know they're using MIME. Today, if two users exchange mail, and one of them is using, say, Eudora, and the 
+other is using Lotus Notes, and the mail being exchanged between them includes a picture (which is something both systems support), then one of two things will happen:
+
+<BR>
+
+<BR>1. The message will be garbled.
+
+<BR>2. The message will work fine, because they're using a recent version of Eudora and a recent Notes-to-SMTP gateway, both of which support MIME.
+
+<BR>
+
+<BR>Note what this looks like from the end user's perspective: either &quot;the system&quot; works, or it doesn't. Evolutionarily, it used to be always case #1, and is slowly turning into case #2 more often. Even a user who is alert enough to notice the 
+improvement will just think &quot;they've improved the software,&quot; but such users never have to hear the word &quot;MIME&quot; or know anything about it at all.
+
+<BR></P>
+
+<P><B>TF:</B> That's a great description&#129;97&#196;makes things a <I>lot </I>clearer. Of course the primary source for information on MIME would be RFC 1521, but are there any other good sources for users to turn to? Third-party literature?
+
+<BR></P>
+
+<P><B>NB:</B> Well. . .that depends on your definition of &quot;third-party.&quot; I'd refer you to Marshall Rose's book <B><I>The Internet Message</I></B>, published by Prentice Hall, which has a whole chapter on MIME. There's also the MIME FAQ, which is 
+itself third-party, and which contains lots of pointers to other information.
+
+<BR></P>
+
+<P><B>TF:</B> How does one use MIME to encode multimedia e-mail&#151;assuming the mailer has that capability?
+
+<BR></P>
+
+<P><B>NB:</B> That depends on the mail tool you're using. In some systems, you have to type an arcane command, followed by the filename, and you even have to type in the MIME content-type (for example, image/gif, or audio/basic, and so on) by hand. Some 
+systems have an &quot;include attachment&quot; menu or button, and may or may not use file type information to deduce the content-type. Other systems have particular buttons or menus for &quot;include image&quot; or &quot;include sound,&quot; or even more 
+specialized ones such as &quot;include screen dump&quot; or &quot;record &amp; include sound.&quot; The best systems (including Andrew, about which I am a shockingly immodest author &lt;g&gt; ) will even let you compose and edit pictures, sounds, and so 
+on, right in the middle of your mail message as you compose it. But as long as these systems all produce MIME as their data format, their users can all interoperate. MIME simply increases the infrastructure available for vendors of ever-better mail tools.
+
+<BR></P>
+
+<P><B>TF: </B>Are MIME messages transportable across both SMTP and UUCP networks? 
+
+<BR></P>
+
+<P><B>NB: </B>Absolutely. In fact, we designed MIME to be transportable across every mail system in the known world. If properly encoded, MIME messages can pass through gateways that connect not only SMTP and UUCP, but also Bitnet, FidoNet, X.400, SNADS, 
+PROFS, and everything else (including some really odd stuff) that was known to the hundred-odd mail gurus involved in the protocol design. A MIME message can pass through any or all such gateways, and as long as the headers aren't stripped off, if the 
+recipient has MIME-smart software, the message will be seen in its full multimedia glory. Einar Stefferud, one of the great visionaries and grand old men of the Internet, likes to speak of MIME as generalized &quot;tunnelling technology,&quot; by which 
+arbitrary data can be safely transported through some of the strangest transport gateways in the world. He also calls it &quot;teflon-coated e-mail armor,&quot; or something like that, but my favorite description is still &quot;ASCII version two.&quot;
+
+<BR></P>
+
+<P><B>TF: </B>Metamail&#151;the program that performs the actual MIME encoding/decoding and display&#151;is described as &quot;a portable MIME implementation&quot; which is called by the mailer. I would imagine that Andrew calls metamail; and it's fairly 
+common knowledge that Pine and Eudora also support its use&#151;what other mailers currently allow for calls to metamail?
+
+<BR></P>
+
+<P><B>NB: </B>Well, actually, this is not quite right. Andrew, Pine, and Eudora all support MIME, but the implementation in Eudora is totally independent of metamail. I'm not sure about Pine, but I think it started out as mostly metamail but is adding 
+stuff. Andrew uses metamail as a fallback when it hits a MIME content-type for which it doesn't have built-in support; but it has built-in support for the most common types, such as image and audio data. So the story is considerably more complicated.
+
+<BR>
+
+<BR>Basically, metamail was designed to be a program that you could easily plug into any mail reader to let it display MIME. This strategy was a very successful way to add <I>minimal </I>support for MIME to existing mail readers, but the result was not 
+what you'd call a seamless or well-integrated user interface. I always saw it as primarily being a transitional tool, to aid in the transition from pre-MIME to post-MIME mail readers. It turns out to be a bit more than that, because nowadays a fair number 
+of MIME-smart mail readers are being designed to use metamail as a fallback for unrecognized data types, the way Andrew does. This is a nice strategy because metamail is so easily configured to handle new content-types by running separate external viewing 
+programs.
+
+<BR>
+
+<BR>Anyway, to get back to your original question, it turns out that I don't really know all the tools that use metamail. I do know that not all of them are mail readers&#151;there are news readers and various other tools that use metamail to handle 
+multimedia &quot;attachments&quot; in MIME format. I know that I have personally patched or received patches for Berkeley Mail and its many variants; Xmail, Mailtool, MH, XMH, MH-E, Rmail, VM, the four Andrew mail-reading tools; Elm, Mush, MM, Msgs, UUPC, 
+RN, TRN, and various lesser-known packages. It has been fairly amazing to watch the way it has taken off. It was 22 days from the first public release of metamail on SunOS to my receipt of the first MS-DOS port, which is when I was really sure I had a hit 
+on my hands.
+
+<BR></P>
+
+<P><B>TF: </B>What about offline applications? Is the day coming when my paint program will have the option to save directly into MIME format instead of saving bit maps or .GIFs?
+
+<BR></P>
+
+<P><B>NB: </B>That's a particularly interesting question, I think, because it goes to the heart of what the world really needs for multimedia interoperability. There are still competing approaches in this regard, such as Bento, and I'm not sure I can 
+predict the future. The cut &amp; paste situation in X11 is the best example of why MIME would be useful for these &quot;offline applications,&quot; as you call them&#151;you need either MIME or something just like it if you're ever going to be able to cut 
+&amp; paste compound multimedia stuff including text, audio, and video between independently-developed applications. I think that day probably is coming on UNIX systems. It's harder to predict in non-UNIX environments because there's more of a chance for 
+vendor-defined standards. For example, cut &amp; paste already works fairly well on the Mac, because Apple managed to control the standards quite nicely by anticipating the need, at least at the level of things like bit maps. (Cut &amp; paste actually 
+breaks down at a more structured level of data, but it remains to be seen if the market really requires the cutting &amp; pasting of active spreadsheets, for example.) Microsoft could have probably set the standards equally well for Windows, but they may 
+have missed the boat by not doing it right sooner&#151;I don't know.
+
+<BR>
+
+<BR>I'd certainly like to think that the day you mention is coming, but if it is I think it will be customer-driven. It will happen if enough users demand the ability to get really high-level interoperability between independent multivendor applications. 
+And that will only happen if consumers are educated enough to realize that this is even possible.
+
+<BR>
+
+<BR>You can obtain more information on MIME and related topics in the following places:
+
+<BR>
+
+<BR>The MIME FAQ, currently maintained by Jerry Sweet, can be found via anonymous FTP at a number of sites; simply ask Archie to find mime-faq, or FTP to any of these sites:
+
+<BR>
+
+<BR>  rtfm.mit.edu/pub/usenet-by-group/news.answers/mail/mime-faq/*
+
+<BR>  ftp.uu.net/usenet/news.answers/mail/mime-faq/*
+
+<BR>  ftp.ics.uci.edu/mh/contrib/multimedia/mime-faq.txt.gz
+
+<BR>
+
+<BR>To retrieve the FAQ by FTPmail, send e-mail to
+
+<BR>
+
+<BR>  archive-server@ics.uci.edu
+
+<BR>
+
+<BR>with the text body:
+
+<BR>
+
+<BR>  mimesend /mh/contrib/multimedia mime-faq.txt.gz
+
+<BR>
+
+<BR>The MIME FAQ is also posted monthly to the Usenet newsgroup comp.mail.mime.
+
+<BR>
+
+<BR>mime.txt, a good primer on MIME and how it works, can be found at ftp.netcom.com, in the directory /pub/mdg/mime.txt.
+
+<BR>
+
+<BR>MIME, metamail, and related programs and sample files are available via anonymous FTP from thumper.bellcore.com, in the /pub/nsb directory.
+
+<BR></P>
+
+<H3><A ID="I20" NAME="I20">
+
+<FONT SIZE=4><B>Anonymous E-Mail and Privacy Issues (PEM, PGP, and So on)</B>
+
+<BR></FONT></A></H3>
+
+<P>In my capacity as Bitnet support person, I once ran across the classic bit of forged e-mail shown in the following screen dump. This was a message posted to the Bitnet LINKFAIL mailing list&#151;undoubtedly as a parody of the usual kinds of notices 
+posted there. While it provided an amusing aside to the usual monitoring of downed Bitnet links (a critical issue at that time, since Bitnet was still primarily a store-and-forward network), it also drove home the fact that not all e-mail was authentic. 
+Today, while a number of safeguards have been put in place by system managers, forged e-mail is still a possibility. The following Bitnet Listserv mail message was a funny, if obvious, forgery.
+
+<BR></P>
+
+<PRE>IPFRCVM  Iowa Pig Farm Research Center will be down tomorrow from
+
+20:0023:00 for system maintenance. Since we are an end node, nobody
+
+will be affected except for us.
+
+It turns out that one of our sows got in through a hole in the wall
+
+and had her litter of piglets under our raised floor. The operator on
+
+duty got quite a scare when he heard a number of squeals. He assumed
+
+we had some massive head crashes and powered down the CPU. Since the
+
+squeals continued we traced it to a corner under our raised floors.
+
+We will be off the air tonight so that we can power down again and
+
+get the sow and her piglets out from under the floor.
+
+Zeke  System Grunt IPFRC</PRE>
+
+<P>Anonymous access to the Internet is counter to the usage guidelines of most Internet service providers, who require that news posts and mail be traceable to a specific computer or human user. In spite of this requirement, however, standard Internet mail 
+is not guaranteed to be legitimate, secure, or authentic. It's still possible to forge SMTP mail, but these days it's harder to do so without getting caught. While mail is, for the most part, provided a degree of legitimacy by the security of the computing 
+systems attached to the Internet, standard Internet mail has to date not been secure enough to support things like monetary transactions, business negotiations, and other truly private transactions.
+
+<BR></P>
+
+<H4><A ID="I21" NAME="I21">
+
+<FONT SIZE=3><B>The Problem of E-Mail Security</B>
+
+<BR></FONT></A></H4>
+
+<P>It is the intent of most system managers to keep their systems secure and to guard user privacy. Such concern for security and privacy usually extends to electronic mail as well. After mail leaves a host machine, control over that security and privacy 
+is out of the hands of the sender or the system's manager. While it is counterproductive to question the motives and integrity of every system manager other than your own, most of us who have spent a good deal of time on the Internet live by the tenet that 
+e-mail is everlasting and ubiquitous. Never commit something to an e-mail message that you would not be able to defend or laugh off at a later date.
+
+<BR></P>
+
+<P>To quell some tinges of paranoia, it is unlikely that some secret agency is routinely gathering all Internet e-mail messages ever sent. They would probably like to, but the volume of mail is just too great. The problem is far more practical and mundane. 
+For example, messages sometimes pass through <I>gateways</I>&#151;computers that use disk space to store messages for later delivery. Disk drives get backed up on a regular basis. In other words, your e-mail message may exist on someone's backup tape. 
+Although it may be the case that no one knows that your e-mail message is there, that does not prevent that message from being accessed at some later time. The way systems communicate on the Internet is also part of the problem. Internet protocols are open 
+and well documented. While it's usually software programs that do so, anyone can connect to an SMTP mail agent and begin to enter commands. because most e-mail messages exist in clear text, there is no guarantee that it will be read only by the individual 
+for whom it is intended.
+
+<BR></P>
+
+<H4><A ID="I22" NAME="I22">
+
+<FONT SIZE=3><B>Some E-Mail Privacy Solutions</B>
+
+<BR></FONT></A></H4>
+
+<P>Since e-mail exists in clear text, the answer to security must lie in encryption, right? Well, the answer is both no and yes. Standard encryption methods require that some &quot;key&quot; value be used to encode and decode the text. If you are sending 
+e-mail, transmitting a key value is problematic. It is possible to do so via some other secured channel of communication, but it certainly would not be convenient, especially on a regular basis. The answer may lie in the dual key model of encryption 
+proposed by the RSA (Rivest, Shamir, and Adleman) standard, published (much to the NSA's chagrin, apparently) in 1977.
+
+<BR></P>
+
+<P>The RSA algorithm makes use of a public and private key to ensure both privacy and authenticity. The private key remains the secret possession of an individual, while an associated public key can be published to others on the network. To put it simply, 
+text encrypted using the public key can only be decrypted using the corresponding private key, thereby ensuring that only the recipient (and private key holder) can access the text, thus preserving the privacy of the message. Likewise, text encrypted with 
+the private key can be decrypted only using the associated public key, thereby ensuring that the text is indeed originating from the sender (and private key holder), thus providing authentication.
+
+<BR></P>
+
+<H5><A ID="I23" NAME="I23">
+
+<FONT SIZE=3><B>The PEM Standard</B>
+
+<BR></FONT></A></H5>
+
+<P>Implementation of RSA security for Internet mail has progressed far beyond the proposal stage, but it has not yet reached the practical level of other implemented and offically accepted Internet standards. Any mail program that wants to operate on the 
+Internet must be capable of &quot;speaking&quot; SMTP (or at least be on speaking terms with another program that is). Very few programs are yet &quot;speaking&quot; PEM.
+
+<BR></P>
+
+<P>PEM stands for Privacy Enhanced Mail, and is documented in RFC numbers 1421, 1422, 1423, and 1424. The PEM standard is intended to implement the RSA encryption algorithm in a manner that can support the exchange of secure electronic mail via Internet 
+protocols. The RFCs mentioned above outline all aspects of managing such a protocol on the Internet, including encryption algorithms used for management of public and private keys. The standard proposes a centralized hierarchical structure for the issuance 
+of public key certificates, and outlines how public keys could be integrated with directory services. The overall scheme is ambitious and has not been fully implemented or officially adopted at this writing.
+
+<BR></P>
+
+<P>One problem with relying on a dual-key encryption method is the inability to ensure that published public keys are actually associated with the person whom they purport to represent. If an impostor publishes a public key for a person, then the impostor 
+can decode messages intended for that person if unsuspecting people use the bogus key to encrypt messages. The PEM standard proposes a hierarchy of certification authorities who would be charged with the task of providing presumably secure &quot;key 
+certificates.&quot; Some people, however, are uncomfortable with entrusting this task to a central authority and advocate a &quot;grass-roots&quot; network of authentication, with one's personal authorities serving as the basis for deciding that a public 
+key is valid. The debates on this topic and on topics such as the U.S. Government-proposed &quot;clipper chip&quot; show that this can be an emotional and complicated issue.
+
+<BR></P>
+
+<H5><A ID="I24" NAME="I24">
+
+<FONT SIZE=3><B>Introducing RIPEM</B>
+
+<BR></FONT></A></H5>
+
+<P>A version of PEM is available from a company name Trusted Information Systems. However, another version named RIPEM seems to be more readily available via the Internet. RIPEM is a program written by Mark Riordin that implements many aspects of the PEM 
+standard but does not implement a hierarchical certification scheme.
+
+<BR></P>
+
+<P>RIPEM makes use of a package of encryption algorithms named the RSAREF Toolkit, which is available from RSA Data Security Inc. at the anonymous FTP site rsa.com. RSA licenses several patented encryption algorithms (including the RSA algorithm) from a 
+company named Public Key Partners. Public Key Partners owns the exclusive licensing rights to those algorithms. The RSAREF Toolkit&#151;actually a package of C libraries&#151;is freely available subject to export limitations and licensing restrictions. 
+Because of U.S. Government rules, only citizens of the U.S. and Canada are eligible to acquire and use the RSAREF package. This is also true of RIPEM and other RSA encryption packages. The following copy of the RSA license agreement illuminates the various 
+restrictions in relation to this package.
+
+<BR></P>
+
+<PRE>     RSA LABORATORIES
+
+PROGRAM LICENSE AGREEMENT
+
+     January 5, 1993
+
+RSA LABORATORIES, A DIVISION OF RSA DATA SECURITY, INC. (&quot;RSA&quot;)
+
+GRANTS YOU A LICENSE AS FOLLOWS TO THE &quot;RSAREF&quot; PROGRAM:
+
+1.   LICENSE. RSA grants you a nonexclusive, nontransferable,
+
+     perpetual (subject to the conditions of section 8) license
+
+     for the &quot;RSAREF&quot; program (the &quot;Program&quot;) and its associated
+
+     documentation, subject to all of the following terms and
+
+     conditions:
+
+     a.   to use the Program on any computer in your possession;
+
+     b.   to make copies of the Program for backup purposes;
+
+     c.   to modify the Program in any manner for porting or
+
+          performance improvement purposes (subject to Section 2)
+
+          or to incorporate the  Program into other computer programs
+
+          for your own personal or internal use, provided that you
+
+          provide RSA with a copy  of any such modification or
+
+          Application Program by electronic mail, and grant RSA
+
+          a perpetual, royaltyfree license to use and distribute
+
+          such modifications and Application Programs on the terms
+
+          set forth in this Agreement.
+
+     d.   to copy and distribute the Program and Application Programs
+
+          in accordance with the limitations set forth in Section 2.
+
+&quot;Application Programs&quot; are programs which incorporate all or any
+
+portion of the Program in any form. The restrictions imposed on
+
+Application Programs in this Agreement shall not apply to any software
+
+which, through the mere aggregation on distribution media, is
+
+colocated or stored with the Program.
+
+2.   LIMITATIONS ON LICENSE.
+
+     a.   RSA owns the Program and its associated documentation and
+
+          all copyrights therein. You may only use, copy, modify and
+
+          distribute the Program as expressly provided for in this
+
+          Agreement. You must reproduce and include this Agreement,
+
+          RSA's copyright notices and disclaimer of warranty on any
+
+          copy and its associated documentation.
+
+     b.   The Program and all Application Programs are to be used only
+
+          for noncommercial purposes. However, media costs associated
+
+          with the distribution of the Program or Application Programs
+
+          may be recovered.
+
+     c.   The Program, if modified, must carry prominent notices
+
+          stating that changes have been made, and the dates of any
+
+          such changes.
+
+     d.   Prior permission from RSA is required for
+
+          any modifications that access the Program through ways
+
+          other than the published Program interface or for
+
+          modifications to the Program interface. RSA will grant
+
+          all reasonable requests for permission to make such
+
+          modifications.
+
+3.   NO RSA OBLIGATION. You are solely responsible for all of your
+
+     costs and expenses incurred in connection with the distribution
+
+     of the Program or any Application Program hereunder, and RSA
+
+     shall have no liability, obligation or responsibility therefor.
+
+     RSA shall have no obligation to provide maintenance, support,
+
+     upgrades or new releases to you or to any distributee of the
+
+     Program or any Application Program.
+
+4.   NO WARRANTY OF PERFORMANCE. THE PROGRAM AND ITS ASSOCIATED
+
+     DOCUMENTATION ARE LICENSED &quot;AS IS&quot; WITHOUT WARRANTY AS TO THEIR
+
+     PERFORMANCE, MERCHANTABILITY OR FITNESS FOR ANY PARTICULAR
+
+     PURPOSE. THE ENTIRE RISK AS TO THE RESULTS AND PERFORMANCE OF
+
+     THE PROGRAM IS ASSUMED BY YOU AND YOUR DISTRIBUTEES. SHOULD THE
+
+     PROGRAM PROVE DEFECTIVE, YOU AND YOUR DISTRIBUTEES (AND NOT RSA)
+
+     ASSUME THE ENTIRE COST OF ALL NECESSARY SERVICING, REPAIR OR
+
+     CORRECTION.
+
+5.   LIMITATION OF LIABILITY. EXCEPT AS EXPRESSLY PROVIDED FOR IN
+
+     SECTION 6 HEREINUNDER, NEITHER RSA NOR ANY OTHER PERSON WHO HAS
+
+     BEEN INVOLVED IN THE CREATION, PRODUCTION, OR DELIVERY OF THE
+
+     PROGRAM SHALL BE LIABLE TO YOU OR TO ANY OTHER PERSON FOR ANY
+
+     DIRECT, INCIDENTAL OR CONSEQUENTIAL DAMAGES, EVEN IF RSA HAS BEEN
+
+     ADVISED OF THE POSSIBILITY OF SUCH DAMAGES.
+
+6.   PATENT INFRINGEMENT OBLIGATION. Subject to the limitations set
+
+     forth below, RSA, at its own expense, shall: (i) defend, or at
+
+     its option settle, any claim, suit or proceeding against you on
+
+     the basis of infringement of any United States patent in the
+
+     field of cryptography by the unmodified Program; and (ii) pay
+
+     any final judgment or settlement entered against you on such
+
+     issue in any such suit or proceeding defended by RSA. The
+
+     obligations of RSA under this Section 6 are subject to:
+
+     (i) RSA's having sole control of the defense of any such claim,
+
+     suit or proceeding; (ii) your notifying RSA promptly in writing
+
+     of each such claim, suit or  proceeding and giving RSA authority
+
+     to proceed as stated in this  Section 6; and (iii) your giving
+
+     RSA all information known to you relating to such claim,
+
+     suit or proceeding and cooperating  with RSA to defend any such
+
+     claim, suit or proceeding. RSA shall have no obligation under
+
+     this Section 6 with respect to any claim to the extent it is
+
+     based upon (A) use of the Program  as modified by any person
+
+     other than RSA or use of any Application Program, where use
+
+     of the unmodified Program would not constitute an infringement,
+
+     or (B) use of the Program in a manner other than that permitted
+
+     by this Agreement.  THIS SECTION 6 SETS FORTH RSA'S ENTIRE
+
+     OBLIGATION AND YOUR EXCLUSIVE REMEDIES CONCERNING CLAIMS FOR
+
+     PROPRIETARY RIGHTS INFRINGEMENT.
+
+     NOTE: Portions of the Program practice methods described in and
+
+     subject to U.S. Patents Nos. 4,200,770, 4,218,582 and 4,405,829,
+
+     and all foreign counterparts and equivalents, issued to Leland
+
+     Stanford Jr. University and to Massachusetts Institute of
+
+     Technology. Such patents are licensed to RSA by Public Key
+
+     Partners of Sunnyvale, California, the holder of exclusive
+
+     licensing rights. This Agreement does not grant or convey any
+
+     interest whatsoever in such patents.
+
+7.   RSAREF is a noncommercial publication of cryptographic
+
+     techniques. Portions of RSAREF have been published in the
+
+     International Security Handbook and the August 1992 issue of Dr.
+
+     Dobb's Journal. Privacy applications developed with RSAREF may be
+
+     subject to export controls. If you are located in the United States
+
+     and develop such applications, you are advised to consult with the
+
+     State Department's Office of Defense Trade Controls.
+
+8.   TERM. The license granted hereunder is effective until
+
+     terminated. You may terminate it at anytime by destroying
+
+     the Program and its associated documentation. The termination
+
+     of your license will not result in the termination of the
+
+     licenses of any distributees who have received rights to the
+
+     Program through you so long as they are in compliance with
+
+     the provisions of this license.
+
+9.   GENERAL
+
+     a.   This Agreement shall be governed by the laws of the State of
+
+          California.
+
+     b.   Address all correspondence regarding this license to RSA's
+
+          electronic mail address &lt;rsarefadministrator@rsa.com&gt;, or
+
+          to
+
+               RSA Laboratories
+
+               ATTN: RSAREF Administrator
+
+               100 Marine Parkway, Suite 500
+
+               Redwood City, CA  94065</PRE>
+
+<P>RIPEM is available for several platforms including UNIX, Macintosh, and MS-DOS. It is a program that acts independently of your mail program, providing file encryption/decryption, and public and private key management. It is not without its limitations, 
+however. As per the PEM standard, it can act upon text files only. It is limited to a 1023-character line length, and the encryptable message size is limited by the available size of your computer system's memory.
+
+<BR></P>
+
+<P>RIPEM and other similar programs use a two-step encryption process. The message text is first encrypted using the Data Encryption Standard (DES) algorithm and that encryption's key value is then encrypted using the RSA algorithm. This process takes less 
+time, since RSA encryption generally is more complex than DES. The text remains secure because the DES key is guarded by the RSA encryption. RIPEM can also ensure that a file has not been altered. It does this by encrypting a hash value with a signed file. 
+The whole process is transparent to the user.
+
+<BR></P>
+
+<H5><A ID="I25" NAME="I25">
+
+<FONT SIZE=3><B>Obtaining RIPEM</B>
+
+<BR></FONT></A></H5>
+
+<P>The official distribution site for RIPEM is ripem.msu.edu, and information about the program can be found in the /pub/crypt/ripem directory. The files ripemusr.txt and ripem.man (the man page) are particularly informative. Since RIPEM and programs like 
+it are export-restricted, the actual executables are only distributable upon request. The RIPEM source code has been placed in the public domain, but because of RSAERF restrictions commercial use of the program is apparently forbidden.
+
+<BR></P>
+
+<P>To gain access, you can send an e-mail message to ripem@ripem.msu.edu with several pieces of information: you must provide your citizenship (must be U.S. or Canadian to be authorized to receive RIPEM), you must state your willingness to comply with 
+relevant export laws and software licenses, and you must provide the fully-qualified domain name of your Internet host and the country in which it resides. Assuming you qualify, you will receive a message with a special FTP name and password usable only 
+from your specified host. RIPEM is also available from rsa.com with similar restrictions. The following README file on that host gives the instructions for accessing both RSARREF and RIPEM and gives you a good idea of the restrictions involved.
+
+<BR></P>
+
+<PRE>Please note: RSAREF and the associated programs distributed in this
+
+directory are EXPORT CONTROLLED and are available via anonymous FTP to
+
+U.S. persons only. Canadian citizens may obtain RSAREF via electronic
+
+mail by sending a message acknowledging the four points below,
+
+changing the country as necessary, to &lt;rsarefadministrator@rsa.com&gt;.
+
+The RSAREF license is in the file 'license.txt'. Please read it. If
+
+you acknowledge that:
+
+     1. You have read the RSAREF Program License Agreement and
+
+        understand and agree to be bound by its terms and conditions,
+
+        including without limitation its restrictions on foreign
+
+        reshipment of the Program and information related to the
+
+        Program;
+
+     2. The computer to which you are requesting that the program be
+
+        transmitted is located in the United States of America;
+
+     3. You are a United States citizen or a permanent resident of the
+
+        United States; and
+
+     4. The RSAREF Program License Agreement is the complete and
+
+        exclusive agreement between RSA Laboratories and you relating
+
+        to the Program, and supersedes any proposal or prior
+
+        agreement, oral or written, and any other communications
+
+        between RSA Laboratories and you relating to the Program,
+
+then change to the following directory:
+
+dist/U.S.onlyf1dd43
+
+This is a timedependent directory. Check this file again if you can't
+
+find the directory.
+
+RSAREF is in the files 'rsaref.tar.Z' and 'rsaref.zip'.  On the first
+
+you would run the commands:
+
+     uncompress rsaref.tar.Z       # produces rsaref.tar
+
+     tar xvf rsaref.tar
+
+On the second you would run:
+
+     pkunzip rsaref.zip
+
+RIPEM, Mark Riordan's RSAREFbased privacyenhanced mail program, is
+
+also distributed in that directory. 'ripem*.tar.Z' includes RSAREF,
+
+so you only need to get one file. 'ripem.el' contains an Emacs command
+
+interface to RIPEM. 'ripemmacintosh*.sit.hqx' is Raymond Lau's
+
+version of RIPEM for the Macintosh(R), archived and compressed with
+
+StuffIt and encoded in ASCII with BinHex.
+
+A collection of RIPEM public keys is in the file 'rpubkeys'. Those
+
+keys are uncertified, so use them AT YOUR OWN RISK. We just add
+
+whatever people send to us. To have your RIPEM public keys added, send
+
+electronic mail to &lt;ripemkeys@rsa.com&gt;.
+
+If you have questions on RSAREF software, licenses, export
+
+restrictions, or other RSA Laboratories offerings, send electronic
+
+mail to &lt;rsarefadministrator@rsa.com&gt;.
+
+Revised December 1, 1993</PRE>
+
+<H4><A ID="I26" NAME="I26">
+
+<FONT SIZE=3><B>An Introduction to Pretty Good Privacy (PGP)</B>
+
+<BR></FONT></A></H4>
+
+<P>Pretty Good Privacy, or PGP, has the potential to be the Kermit of the 1990s. Kermit, the public-domain, file-transfer protocol developed at Columbia University, is&#151;while not necessarily the fastest or most elegant&#151;certainly the most 
+widespread solution. It achieved its ubiquitous status because it was freely available and implementable on many diverse computer systems. PGP has yet to attain the same status, but like Kermit it is freely available for noncommercial use (but not in the 
+public domain), and because the source code is available, it has the potential to be implemented on diverse systems.
+
+<BR></P>
+
+<P>PGP is an implementation of dual-key encryption for use with Internet mail and for general data security. PGP was written by Philip Zimmerman, and is credited to his company, Phil's Pretty Good Software. PGP also has a rather storied history, since it 
+has been in the center of a controversy related to whether posting on an anonymous FTP site constitutes export, and it has drawn attention to the sensitivity about cryptography technology in some government circles. Early versions were subject to some RSA 
+license questions as well. The current versions of PGP have been developed using the RSAREF Toolkit, a move that has apparently quelled any ambiguities about licensing.
+
+<BR></P>
+
+<H5><A ID="I27" NAME="I27">
+
+<FONT SIZE=3><B>Advantages of PGP</B>
+
+<BR></FONT></A></H5>
+
+<P>PGP is very explicitly a publicly available security solution&#151;RSA for the &quot;little guy.&quot; Its author is quite open and eloquent about the various issues of encryption security within the electronic society of the Internet. PGP's 
+attractiveness goes beyond this availability, however. Unlike RIPEM and other PEM-based programs, PGP goes beyond simple encryption and includes built-in compression and ASCII encoding as well. PGP can perform the compression functions of zip-like programs 
+and do ASCII encoding (similarly to uuencode) in one single operation and provide encryption security on top of it all. It can also produce clear text messages with encrypted signatures attached. PGP is very simple to use, but it is highly recommended that 
+you read all the accompanying documentation to fully understand the concepts of its use as well as the program's limitations.
+
+<BR></P>
+
+<H5><A ID="I28" NAME="I28">
+
+<FONT SIZE=3><B>Where to Get PGP</B>
+
+<BR></FONT></A></H5>
+
+<P>The official distribution point for PGP in the U.S. is at the Massachusetts Institute of Technology (MIT), on the node net-dist.mit.edu, in the directory /pub/PGP. The README file in that directory will provide an explanation of the procedure for 
+acquiring PGP from that site. An Archie search for PGP will turn up numerous other sites. Care should always be taken, however, to obtain the package from the most authoritative source available. A commercial version is available from a company named 
+ViaCrypt (2014 West Peoria Avenue, Phoenix, Arizona 85029; tel. 602-944-0773).
+
+<BR></P>
+
+<H5><A ID="I29" NAME="I29">
+
+<FONT SIZE=3><B>How to Use PGP</B>
+
+<BR></FONT></A></H5>
+
+<P>After PGP is acquired, installed, and configured, it is fairly straightforward to use. The pgp command is used in combination with a number of subcommand options to perform various functions. Encryption is accomplished by using the -e option and 
+decryption is accomplished by using the command pgp <I>filename</I>, where your filename usually has a .pgp extension. Another possible option is -a, which produces an ASCII-encoded output (radix-64) suitable for mailing over the Internet. For example, if 
+you wanted to create a file encrypted with someone's public key and signed with your private key and suitable for sending via an e-mail message, you might use a command like the following:
+
+<BR></P>
+
+<PRE><B>pgp -esa testfile.txt Bob Jones</B></PRE>
+
+<P>The following is a key-generation dialog resulting from the command pgp -kg.
+
+<BR></P>
+
+<PRE><B>pgp -kg</B>
+
+Pretty Good Privacy(tm) 2.6  Publickey encryption for the masses.
+
+(c) 19901994 Philip Zimmermann, Phil's Pretty Good Software. 23 May 94
+
+Distributed by the Massachusetts Institute of Technology. Uses RSAREF.
+
+Export of this software may be restricted by the U.S. government.
+
+Current time: 1994/06/07 15:56 GMT
+
+Pick your RSA key size:
+
+    1)   512 bits Low commercial grade, fast but less secure
+
+    2)   768 bits High commercial grade, medium speed, good security
+
+    3)  1024 bits &quot;Military&quot; grade, slow, highest security
+
+Choose 1, 2, or 3, or enter desired number of bits: 2
+
+Generating an RSA key with a 768bit modulus.
+
+You need a user ID for your public key. The desired form for this
+
+user ID is your name, followed by your Email address enclosed in
+
+&lt;angle brackets&gt;, if you have an Email address.
+
+For example: John Q. Smith &lt;12345.6789@compuserve.com&gt;
+
+Enter a user ID for your public key:
+
+John R. Smith &lt;smith@somewhere.edu&gt;
+
+You need a pass phrase to protect your RSA secret key.
+
+Your pass phrase can be any sentence or phrase and may have many
+
+words, spaces, punctuation, or any other printable characters.
+
+Enter pass phrase:
+
+Enter same pass phrase again:
+
+We need to generate 385 random bits. This is done by measuring the
+
+time intervals between your keystrokes. Please enter some random text
+
+on your keyboard until you hear the beep:
+
+   0 * Enough, thank you.
+
+.............++++ .................++++
+
+Key generation completed.</PRE>
+
+<P>The following is an example of a simple encryption/decryption process.
+
+<BR></P>
+
+<PRE>C:\PGP:pgp e c:\testfile.txt o testfile.pgp
+
+Pretty Good Privacy(tm) 2.6  Publickey encryption for the masses.
+
+(c) 19901994 Philip Zimmermann, Phil's Pretty Good Software. 23 May 94
+
+Distributed by the Massachusetts Institute of Technology.  Uses RSAREF.
+
+Export of this software may be restricted by the U.S. government.
+
+Current time: 1994/06/07 14:42 GMT
+
+Recipients' public key(s) will be used to encrypt.
+
+A user ID is required to select the recipient's public key.
+
+Enter the recipient's user ID: John R. Smith
+
+Key for user ID: John R. Smith
+
+768bit key, Key ID 0E922109, created 1994/06/07
+
+.
+
+Ciphertext file: testfile.pgp
+
+C:\PGP:pgp testfile.pgp
+
+Pretty Good Privacy(tm) 2.6  Publickey encryption for the masses.
+
+(c) 19901994 Philip Zimmermann, Phil's Pretty Good Software. 23 May 94
+
+Distributed by the Massachusetts Institute of Technology. Uses RSAREF.
+
+Export of this software may be restricted by the U.S. government.
+
+Current time: 1994/06/07 14:49 GMT
+
+File is encrypted. Secret key is required to read it.
+
+Key for user ID: John R. Smith
+
+768bit key, Key ID 0E922109, created 1994/06/07
+
+You need a pass phrase to unlock your RSA secret key.
+
+Enter pass phrase: Pass phrase is good. Just a moment......
+
+Plaintext filename: testfile
+
+C:\PGP:</PRE>
+
+<H5><A ID="I30" NAME="I30">
+
+<FONT SIZE=3><B>Caveats: Disadvantages of Using PGP</B>
+
+<BR></FONT></A></H5>
+
+<P>One disadvantage to relying upon PGP or other programs such as RIPEM is that your intended recipient must also have a copy of the program or of a program that supports the same implementation of the encryption algorithm. As a standard develops, it will 
+be increasingly possible to have some assurance that your message can be decrypted and verified by the recipient. For example, the same is currently true of the MIME standard for mail attachments. Even though MIME is fairly well established, it will become 
+a useful standard after most e-mail programs have support built in.
+
+<BR></P>
+
+<P>Unlike most MIME support, PGP and other similar programs are currently implemented independently of mail programs and require you to act upon a file before sending it via e-mail. The PEM standard seems to support integration of security into mail 
+applications, but at the time of this writing, no major mail programs are supporting built-in PEM. Such independence will not necessarily prevent a standard from being established. Uuencode/uudecode and the various &quot;zip&quot; programs have achieved de 
+facto standard status and are commonly available on many platforms and in many locations. A standard becomes useful when a &quot;critical mass&quot; of people or computers employ it, and PGP has as much chance of catching on as many other programs at this 
+point.
+
+<BR></P>
+
+<P>Verifying the security of the security software and signature certificates can be somewhat problematic with PGP. Because no central authority provides or certifies the public keys for PGP, you must rely on &quot;personal&quot; authorities to verify 
+signatures. PGP even supports this interpersonal certification method, enabling you to certify public keys on your key ring for later distribution to others and enabling you to specify your confidence level in a particular key based upon who else has 
+certified it. MIT serves as the central authority for distribution of the PGP software, and also maintains some public keys.
+
+<BR></P>
+
+<P>Export controls and other licensing issues related to products using RSA security can be somewhat complex and sometimes confusing. The fact that U.S. export restrictions for this software are in place currently reduces the likelihood of it becoming a 
+global standard. (While there is an international version of PGP named PGPui, establishment of a global standard is still somewhat inhibited by U.S. restrictions.) An overview of the political debate on this subject is not appropriate here, but if you 
+research these programs you can't help but get a sense of the nature of the debate. The PGP documentation provides a good overview of some of the legal issues involved for this program and others like it.
+
+<BR></P>
+
+<H4><A ID="I31" NAME="I31">
+
+<FONT SIZE=3><B>Finding Out More about PGP and PEM</B>
+
+<BR></FONT></A></H4>
+
+<P>If you are new to RSA security and want to learn more about the general concepts and some of the technical issues involved, the PGP documentation files (pgtdoc1.txt and pgpdoc2.txt) are great places to start. As already mentioned, they provide a good 
+overview of the technology involved, as well as an overview of the legal and licensing issues. The RIPEM documentation (ripemusr.txt) is also helpful in this regard. Other sources for information are the news groups alt.security.pgp, alt.security.ripem, 
+sci.crypt, and info.pem-dev.
+
+<BR></P>
+
+<H3><A ID="I32" NAME="I32">
+
+<FONT SIZE=4><B>Subscribing and Staying Current on Listservs and Mailing Lists (How a </B><B>Guru Is Able to Track So Many Groups)</B>
+
+<BR></FONT></A></H3>
+
+<P>
+
+<BR><B><A HREF="todfoley.gif">ALEPH: The Rise and Fall of a Virtual Community </B><B>--by Tod Foley</A></B>
+
+<BR></P>
+
+<HR ALIGN=CENTER>
+
+<NOTE>
+
+<IMG SRC="more.gif">The Internet is touted as a place where people of diverse types and scattered localities can come together to work, play, and socialize in the spirit of the common good, congregating in all manner of self-organizing groups often known 
+as <I>virtual communities</I>. As many Net gurus will tell you, e-mail lists present an excellent environment for the construction of such experimental communities: distribution is handled automatically, list subscription can be strictly controlled (if 
+desired), and the asynchronous nature of the medium enables subscribers to participate at their own pace, in their own unique way.
+
+<BR>
+
+<BR>To many people (including myself), this sort of structure represents total creative freedom, and perhaps the best environment yet designed for shared human labor and social expression. Last year, I was a key participant in one of these working 
+environments&#151;a progressive hothouse of furious metaphysical speculation called aleph@pyramid.com&#151;where I learned that such freedom is not without its cost.
+
+<BR>
+
+<BR><B>The Ambistructure of Aleph</B>
+
+<BR>
+
+<BR>One way of looking at an e-list is to liken the entire structure to a single massive mind, speaking to itself in a holographic and self-reflexive way. If this model were applied to Aleph, the diagnosis would have revealed a schizophrenic 
+physicist/mystic, compulsively obsessed with the idea of codifying the twin universes of mind and matter into a single massive body of semiformal systems theory. The early days of Aleph, like those of most creative projects, were marked by feverish bouts 
+of prolific brainstorming, and by an overly-broad definition of our interests and activities. There were no hierarchies and no official titles, just various &quot;electronic citizens&quot; adding the contents of their minds and hearts to this strange 
+portable public forum. In general, Mitch Porter provided the basis of our scientific research, while I dug up the arcane works of mystics and Heath Rezabek (&quot;free agent .rez&quot;) rallied the creative forces of Alephian text-artists.
+
+<BR>
+
+<BR>Among the various tasks Aleph set upon were the Fixion project (an exercise in cooperative writing and creative role-playing, devised by .rez), the study of Applied Memetics (the means by which ideas spread from mind to mind), the creation of The 
+Alephian Lexicon (a huge collection of useful terms and redefinitions from the realms of philosophy, science, and mysticism), Alpha/Omega (Mitch's idea for a global event heralding a huge worldwide networked Millennial Climax), Gaia 2000 (an experiment in 
+the creation of real-life organizations based upon our fictional structures), and the formation of the HyperQabalah (an interactive Qabalistic Tree of Life). Ultimately, the Alephians assumed, this massive body of knowledge would result in the creation of 
+what we called the AAleph&#151;a relativistic online model of the universe. Unrealistic? Perhaps. Insane? Probably. But none of this stopped us from working. Aleph was unleashed upon the unsuspecting Net in May of 1993; by the end of July, our archives 
+contained over three megabytes&#151;800 pages&#151;of dense and self-reflexive text, loosely referred to as The Alephian Current.
+
+<BR>
+
+<BR><B>Weird Sister</B>
+
+<BR>
+
+<BR>In the first week of August, the list began receiving essays and letters from someone who called herself &quot;Doctress Neutopia.&quot; She immediately proved herself to be a prolific writer, highly imaginative and not prone to holding back her 
+opinion. The writings of The Doctress dealt consistently with issues of sexism and the oppression of females by males, and were generally of tremendous length and great personal investment. In shorter e-mailed notes, she spoke of adding a love saga to the 
+rapidly-developing Fixion project. She also told us she was looking for &quot;the A/O (Alpha/Omega) Man,&quot; who would join her in rule over the Earth when the Lovolution came. (In an early letter to me she asked if <I>I </I>was that man; a little 
+stunned, I bounced back Mitch's address, figuring she was looking for the author of A/O.) Day after day, her writings poured in, screenful after screenful. She seemed to care little for our already-developing lines of work, preferring instead to stick to 
+her own campaign and agenda. For a week or so, her words seemed illuminating in a unique way; her over-the-top, egocentric, dyslexic metaphor seemed intentionally postmodern, and her research skills were undeniable (even if her prose tended toward 
+hyperbole). The Doctress was unconditionally welcomed to the list. Relatively speaking; Aleph had found another weird sister.
+
+<BR>
+
+<BR>Upon acceptance, her tone changed almost immediately. As I soon found out, she was not one to submit herself to the communal-editor approach we fostered; the slightest criticism of her words would send her into a rant, and heaven forbid if that 
+criticism come from a <I>male</I>! Beneath her hard-edged rhetoric, it soon became apparent that another thread existed: as she often revealed in her own poetic works and letters to the list, The Doctress was actually an extremely sensitive person who had 
+been imprinted by various unfortunate incidents throughout her life. She was very badly wounded, very much in pain, and quite possibly out of touch with reality. As her words rolled in by the bufferload, she began painting for us her feverish visions of a 
+&quot;Neutopian Society&quot; with herself at its apex; a world in which males were subservient to females. The issue of subservience was key&#151;there had always been Alephians of both sexes, but sexism <I>per se </I>had never been an issue. Some 
+Alephians became outraged by her continued presence, and several of them unsubbed from the list. Others supported her views but tried to convince her to adopt a more sensitive viewpoint. Some of us ignored her posts altogether, and, in their own naive 
+neohumanistic ways, some of us assumed they could help her.
+
+<BR>
+
+<BR><B>War in Cyberspace</B>
+
+<BR>
+
+<BR>Alone or in groups, the Alephians tried every possible means of communication to rationalize with &quot;The Doctress.&quot; Her writings were analyzed, edited, ignored, attacked, defended, spoofed and satirized; she was contacted in private e-mail as 
+well as in our public forum, and even spoke to a few of us live, via IRC channels and telephone. In synchronous dialogue&#151;such as the five-hour telephone conversation we once had&#151;she was quite personable, even <I>engaging</I>. In realtime, it was 
+possible to nip potential misunderstandings in the bud, saying, &quot;No no, I meant <I>this</I>,&quot; or &quot;Why did you use <I>that </I>word?&quot; But back online, driven by the juggernaut of her cybernetic persona, she again assumed her autocratic 
+and ignominious tone.
+
+<BR>
+
+<BR>Publicly, diehard Alephians tried to ignore her posts. In private e-mail, the same group worried about the future of the list. Certainly, we could have removed her &quot;forcibly,&quot; but we didn't want to do that. Moderating is a tricky job, 
+requiring a strange new social skillset (one which I'm not really sure I've developed completely), but the general consensus was: (a) if we kicked her off the list we would be acting like the &quot;fascists&quot; she often accused us of being, and (b) if 
+<I>anyone </I>could actually <I>help </I>this woman, it would be us. While we brainstormed and deliberated, further arousing Neutopia's temper, the Alephian Current was becoming a socio-sexual flamewar. Things move very quickly in Cyberspace, and a 
+reputation for a low signal-to-noise ratio can be a real subscription-killer.
+
+<BR>
+
+<BR>On August 20th, Neutopia played out her gambit. I logged on that morning to find another e-comm from The Doctress in my .inbox, ominously entitled, &quot;Urgency&#151;THE COUP OF ALEPH.&quot; I opened the message and read. A sick feeling crept over me 
+as I took in The Doctress' words; <I>she was </I><I>attempting to take over the list! </I>In paragraph after ranting paragraph, Doctress Neutopia was dictating what the list was about, what our goals had become, and what our individual functions were, 
+where we would strike, whom we would contact, and&#151;of course&#151;eliciting her call for the deific A/O Man who would sit beside her on the planetary throne. Her massive agenda called for investigations of NASA and military science institutes, 
+microbiological research projects on the state of Gaia, phreaking and cracking maneuvers intended to &quot;free&quot; the Internet, public lectures and performance events, reports on extraterrestrial contacts, video documentaries, book summaries, activist 
+mobilizations, recruitment projects, press releases and publicity campaigns, all aimed at the Neutopian goal of taking over the world.
+
+<BR>
+
+<BR>For the next few weeks, what traffic remained on Aleph stumbled and halted. The Fixion project did its best to continue, but our dwindling population was making it difficult to maintain our original velocity. A month after the &quot;coup,&quot; 
+Neutopia was still arguing with nonsupporters, and our ongoing research projects had ceased entirely. Our subscription base was next to nil. Having spent hundreds of dollars in Aleph-related phone calls over the previous few weeks, Mitch and I were both 
+seriously indebted to our respective phone companies and were having difficulty getting online. Soon after, free agent .rez and the Fixioneers moved on to another site (fixion-list@netcom.com), and the Alephian Current, for all intents and purposes, came 
+to an end.
+
+<BR>
+
+<BR><B>Alephtermath</B>
+
+<BR>
+
+<BR>The Doctress hung around for a little while after the dissolution but apparently found the lack of company disenchanting; she eventually discovered other elists, and recently began posting to Usenet. The funny thing is; sometimes I miss her.
+
+<BR>
+
+<BR>Aleph still exists today, although lately it's held little more than a slow-motion conversation on &quot;quantum consciousness&quot; and a number of press releases reflected there from other lists. Mitch and I are back online regularly again, although 
+neither of us is racking up linetime like it's going out of style (quite the opposite, in fact). As we enter the summer of 1994, a number of old and new friends have come around; there are signs that the Current may be unceremoniously returning to life, 
+but cautiously, and in a totally new form (the cliche might be &quot;sadder but wiser&quot;). We haven't yet determined our &quot;policy&quot; regarding subscription denials, killfiles, and electronic coups ;-) , but like the futuristic telecommunications 
+commercials constantly remind us: &quot;We will.&quot; The moral of our story? Draw your own. Perhaps simply, &quot;Caveat Listor.&quot;
+
+<BR>
+
+<BR><I>To subscribe to the Aleph Elist, send e-mail to:</I>
+
+<BR>
+
+<BR>Majordomo@gossip.pyramid.com
+
+<BR>
+
+<BR><I>Text body:</I> subscribe aleph
+
+<BR>
+
+<BR><I>To subscribe to the Fixion Elist, send e-mail to:</I>
+
+<BR>
+
+<BR>fixion-list-request@netcom.com
+
+<BR>
+
+<BR><I>Subject:</I> subscribe fixion-list
+
+<BR></NOTE>
+
+<HR ALIGN=CENTER>
+
+<P>After years of subscribing to many active mailing lists and reading very active newsgroups, in self-defense I have developed a set of personal rules to guide my own activities in this regard and to keep my head above e-mail water.
+
+<BR></P>
+
+<H4><A ID="I33" NAME="I33">
+
+<FONT SIZE=3><B>Five Major Guru Rules for Reading All That Mail</B>
+
+<BR></FONT></A></H4>
+
+<P>Everyone's rules may be different and may reflect their own personality, but it's been my observation that people I know who read and track a lot of information in newsgroups and mailing lists seem to have several of these rules in common. They are 
+presented here in order of importance (in my opinion). In some cases these may seem like common sense, but I've seen too many competent computing professionals bogged down by their e-mail reading to believe that even the most commonsensical rules are 
+easily adopted.
+
+<BR></P>
+
+<H5><A ID="I34" NAME="I34">
+
+<FONT SIZE=3><B>1. Don't Read It All</B>
+
+<BR></FONT></A></H5>
+
+<P>There is an overwhelming urge, when presented with so much information, to try to absorb it all. A colleague of mine once decided that he should try to read all of Usenet news (back when there were less than 1500 groups) and even he, who was notorious 
+for such exploits, gave up early in the process. The bottom line is that you don't have to read it all to be reasonably informed. Even the most professional of discussion groups has e-mail &quot;noise&quot; mixed in with the informative messages. Even some 
+informative messages will not be of interest to you. I scan subject lines fairly thoroughly and delete many mail messages from my mailbox before reading them. You can use e-mail rules facilities to automatically discard messages such as those with the 
+notorious unsubscribe in the subject field. The same is true for news readers that support kill files. By being very selective in what you read, you can cover a lot of territory without devoting your life to e-mail. Remember that in most cases, you can 
+search a mailing list archive for a particular topic after the fact if you do miss something important the first time around.
+
+<BR></P>
+
+<H5><A ID="I35" NAME="I35">
+
+<FONT SIZE=3><B>2. Read Your Mail Every Day; Suspend Subscriptions When Away</B>
+
+<BR></FONT></A></H5>
+
+<P>If you are like me, with subscriptions to more than several active mailing lists, not reading mail for even one day will result in an uncomfortably large number of messages waiting for you on the next day. The best way to keep up with mail is to read it 
+every day. I know several people who are continually catching up on their e-mail because they let one or more days go by without their attention. It's a simple rule, but it takes a lot of discipline for some people to follow it. One very nice feature of 
+e-mail is that it is out-of-time communication, so it does not usually matter when or how often you read it. Sneaking in four fifteen-minute segments in one day is sometimes more productive than spending a whole hour at once. Also, my general rule is that 
+if you are going to be gone a week or more, it's more productive to suspend delivery of your most active mailing lists than to weed through the volumes of messages when you get back. If you find an interesting thread occurring, you can usually retrieve 
+list archives to catch up on the start of the &quot;conversation.&quot;</P>
+
+<H5><A ID="I36" NAME="I36">
+
+<FONT SIZE=3><B>3. Be Selective in Your Subscriptions</B>
+
+<BR></FONT></A></H5>
+
+<P>Find the mailing lists that provide the best information for your needs and stick with them. Most mailing list beginners, enthusiastic about the medium, have a tendency to over-subscribe, and even veterans sometimes have trouble letting go of a list 
+that has previously been useful but is no longer relevant. Mailing lists can become part of your life and sometimes it's just hard to say goodbye. There are many good reference lists that can serve as pointers to information on a wide range of topics 
+(new-list and net-happenings are a couple of examples). Sometimes you can fulfill an information need by searching a list's archives or by posting to a list of which you are not a member and asking for replies directly to your address.
+
+<BR></P>
+
+<H5><A ID="I37" NAME="I37">
+
+<FONT SIZE=3><B>4. When Possible, Read News Rather Than Mail</B>
+
+<BR></FONT></A></H5>
+
+<P>Mailing-list mail usually comes whether you want it to or not. Usenet news is there, waiting to be read. It doesn't count against your space quota if you skip a few days of reading, and you can easily read as much or as little as you wish. Many news 
+readers have fairly sophisticated mechanisms for managing messages, making news reading more efficient than e-mail access. Many mailing lists are echoed to news and vice versa. The bit.listserv hierarchy is dedicated to echoing Bitnet Listserv mailing 
+lists, and you can participate in the discussions via news without having to subscribe and then sign off later. This makes it much easier to visit lists on a temporary basis.
+
+<BR></P>
+
+<H5><A ID="I38" NAME="I38">
+
+<FONT SIZE=3><B>5. Organize Your Reading Process</B>
+
+<BR></FONT></A></H5>
+
+<P>Even if you are not by nature an organized person, you should try to organize your e-mail reading. I have my mail options set so that mail is automatically sorted by the From: field and the Date: field. This groups messages by sender or mailing list and 
+places them in chronological order. I further reduce my view of messages to read only one group at a time. This can be accomplished in some mail programs with a SELECT command or by using a mail preprocessor or rules facility to file the mail into 
+different folders based on the header fields. If you can further select messages based upon subject thread, you can further increase the efficiency of the process&#151;especially for groups or lists that have frequent ongoing discussions on a particular 
+topic. I find the thread feature of my news readers to be one of my favorite features. However you do it, an organized approach to reading news and mail will cut down on the amount of time needed and increase the amount of information you can track.</P>
+
+<P><A HREF="tigp2.htm"><IMG SRC="bluprev.gif" WIDTH = 32 HEIGHT = 32 BORDER = 0 ALT="Previous Page"></A>
+
+<A HREF="httoc.htm"><IMG SRC="blutoc.gif" WIDTH = 32 HEIGHT = 32 BORDER = 0 ALT="TOC"></A>
+
+<A HREF="htindex.htm"><IMG SRC="bluindex.gif" WIDTH = 32 HEIGHT = 32 BORDER = 0 ALT="Index"></A>
+
+<A HREF="tig06.htm"><IMG SRC="blunext.gif" WIDTH = 32 HEIGHT = 32 BORDER = 0 ALT="Next Page"></A>
+
+<A HREF="httoc.htm"><IMG SRC="bluprev.gif" WIDTH = 32 HEIGHT = 32 BORDER = 0 ALT="Home"></A>
+
+</P></BODY></HTML>
+

@@ -1,0 +1,1622 @@
+<HTML>
+
+<HEAD>
+
+<TITLE>Tricks of the Internet Gurus tig04.htm</TITLE>
+
+<LINK REL="ToC" HREF="httoc.htm">
+
+<LINK REL="Index" HREF="htindex.htm">
+
+<LINK REL="Next" HREF="tigp2.htm">
+
+<LINK REL="Previous" HREF="tig03.htm"></HEAD>
+
+<BODY TEXT="#000000" LINK="#0000FF" VLINK="#800080" bgcolor=white>
+
+<P><A HREF="tig03.htm"><IMG SRC="bluprev.gif" WIDTH = 32 HEIGHT = 32 BORDER = 0 ALT="Previous Page"></A>
+
+<A HREF="httoc.htm"><IMG SRC="blutoc.gif" WIDTH = 32 HEIGHT = 32 BORDER = 0 ALT="TOC"></A>
+
+<A HREF="htindex.htm"><IMG SRC="bluindex.gif" WIDTH = 32 HEIGHT = 32 BORDER = 0 ALT="Index"></A>
+
+<A HREF="tigp2.htm"><IMG SRC="blunext.gif" WIDTH = 32 HEIGHT = 32 BORDER = 0 ALT="Next Page"></A>
+
+<A HREF="httoc.htm"><IMG SRC="bluprev.gif" WIDTH = 32 HEIGHT = 32 BORDER = 0 ALT="Home"></A>
+
+</P><UL>
+
+<LI>
+
+<A HREF="#I1">4</A></LI>
+
+<UL>
+
+<LI>
+
+<A HREF="#I3">Where's the Complaint Department? Or, What to Do When Things Don't Work</A></LI>
+
+<UL>
+
+<UL>
+
+<UL>
+
+<LI>
+
+<A HREF="#I4">--by Kevin Mullet
+
+<LI>
+
+<A HREF="#I5">How to Approach Internet Problem-Solving</A></LI>
+
+<UL>
+
+<LI>
+
+<A HREF="#I6">Good Troubleshooting Practices</A></LI></UL>
+
+<LI>
+
+<A HREF="#I7">What Are Your Expectations?</A></LI>
+
+<LI>
+
+<A HREF="#I8">Has It Ever Worked?</A></LI>
+
+<LI>
+
+<A HREF="#I9">Has It Failed Before? What Fixed It Then?</A></LI>
+
+<LI>
+
+<A HREF="#I10">What Is the Simplest Way of Consistently Reproducing This Problem?</A></LI>
+
+<LI>
+
+<A HREF="#I11">What Pieces Must Go Together for This to Work?</A></LI>
+
+<LI>
+
+<A HREF="#I12">Do I Have Accurate Assumptions about a Possible Cause and Solution?</A></LI>
+
+<LI>
+
+<A HREF="#I13">KISS: Sometimes There's No Grassy Knoll</A></LI>
+
+<LI>
+
+<A HREF="#I14">&quot;Can We Talk?&quot; Or, Getting Clients and Servers to Talk to Each Other</A></LI>
+
+<UL>
+
+<LI>
+
+<A HREF="#I15">Common E-Mail Problems</A></LI>
+
+<LI>
+
+<A HREF="#I16">&quot;The Check's in the Mail&quot;: Trace Your Mail on its Travels</A></LI>
+
+<LI>
+
+<A HREF="#I17">Usenet News</A></LI>
+
+<LI>
+
+<A HREF="#I18">Gopher</A></LI>
+
+<LI>
+
+<A HREF="#I19">The World Wide Web and Associated Browsers</A></LI>
+
+<LI>
+
+<A HREF="#I20">&quot;And the Web Was without Forms and Void&#151;&quot;</A></LI>
+
+<LI>
+
+<A HREF="#I21">ICMP: The Immovable Object Meets the Unreachable Destination</A></LI>
+
+<LI>
+
+<A HREF="#I22">How About Those TCP/IP Settings?</A></LI>
+
+<UL>
+
+<LI>
+
+<A HREF="#I23">IP Address Problems</A></LI>
+
+<LI>
+
+<A HREF="#I24">The Subnet Mask</A></LI>
+
+<LI>
+
+<A HREF="#I25">Internet Routing</A></LI>
+
+<LI>
+
+<A HREF="#I26">The Default Route or Gateway</A></LI>
+
+<LI>
+
+<A HREF="#I27">The Domain Name Server</A></LI></UL></UL>
+
+<LI>
+
+<A HREF="#I28">A Word About Hardware</A></LI>
+
+<LI>
+
+<A HREF="#I29">The Graceful Art of Finger-Pointing</A></LI>
+
+<UL>
+
+<LI>
+
+<A HREF="#I30">How Do You Get There from Here?</A></LI>
+
+<LI>
+
+<A HREF="#I31">Who Supports What?</A></LI>
+
+<LI>
+
+<A HREF="#I32">Regional Contact References</A></LI>
+
+<LI>
+
+<A HREF="#I33">Getting Down to &quot;Brass Tacts&quot;</A></LI></UL>
+
+<LI>
+
+<A HREF="#I34">Getting Around the Problem</A></LI>
+
+<LI>
+
+<A HREF="#I35">Summary</A></LI></UL></UL></UL>
+
+
+
+</ul></UL></UL>
+
+
+
+
+
+
+
+<H1><A ID="I1" NAME="I1">
+
+<BR>
+
+<FONT SIZE=5><A ID="I2" NAME="I2"></A><B>4</B>
+
+<BR></FONT></A>
+
+
+
+</H1>
+
+<H2><A ID="I3" NAME="I3">
+
+<FONT SIZE=5><B>Where's the Complaint Department? Or, What to Do When Things Don't Work</B>
+
+<BR></FONT></A></H2>
+
+<H5><A ID="I4" NAME="I4">
+
+<FONT SIZE=3><B>--by Kevin Mullet</B>
+
+<BR></FONT></A></H5>
+
+<H3><A ID="I5" NAME="I5">
+
+<FONT SIZE=4><B>How to Approach Internet Problem-Solving</B>
+
+<BR></FONT></A></H3>
+
+<P>&quot;Why on earth,&quot; you may ask, &quot;should I learn anything about Internet troubleshooting?&quot; Simple. No matter how good your network support structure is, a bit of self-reliance is always a good thing on the Internet. Naturally, unless 
+your job is computer or network support, you've got other ways to spend your time than peering into the abyss of network protocol analysis and service availability. Just as you're better off knowing how to change the oil and fill up the tank in your 
+automobile, some knowledge about how things talk to each other on the Net and what it's like when they go down goes a long way.
+
+<BR></P>
+
+<P>This information is directed at everyday Internet users who don't have an arsenal of network management tools at their beck and call, but still want to be able to find out more about why things on the Internet sometimes don't work&#151;and if there's 
+anything they can do to fix it, or to at least make problem resolution easier for those who can.
+
+<BR></P>
+
+<H4><A ID="I6" NAME="I6">
+
+<FONT SIZE=3><B>Good Troubleshooting Practices</B>
+
+<BR></FONT></A></H4>
+
+<P>The most important ideas in this chapter have nothing to do with the Internet. The essentials of troubleshooting are valuable to just about every discipline. It's surprising how many professional troubleshooters regard systematic troubleshooting as an 
+unnecessary chore once they acquire a bit of confidence and experience. Ordinary Internet users armed with less experience but a better troubleshooting practice can stand toe-to-toe with the experts in their ability to diagnose a majority of Internet 
+service availability problems.
+
+<BR></P>
+
+<P>Each time you encounter a problem on the Internet, it helps to run through a few essential questions to get a clear idea of exactly what the problem is.
+
+<BR></P>
+
+<H3><A ID="I7" NAME="I7">
+
+<FONT SIZE=4><B>What Are Your Expectations?</B>
+
+<BR></FONT></A></H3>
+
+<P>It's quite common to begin troubleshooting with nothing more substantial than a general feeling of non-productiveness, and no specific ideas about what your eventual expectations are from your troubleshooting efforts. The first order of business when 
+troubleshooting is to boil your troubles down to a simple statement of what you want that you're not getting, and what requirements must be met by your troubleshooting efforts. A poor problem definition would be &quot;Telnet is broke&quot; followed by an 
+equally poor resolution requirement of &quot;Fix it.&quot; Something along the lines of &quot;When I try to telnet to zig.foo from zag.foo, I connect but never get a login prompt&quot; and &quot;Make sure I get a login prompt when I telnet to zag.foo&quot; 
+leads to a much more self-contained troubleshooting agenda than something abysmal like &quot;The system is down; make it work.&quot;
+
+<BR></P>
+
+<H3><A ID="I8" NAME="I8">
+
+<FONT SIZE=4><B>Has It Ever Worked?</B>
+
+<BR></FONT></A></H3>
+
+<P>Sometimes system performance expectations are more a function of urban legends than actual experience. Some of the world's most humble software can be imbued with the most amazing characteristics. It's worthwhile to separate the wheat from the chaff and 
+determine if the task before you can actually be done. Does telnet really have a video-conferencing mode?
+
+<BR></P>
+
+<H3><A ID="I9" NAME="I9">
+
+<FONT SIZE=4><B>Has It Failed Before? What Fixed It Then?</B>
+
+<BR></FONT></A></H3>
+
+<P>Most troubleshooting would pretty much be a waste of time unless we retained the information we learned. Keep records of what fails and when, and how it was fixed. Most problems aren't unique&#151;they've been solved before. Finding an earlier solution 
+that works for you is usually preferable to finding a new one. The extra time it takes to keep adequate records is almost certainly less time that it would take to repeat the entire troubleshooting process the next time the problem happens.
+
+<BR></P>
+
+<H3><A ID="I10" NAME="I10">
+
+<FONT SIZE=4><B>What Is the Simplest Way of Consistently Reproducing This Problem?</B>
+
+<BR></FONT></A></H3>
+
+<P>The first thing you'll need to do if you or someone else tries to fix a problem is to reproduce it. Problem reproduction is necessary both for further characterization and for testing possible solutions. Unless it would be damaging to do so, find a way 
+to repeat the problem, then remove variables until you have the simplest circumstances under which you can reproduce the problem.
+
+<BR></P>
+
+<P>For instance, if you use an MS-Windows client to send e-mail with MIME attachments to numerous recipients and it always bounces back, you might start by closing out the other applications you're running at the same time. You can then reduce the number 
+of recipients to one and see if it still bounces, maybe trying a different recipient as well. You can also try sending a very simple message with no MIME attachments and see if that makes a difference.
+
+<BR></P>
+
+<P>A good way of finding the minimum level of complexity that still exhibits your problem is the &quot;binary search,&quot; so-called because you're forever splitting the number of possibilities in two.
+
+<BR></P>
+
+<P>Let's say you've a 10BaseT hub with thirty computers attached to it, and one of them is using the same IP address as the mainframe that's on the same subnet&#151;which means that it's practically impossible to get work done on the mainframe. This 
+condition has the curious side-effect of putting all your VM programmers in a really foul mood. You've got to find the offending computer and reconfigure it to have a unique IP address. Using a binary search, you start by taking half the users off the hub 
+and see if the problem is still there. If it's not, that means the problem is probably with one of the 15 computers you just pulled off the Net. Next, you put half of the disconnected computers back on the Net. If the problem shows up again, that means 
+that one of the seven or eight computers you just replaced is the one you're after. You follow this procedure a few more times until you narrow the possible choices to the machine belonging to the individual with the unruly mob gathering outside his or her 
+office&#151;at which point you fix the problem and blame it on whoever was the most recent person to quit.
+
+<BR></P>
+
+<H3><A ID="I11" NAME="I11">
+
+<FONT SIZE=4><B>What Pieces Must Go Together for This to Work?</B>
+
+<BR></FONT></A></H3>
+
+<P>An understanding of what talks what on the path from your computer or terminal to the end service can be as invaluable as a good map on a road trip. Troubleshooting usually lends itself well to one of two approaches: a <I>binary search</I> or a 
+<I>linear search</I>. Linear searches, in which you begin at one end of the route and verify components in a line until you get to the other end, require you to know at any given point on the network what the next item is on the path to the other end.
+
+<BR></P>
+
+<P>Regional IP routing problems often lend themselves well to a linear approach&#151;especially when there are dissimilar mediums between routers. If, for instance, you use a dial-up facility with a terminal server in one city that connects via the 
+Internet to hosts in another city&#151;going through numerous local Ethernets, T1 lines, and a microwave link&#151;it would be difficult to troubleshoot connectivity or service quality problems without the knowledge of where the traffic went when it 
+traveled from the terminal server to the hosts. Frequently, there is a method for finding such information dynamically on an IP network. We'll get to that a little later on.
+
+<BR></P>
+
+<H3><A ID="I12" NAME="I12">
+
+<FONT SIZE=4><B>Do I Have Accurate Assumptions about a Possible Cause and Solution?</B>
+
+<BR></FONT></A></H3>
+
+<P>An inexperienced troubleshooter often has an important advantage over more experienced ones: modesty. A humble troubleshooter is less likely to make rash assumptions about the state of both the Net and their own capabilities.
+
+<BR></P>
+
+<P>Accurate assumptions about causes and solutions should be based on information such as what kind of error messages coincided with the problem, whether the service has worked since any related system changes or upgrades, and whether anyone else using the 
+same resource is having the same problem.
+
+<BR></P>
+
+<H3><A ID="I13" NAME="I13">
+
+<FONT SIZE=4><B>KISS: Sometimes There's No Grassy Knoll</B>
+
+<BR></FONT></A></H3>
+
+<P>One of the axioms of troubleshooting is known as KISS: Keep It Simple Stupid. It's an important component to any problem solving technique. If, once you eliminate the impossible, there are numerous conceivable causes for a particular problem, it's more 
+likely to be the uncomplicated, obvious choice than the one involving international conspiracy and a gunman on a grassy knoll.
+
+<BR></P>
+
+<H3><A ID="I14" NAME="I14">
+
+<FONT SIZE=4><B>&quot;Can We Talk?&quot; Or, Getting Clients and Servers to Talk to Each Other</B>
+
+<BR></FONT></A></H3>
+
+<P>To find the source of a problem, you occasionally need to look no further than your local application or operating system. In a way, problems like this are much better than errors out on some remote weigh station on the information highway&#151;there's 
+a greater possibility you can fix these and move on.
+
+<BR></P>
+
+<P>Sometimes, though, the problem is with the server for whatever service you're trying to access. When there's a problem with a server, it is frequently easy to narrow the number of possible causes, but the responsibility for resolving the problem may 
+ultimately fall to the local MIS or Computing Center personnel.
+
+<BR></P>
+
+<P>The sheer size and complexity of the Internet demands that there's always something down somewhere. This isn't to say that the Internet should be written off as unreliable, but that the system is so immense that even if a tiny percentage of it is down 
+at any given time, it might just be that tiny percentage that's critical to something you want to do right now. Troubleshooting end-to-end connectivity isn't rocket science, though, and there are a few easy steps that, if they won't fix the problem, will 
+at least give you more information about where the cause is and who to talk to about it.
+
+<BR></P>
+
+<P>In the spirit of keeping it simple, it's usually a good idea to check a few rudimentary areas before you drag out the big guns:
+
+<BR></P>
+
+<P>Has your software been able to do what you want it to do since the most recent configuration change in the application, network driver, or operating system?
+
+<BR></P>
+
+<P>Did you specify the correct path?
+
+<BR></P>
+
+<P>For PC users, and to a lesser extent for Mac users, do you have the correct network drivers loaded?
+
+<BR></P>
+
+<P>Take a couple of minutes to walk through the process you're trying to accomplish and ask yourself why you're doing each step. The oddest things can look acceptable if you're tired, hurried, or otherwise stressed. Lots of things can be quickly resolved 
+with a slow, sane walk-through. Although we don't often like to admit it, sometimes the problem really is the nut behind the keyboard.
+
+<BR></P>
+
+<H4><A ID="I15" NAME="I15">
+
+<FONT SIZE=3><B>Common E-Mail Problems</B>
+
+<BR></FONT></A></H4>
+
+<P>After eliminating rather obvious things like availability of local disk space for temporary files and confirming that the configuration for whatever e-mail package you're using is actually being used, there are a few problems that seem to be endemic to 
+e-mail packages in general.
+
+<BR></P>
+
+<P>Many e-mail packages typically use one or two of three main e-mail protocols: Internet Message Access Protocol (IMAP), Post Office Protocol (POP), and Simple Message Transport Protocol (SMTP). IMAP and POP retrieve and manipulate messages on a remote 
+mail server. SMTP is used for sending Internet mail. Of the e-mail clients that don't use these protocols, many of them use proprietary methods for sending, manipulating, and retrieving messages from a central mail server. Such a proprietary mail server, 
+however, frequently either supports SMTP or communicates with a server that does if it's Internet accessible.
+
+<BR></P>
+
+<P>It's important that any IMAP-, POP- or SMTP-compatible e-mail client be configured to use the appropriate servers. The first thing you'll need to do to ensure you're pointed at the appropriate servers is to check your application and see which 
+standards, if any, it adheres to. Just because you can send Internet mail doesn't mean you necessarily use SMTP. You might be using a proprietary e-mail client that all but precludes standardized protocol debugging. Let's assume you're not, though, and 
+that you've determined by either asking your neighborhood guru or (if you are the guru) by reading the documentation on what protocol your e-mail client uses, and that it's some combination of SMTP with either POP or IMAP.
+
+<BR></P>
+
+<P>To test basic connectivity to an SMTP client, you can telnet to it at tcp port 25, (see the following example) and issue a noop (no operation or null operation) command. If this works, you will have confirmed two things:
+
+<BR></P>
+
+<P>End-to-end connectivity with your SMTP host.
+
+<BR></P>
+
+<P>Your SMTP server is &quot;listening&quot; for SMTP connections, and at least has enough resources to start receiving SMTP requests.
+
+<BR></P>
+
+<P>You will not have confirmed:
+
+<BR></P>
+
+<P>That you are talking to the correct SMTP server. That's an administrative decision, not a technical one.
+
+<BR></P>
+
+<P>That the SMTP server is able to process much more than the null command you sent it.
+
+<BR></P>
+
+<P>Generally, if you can connect at all with a server in this manner, it's running fine. E-mail server failures tend to be catastrophic and, in such situations, the solution is usually just to restart the server software.
+
+<BR></P>
+
+<P>Here's a basic telnet test to the SMTP port. The example is shown from a UNIX csh prompt, but it can just as easily be done from any telnet client that lets you telnet to tcp ports other than 23, the one officially assigned to the Telnet application. 
+You would type what's in <B>bold,</B> and replace your own server name with the one in the example:
+
+<BR></P>
+
+<PRE>%<B>telnet foo.any.net 25</B>
+
+Trying 127.1.2.3 ...
+
+Connected to foo.any.net.
+
+Escape character is '^]'.
+
+220 foo.any.net SMTP ready at Mon, 1 Aug 94 10:41:43 CDT.
+
+noop
+
+200 OK
+
+quit
+
+221 foo.any.net closing connection
+
+Connection closed by foreign host.
+
+%</PRE>
+
+<P>If your client uses POP, you can do an equivalent test with tcp port 109 of your POP server to establish similar connectivity assumptions:
+
+<BR></P>
+
+<PRE>%<B>telnet pop.bogus.net 109</B>
+
+Trying 127.1.2.3 ...
+
+Connected to pop.bogus.net.
+
+Escape character is '^]'.
+
++ POP2 pop Server (Version 1.001  February, 1989)
+
+quit
+
++ Bye POP2 pop Server (Version 1.001) shutdown
+
+Connection closed by foreign host.
+
+%</PRE>
+
+<P>As listed in RFC937, POP2 uses a default port of tcp/109; as listed in RFC1081, POP3 uses a default port of tcp/110.
+
+<BR></P>
+
+<P>And finally, here's a test you can do to with port tcp/143 of your IMAP server to establish basic connectivity. The part you type may look a little strange to you, but IMAP requires that incoming commands be serialized; that's why there's an arbitrary 
+code in front of each command you type.
+
+<BR></P>
+
+<PRE>%<B>telnet imap.bogus.net 143</B>
+
+Trying 127.1.2.3 ...
+
+Connected to imap.bogus.net.
+
+Escape character is '^]'.
+
+* OK imap.bogus.net IMAP2bis Service 7.0(52) at Mon, 1 Aug 1994
+
+A1 noop
+
+A1 OK NOOP completed
+
+A2 logout
+
+* BYE imap.bogus.net IMAP2bis server terminating connection
+
+A2 OK LOGOUT completed
+
+Connection closed by foreign host.
+
+%</PRE>
+
+<P>If all goes well, you will get replies from your SMTP, POP, or IMAP server similar to the preceding ones. If not, that's also good because it gives you information you can use to solve your problem. It's important to remember that there's no such thing 
+as a failed experiment&#151;only one that didn't necessarily go as planned. Here are some things that may have happened in the preceding tests and what they may indicate:
+
+<BR></P>
+
+<PRE>%<B>telnet server.bogus.net 25</B>
+
+Trying 127.1.2.3 ...
+
+telnet: connect: Connection timed out
+
+telnet&gt;</PRE>
+
+<P>There are a variety of error messages that amount to &quot;you can't get there from here.&quot; This may indicate loss of end-to-end connectivity between the client and the server. More about that later.
+
+<BR></P>
+
+<PRE>%<B>telnet speigal.hou.tx.us</B>
+
+speigal.hou.tx.us: unknown host
+
+telnet&gt;</PRE>
+
+<P>An unknown host message may indicate a couple of things:
+
+<BR></P>
+
+<UL>
+
+<LI>If it truly is an unknown host, you may just have the wrong name. One way to check is to use the IP address to connect to it. If that fails as well, and depending on just how it failed, you may have end-to-end connectivity problems.
+
+<BR>
+
+<BR></LI>
+
+<LI>If you know you have the correct name, and you are able to connect successfully to the IP address but not to the &quot;Fully-Qualified Domain Name&quot; or FQDN, you may have a problem with your Domain Name Service. DNS is the system that associates 
+FQDNs that are meaningful to people, and IP addresses that are meaningful to computers. Before DNS, host managers had to keep local host files with a list of all hosts and all IP addresses on each host. With over 20 million users now on the Internet, the 
+existence of DNS is great news for system managers&#151;probably lukewarm news for disk manufacturers.
+
+<BR>
+
+<BR></LI></UL>
+
+<P>If your connection is refused:
+
+<BR></P>
+
+<PRE>%<B>telnet server.bogus.net 25</B>
+
+Trying 127.5.4.3 ...
+
+telnet: connect: Connection refused
+
+telnet&gt;</PRE>
+
+<P>it means that the machine you want to talk to is there, but it isn't accepting connections for the service you want. This can be caused by numerous things, including:
+
+<BR></P>
+
+<UL>
+
+<LI>You're trying to talk to the wrong machine&#151;another machine is actually the server you want. Double-check your information.
+
+<BR>
+
+<BR></LI>
+
+<LI>The server software on the machine isn't working correctly. See if you can get whoever runs the machine to take a look at it.
+
+<BR>
+
+<BR></LI>
+
+<LI>There's a security gotcha in place. Talk to the folks responsible for network security of whatever network you're using and see if the particular tcp service port you're trying to use has been blocked between your source machine and the destination 
+server. This is appropriate as a last resort, in case nothing else pans out. If there is a security block in place, it's probably there for a good reason.
+
+<BR>
+
+<BR></LI></UL>
+
+<H4><A ID="I16" NAME="I16">
+
+<FONT SIZE=3><B>&quot;The Check's in the Mail&quot;: Trace Your Mail on its Travels</B>
+
+<BR></FONT></A></H4>
+
+<P>If you have established that you have basic e-mail connectivity, and you're using an e-mail program that lets you add your own user-defined header lines, you can attempt to send mail with a return receipt.
+
+<BR></P>
+
+<P>If you don't get a receipt, it doesn't mean you have a problem&#151;it may mean that one or more of the mail servers your mail has to travel through to get to its destination doesn't support return receipts. Return receipts are great if you can get 
+them, but they don't mean much if you don't&#151;unless you're previously confirmed that a given mail server does support receipts.
+
+<BR></P>
+
+<P>The method or possibility of adding a header line to a mail message varies from client-to-client, but essentially, you should add a line like this to your message, replacing the e-mail address with your own.
+
+<BR></P>
+
+<PRE>Return-Receipt-To: cuss@blankety.blank.com</PRE>
+
+<P>After you send such a message, a mail server that supports return receipts on the e-mail route between you and your addressee will send you a separate message informing you that it received your message.
+
+<BR></P>
+
+<H4><A ID="I17" NAME="I17">
+
+<FONT SIZE=3><B>Usenet News</B>
+
+<BR></FONT></A></H4>
+
+<P>Making sure you're talking to the right Usenet news server isn't all that much different that confirming basic e-mail connectivity. The transport protocol for most Usenet news, Network News Transport Protocol (NNTP), is a TCP-based service, as are SMTP, 
+POP, and IMAP. As you may suspect, this means that there's a simple telnet test to make sure that there's end-to-end connectivity to the server to which you believe you're supposed to connect to with your news reader.
+
+<BR></P>
+
+<P>After you've ruled out obvious problems like a configuration file in the wrong subdirectory or lack of local disk space, you may want to try the following test on your designated news server's NNTP port, tcp/119.
+
+<BR></P>
+
+<HR ALIGN=CENTER>
+
+<NOTE>
+
+<IMG SRC="note.gif"><B>Note: </B>If you use UUCP, IP Multicasting, or another method to get your news, this method won't do you any good.
+
+<BR></NOTE>
+
+<HR ALIGN=CENTER>
+
+<PRE>%<B>telnet news.clench.org 119</B>
+
+Trying 127.1.5.5 ...
+
+Connected to news.clench.org.
+
+Escape character is '^]'.
+
+200 news NNTP server ENEWS 1.4 22-Dec-93 ready (posting ok).
+
+quit
+
+205
+
+Connection closed by foreign host.
+
+%</PRE>
+
+<P>Aside from the basic connectivity issues convered earlier, you can also determine if you are permitted to originate or &quot;post&quot; new Usenet articles through this server. On the greeting line that begins 200 news NNTP server ENEWS 1.4, look at the 
+end of the line. You'll see a statement of whether you can post or not. If an NNTP server doesn't permit you to post, you may either be using the wrong server, or have essentially read-only access to Usenet.
+
+<BR></P>
+
+<H4><A ID="I18" NAME="I18">
+
+<FONT SIZE=3><B>Gopher</B>
+
+<BR></FONT></A></H4>
+
+<P>Gopher is another TCP-based service, which means (as you may suspect) you can give it a cursory check by telnetting to its service port. Although it's not a hard-and-fast rule, about half of all Gophers may be found on TCP port 70. If a Gopher doesn't 
+respond on port 70, it's not necessarily down&#151;it may be installed on a different TCP port. This test, therefore, can reliably confirm the health of a Gopher server, but it can't reliably confirm that Gopher server is down <I>unless</I> you already 
+know the Gopher is installed on a particular port and isn't responding.
+
+<BR></P>
+
+<P>As you can see from the example, this is a pretty straightforward test. You should connect to the server and get no welcome message or other output until you press Return. Once you hit RETURN, you'll get a listing of the top-level directory entries for 
+that particular Gopher server, followed by a period (.) on a line by itself before the connection is closed from the remote end.
+
+<BR></P>
+
+<PRE>%<B>telnet rs.internic.net 70</B>
+
+Trying 198.41.0.5 ...
+
+Connected to rs.internic.net.
+
+Escape character is '^]'.
+
+(press RETURN here)
+
+1Information about the InterNIC 1/aboutinternic is.internic.net 70
+
+1InterNIC Information Services 1/infoguide is.internic.net 70
+
+1InterNIC Registration Services 1 /rs  rs.internic.net 70
+
+1InterNIC Directory Services 1/.ds gopher.internic.net 70
+
+.
+
+Connection closed by foreign host.
+
+%</PRE>
+
+<P>If the Gopher doesn't connect at the appropriate port, it may have lost its ability to listen for new connections. The system administrator for the Gopher machine can probably fix this using a solution from the Gopher FAQ at URL
+
+<BR></P>
+
+<PRE>gopher://mudhoney.micro.umn.edu/00/Gopher.FAQ</PRE>
+
+<H4><A ID="I19" NAME="I19">
+
+<FONT SIZE=3><B>The World Wide Web and Associated Browsers</B>
+
+<BR></FONT></A></H4>
+
+<P>The telnet test for a WWW server (actually, a HyperText Transport Protocol or HTTP server) involves connecting to TCP port 80 and doing a simple command to verify operation. Like their cousins the Gophers, HTTP servers may also be installed on alternate 
+service ports, so be sure to double-check which port your HTTP server ought to be using before you begin testing.
+
+<BR></P>
+
+<P>The server can be tested by telnetting to the HTTP service port of a particular machine, and requesting the root document with a GET / command. The server should spit out a document writing in the hypertext markup language (HTML). If it doesn't, this 
+doesn't necessarily mean the server doesn't work&#151;it just means there isn't a root document. To test servers without a root document, you have to know the path to a document available on the server and give that instead of /.
+
+<BR></P>
+
+<PRE>%<B>telnet info.cern.ch 80</B>
+
+Trying 128.141.201.214 ...
+
+Connected to info.cern.ch.
+
+Escape character is '^]'.
+
+GET /
+
+&lt;HTML&gt;
+
+&lt;HEAD&gt;
+
+&lt;TITLE&gt;World-Wide Web Home&lt;/TITLE&gt;
+
+(lots of text deleted)
+
+&lt;/BODY&gt;
+
+&lt;/HTML&gt;
+
+Connection closed by foreign host.
+
+%</PRE>
+
+<P>WWW Browsers are unique critters in that they not only serve up access to their own native protocol, HTTP, but they provide access to other information-server technologies as well, including FTP, Gopher, WAIS, and numerous others. You may start out 
+troubleshooting a WWW service failure but soon realize that it is actually an FTP problem.
+
+<BR></P>
+
+<P>As a matter or fact, FTP is occasionally problematic when used with file:// or ftp:// URLs in World Wide Web browsers. Web browsers do an anonymous FTP login before and logout after every operation requested by the person using the browser, whether it's 
+a directory listing or a single file retrieval. For all but the most resource-poor or busiest FTP sites, this presents no problem. It's likely, however, that the busiest sites will also be frequented by Web-browser users. The problem lies in the fact that 
+many FTP sites place a ceiling on the number of users that can be doing anonymous FTP at one time. Any users attempting to connect after such a threshold has been reached will be refused access. Such sites frequently stay at their ceiling constantly during 
+peak periods of usage. During such times, Web browsers may perform poorly as FTP clients, and you would be well-advised to use a conventional FTP client instead.
+
+<BR></P>
+
+<H4><A ID="I20" NAME="I20">
+
+<FONT SIZE=3><B>&quot;And the Web Was without Forms and Void&#151;&quot;</B>
+
+<BR></FONT></A></H4>
+
+<P>Well, it's not really that bad, but surfing the World Wide Web these days without a browser capable of HTML+ forms is like having a television with no cable&#151;quaint idea, but you're really missing a lot. Many of the most interesting and cutting-edge 
+things on the Internet are implemented with HTML+ Forms front ends that deliver everything from databases or flowers to your doorstep to prerecorded video. If you find that Web pages that are supposed to have forms don't display the fields, or display 
+unintelligible text, you may want to upgrade your client to one that can handle forms.
+
+<BR></P>
+
+<H4><A ID="I21" NAME="I21">
+
+<FONT SIZE=3><B>ICMP: The Immovable Object Meets the Unreachable Destination</B>
+
+<BR></FONT></A></H4>
+
+<P>Internet Control Message Protocol. Yeah, right. But wait! It's really not all that complex. ICMP is not some kind of rocket science network mysticism that requires a pointy hat, magic wand, and a membership card in a space-cadet club to figure out. 
+Briefly stated, ICMP is a protocol for explaining why you can't do what you want to on the Net, and a little bit about why. ICMP doesn't cover all possible problems&#151;far from it&#151;but it does describe a great deal of the problems you can encounter 
+that involve failed end-to-end connectivity.
+
+<BR></P>
+
+<P>The reason you would want to know anything at all about ICMP messages is that the language of ICMP errors is usually the same language in which the applications that receive them tell you about network problems. When your Web browser, telnet app, or 
+e-mail program comes back with a message like destination unreachable, host unknown, or port unreachable, it's quoting chapter and verse from ICMP. The first step to understanding the nuances of Internet end-to-end connectivity is a familiarity with ICMP 
+and how it relates to the Net.
+
+<BR></P>
+
+<P>The ICMP errors you may want to be familiar with are network unreachable, host unreachable, port unreachable, destination network unknown, destination host unknown, and a handful of errors reflecting an administrative prohibition to a particular host, 
+network, or service.
+
+<BR></P>
+
+<P>A network unreachable message means that the network may exist, but a critical link between two or more sites is down on the route between you and your destination. The reason for this is usually a failure of the communications equipment that provides 
+the link between the two sites, or a circumstance known in Net parlance as a <I>route flap</I>, in which the physical route may be perfectly healthy but the configurations of two or more pieces of communications equipment may be locked in a type of deadly 
+embrace, each fighting for its own view of how the network link ought to be configured. Legitimate physical and electronic problems, of course, can also cause route flaps&#151;but it's also likely that the routing-layer flap may be caused by failure of 
+adjacent Internet providers to adequately work together to provide optimum connectivity. The hallmark of a configuration-caused route flap is one that goes up and down with a rhythmic regularity. If you test connectivity to a remote site and you notice 
+that, without fail, it goes down for 45 seconds, comes up for 45 seconds, goes back down for 45 seconds ad nauseam, hang on, because you might be riding the roller-coaster of an interregional border dispute.
+
+<BR></P>
+
+<P>A host unreachable message happens when the route between your site and the destination site is in working order, but the ultimate destination for your service is down. This usually occurs when a computer is either down or partially disabled due to a 
+difficulty specific to a small number of hosts.
+
+<BR></P>
+
+<P>A port unreachable error indicates that while there is successful routing between source and destination sites, and while the hosts on each end can talk to each other, the service you want from the remote host is not available. This doesn't necessarily 
+mean that it shouldn't be available. Sometimes the software providing a particular service can &quot;give up the ghost&quot; without affecting other services on the machine. Actually, this is one of the most frequent critical errors you may experience.
+
+<BR></P>
+
+<P>Destination network unknown and destination host unknown messages happen when information about the location of your destination network or host has expired, or was never there to begin with. The reason for this may be that the host or network was 
+unreachable for so long&#151;that it's route expired in the constituent routers that provide a path between you and the destination. It may also be the case that the network or host name or address is just wrong.
+
+<BR></P>
+
+<P>Administrative prohibitions may be put in place to intentionally prevent access to services (ports), hosts, or entire networks. In fact, the more commercialized and less provincial the Internet becomes, the more valuables there are to protect. It stands 
+to reason, therefore, that the number of people in this global community installing locks on their front doors will only increase over time.
+
+<BR></P>
+
+<H4><A ID="I22" NAME="I22">
+
+<FONT SIZE=3><B>How About Those TCP/IP Settings?</B>
+
+<BR></FONT></A></H4>
+
+<P>Often, network problems can be solved as easily as correcting the local network client configuration. TCP/IP, the protocol suite that forms the basis for the global Internet, requires that each client either be preconfigured or remotely configured with 
+a number of parameters that are critical to the healthy operation of any host.
+
+<BR></P>
+
+<H5><A ID="I23" NAME="I23">
+
+<FONT SIZE=3><B>IP Address Problems</B>
+
+<BR></FONT></A></H5>
+
+<P>If one machine is configured with the same IP address as another machine on the same network, neither of the machines will be able to function on the network while both are running, but both will be able to run just fine individually&#151;that is, if 
+enough time has elapsed since the appearance of the other host that its address resolution entry has expired from the local hosts and routers. This problem is usually resolved by changing the IP address of the host on which it is most convenient to do so.
+
+<BR></P>
+
+<P>Often, if a host is moved from one location to another, it isn't reconfigured to have a new address appropriate for the new location. In this situation, the host will not function on the network at all. If a host&#151;particularly a PC or a Mac, on 
+which it is easy to overlook such things&#151;ceases to function after it's been moved to a new location, you may want to check the IP address.
+
+<BR></P>
+
+<P>Another clue that a wrong IP address is the problem is if your machine is using more than one network protocol &quot;stack&quot; and IP is the only thing that isn't working. If you can talk to DECNET or Novell just fine, but the Internet stops working 
+for you after a move, this is almost certainly the problem.
+
+<BR></P>
+
+<H5><A ID="I24" NAME="I24">
+
+<FONT SIZE=3><B>The Subnet Mask</B>
+
+<BR></FONT></A></H5>
+
+<P>The subnet mask tells your Internet software how much of your IP address describes which computer you are on your local-area network, and how much of the address describes which network you are attached to. For instance, a subnet mask of 255.255.255.0 
+(sometimes stated in C-language hexadecimal notation as 0xffffff00) on an address of 192.136.150.6 means that the computer is number six on a network that can be described as 192.136.150.0. If a computer is set up with an inappropriate subnet mask, that 
+means that it will probably be able to talk to other computers on its local-area network, but that it might not be able to talk to hosts outside of it. To understand why, we need to take a brief pit stop and look at something called the IP Routing 
+Algorithm.
+
+<BR></P>
+
+<H5><A ID="I25" NAME="I25">
+
+<FONT SIZE=3><B>Internet Routing</B>
+
+<BR></FONT></A></H5>
+
+<P>With so may millions of hosts on the Internet, how does your host know whether the destination for a particular service is the computer in the next office or a mainframe in Canada? To a large extent, this kind of global localism is accomplished because 
+TCP/IP software follows a standard set of routing &quot;rules of the road.&quot; For any given IP address that it would contact:
+
+<BR></P>
+
+<UL>
+
+<LI>Is it visible on the local-area network to which it is attached? If so, route established&#151;if not, go to next step.
+
+<BR>
+
+<BR></LI>
+
+<LI>Is the route recorded locally, perhaps in a local host's file? If so, route established&#151;if not, try the next step.
+
+<BR>
+
+<BR></LI>
+
+<LI>Has the route been learned about through a dynamic routing broadcast protocol? If so, great&#151;if not, we've still got one more thing to try.
+
+<BR>
+
+<BR></LI>
+
+<LI>Has the software been configured with a <I>default route</I> or <I>default </I><I>gateway</I>? If so, forget about trying to find out where the destination is and let the default gateway try this whole business. If there isn't a default gateway, on to 
+the next step.
+
+<BR>
+
+<BR></LI>
+
+<LI>Sorry, you've lost the routing game. destination host unknown or destination network unknown.
+
+<BR>
+
+<BR></LI></UL>
+
+<P>A lot of Internet software uses the subnet mask to help determine if a destination host is on the same network as it is. For instance, if the source host had the address of 198.64.55.100 and the destination host had the address of 198.64.56.101, it's a 
+good bet that if they're using a subnet mask of 255.255.0.0, that they're on the same local network. If, however, they're using a subnet mask of 255.255.255.0, that means that one computer is on subnet 198.64.55 and the other one is on subnet 
+198.64.56&#151;two different networks. In the first example, though, each computer is be considered to be on the same network: network 198.64.0.0.
+
+<BR></P>
+
+<H5><A ID="I26" NAME="I26">
+
+<FONT SIZE=3><B>The Default Route or Gateway</B>
+
+<BR></FONT></A></H5>
+
+<P>As we've seen earlier, the default route or gateway is critical to proper connection with hosts beyond your local-area network. If you can't talk to any computer outside your own local-area network, and you're using the correct subnet mask, your 
+software might be pointing at the wrong gateway.
+
+<BR></P>
+
+<P>A feature of some TCP/IP software is that it requires the network portion of your gateway address to be the same as the network portion of your own IP address. This may seem to be an obvious thing to assume but, as in the earlier example, computers 
+198.64.55.100 and 198.64.56.101 may actually be on the same local network, even if they have a subnet mask of 255.255.255.0. This may happen if two networks that are previously separate are consolidated, or if there are other reasons you may want to 
+clearly distinguish the address of two or more groups of computers on a local-area network from each other.
+
+<BR></P>
+
+<P>In this situation, such software may require that the 198.64.56.101 computer use use a gateway address beginning with 198.64.56, and that the 198.64.55.100 computer have a gateway address beginning with 198.64.55. There are two ways around this problem. 
+One is to use different TCP/IP software on that network (often a support headache) and the other is to see if the caretaker of the local routers can add a supplementary address to the gateway you need to use. In this certain limited circumstance, one 
+computer (the router) can respond to packets on the network with one of two or more IP addresses, even though packets that it sends out in return will only use the main IP address.
+
+<BR></P>
+
+<P>This is one of those lady-or-the-tiger choices: either a headache for the networking support people, who have to keep track of multiple addresses for a given gateway router on a single local-area network, or a headache for the software support folks, 
+who may have to support an additional TCP/IP package for a particular network.
+
+<BR></P>
+
+<H5><A ID="I27" NAME="I27">
+
+<FONT SIZE=3><B>The Domain Name Server</B>
+
+<BR></FONT></A></H5>
+
+<P>If all these numbers are confusing, don't worry&#151;you should rarely have to deal with them except when troubleshooting. The <I>domain name server</I> is a protocol for associating more memorable names with the IP address numbers necessary for routing 
+between hosts.
+
+<BR></P>
+
+<P>If DNS is working, you should be able to contact hosts by their proper names like rs.internic.net. If not, you may have to resort to using their IP addresses, such as 198.41.0.5. If, in fact, you are able to talk to a destination host by using the IP 
+address but not the fully-qualified domain name, it's a good indicator that your software isn't configured with a correct domain name server, or the domain name server itself is nonfunctional.
+
+<BR></P>
+
+<P>A good way to test this if you're on a UNIX host is to use nslookup to compare what your host <I>thinks</I> is the correct resolution of a given address with the actual source of authority for that network.
+
+<BR></P>
+
+<P>To check what IP address the host brigadoon.hou.tx.us resolves to, for instance, try this from the UNIX shell prompt. You may have to specify the full path for nslookup. It's often kept in /usr/etc.
+
+<BR></P>
+
+<PRE>%<B>nslookup brigadoon.hou.tx.us</B>
+
+Server:  is.rice.edu
+
+Address:  128.42.42.24
+
+Non-authoritative answer:
+
+Name:    brigadoon.hou.tx.us
+
+Address:  198.64.55.98
+
+%</PRE>
+
+<P>This exchange can tell you a couple of things. First, that the host uses domain name server is.rice.edu to get the information from the nslookup. That server says that it has a non-authoritative answer to the query, which is that brigadoon's IP address 
+is 198.64.55.98. &quot;Non-authoritative&quot; refers to the fact that the server supplied the information from cache instead of getting it from the authoritative source. The server will not actually go to the original source to get the answer to a DNS 
+query unless it can't fnd it in cache, or the time to live on the cache entry has expired.
+
+<BR></P>
+
+<P>Here's an example. If Unslookup queries the domain name server for something that isn't likely to be in its cache, it goes out to the authority for the entry (in this case, the source of authority for UNT.EDU) and returns an authoritative entry. The 
+second time the same name server is queried for the same information, a nonauthoritative entry is returned from the local cache.
+
+<BR></P>
+
+<PRE>&gt; nslookup loher.dialup.unt.edu
+
+Server:  is.rice.edu
+
+Address:  128.42.42.24
+
+Name:    loher.dialup.unt.edu
+
+Address:  129.120.35.13
+
+&gt; nslookup loher.dialup.unt.edu
+
+Server:  is.rice.edu
+
+Address:  128.42.42.24
+
+Non-authoritative answer:
+
+Name:    loher.dialup.unt.edu
+
+Address:  129.120.35.13
+
+&gt;</PRE>
+
+<P>Because of the tendency of DNS entries to not be updated until they expire, they are sometimes out-of-date with respect to changes at a remote location. If, soon after that DNS record was cached by is.rice.edu, that remote network was reconfigured and 
+loher.dialup.unt.edu was given a new IP address, you would be unable to reach it by its domain name until your local cache entry expired some hours later.
+
+<BR></P>
+
+<P>There is a method for using nslookup for finding the formal source of authority for any given fully-qualified domain name. It involves setting the query type to SOA (source of authority), and querying successively smaller portions of the address until 
+you hit on the site's domain name (like hou.tx.us as opposed to gotham.hou.tx.us). After you get a source of authority record, you can point nslookup at that server and get an authoritative reply. See the following example:
+
+<BR></P>
+
+<PRE>%<B>nslookup</B>
+
+Default Server:  is.rice.edu
+
+Address:  128.42.42.24
+
+&gt; narnia.hou.tx.us
+
+Server:  is.rice.edu
+
+Address:  128.42.42.24
+
+Non-authoritative answer:
+
+Name:    narnia.hou.tx.us
+
+Address:  198.64.55.97
+
+&gt; set type=soa
+
+&gt; narnia.hou.tx.us
+
+Server:  is.rice.edu
+
+Address:  128.42.42.24
+
+*** No start of authority zone information is available for narnia.hou.tx.us
+
+&gt; hou.tx.us
+
+Server:  is.rice.edu
+
+Address:  128.42.42.24
+
+Non-authoritative answer:
+
+hou.tx.us       origin = sesqui.net
+
+        mail addr = hostmaster.sesqui.net
+
+        serial=19930236, refresh=10800, retry=900, expire=3600000, min=86400
+
+Authoritative answers can be found from:
+
+ns.sesqui.net   inet address = 128.241.0.84
+
+moe.rice.edu    inet address = 128.42.5.4
+
+&gt; server ns.sesqui.net
+
+Default Server:  ns.sesqui.net
+
+Address:  128.241.0.84
+
+&gt; set type=a
+
+&gt; narnia.hou.tx.us
+
+Server:  ns.sesqui.net
+
+Address:  128.241.0.84
+
+Name:    narnia.hou.tx.us
+
+Address:  198.64.55.97
+
+&gt;
+
+%</PRE>
+
+<P>Here's what the user did in the preceding example:
+
+<BR></P>
+
+<UL>
+
+<LI>Run nslookup.
+
+<BR>
+
+<BR></LI>
+
+<LI>Request an IP address for the host narnia.hou.tx.us.
+
+<BR>
+
+<BR></LI>
+
+<LI>Receive a nonauthoritative answer from is.rice.edu, the default name server for the current host.
+
+<BR>
+
+<BR></LI>
+
+<LI>Tell nslookup to switch to requesting source-of-authority records instead of the default address (a) type records.
+
+<BR>
+
+<BR></LI>
+
+<LI>Request a source of authority for narnia.hou.tx.us. That fails because narnia is an individual host, not a domain.
+
+<BR>
+
+<BR></LI>
+
+<LI>Try requesting a source of authority record for the domain hou.tx.us, which succeeds, because hou.tx.us is a full domain. If that failed, a good next try would have been tx.us ,and so on.
+
+<BR>
+
+<BR></LI>
+
+<LI>The copious SOA reply lists two authoritative sources of DNS for the domain hou.tx.us: ns.sesqui.net and moe.rice.edu.
+
+<BR>
+
+<BR></LI>
+
+<LI>Direct nslookup to use the domain name server ns.sesqui.net.
+
+<BR>
+
+<BR></LI>
+
+<LI>Change the query type back to address (type A) from source of authority (type SOA).
+
+<BR>
+
+<BR></LI>
+
+<LI>Ask for the address of narnia.hou.tx.us.
+
+<BR>
+
+<BR></LI>
+
+<LI>All done. Wasn't that fun?
+
+<BR>
+
+<BR></LI></UL>
+
+<P>You now know that the IP address for the host narnia.hou.tx.us in your local DNS cache agrees with the actual entry out on the authoritative source for that domain, ns.sesqui.net.
+
+<BR></P>
+
+<H3><A ID="I28" NAME="I28">
+
+<FONT SIZE=4><B>A Word About Hardware</B>
+
+<BR></FONT></A></H3>
+
+<P>Believe it or not, faulty local hardware can sometimes prevent you from cruising the Internet. Nailing down hardware problems can get a bit hairy. Usually, you're doing good if you can isolate the problem far enough to know who to call. It's important 
+when you start looking at the hardware to have fairly confident knowledge of just what is plugging into what.
+
+<BR></P>
+
+<P>In this day of &quot;brouters&quot; and Ethernet switches, it's less easy to pigeon-hole your work-a-day network box than it used to be, but three of the basic categories are still worth knowing: <I>repeaters</I>, <I>bridges</I>, and <I>routers</I>.
+
+<BR></P>
+
+<P>Repeaters are probably the most humble network box. They have two or more network interfaces and simply regenerate the electrical signal from any given interface to all the others&#151;warts and all. Repeaters are usually used to increase the legal 
+limit on length or number of nodes possible on a local-area network.
+
+<BR></P>
+
+<P>Bridges offer a bit more protection from propagating electrical problems than do repeaters. A bridge &quot;understands&quot; the lowest-layer &quot;Media Access Control&quot; packets on the network, albeit Ethernet, token-ring, or whatever. A bridge 
+will not ordinarily permit electrical signal problems to spread between its two or more network interfaces. What it will permit, though, is for higher-level, packet-storm type problems to spread. To ensure against this type of problem, a more complex type 
+of machine is needed: a router.
+
+<BR></P>
+
+<P>Routers &quot;understand&quot; the higher-layer &quot;network&quot; protocols such as IP, IPX, DECNET, and so on. The greater degree of complexity affords a greater range of success&#151;a router will both permit you to set up global networks that are 
+all insulated from each other, and give you more than enough rope with which to hang yourself.
+
+<BR></P>
+
+<P>Each level of complexity afforded by repeaters, bridges, and routers represents an increase in security, but an increase in price and complexity of skill set required to maintain them as well. For this and other reasons, there are few tools available to 
+diagnose and troubleshoot repeaters, only a handful more available to troubleshoot bridges, and an entire industry that earns its livelihood from router troubleshooting tools.
+
+<BR></P>
+
+<P>If your Internet problems are shared by other persons in the same office or building, you might want to consider the possibility that some hardware may be at fault. Do you share an Ethernet segment with the other persons having the problem? Do you share 
+a repeater or bridge?
+
+<BR></P>
+
+<P>Later in this chapter, a few methods are presented for finding problems on specific routers on complex IP-based wide-area networks like the Internet, where we all share routers varying in complexity from a UNIX host running routed or gated, to 
+custom-designed IBM Nodal Switching Systems.
+
+<BR></P>
+
+<H3><A ID="I29" NAME="I29">
+
+<FONT SIZE=4><B>The Graceful Art of Finger-Pointing</B>
+
+<BR></FONT></A></H3>
+
+<P>By far, the best way to assure good quality and consistency in your Internet experience is to look beyond the products of each FTP retrieval or Web surf to the <I>process</I> of using the Internet. If you look at the big picture&#151;all the pieces that 
+come into play when you use the Internet&#151;it is much easier to deal with the inconsistencies and other problems that will inevitably haunt your online sessions when you can least afford them. By tuning the process instead of patching or reworking the 
+result, you will not only increase your own expertise, but create an environment that produces less problems and is much more enjoyable to use.
+
+<BR></P>
+
+<H4><A ID="I30" NAME="I30">
+
+<FONT SIZE=3><B>How Do You Get There from Here?</B>
+
+<BR></FONT></A></H4>
+
+<P>Eventually, you'll encounter an Internet problem that's caused by loss of service somewhere beyond your local site. Two invaluable tools for tracking down this kind of problem are PING and Traceroute.
+
+<BR></P>
+
+<P>PING performs the simplest of network tests. It bounces a packet against the remote site and waits for it to return. Command-line options on different versions of PING permit you to expand the test to note the total route trip time in milliseconds, or 
+to do a continuous stream of PINGs, noting the amount of loss, and more.
+
+<BR></P>
+
+<P>In its simplest form, a PING test would be performed like this:
+
+<BR></P>
+
+<PRE>%<B>ping mit.edu</B>
+
+mit.edu is alive
+
+%</PRE>
+
+<P>A more complex test could be used to get some information about the quality of a connection out to a particular site. The following test tells PING to send five packets of 100 bytes to a remote host and note the route trip time.
+
+<BR></P>
+
+<PRE>%<B>ping -s mit.edu 100 5</B>
+
+PING mit.edu: 100 data bytes
+
+108 bytes from MIT.MIT.EDU (18.72.2.1): icmp_seq=0. time=53. ms
+
+108 bytes from MIT.MIT.EDU (18.72.2.1): icmp_seq=1. time=51. ms
+
+108 bytes from MIT.MIT.EDU (18.72.2.1): icmp_seq=2. time=54. ms
+
+108 bytes from MIT.MIT.EDU (18.72.2.1): icmp_seq=3. time=51. ms
+
+108 bytes from MIT.MIT.EDU (18.72.2.1): icmp_seq=4. time=53. ms
+
+----MIT.MIT.EDU PING Statistics----
+
+5 packets transmitted, 5 packets received, 0% packet loss
+
+round-trip (ms) min/avg/max = 51/52/54
+
+%</PRE>
+
+<P>Traceroute works in a similar manner, but it also lists each of the routers between your local site and the remote side:
+
+<BR></P>
+
+<PRE>%<B>traceroute mit.edu</B>
+
+traceroute to mit.edu (18.72.2.1), 30 hops max, 40 byte packets
+
+ 1  bruno-p5.rice.edu (128.42.42.1)  2 ms  3 ms  2 ms
+
+ 2  verge.rice.edu (128.42.209.42)  4 ms  4 ms  2 ms
+
+ 3  ENSS-F0.SESQUI.NET (192.67.13.94)  3 ms  3 ms  4 ms
+
+ 4  t3-3.cnss64.Houston.t3.ans.net (140.222.64.4)  6 ms  5 ms  2 ms
+
+ 5  t3-0.cnss80.St-Louis.t3.ans.net (140.222.80.1)  19 ms  25 ms  21 ms
+
+ 6  t3-1.cnss25.Chicago.t3.ans.net (140.222.25.2)  24 ms  25 ms  26 ms
+
+ 7  t3-0.cnss40.Cleveland.t3.ans.net (140.222.40.1)  32 ms  33 ms  34 ms
+
+ 8  t3-1.cnss48.Hartford.t3.ans.net (140.222.48.2)  51 ms  46 ms  47 ms
+
+ 9  t3-0.enss134.t3.ans.net (140.222.134.1)  51 ms  50 ms  49 ms
+
+10  w91-rtr-external-fddi.mit.edu (192.233.33.1)  51 ms  52 ms  51 ms
+
+11  E40-RTR-FDDI.MIT.EDU (18.168.0.2)  52 ms  52 ms  64 ms
+
+12  MIT.MIT.EDU (18.72.2.1)  56 ms  53 ms *
+
+%</PRE>
+
+<P>In this example, the entire route is operative. Each router between the local site and mit.edu responds. If one of the routers is down, however, each line after it has a line of astrisks like this:
+
+<BR></P>
+
+<PRE>%<B>traceroute gotham.hou.tx.us</B>
+
+traceroute to gotham.hou.tx.us (198.64.55.96), 30 hops max, 40 byte packets
+
+ 1  bruno-p5.rice.edu (128.42.42.1)  2 ms  2 ms  2 ms
+
+ 2  verge.rice.edu (128.42.209.42)  3 ms  3 ms  2 ms
+
+ 3  RICE3-F0.SESQUI.NET (192.67.13.86)  4 ms  4 ms  4 ms
+
+ 4  LCIS.SESQUI.NET (192.136.149.9)  8 ms  4 ms  3 ms
+
+ 5  192.136.150.6 (192.136.150.6)  243 ms  220 ms  213 ms
+
+ 6  192.136.150.6 (192.136.150.6)  228 ms * *
+
+ 7  * * *
+
+ 8  * * *
+
+ 9  * * *
+
+10  * * *
+
+(additional text deleted)</PRE>
+
+<P>That could mean one of two things. Either the router after hop 6 doesn't support the feature of IP routing that Traceroute exploits, or there is an actual outage preventing contact with gotham.hou.tx.us. For this reason, <I>a PING test should always be 
+done before a Traceroute test</I>.
+
+<BR></P>
+
+<P>If the PING succeeds and the Traceroute fails, it's likely that the problem is in using Traceroute to test that particular route, not an actual end-to-end connectivity failure.
+
+<BR></P>
+
+<P>Let's assume, however, that PING and Traceroute have both indicated that there is an end-to-end connectivity failure. What next? Well, you could set about trying to find out who's responsible for the router on the last hop and see if they have any clues 
+as to why the route to your destination is unavailable.
+
+<BR></P>
+
+<H4><A ID="I31" NAME="I31">
+
+<FONT SIZE=3><B>Who Supports What?</B>
+
+<BR></FONT></A></H4>
+
+<P>Finding out who to call is a sticky business on the Internet. Regional Internet providers have network operation centers that vary in size and formality, from a couple of college students who only work from nine to five, to a full-fledged, 
+mission-control-style operations center with three shifts of full-time staff.
+
+<BR></P>
+
+<P>When you find out who the technical contact for a remote site is, consider whether or not it's really worthwhile to call them. Perhaps you might want to get someone else to do it. If so, you can call the InterNIC Information Services Reference Desk. 
+They may not only be able to help you sort out what kind of connectivity problems you might be having, but they may be able to direct you to the appropriate regional provider to get your problem resolved. The folks at InterNIC, however, are understandably 
+loaded with requests concerning everything from how to get on the Internet, to inquiries about why things aren't working correctly.
+
+<BR></P>
+
+<P>The InterNIC Services Reference Desk is the Network Information Center of first and last resort. As the NIC of first resort, they try and direct Internet users to the appropriate folks to field their service requests and complaints. As the NIC of last 
+resort, they will lend an ear to anyone who encounters problems because of the chaotic nature of the Internet, and the fact that after all is said and done, no one's really in charge.
+
+<BR></P>
+
+<P>Here's their contact information:
+
+<BR></P>
+
+<TABLE BORDER>
+
+<TR>
+
+<TD>
+
+<P>voice:</P>
+
+<TD>
+
+<P>(619) 455-4600</P>
+
+<TR>
+
+<TD>
+
+<P>fax:</P>
+
+<TD>
+
+<P>(619) 455-4640</P>
+
+<TR>
+
+<TD>
+
+<P>e-mail:</P>
+
+<TD>
+
+<P>info@is.internic.net</P>
+
+<TR>
+
+<TD>
+
+<P>Gopher:</P>
+
+<TD>
+
+<P>gopher://rs.internic.net/</P>
+
+<TR>
+
+<TD>
+
+<P>WWW:</P>
+
+<TD>
+
+<P><A HREF="http://www.internic.net/">http://www.internic.net/</A></P></TABLE>
+
+<P>Try the online resources first&#151;they're a virtual encyclopedic resource of connectivity information, with plenty of pointers to other sites.
+
+<BR></P>
+
+<P>If you're determined to try and get the regional contact information yourself, there are a few resources (discussed in the following section) you can use.
+
+<BR></P>
+
+<H4><A ID="I32" NAME="I32">
+
+<FONT SIZE=3><B>Regional Contact References</B>
+
+<BR></FONT></A></H4>
+
+<P>The whois program enables you to have access to numerous remote databases. In this section, we discuss four in particular: the InterNIC Registration Services, the InternNIC Directory and Database Services, the MERIT Policy-Based Routing Database, and 
+the MERIT Routing Registry Database.
+
+<BR></P>
+
+<P>The syntax for using each database varies slightly, but the following commands can be used to get help on each one:
+
+<BR></P>
+
+<P>The InterNIC Registration Services:
+
+<BR></P>
+
+<PRE>whois -h rs.internic.net</PRE>
+
+<P>The InterNIC Directory and Database Services:
+
+<BR></P>
+
+<PRE>whois -h ds.internic.net help</PRE>
+
+<P>The MERIT Policy-based Routing Database (being phased out soon):
+
+<BR></P>
+
+<PRE>whois -h prdb.merit.edu help</PRE>
+
+<P>The MERIT Routing Registry Database (new system):
+
+<BR></P>
+
+<PRE>whois -h rrdb.merit.edu help</PRE>
+
+<P>As already noted, the MERIT PRDB may be unavailable after April, 1995. The MERIT RRDB is a newer system that is still being loaded with the pertinent information.
+
+<BR></P>
+
+<P>To use the InterNIC Registrations Services to determine, for instance, to who's responsible for the router t3-1.cnss25.Chicago.t3.ans.net found in the first Traceroute in the preceding example, we can do a search on the domain ans.net in the InterNIC 
+Registration Services, as in this example:
+
+<BR></P>
+
+<PRE>%<B>whois -h rs.internic.net ans.net</B>
+
+Advanced Networks &amp; Services Inc. (ANS-DOM)
+
+   100 Clearbrook Road
+
+   Elmsford, NY 10523
+
+   Domain Name: ANS.NET
+
+   Administrative Contact:
+
+      Hershman, Ittai  (IH4)  ittai@ANS.NET
+
+      (914) 789-5337
+
+   Technical Contact, Zone Contact:
+
+      Wolfson, Claudia G.  (CGW2)  wolfson@ANS.NET
+
+      (914) 789-5369
+
+   Record last updated on 08-Mar-93.
+
+   Domain servers in listed order:
+
+   NIS.ANS.NET                  147.225.1.2
+
+   NS.ANS.NET                   192.103.63.100
+
+The InterNIC Registration Services Host ONLY contains Internet Information
+
+(Networks, ASN's, Domains, and POC's).
+
+Please use the whois server at nic.ddn.mil for MILNET Information.</PRE>
+
+<P>As you see in the example, a query sent to rs.internic.net shows who the technical contact is for ans.net. In many cases, the information you retrieve through one of these databases will be a good starting point, but the person in the entry may not be 
+the actual appropriate person with whom you should discuss connectivity problems.
+
+<BR></P>
+
+<H4><A ID="I33" NAME="I33">
+
+<FONT SIZE=3><B>Getting Down to &quot;Brass Tacts&quot;</B>
+
+<BR></FONT></A></H4>
+
+<P>Your troubleshooting experience will be greatly enhanced if you remember that any &quot;brass&quot; you find in a whois database and call will probably already know about the problem; a little politeness will go a long way. It's unlikely that these 
+numbers will be valid before or after their local working hours, so you should also restrict calls to conventional working hours for their time zone.
+
+<BR></P>
+
+<P>Occasionally, though, the technician at the remote site may be glad to have the opportunity to chat with a remote user and get some additional information about a current downage. The Internet technical community is every bit as diverse as the Internet 
+itself, and the reaction from anyone you call about a technical problem is very much a pot-luck affair.
+
+<BR></P>
+
+<H3><A ID="I34" NAME="I34">
+
+<FONT SIZE=4><B>Getting Around the Problem</B>
+
+<BR></FONT></A></H3>
+
+<P>If a problem is particularly resistant to troubleshooting efforts, it may be wise to consider a couple of alternatives.
+
+<BR></P>
+
+<P>If you've lost end-to-end connectivity, you might want to see if you can arrange Internet connectivity through an alternate provider. The resources listed earlier for the InterNic will also be productive in finding a suitable provider in your area for 
+the type of service you want.
+
+<BR></P>
+
+<P>If the problem isn't end-to-end connectivity but loss of service, and you still have electronic mail access, look around on Gopher and World Wide Web sites for information about sites that offer e-mail access to services such as Gopher, WWW, Archie, FTP 
+and other services. If all else fails, there are numerous commercial online services such as America Online and CompuServe that offer electronic mail access to the Internet, from which you can indirectly access many of the other services on the Net.
+
+<BR></P>
+
+<H3><A ID="I35" NAME="I35">
+
+<FONT SIZE=4><B>Summary</B>
+
+<BR></FONT></A></H3>
+
+<P>When all is said and done, there's not a great deal you can do about many things that can go wrong on the Internet. You can get lots of information useful to yourself and others, but ultimately it's the responsibility of the service provider to ensure 
+that their service delivers consistent and high quality to the end user.
+
+<BR></P>
+
+<P>It is unfortunate that occurrences on the Internet can make such troubleshooting skills a highly prized item; but in a way, it's better than other networks like the telephone voice network and the cable television networks, in which things go wrong and 
+all you can do is wait for the problem to be resolved. If nothing else, at least these troubleshooting skills give you something interesting to do while you're waiting for the Net to start working again.</P>
+
+<P><A HREF="tig03.htm"><IMG SRC="bluprev.gif" WIDTH = 32 HEIGHT = 32 BORDER = 0 ALT="Previous Page"></A>
+
+<A HREF="httoc.htm"><IMG SRC="blutoc.gif" WIDTH = 32 HEIGHT = 32 BORDER = 0 ALT="TOC"></A>
+
+<A HREF="htindex.htm"><IMG SRC="bluindex.gif" WIDTH = 32 HEIGHT = 32 BORDER = 0 ALT="Index"></A>
+
+<A HREF="tigp2.htm"><IMG SRC="blunext.gif" WIDTH = 32 HEIGHT = 32 BORDER = 0 ALT="Next Page"></A>
+
+<A HREF="httoc.htm"><IMG SRC="bluprev.gif" WIDTH = 32 HEIGHT = 32 BORDER = 0 ALT="Home"></A>
+
+</P></BODY></HTML>
+

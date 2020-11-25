@@ -1,0 +1,393 @@
+<HTML>
+
+<HEAD>
+
+<TITLE>Tricks of the Internet Gurus tigxc.htm</TITLE>
+
+<LINK REL="ToC" HREF="httoc.htm">
+
+<LINK REL="Index" HREF="htindex.htm">
+
+<LINK REL="Next" HREF="tigorder.htm">
+
+<LINK REL="Previous" HREF="tigxb.htm"></HEAD>
+
+<BODY TEXT="#000000" LINK="#0000FF" VLINK="#800080" bgcolor=white>
+
+<P><A HREF="tigxb.htm"><IMG SRC="bluprev.gif" WIDTH = 32 HEIGHT = 32 BORDER = 0 ALT="Previous Page"></A>
+
+<A HREF="httoc.htm"><IMG SRC="blutoc.gif" WIDTH = 32 HEIGHT = 32 BORDER = 0 ALT="TOC"></A>
+
+<A HREF="htindex.htm"><IMG SRC="bluindex.gif" WIDTH = 32 HEIGHT = 32 BORDER = 0 ALT="Index"></A>
+
+<A HREF="tigorder.htm"><IMG SRC="blunext.gif" WIDTH = 32 HEIGHT = 32 BORDER = 0 ALT="Next Page"></A>
+
+<A HREF="httoc.htm"><IMG SRC="bluprev.gif" WIDTH = 32 HEIGHT = 32 BORDER = 0 ALT="Home"></A>
+
+</P><UL>
+
+<LI>
+
+<A HREF="#I1">C</A></LI>
+
+<UL>
+
+<LI>
+
+<A HREF="#I3">Standards and Where To Find Them</A></LI>
+
+<UL>
+
+<UL>
+
+<UL>
+
+<LI>
+
+<A HREF="#I4">--by Max Metral
+
+<LI>
+
+<A HREF="#I5">The OSI Reference Model</A></LI>
+
+<LI>
+
+<A HREF="#I6">TCP: Transmission Control Protocol (Transport Layer)</A></LI>
+
+<LI>
+
+<A HREF="#I7">SNMP: Simple Network Management Protocol (Application Layer)</A></LI>
+
+<LI>
+
+<A HREF="#I8">FTP: File Transfer Protocol (Application Layer)</A></LI>
+
+<LI>
+
+<A HREF="#I9">Telnet (Application Layer)</A></LI>
+
+<LI>
+
+<A HREF="#I10">SMTP: Simple Mail Transfer Protocol (Application Layer)</A></LI>
+
+<LI>
+
+<A HREF="#I11">MIME: Multipurpose Internet Mail Extensions (Application and Presentation Layers)</A></LI>
+
+<LI>
+
+<A HREF="#I12">HTTP: HyperText Transfer Protocol (Application Layer)</A></LI>
+
+<LI>
+
+<A HREF="#I13">HTML: HyperText Markup Language N/A</A></LI>
+
+<LI>
+
+<A HREF="#I14">POP: Post Office Protocol (Application Layer)</A></LI>
+
+<LI>
+
+<A HREF="#I15">IMAP: Interactive Mail Access Protocol (Application Layer)</A></LI></UL></UL></UL></ul></ul>
+
+
+
+<H1><A ID="I1" NAME="I1">
+
+<BR>
+
+<FONT SIZE=5><A ID="I2" NAME="I2"></A><B>C</B>
+
+<BR></FONT></A></H1>
+
+<H2><A ID="I3" NAME="I3">
+
+<FONT SIZE=5><B>Standards and Where To Find Them</B>
+
+<BR></FONT></A></H2>
+
+<H5><A ID="I4" NAME="I4">
+
+<FONT SIZE=3><B>
+
+<a href="max.gif">--by Max Metral</a></B>
+
+<BR></FONT></A></H5>
+
+<P>&quot;The great thing about standards is that there are so many of them.&quot; &#151;unknown
+
+<BR></P>
+
+<P>Indeed, there are thousands of standards, and usually at least two for each problem domain. The Internet is no exception. Here's a brief description of the most popular standards. Each standard will be accompanied by its place in the OSI Reference Model 
+as well as any documents that define the standard. Most standards are defined by Request For Comments (RFC) documents. To get an RFC, you can point your Web browser at:
+
+<BR></P>
+
+<PRE><A HREF="http://info.cern.ch/hypertext/DataSources/Archives/RFC_sites.html">http://info.cern.ch/hypertext/DataSources/Archives/RFC_sites.html</A></PRE>
+
+<P>or FTP to venera.isi.edu and look in the directory in-notes.
+
+<BR></P>
+
+<H3><A ID="I5" NAME="I5">
+
+<FONT SIZE=4><B>The OSI Reference Model</B>
+
+<BR></FONT></A></H3>
+
+<P>The Open Systems Interconnection Reference model was designed by the International Organization for Standardization and International Electrotechnical Committee. Its purpose is to provide a model to discuss the different tasks involved in computer 
+networks and communication. The model defines seven layers that account for all the pieces of OSI:
+
+<BR></P>
+
+<TABLE BORDER>
+
+<TR>
+
+<TD>
+
+<PRE><B><I>Layer</I></B>
+
+<BR></PRE>
+
+<TD>
+
+<PRE><B><I>Task(s)</I></B>
+
+<BR></PRE>
+
+<TR>
+
+<TD>
+
+<P>Application</P>
+
+<TD>
+
+<P>Manages communications between applications, and between applications and lower levels.</P>
+
+<TR>
+
+<TD>
+
+<P>Presentation</P>
+
+<TD>
+
+<P>Responsible for mapping the format of communicated data onto that used by the application.</P>
+
+<TR>
+
+<TD>
+
+<P>Session</P>
+
+<TD>
+
+<P>Controls data exchange.</P>
+
+<TR>
+
+<TD>
+
+<P>Transport</P>
+
+<TD>
+
+<P>Responsible for communicating data reliably. For example, this layer will handle retries in case of network failures.</P>
+
+<TR>
+
+<TD>
+
+<P>Network</P>
+
+<TD>
+
+<P>Responsible for abstracting the Data Link and Physical Layers in a common format for higher layers. In other words, it provides a common interface regardless of communications media or other lower level factors.</P>
+
+<TR>
+
+<TD>
+
+<P>Data Link</P>
+
+<TD>
+
+<P>Responsible for data communications in a single network. For example, sending bits over one office subnet. When multiple subnets are involved, the Network Layer takes over.</P>
+
+<TR>
+
+<TD>
+
+<P>Physical</P>
+
+<TD>
+
+<P>Responsible for pushing bits over the communications media (fiber, copper, and so on). As the name implies, the physical layer is the actual cable, and not a protocol.</P></TABLE>
+
+<P>Most standards listed below have a place in the OSI Reference Model. Noting their place will help you understand exactly where the responsibility of the standard begins and ends.
+
+<BR></P>
+
+<H3><A ID="I6" NAME="I6">
+
+<FONT SIZE=4><B>TCP: Transmission Control Protocol (Transport Layer)</B>
+
+<BR></FONT></A></H3>
+
+<P>TCP enables a connection-oriented transport mechanism using the Internet suite of protocols. TCP goes through three stages for each communication session: connection, data transmission, and disconnection. During data transmission, TCP handles error 
+recovery and out-of-order problems. For example, if a packet of information is not acknowledged by the recipient, TCP will attempt to resend that information. It will also reorder packets on the receiver side so it appears that nothing out of the ordinary 
+has occurred. <B><I>See RFC 761.</I></B>
+
+<BR></P>
+
+<H3><A ID="I7" NAME="I7">
+
+<FONT SIZE=4><B>SNMP: Simple Network Management Protocol (Application Layer)</B>
+
+<BR></FONT></A></H3>
+
+<P>SNMP arose from the need of system administrators to debug network problems remotely. When trying to figure out which of 100 network routers has gone bad, it is much more convenient to do it from a desk than to run to all the routers. SNMP provides 
+tools to monitor and change network configurations remotely. Unfortunately, the first version of SNMP did not provide authentication, so in theory anyone could change the network configuration. As a result, most vendors disabled the modification features 
+of SNMP. There is a successor in the works, SNMPv2, which provides authentication. <B><I>See </I></B><I>RFC 1157.</I>
+
+<BR></P>
+
+<H3><A ID="I8" NAME="I8">
+
+<FONT SIZE=4><B>FTP: File Transfer Protocol (Application Layer)</B>
+
+<BR></FONT></A></H3>
+
+<P>As the name suggests, File Transfer Protocol allows for the exchange of files over the Internet Protocols. FTP aims to shield users from differences in file systems between hosts. For example, when FTPing from a DOS machine, you are able to use the same 
+commands and filename formats as you would from a UNIX machine. <B><I>See </I></B><I>RFC 959.</I>
+
+<BR></P>
+
+<H3><A ID="I9" NAME="I9">
+
+<FONT SIZE=4><B>Telnet (Application Layer)</B>
+
+<BR></FONT></A></H3>
+
+<P>Telnet provides a session-based protocol for communication between hosts. Behind the buzz words, telnet is primarily used for remote login. However, most telnet programs are capable of interfacing to other protocols, such as SMTP and POP (see the RFCs 
+of those protocols for more information). <B><I>See </I></B><I>RFC 854.</I>
+
+<BR></P>
+
+<H3><A ID="I10" NAME="I10">
+
+<FONT SIZE=4><B>SMTP: Simple Mail Transfer Protocol (Application Layer)</B>
+
+<BR></FONT></A></H3>
+
+<P>Almost all mail over the Internet is carried using SMTP at one point or another. In an all-SMTP environment, the path from sender to recipient would be that shown in Figure C.1.
+
+<BR></P>
+
+<P>
+
+<BR><B><A HREF="xctig01.gif">Figure C.1. The data path for a typical SMTP message.</A></B>
+
+<BR></P>
+
+<P>SMTP provides protocols and directives for forwarding mail from one host to another on the way to the ultimate destination. Once at the ultimate destination, it is up to the particular implementation of SMTP to make the data available to the message 
+recipient. This can be accomplished in several ways (see POP and IMAP). The format of the content of the mail is described in RFC 822. This includes header and body formatting.
+
+<BR></P>
+
+<P>It's interesting to note that the commonly used SMTP is a 7-bit protocol. In other words, all characters sent using SMTP must be have an ASCII code less than 127. For text, this is usually no problem. When trying to send graphics, programs, or other 
+binary files, it's a big problem. This is why encoding methods such as Uuencode and BinHex are commonly used. These methods pack 8-bit data into a 7-bit data stream and extract it again on the other side. There is a new specification for 8-bit SMTP, but 
+because most client applications want to be compatible with all mail hosts, few have moved to 8-bit SMTP. <B><I>See </I></B><I>RFC 821 and RFC </I><I>822.</I>
+
+<BR></P>
+
+<H3><A ID="I11" NAME="I11">
+
+<FONT SIZE=4><B>MIME: Multipurpose Internet Mail Extensions (Application and </B><B>Presentation Layers)</B>
+
+<BR></FONT></A></H3>
+
+<P>Often mistaken for Multimedia Internet Mail Extensions, MIME describes formats for many different content types. MIME is on the same level as RFC 822, which describes the content of messages exchanged via SMTP. An interesting feature of MIME is that it 
+accounts for different representations of the same data. For example, an image can be represented in a binary form and a textual form, so that readers who can't handle the image can still display a text alternate. <B><I>See RFC 1341.</I></B>
+
+<BR></P>
+
+<H3><A ID="I12" NAME="I12">
+
+<FONT SIZE=4><B>HTTP: HyperText Transfer Protocol (Application Layer)</B>
+
+<BR></FONT></A></H3>
+
+<P>HyperText Transfer Protocol is associated with the World Wide Web. Mosaic and other browsers use HTTP to retrieve hypertext documents. HTTP is a stateless protocol; an HTTP client connects to the server, gets its data, and leaves. For this reason, truly 
+interactive services on the Web must be hacks that get around this limitation. HTTP can exchange many types of data, including MIME types. <B><I>See RFC draft:</I></B>
+
+<BR></P>
+
+<PRE><A HREF="ftp://ds.internic.net/internet-drafts/draft-ietf-iiir-http-00.txt">ftp://ds.internic.net/internet-drafts/draft-ietf-iiir-http-00.txt</A></PRE>
+
+<H3><A ID="I13" NAME="I13">
+
+<FONT SIZE=4><B>HTML: HyperText Markup Language N/A</B>
+
+<BR></FONT></A></H3>
+
+<P>HTML describes a language to represent hypertext and multimedia documents. HTML is not in the OSI Reference Model because it is purely a data format, not related explicitly to communication or networking. HTML is a subset of Standard Generalized Markup 
+Language (SGML). The hypertext documents in the World Wide Web are written in HTML. HTML is composed of text and a set of tags, and can be written with text editors or with a variety of WYSIWYG editors. The following is an example of a bold string in HTML:
+
+
+<BR></P>
+
+<PRE>This is a &lt;b&gt;good&lt;/b&gt; book.</PRE>
+
+<P><I>See RFC draft:</I>
+
+<BR></P>
+
+<PRE><A HREF="ftp://ds.internic.net/internet-drafts/draft-ietf-iiir-html-01.txt">ftp://ds.internic.net/internet-drafts/draft-ietf-iiir-html-01.txt</A></PRE>
+
+<H3><A ID="I14" NAME="I14">
+
+<FONT SIZE=4><B>POP: Post Office Protocol (Application Layer)</B>
+
+<BR></FONT></A></H3>
+
+<P>Post Office Protocol gained popularity as the client-server model became a standard. In the past, users would read their mail on a UNIX workstation with shared file systems with the mail server. As personal computers began to enter Internet sites, there 
+needed to be a non-file system based solution. There are essentially two reasons for this. First, PCs are not always on. SMTP works best when reliable machines are used as mail hubs. If your machine is off for three days, you don't want your mail to bounce 
+back to its originator. Secondly, many PCs don't have implementations of the heavyweight file sharing protocols used in many UNIX systems. <B><I>See RFC 937.</I></B>
+
+<BR></P>
+
+<P>POP provides a solution. To use the Post Office metaphor, the mail server is the Post Office, and your mail client is the customer. When mail arrives, it goes into local storage in the Post Office. When you want to check your mail, you connect with the 
+Post Office, grab your mail, and leave. After getting your mail, the Post Office can delete its copy of the data.
+
+<BR></P>
+
+<H3><A ID="I15" NAME="I15">
+
+<FONT SIZE=4><B>IMAP: Interactive Mail Access Protocol (Application Layer)</B>
+
+<BR></FONT></A></H3>
+
+<P>IMAP is conceptually a post-POP protocol for managing a mailbox from multiple client machines. Travelers will know that it's a real pain to deal with the same mail twice: once while on the road, and once while in the office. IMAP keeps mail on the 
+server machine and enables clients to browse and delete messages remotely. You may also bring down local copies of mail to be read while disconnected. It handles synchronization and the other problems that arise from multilocation access.
+
+<BR></P>
+
+<P>IMAP has been around for a while, but hasn't truly caught on yet. The main problem is that IMAP almost goes too far in the client-server model by pushing to much responsibility onto the server. The problem it attempts to solve still exists for many 
+users, but the current trend is to provide access to client software on the road. For example, many Macintosh users can dial into their own machine and handle their mail remotely using AppleTalk Remote Access and a mail client such as Eudora. <B><I>See RFC 
+1203.</I></B></P>
+
+<P><A HREF="tigxb.htm"><IMG SRC="bluprev.gif" WIDTH = 32 HEIGHT = 32 BORDER = 0 ALT="Previous Page"></A>
+
+<A HREF="httoc.htm"><IMG SRC="blutoc.gif" WIDTH = 32 HEIGHT = 32 BORDER = 0 ALT="TOC"></A>
+
+<A HREF="htindex.htm"><IMG SRC="bluindex.gif" WIDTH = 32 HEIGHT = 32 BORDER = 0 ALT="Index"></A>
+
+<A HREF="tigorder.htm"><IMG SRC="blunext.gif" WIDTH = 32 HEIGHT = 32 BORDER = 0 ALT="Next Page"></A>
+
+<A HREF="httoc.htm"><IMG SRC="bluprev.gif" WIDTH = 32 HEIGHT = 32 BORDER = 0 ALT="Home"></A>
+
+</P></BODY></HTML>
+

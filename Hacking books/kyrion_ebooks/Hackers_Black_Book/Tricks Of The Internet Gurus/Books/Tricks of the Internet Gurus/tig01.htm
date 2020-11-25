@@ -1,0 +1,985 @@
+<HTML>
+
+<HEAD>
+
+<TITLE>Tricks of the Internet Gurus tig01.htm</TITLE>
+
+<LINK REL="ToC" HREF="httoc.htm">
+
+<LINK REL="Index" HREF="htindex.htm">
+
+<LINK REL="Next" HREF="tig02.htm">
+
+<LINK REL="Previous" HREF="tigp1.htm"></HEAD>
+
+<BODY TEXT="#000000" LINK="#0000FF" VLINK="#800080" bgcolor=white>
+
+<P><A HREF="tigp1.htm"><IMG SRC="bluprev.gif" WIDTH = 32 HEIGHT = 32 BORDER = 0 ALT="Previous Page"></A>
+
+<A HREF="httoc.htm"><IMG SRC="blutoc.gif" WIDTH = 32 HEIGHT = 32 BORDER = 0 ALT="TOC"></A>
+
+<A HREF="htindex.htm"><IMG SRC="bluindex.gif" WIDTH = 32 HEIGHT = 32 BORDER = 0 ALT="Index"></A>
+
+<A HREF="tig02.htm"><IMG SRC="blunext.gif" WIDTH = 32 HEIGHT = 32 BORDER = 0 ALT="Next Page"></A>
+
+<A HREF="httoc.htm"><IMG SRC="bluprev.gif" WIDTH = 32 HEIGHT = 32 BORDER = 0 ALT="Home"></A>
+
+</P><UL>
+
+<LI>
+
+<A HREF="#I1">1</A></LI>
+
+<UL>
+
+<LI>
+
+<A HREF="#I3">Getting Connected: The Guru's Options</A></LI>
+
+<UL>
+
+<UL>
+
+<UL>
+
+<LI>
+
+<A HREF="#I4">&#151;by Kevin Barron</A></LI></UL></UL>
+
+<LI>
+
+<A HREF="#I5">Connection Categories</A></LI>
+
+<LI>
+
+<A HREF="#I6">Determining Needs</A></LI>
+
+<LI>
+
+<A HREF="#I7">Dialup Hardware</A></LI>
+
+<LI>
+
+<A HREF="#I8">The Dialup Connection</A></LI>
+
+<LI>
+
+<A HREF="#I9">SLIP/PPP: the Proxy Connection</A></LI>
+
+<LI>
+
+<A HREF="#I10">UUCP</A></LI>
+
+<LI>
+
+<A HREF="#I12">ISDN</A></LI>
+
+<LI>
+
+<A HREF="#I13">AirNet</A></LI>
+
+<LI>
+
+<A HREF="#I14">Leased Line</A></LI>
+
+<LI>
+
+<A HREF="#I15">Summary</A></LI>
+
+<LI>
+
+<A HREF="#I16">References and Further Reading</A></LI>
+
+<UL>
+
+<LI>
+
+<A HREF="#I17">Books</A></LI>
+
+<LI>
+
+<A HREF="#I18">Online Materials</A></LI></UL></UL></UL></UL>
+
+
+
+<H1><A ID="I1" NAME="I1">
+
+<BR>
+
+<FONT SIZE=5><A ID="I2" NAME="I2"></A><B>1</B>
+
+<BR></FONT></A></H1>
+
+<H2><A ID="I3" NAME="I3">
+
+<FONT SIZE=5><B>Getting Connected: The Guru's Options</B>
+
+<BR></FONT></A></H2>
+
+<H5><A ID="I4" NAME="I4">
+
+<FONT SIZE=3><B>&#151;by Kevin Barron</B>
+
+<BR></FONT></A></H5>
+
+<P>One of the most basic hurdles for the would-be Internet user is &quot;How do I get connected?&quot; It is also a difficult question to answer because it is not merely a matter of filling out some forms at a utility company office. Unlike other services 
+such as phone or cable TV, there is no single provider and no unified service offerings to choose from. Granted, there are service providers who make it relatively simple to connect to the Internet; each service is different, however, offering varying 
+types of service and pricing structures. Trying to sort out the differences among these services can make the process of connecting more confusing, instead of simplifying it as intended.
+
+<BR></P>
+
+<P>To make the process somewhat more comprehensible, this chapter takes a look at the services offered in light of how they can match your needs. The first order of business, then, is to describe the types of services available in terms of how you connect 
+to them. The next step is to determine your needs and match them to the corresponding connection category. In this way, it will become apparent which type of connection is best for you.
+
+<BR></P>
+
+<H3><A ID="I5" NAME="I5">
+
+<FONT SIZE=4><B>Connection Categories</B>
+
+<BR></FONT></A></H3>
+
+<P>Connections to the Internet can be described in four basic categories: <I>dialup</I>, <I>proxy</I>, <I>direct</I> and <I>leased</I>.
+
+<BR></P>
+
+<P>A <I>dialup</I> connection is attained through a modem or similar device. The connection typically provides between 2400 bps (bits per second) and 28,800 bps throughput, which is usually more than adequate for e-mail and for running processes on the 
+remote host. While this type of connection is usually adequate for line-oriented access, it is not suitable for full-screen programs. For instance, utilities such as Mosaic expect to be able to address the full screen of a machine that is directly 
+connected to the internet. To make full use of many of the current Internet resources, then, a more advanced connection is required&#151;at minimum, a proxy connection.
+
+<BR></P>
+
+<P>A <I>proxy</I> connection is also typically made through a modem, but it has special provisions that enable full Internet access. SLIP (Serial Line IP) and PPP (Point-to-Point Protocol) are two examples of such provisions (both discussed later in this 
+chapter). Tools such as FTP, Gopher and Mosaic are thereby available for use just as if the connection were directly on the Internet.
+
+<BR></P>
+
+<P><I>Direct</I> connections are obtained when the machine being used has a dedicated circuit to the Internet. This can still be a remote connection, but it has the full functionality of a directly connected machine. A good example is ISDN (Integrated 
+Services Digital Network), which is discussed later in this chapter.
+
+<BR></P>
+
+<P>Lastly, the <I>leased</I> line is a circuit leased from the local telephone company that provides a permanent address on the Internet. The advantage of a permanent address is that it that enables services such as FTP or Gopher to be set up. The leased 
+line varies in throughput from 9600 bps to 45,000,000 bps (45 Mbps).
+
+<BR></P>
+
+<H3><A ID="I6" NAME="I6">
+
+<FONT SIZE=4><B>Determining Needs</B>
+
+<BR></FONT></A></H3>
+
+<P>One of the first steps in deciding on the most appropriate type of Internet connection is to determine your needs. An individual connecting from home may be well served by a low-speed modem and a PC (I survived many years with a terminal and a 2400 bps 
+modem). On the other hand, if you need to transfer large amounts of data, or you want a more direct connection, you will want to consider other options.
+
+<BR></P>
+
+<P>One option is to obtain a data circuit from your local telephone company; another approach is to buy the fastest modem supported by the service provider. Note that while the data circuit is likely to provide a faster connection, it generally ties you to 
+a single service provider. On the other hand, purchasing your own modem means that you can simply dial the service provider who best meets your needs. But then, how do you determine your needs?
+
+<BR></P>
+
+<P>To help determine your needs, it may be useful to consider the following categories:
+
+<BR></P>
+
+<UL>
+
+<LI><I>Type of connection</I> (individual, group, or enterprise)
+
+<BR>
+
+<BR></LI>
+
+<LI><I>Frequency of use</I> (occasional, frequent, or constant)
+
+<BR>
+
+<BR></LI>
+
+<LI><I>Throughput</I> (low, medium/occasionally high, or high/frequently high
+
+<BR>
+
+<BR></LI></UL>
+
+<P>Although these categories are not necessarily mutually exclusive, and they can readily change, they are useful as a starting point. Of particular significance is whether the connection is individual or enterprise. The hardware required to make an 
+individual connection can be extremely simple&#151;a terminal and modem will suffice. Monthly charges, where applicable, typically run no more than the fixed monthly portion of a phone bill (approximately $15). On the other end of the scale, an enterprise 
+connection may require thousands of dollars worth of equipment, with monthly charges also in the thousands of dollars.
+
+<BR></P>
+
+<P>A group connection is distinct from both the individual and enterprise in that the requirements are quite different. Usually this type of connection is required when two or more individuals will be using the connection simultaneously&#151;for example, a 
+satellite office where five employees need to access the network on a frequent basis. If more than one person will be using the connection at a given time, a single modem may not suffice. In fact, even several modems may not be the most efficient or 
+cost-effective solution.
+
+<BR></P>
+
+<P>Depending on the frequency of use and the amount of data being transferred, a leased line may be best. Even high speed modems can be a bottleneck when it comes to supporting data-intensive applications. Moreover, economies of scale dictate that shared 
+use of a medium-grade connection is more cost effective than simply multiplying individual connections. If the phone line being used for the modem is being charged usage rates (as business phones are), the point at which a leased line becomes cost 
+effective is approximately three hours per day. Generally speaking, the costs of setting up a leased line are high, but these costs are quickly amortized by the significantly lower monthly costs.
+
+<BR></P>
+
+<P>The speed of leased lines varies from 9600 bps to 45 Mbps (referred to as <I>T3</I>). Due to their cost, T3 lines are generally used only by service providers in their backbone networks (links to other regions or service providers). Typically, an 
+enterprise connection varies from a fractional 56 Kbps or <I>DS-0</I> (19.2 Kbps) to a T1 (1.544 Mbps). For the sake of comparison, it is interesting to note that a standard Ethernet is nominally 10 Mbps. The best method to determine the &quot;size of the 
+pipe&quot; required for your site is to talk it over with some service providers in your area. The questions you should be prepared to answer are:
+
+<BR></P>
+
+<OL>
+
+<LI>How many users do you plan to support?
+
+<BR>
+
+<BR></LI>
+
+<LI>What kinds of services will they want to use?
+
+<BR>
+
+<BR></LI>
+
+<LI>How much Internet traffic do you anticipate?
+
+<BR>
+
+<BR></LI>
+
+<LI>How deep are your pockets? (!)
+
+<BR>
+
+<BR></LI></OL>
+
+<HR ALIGN=CENTER>
+
+<NOTE>
+
+<IMG SRC="note.gif"><B>Note: </B>To obtain an updated list of Internet service providers offering dialup access look in: ftp.netcom.com:/pub/info-deli/public-access/pdial or get it from the mailserver at MIT. Send the following message:
+
+<BR>
+
+<BR>send usenet/news.answers/pdial
+
+<BR>to mail-server@rtfm.mit.edu.
+
+<BR></NOTE>
+
+<HR ALIGN=CENTER>
+
+<P>Usually, the right answer is to buy as big a pipe as you can afford. Then plan on doubling its size at least once. The growth of the Internet is due not only to the addition of new users, but also to the increasing use by existing users. New uses for 
+the Internet are being discovered constantly&#151;many of them requiring substantial network bandwidth. Probably the best example of a network-intensive application is Mosaic. Due partly to its popularity and partly to its multimedia nature, Mosaic can 
+load a network down very quickly. The image and audio files that are downloaded through Mosaic are so large that a few users is all it takes to bring a LAN to its knees.
+
+<BR></P>
+
+<HR ALIGN=CENTER>
+
+<NOTE>
+
+<IMG SRC="more.gif"><B>Are You a Hacker?</B>
+
+<BR>
+
+<BR><B>
+
+<a href="robert.gif">by Robert Bickford</a></B>
+
+<BR>
+
+<BR>Are you a <I>hacker</I>? How would you know? If all you know about the word is what you've seen on the evening news or read in a magazine, you're probably feeling indignant at the very question! But do those magazine-selling headlines really describe 
+what a hacker is?
+
+<BR>
+
+<BR>Some time ago I defined a hacker as &quot;any person who derives joy from discovering ways to circumvent limitations&quot; <I>(MicroTimes,</I> December 1986). The definition has been widely quoted since that time, but unfortunately it has not yet made 
+the evening news in the same way as a teenager who robs a bank with his telephone.
+
+<BR>
+
+<BR>Does that teenaged criminal fit my definition? Possibly. Does that fact mean that all, or even most, hackers are criminals? (Does that fact make all or most hackers teenagers?) Of course not! So why is there such widespread misinformation about 
+hackers? Very simply, it's because the criminal hackers, or <I>crackers</I>, have been making news, while the rest of us are virtually invisible. For every irresponsible fool writing a virus program, there are at least twenty software engineers earning a 
+living &quot;. . .discovering ways to circumvent limitations.&quot; When the much-publicized Internet worm was released by an irresponsible hacker, hundreds of other hackers applied their considerable talents to control and eradicate the problem. The 
+brilliance and creativity brought to this task are typical of the kind of people&#151;hackers&#151;that my definition is meant to describe.
+
+<BR>
+
+<BR>Working on the yearly Hackers Conferences has been a mixed experience. On the one hand, helping to bring together 200 of the most brilliant people alive today, and then interacting with them for an entire weekend, is immensely rewarding. On the other 
+hand, trying to explain to others that the Hackers Conference is not a Gathering of Nefarious Criminals out to Wreak Havoc upon Western Civilization does get a bit wearing at times. Also, trying to convince a caller that repeatedly crashing his school 
+district's computer from a pay phone will not, emphatically <I>not</I>, qualify him for an invitation to the conference can be a bit annoying. None of this would be a problem if we hadn't let a small minority&#151;the <I>crackers</I>&#151;steal the show, 
+and become associated with the word <I>hacker</I> in the minds of the general public. The attendees at the Hackers Conferences&#151;many of whom hold Ph.D.s and/or are Presidents or other upper management of Fortune 500 companies&#151;are (quite 
+understandably) very indignant at being confused with these crackers.
+
+<BR>
+
+<BR>Taking myself as an example (no, I don't have a Ph.D.&#151;my only degree is from the &quot;School of Hard Knocks&quot;&#151;and no, I'm not working in management), when this article was first published (1989), I was writing software for a company that 
+builds medical image-processing equipment. My code controls a product that can, and often does, improve the quality of medical care, reduce the cost, or both. When I develop a piece of software that goes around some limit, I feel very happy and can often 
+be seen with a silly grin plastered across my face. When some ignorant reporter writes a story that equates the work I do with expensive but childish pranks committed by someone calling himself a hacker, I see red.
+
+<BR>
+
+<BR>Are you a hacker? If you want to break rules just for the sake of breaking rules, or if you just want to hurt or &quot;take revenge&quot; upon somebody or some company, then forget it. But if you delight in your work, almost to the point of being a 
+workaholic, you just might be. If finding the solution to a problem can be not just satisfying but almost an ecstatic experience, you probably are. If you sometimes take on problems just for the sake of finding the solution (and that ecstatic experience 
+that comes with it), then you almost certainly are. Congratulations! You're in good company, with virtually every inventor whose name appears in your high school history book, and with the many thousands of brilliant people who have created the computer 
+revolution.
+
+<BR>
+
+<BR>What can we do about all that bad press? Meet it head on! Tell the people you work with that you're a hacker and what that means. If you know somebody whose work habits, style, or personality make them pretty clearly a hacker, tell them so and tell 
+them what you mean by that. Show them this piece!
+
+<BR>
+
+<BR>Meanwhile, have fun finding those solutions, circumventing those limitations, and making this a better world thereby. You are an Artist of Technology, a Rider of the Third Wave, and at least you can enjoy the ride!
+
+<BR>
+
+<BR>Bob Bickford is a software consultant who lives in Marin County, California, often hacking late into the night, and (usually) enjoying it immensely. His .sig file reads: &quot;I recognize that a class of criminals and juvenile delinquents has taken to 
+calling themselves 'hackers,' but I consider them irrelevant to the true meaning of the word&#151;just as Mafia members call themselves 'businessmen' but nobody pays that fact any attention.&quot; Bob can be reached through InterNet at rab@well.sf.ca.us.
+
+<BR>
+
+<BR>An edited version of this article appeared in Microtimes in early 1989. Copyright (c) Robert Bickford, 1989, 1992.
+
+<BR></NOTE>
+
+<HR ALIGN=CENTER>
+
+<H3><A ID="I7" NAME="I7">
+
+<FONT SIZE=4><B>Dialup Hardware</B>
+
+<BR></FONT></A></H3>
+
+<P>So, what hardware do you need for a dialup connection? As previously mentioned, at minimum, a terminal and modem will suffice. Nominally that means a PC (including Macs), terminal-emulating software, and a modem. Depending on the state of your 
+addiction(!), you may also need a separate phone line&#151;lest the other members of your household turn violent towards your computer. With the advent of ISDN and other high-speed services to the home, it may eventually become unnecessary to use the phone 
+line for data. In the meantime, it is still the most common access method.
+
+<BR></P>
+
+<P>The modem has undergone many changes since the early days of acoustic couplers (headphones for the telephone handset). The newly developed V.fast standard provides for a transmission speed of 28,800&#151;doubling the previous speed of 14.4 Kbps. 
+Although cynics may question the need for greater speed, it does allow for services that would otherwise be unusable (Mosaic and PPP, for example). With V.fast as an established standard, any modem supporting the standard can connect to any other V.fast 
+modem at the higher speed&#151;there is no longer a need to rely on proprietary standards of a particular modem vendor to exceed the 14,400 standard.
+
+<BR></P>
+
+<P>Another benefit of the established V.fast protocol is that it drives down the price of those modems that don't support it. The older protocols supporting 9600 or 14,400 are often provided and are more than adequate for many users' needs. As with other 
+aspects of computers and networking, the rule of thumb is to buy the best you can afford (and then avoid reading the sale items in the computer ads!). With fancier modems becoming available, the simpler modems become less expensive. It pays then, to know 
+what all the buzzers and bells are for, and whether you actually need them.
+
+<BR></P>
+
+<P>Speed is not the only consideration in buying a modem. It is essential to ensure that the modem you purchase supports the error-correction and compression protocols used by the service provider you plan to use. These protocols (see Table 1.1) are 
+standard features on newer modems, but you should be aware of some inconsistencies. MNP5 and PEP/Turbo PEP, for example, are proprietary&#151;not all modems support them. The best policy is to check with the service provider to see which protocols are 
+supported or required.
+
+<BR></P>
+
+<P>The various standards applied to modems have been called V-dots due to their CCIT naming convention (V.32, V.42, and so on). V-dots, along with their MNP counterparts, specify the speed, compression, and error-checking standards (see Table 1.1).
+
+<BR></P>
+
+<UL>
+
+<LH><B>Table 1.1. Transmission protocols.</B>
+
+<BR></LH></UL>
+
+<TABLE BORDER>
+
+<TR>
+
+<TD>
+
+<PRE><B><I>Protocol</I></B>
+
+<BR></PRE>
+
+<TD>
+
+<PRE><B><I>Specification</I></B>
+
+<BR></PRE>
+
+<TR>
+
+<TD>
+
+<P>V.22 (or Bell 212A)</P>
+
+<TD>
+
+<P>1200 bps</P>
+
+<TR>
+
+<TD>
+
+<P>V.22bis</P>
+
+<TD>
+
+<P>2400 bps</P>
+
+<TR>
+
+<TD>
+
+<P>V.27ter</P>
+
+<TD>
+
+<P>4800 bps</P>
+
+<TR>
+
+<TD>
+
+<P>V.32</P>
+
+<TD>
+
+<P>9600 bps</P>
+
+<TR>
+
+<TD>
+
+<P>V.32bis</P>
+
+<TD>
+
+<P>14400 bps</P>
+
+<TR>
+
+<TD>
+
+<P>V.fast</P>
+
+<TD>
+
+<P>28800 bps</P>
+
+<TR>
+
+<TD>
+
+<P>V.42</P>
+
+<TD>
+
+<P>LAP-M error control</P>
+
+<TR>
+
+<TD>
+
+<P>V.42bis</P>
+
+<TD>
+
+<P>Data compression</P></TABLE>
+
+<P>As modems increase in speed, they approach the theoretical limit of what can be accomplished over voice-grade phone lines. Even with clever compression protocols, any modem will have to retransmit when line noise is encountered. With sufficient line 
+noise, the modems are effectively forced back to a slower speed. The connection is dropped altogether, occasionally, if the modems sense that the carrier signal has been lost.
+
+<BR></P>
+
+<HR ALIGN=CENTER>
+
+<NOTE>
+
+<IMG SRC="note.gif"><B>Note:</B> A loss-of-carrier signal is particularly problematic when using a cellular phone to connect via modem. One of the main problems is that cellular technology incorporates in-band signaling. This signaling is inaudible because 
+the cellphone is designed to mask it. Unfortunately for the modem, this masking also makes the carrier signal inaudible, so the net result is that the connection is lost. To get around this problem, it is necessary to do some bit-twiddling on the modems. 
+If your modem has the capability, you should increase the detection time for carrier loss. The down side of increasing that setting is a slight delay in the time it takes to disconnect after you log out.
+
+<BR></NOTE>
+
+<HR ALIGN=CENTER>
+
+<P>To configure a modem for use, simply follow the manufacturer's guidelines. The most important consideration is to ensure that the interface speed on the modem matches the speed of the serial port you connect it to. If your modem is set at 14,400, while 
+your serial port is set to 9600, you will have extreme difficulty communicating with your modem!
+
+<BR></P>
+
+<P>When you are sure you can communicate with your modem, you can go ahead with configuring your terminal-emulating software. Once again, it is important that the settings are matched; in this case, you need to match the serial port and the 
+terminal-emulating software. Typically, the settings you want to use are <I>8 data bits</I>, <I>No parity</I> and <I>1 stop bit</I> (8,N,1).
+
+<BR></P>
+
+<HR ALIGN=CENTER>
+
+<NOTE>
+
+<IMG SRC="note.gif"><B>Note: </B>For great guides on setting up a Telebit modem on Sun workstations, DOS, Apple, VMS, and more, FTP the appropriate guide from: ftp.telebit.com:/pub/tech-support/modems/setup-guides.
+
+<BR></NOTE>
+
+<HR ALIGN=CENTER>
+
+<H3><A ID="I8" NAME="I8">
+
+<FONT SIZE=4><B>The Dialup Connection</B>
+
+<BR></FONT></A></H3>
+
+<P>When you get your modem all wired up and ready to go, you must choose from the many online services available. Some of the more popular services include CompuServe, America Online (AOL), and The WELL. Chapter 2 deals with online services in depth, but 
+for this discussion, these services will suffice as examples of the dialup connection. Other examples of dialup connections include colleges that have dialup modem pools, local BBSs, and businesses that have dialup access for employees. Essentially, any 
+machine that is on the Internet and has a modem attached can potentially serve as a dialup connection.
+
+<BR></P>
+
+<P>As an alternative to the direct connection, the dialup option offers some distinct advantages. Starting with a local BBS and continuing through the large commercial services such as CompuServe and America Online, the dialup connection provides a simple 
+means of accessing the Internet. All that is required is a PC and a modem. Access is made through a local phone call, or sometimes an 800 number.
+
+<BR></P>
+
+<HR ALIGN=CENTER>
+
+<NOTE>
+
+<IMG SRC="imp.gif"><B>Tip: </B>To find numbers for local BBSs, look in the local computer weekly or the computer supplement of larger papers. Often, there will be listings of BBSs that have Internet connectivity. Alternately, local computer stores are good 
+sources of information&#151;some even have their own BBS established.
+
+<BR></NOTE>
+
+<HR ALIGN=CENTER>
+
+<P>Another advantage of the dialup connection is that so many of the complexities of Internet services are dealt with by the service provider. The Domain Name Service (DNS), sendmail configuration, and all the other headaches faced by network 
+administrators are taken care of for you. All you have to be concerned with is your modem, PC, and terminal-emulating software.
+
+<BR></P>
+
+<P>In the same vein, there is usually a certain amount of disk space that you can use without having to worry about backups. At least, someone is supposed to be backing up your disk space&#151;right? At any rate, having the extra disk space is always a 
+nice benefit.
+
+<BR></P>
+
+<P>The main drawback to using a dialup connection is that it usually does not allow the full range of Internet services. Some systems have only e-mail access to the Internet (although it's amazing how much you can accomplish using just e-mail access). And 
+even among those services that do offer full access (FTP, Gopher, and so on), there is still a limitation in that you are connecting through a third party. For example, if you transfer files using FTP, you would have to transfer them first to the service 
+provider's machine, then transfer the files down to your PC. Worse yet, certain applications, such as Mosaic, expect your machine to be directly connected and will not work at all.
+
+<BR></P>
+
+<P>Having said that, though, I should point out that the dialup option is often one of the most cost-effective and sensible solutions. One of the most common examples of the dialup option is connecting via your employer's or nearby college's modem pool. 
+Depending on the policies at the college, a <I>community account</I> can be obtained for around $15/month. Also, it is becoming more common to be able to use SLIP or PPP on these connections, thus effectively simulating a direct connection. If SLIP or PPP 
+is available, it is well worth considering this connection option.
+
+<BR></P>
+
+<H3><A ID="I9" NAME="I9">
+
+<FONT SIZE=4><B>SLIP/PPP: the Proxy Connection</B>
+
+<BR></FONT></A></H3>
+
+<P>In the dark ages of computer networking (not long after ISDN was coined), network hackers were trying to come up with a method of extending their networks using modems. The net result was <I>S</I>erial <I>L</I>ine over <I>IP</I>, or <I>SLIP</I>. The 
+specification for SLIP&#151;RFC 1055&#151;describes it as a nonstandard. Nonetheless, SLIP is an extremely simple and effective scheme for transmitting Internet packets over a serial line, such as a modem. As a result of its straightforward implementation 
+and use, SLIP gained significant acceptance. There are many public-domain versions that work in conjunction with MAC, DOS, and various UNIX flavors.
+
+<BR></P>
+
+<P>The main advantage of a SLIP connection is that the remote machine (for example, the PC at home) becomes a full member of the Internet community for the duration of the call. This means that the full suite of Internet tools&#151;Telnet, FTP, Gopher, 
+Mosaic, and the like&#151;can all be run as if the machine were directly connected to the network. Of course, the speed of the modem and the load on the machine hosting the SLIP connection both effect a somewhat delayed response time, but the connection 
+evokes a sense of being directly attached to the local network.
+
+<BR></P>
+
+<P>The downside of SLIP is that because of its nonstandard nature, there are many different implementations and no clear method to conform the variations. Moreover, the simplistic nature of SLIP does not provide for many of the complexities of contemporary 
+network environments. SLIP supports only IP, which leaves out OSI, DECnet, Appletalk, Novell Netware, and others. Moreover, SLIP requires that both ends of the connection be completely preconfigured, making nomadic computing very difficult to support. 
+Lastly, SLIP provides no mechanism for authenticating the connection.
+
+<BR></P>
+
+<P>The solution to these problems was the development of <I>PPP</I> (<I>P</I>oint-to-<I>P</I>oint <I>P</I>rotocol) by the Internet Engineering Task Force (IETF). PPP represents the culmination of several years of work by the IETF's Point-to-Point Working 
+Group. The protocol, as defined in RFC 1548, is much more full-featured than SLIP.
+
+<BR></P>
+
+<P>Some of the advantages of PPP include the capability to negotiate compression technique and maximum frame size; the provision for control characters to be &quot;escaped&quot; so that they can be passed through to the application; and the capability to 
+provide low-level authentication, quality monitoring, and loopback detection. Fortunately, these additional features do not come at the cost of making a connection more difficult to establish. As the connection is being made, PPP can negotiate all the 
+variables that might be problematic.
+
+<BR></P>
+
+<P>One of the features of PPP that is bound to make it increasingly popular is the support for nomadic computing. This feature provides the capability to make connections from any point-of-presence on the Internet, regardless of network addressing.
+
+<BR></P>
+
+<P>When the connection is made, the PPP address negotiation permits the assignment of an IP address from a pool of addresses. The nomadic computer can then use that address for the duration of the session. After the session has ended, the address is 
+deallocated and can be reused for another connection. This reallocation of addresses will be particularly appreciated as network administrators begin to run out of assignable addresses.
+
+<BR></P>
+
+<P>Although there are many public-domain versions of SLIP and PPP available, installation is not a trivial task. The support provided by software vendors is often worth the $100[nd]$700 for the commercial package. Arguably, there is also added reliability 
+in the commercial implementation&#151;Table 1.2 contains examples of commercial SLIP/PPP software.
+
+<BR></P>
+
+<UL>
+
+<LH><B>Table 1.2. SLIP/PPP software providers.</B>
+
+<BR></LH></UL>
+
+<TABLE BORDER>
+
+<TR>
+
+<TD>
+
+<PRE><B><I>OS</I></B>
+
+<BR></PRE>
+
+<TD>
+
+<PRE><B><I>Software</I></B>
+
+<BR></PRE>
+
+<TD>
+
+<PRE><B><I>Vendor</I></B>
+
+<BR></PRE>
+
+<TR>
+
+<TD>
+
+<P>DOS/Windows</P>
+
+<TD>
+
+<P>Chameleon</P>
+
+<TD>
+
+<P>Netmanage</P>
+
+<TR>
+
+<TD>
+
+<P>Mac</P>
+
+<TD>
+
+<P>MacSLIP</P>
+
+<TD>
+
+<P>Trisoft</P>
+
+<TR>
+
+<TD>
+
+<P>UNIX</P>
+
+<TD>
+
+<P>MST-PPP</P>
+
+<TD>
+
+<P>Morning Star</P></TABLE>
+
+<P>It is also possible to implement SLIP/PPP on a router. Several vendors have incorporated SLIP/PPP, a router, and a modem in one package. Examples include the NetBlazer from Telebit, and the NetHopper from Rockwell International. MorningStar also has a 
+router with SLIP/PPP incorporated. Even though it is convenient to have a box with all this functionality packaged together, it is nonetheless an expensive approach when compared with installing the software and modem separately&#151;assuming that you 
+already have a machine to install them on.
+
+<BR></P>
+
+<P>On the whole, PPP provides a more robust and configurable connection than SLIP. Some implementations of PPP (Morning Star's, for example) actually include a SLIP option to interoperate with older, SLIP-only configurations. In sum, new services being 
+established for dialup networking should be implemented using PPP. Even existing services running SLIP should be given serious consideration as prospects for converting to PPP.
+
+<BR></P>
+
+<H3><A ID="I10" NAME="I10">
+
+<FONT SIZE=4><B>UUCP</B>
+
+<BR></FONT></A></H3>
+
+<P>Although it is not strictly a part of the Internet protocols, UUCP bears some discussion because it has been a significant adjunct to the Internet. Probably best known as the transport mechanism for news, UUCP is also used to provide e-mail to remote 
+machines. Because most implementations of UNIX include UUCP, and it requires only a phone line and modem to use, UUCP is very economical. The catch is that the setup procedures are very arcane, and it does not provide full connectivity.
+
+<BR></P>
+
+<HR ALIGN=CENTER>
+
+<NOTE>
+
+<IMG SRC="note.gif"><B>Note: </B>News (discussion groups) is carried out over Usenet, which is a pseudo-network of all computers that carry news. UUCP used to be the main transport mechanism for news; hence, it was often confused with Usenet. These days, 
+however, news is now more often distributed over TCP/IP using the Internet, so it is more evident that UUCP and Usenet are not synonymous.
+
+<BR>
+
+<BR>For more on this topic, see Chapter 9, &quot;Usenet.&quot;
+
+<BR></NOTE>
+
+<HR ALIGN=CENTER>
+
+<P>Primarily, UUCP is useful for exchanging files with a remote host&#151;particularly e-mail. In a situation wherein a remote machine is self-sufficient and only requires an exchange of e-mail, UUCP is a good choice. Such cases are becoming increasingly 
+rare, however. More often, it is the case that remote machines are all-the-more isolated if they can't connect to the Internet; yet it is inefficient for the users of a remote machine to have to manually connect to retrieve e-mail.
+
+<BR></P>
+
+<P>O<A ID="I11" NAME="I11"></A>ne solution is to use both UUCP and TCP/IP: UUCP-over-TCP Daemon (UUCPD). If you have multiple users on a machine that is only occasionally connected to the Internet, UUCPD is an efficient means of dealing with e-mail. This 
+is particularly true if the link that is being used to connect incurs a usage charge. If there is no usage charge, but the link is slow, it might still make more sense to implement UUCPD rather than relying on interactive for e-mail. UUCPD relies on 
+TCP/IP, so there must be a SLIP or PPP connection made to support it; otherwise, UUCPD is configured identically to the standard UUCP.
+
+<BR></P>
+
+<P>Eventually, we are supposed to get high-speed digital connections to the home&#151;our on-ramps to the superhighway. But don't hold your breath waiting for your neighborhood to be wired; you might be turning bluer than a Smurf before you see that kind 
+of connectivity. In the meantime, the modem will continue to be the principal method of connecting from the home and similar single-user environments. Having said that, though, I should point out that ISDN seems to be nearing deployment in many 
+metropolitan areas.
+
+<BR></P>
+
+<H3><A ID="I12" NAME="I12">
+
+<FONT SIZE=4><B>ISDN</B>
+
+<BR></FONT></A></H3>
+
+<P>ISDN, which stands for Integrated Services Digital Network, has been called variously, &quot;I Still Don't kNow&quot;, and &quot;It Still Doesn't Network&quot; due to its long-awaited implementation. Amazingly, ISDN dates back to 1968, when it was 
+conceived as a means of integrating voice, teletext, videotex, and data. Obviously, the network landscape was quite different in those early days; consequently, ISDN was designed based on the assumption that 64 Kbps was plenty of bandwidth. Moreover, it 
+was assumed that the same equipment used to route telephone traffic would be the best method to handle data.
+
+<BR></P>
+
+<P>Despite its shortcomings, however, ISDN is quite likely to serve as the high-speed connection to the home for the next several years. The main reason is that it is extremely expensive to rewire existing neighborhoods with fiber optic cable. ISDN works 
+on existing copper cables and is the telephone companies' (telcos') preferred approach to bringing data communications into the home. Ironically, one of the main stumbling blocks to ISDN's implementation has been the telco's insistence on a metered fee 
+structure (much like the way business phones are charged). Recently, much pressure has been placed on the telcos to use a flat fee for ISDN use. The flat fee would mean that users would be charged a single monthly fee only, instead of having to worry about 
+the length of each call. If the flat rate is implemented, acceptance of ISDN would almost certainly be guaranteed, and widespread deployment would follow. On the other hand, if a split fee is used&#151;meaning that during business hours the metered rate 
+applies and during off-business hours the flat rate applies&#151;chances are it will not be well received.
+
+<BR></P>
+
+<P>A service similar to ISDN that already exists in most areas is Switched 56k (SW56k). This service enables you to connect to other sites running the same service. It also interoperates with ISDN. SW56k requires special cabling (whereas ISDN does not), 
+but is analogous to regular phone circuits in that it takes some time to make the connection (ISDN is much faster).
+
+<BR></P>
+
+<P>The biggest drawback to SW56k is that it is a metered service, like a business phone: each call is billed depending on the length of the call and more if it is long distance. The alternative to SW56k is a dedicated 56k (DDS) connection, which costs more 
+initially, but is billed at a flat rate. The dedicated line is fixed between two points and is therefore not as flexible as SW56k.
+
+<BR></P>
+
+<P>Some telcos are offering single-line ISDN service, which is a 56 Kbps line, whereas others add the two 64 Kbps channels for a maximum throughput of 128 Kbps. If you are considering ISDN service, your best bet is to contact your local telephone company 
+to see what services are available. General information can be found at the info.bellcore.com FTP site. Also, regional telcos sometimes have information services available online&#151;for example, Pacific Bell has a Gopher server at gopher.pacbell.com.
+
+<BR></P>
+
+<H3><A ID="I13" NAME="I13">
+
+<FONT SIZE=4><B>AirNet</B>
+
+<BR></FONT></A></H3>
+
+<P>An alternative option to connect a remote site to the Internet is what I call AirNet. A number of manufacturers have developed products to connect remote computers over several miles. Using spread-spectrum technology, these devices usually broadcast at 
+approximately 900 Mghz. A receiver unit is required at the Internet site, but because at least one manufacturer has developed a PC version (NCR's WaveLAN), the total cost is not prohibitive.
+
+<BR></P>
+
+<HR ALIGN=CENTER>
+
+<NOTE>
+
+<IMG SRC="note.gif"><B>Note: </B>As with any broadcast RF signal, obtaining good signal strength is based on a number of factors. Because the FCC regulates the power of the transmitters, the main variables that can improve signal strength are the antenna 
+and its cabling. A low-loss cable and, particularly, a high-gain antenna will go a long way to aiding a weak signal. Larsen Electronics in Washington state make a high-gain (12-dB) yaggi antenna that is well-suited to this purpose.
+
+<BR></NOTE>
+
+<HR ALIGN=CENTER>
+
+<P>The principal limitation with the AirNet connection is that the units cannot be more than a few miles apart (usually 2-3) and they must have line-of-sight visibility to establish a link. Ultimately, their application is limited. With a bandwidth of 1-8 
+Mbps, however, the AirNet approach clearly surpasses the ISDN throughput. As a result, AirNet may come to serve a niche market.
+
+<BR></P>
+
+<H3><A ID="I14" NAME="I14">
+
+<FONT SIZE=4><B>Leased Line</B>
+
+<BR></FONT></A></H3>
+
+<P>For the enterprise connection, you should consider nothing short of a leased line. Too often the needs of the enterprise are underestimated, resulting in costly equipment being replaced to provide a connection with higher throughput. As stated earlier, 
+allow for double your current need and count on doubling that amount at least once.
+
+<BR></P>
+
+<P>Leased lines come in a variety of sizes and flavors. The size (or speed) varies from 9600 bps to 45 Mbps. At the bottom of the scale is the 9600 bps connection over an analog line. At the other end is the 45 Mbps (T3) connection over a digital line. T3 
+lines are typically used for backbone links between major networks. A good example is the NSFnet, which employs T3 lines for its national backbone network. Most enterprise connections can be adequately served by much less expensive circuits. The NSFnet 
+itself began with 56 Kbps (DS-0), which is a data circuit over ordinary voice lines.
+
+<BR></P>
+
+<P>The next step up is a fractional T1. A T1 circuit is 1.544 Mbps, but often telcos provide fractional T1s at reduced rates. These usually start at 64 Kbps and increment by 64 Kbps, up to 1.544 Mbps.
+
+<BR></P>
+
+<P>The hardware required for a leased line varies depending on the type of circuit. Generally speaking, though, <I>each</I> end requires a CSU/DSU (a device for digital conversion) and a router. The exception is analog lines that can be used with modems.
+
+<BR></P>
+
+<P>The router is what determines which traffic is destined for the other side of the link versus the local network. The router can be a process running on a UNIX machine, but for faster circuits, it is more efficient to have a dedicated router (Cisco, 
+Proteon, Wellfleet, and so on). This is one of those factors that can contribute to getting the maximum throughput from your Internet link. If you use a UNIX machine as a router and the machine gets loaded down with other processes, the routing performance 
+is going to suffer. It is advisable to use a dedicated router, or at least a UNIX router on a machine that is stripped of the other processes.
+
+<BR></P>
+
+<H3><A ID="I15" NAME="I15">
+
+<FONT SIZE=4><B>Summary</B>
+
+<BR></FONT></A></H3>
+
+<P>In determining the needs for an Internet connection, it becomes possible to match an appropriate type of circuit. An individual who wants to be able to run the full suite of Internet tools would probably be well served by a PPP connection running over a 
+high-speed modem. At the same time, a satellite office with half a dozen employees who run data-intensive applications over the network would probably not be very happy with PPP over a modem. A better match for such a group connection would be ISDN or 
+fractional T1.
+
+<BR></P>
+
+<P>At the enterprise level, it is essential to plan for growth. Although an ISDN circuit may be sufficient for the initial phase of implementation, bear in mind that it does not scale. An IS circuit is 64 Kbps, whereas a full ISDN circuit tops out at 128 
+Kbps. A more appropriate solution would probably be a fractional T1 because there is more room for growth&#151;from 64 Kbps all the way to 1.544 Mbps.
+
+<BR></P>
+
+<P>The types of connections to the Internet vary greatly, and new methods continue to evolve. Determining which method is most appropriate can be complicated and frustrating. By becoming aware of your needs and some of the connection options, however, it 
+is possible to make a rational decision. With some luck, the decision will prove to be the right one and provide for the growth of Internet use you are bound to witness.
+
+<BR></P>
+
+<H3><A ID="I16" NAME="I16">
+
+<FONT SIZE=4><B>References and Further Reading</B>
+
+<BR></FONT></A></H3>
+
+<H4><A ID="I17" NAME="I17">
+
+<FONT SIZE=3><B>Books</B>
+
+<BR></FONT></A></H4>
+
+<P>Bang, Steve, et al, <I>The Internet Unleashed</I> (Indianapolis: Sams Publishing, 1994).
+
+<BR></P>
+
+<P>Estrada, Susan, <I>Connecting to the Internet</I> (Sebastopol, CA: O'Reilly &amp; Associates, 1993).
+
+<BR></P>
+
+<P>Kessler, Gary, <I>ISDN: Concepts, Facilities, and Services</I>, second edition (New York: McGraw-Hill, 1993).
+
+<BR></P>
+
+<P>Lynch, Daniel C., and Rose, Marshall T. eds., <I>The Internet System </I><I>Handbook</I> (Reading, MA: Addison-Wesley, 1993).
+
+<BR></P>
+
+<P>Quarterman, John, and Smoot, Carl-Mitchell, <I>The Internet </I><I>Connection</I> (Reading, MA: Addison-Wesley, 1993).
+
+<BR></P>
+
+<H4><A ID="I18" NAME="I18">
+
+<FONT SIZE=3><B>Online Materials</B>
+
+<BR></FONT></A></H4>
+
+<P>FYI 16: Connecting to the Internet, Gopher:
+
+<BR>is.internic.net:/infoguide/getting-connected/about-internet-access/fyi16
+
+<BR></P>
+
+<P>ISDN FAQ: send e-mail to mail-server@rtfm.mit.edu with the message:
+
+<BR>send usenet/news.answers/isdn-faq
+
+<BR></P>
+
+<P>General Internet Information, Gopher:
+
+<BR>is.internic.net:/infoguide
+
+<BR></P>
+
+<P>National ISDN, FTP: info.bellcore.com:/pub/ISDN
+
+<BR></P>
+
+<P>PacBell ISDN, Gopher: gopher.pacbell.com:1/pacbell_bbs/ISDN. FTP: <A HREF="ftp.pacbell.com:/PacBell/info/ISDN">ftp.pacbell.com:/PacBell/info/ISDN</A>.
+
+<BR></P>
+
+<P>PDIAL (Public Dialup Internet Access List); send e-mail to mail-server@rtfm.mit.edu with the message:
+
+<BR></P>
+
+<P>send usenet/news.answers/pdial
+
+<BR></P>
+
+<P>PPP FAQ; send mail to mail-server@rtfm.mit.edu with the message:
+
+<BR></P>
+
+<P>send usenet/news.answers/ppp-faq/part1
+
+<BR>send usenet/news.answers/ppp-faq/part2
+
+<BR>send usenet/news.answers/ppp-faq/part3
+
+<BR>...
+
+<BR>send usenet/news.answers/ppp-faq/part8
+
+<BR></P>
+
+<P>RFC1055 SLIP, RFC1548 PPP; send e-mail to rfc-info@isi.edu with the message:
+
+<BR></P>
+
+<P>  Retrieve: RFC
+
+<BR>  Doc-ID: RFC1055
+
+<BR>  Retrieve: RFC
+
+<BR>  Doc-ID: RFC1548
+
+<BR></P>
+
+<P>Sutterfield, Robert A., &quot;Low-Cost IP Connectivity,&quot; paper presented to Sun User Group, December 1991. Deals with SLIP versus PPP. Available by FTP from:
+
+<BR>ftp.uu.net:vendor/MorningStar/papers/sug91-cheapIP.ps.Z
+
+<BR></P>
+
+<P>US Dial-Up Service Providers, Gopher:
+
+<BR>is.internic.net:/infoguide/getting-connected/us-dialup</P>
+
+<P><A HREF="tigp1.htm"><IMG SRC="bluprev.gif" WIDTH = 32 HEIGHT = 32 BORDER = 0 ALT="Previous Page"></A>
+
+<A HREF="httoc.htm"><IMG SRC="blutoc.gif" WIDTH = 32 HEIGHT = 32 BORDER = 0 ALT="TOC"></A>
+
+<A HREF="htindex.htm"><IMG SRC="bluindex.gif" WIDTH = 32 HEIGHT = 32 BORDER = 0 ALT="Index"></A>
+
+<A HREF="tig02.htm"><IMG SRC="blunext.gif" WIDTH = 32 HEIGHT = 32 BORDER = 0 ALT="Next Page"></A>
+
+<A HREF="httoc.htm"><IMG SRC="bluprev.gif" WIDTH = 32 HEIGHT = 32 BORDER = 0 ALT="Home"></A>
+
+</P></BODY></HTML>
+

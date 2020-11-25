@@ -1,0 +1,1552 @@
+<HTML>
+
+<HEAD>
+
+<TITLE>Tricks of the Internet Gurus tig16.htm</TITLE>
+
+<LINK REL="ToC" HREF="httoc.htm">
+
+<LINK REL="Index" HREF="htindex.htm">
+
+<LINK REL="Next" HREF="tig17.htm">
+
+<LINK REL="Previous" HREF="tig15.htm"></HEAD>
+
+<BODY TEXT="#000000" LINK="#0000FF" VLINK="#800080" bgcolor=white>
+
+<P><A HREF="tig15.htm"><IMG SRC="bluprev.gif" WIDTH = 32 HEIGHT = 32 BORDER = 0 ALT="Previous Page"></A>
+
+<A HREF="httoc.htm"><IMG SRC="blutoc.gif" WIDTH = 32 HEIGHT = 32 BORDER = 0 ALT="TOC"></A>
+
+<A HREF="htindex.htm"><IMG SRC="bluindex.gif" WIDTH = 32 HEIGHT = 32 BORDER = 0 ALT="Index"></A>
+
+<A HREF="tig17.htm"><IMG SRC="blunext.gif" WIDTH = 32 HEIGHT = 32 BORDER = 0 ALT="Next Page"></A>
+
+<A HREF="httoc.htm"><IMG SRC="bluprev.gif" WIDTH = 32 HEIGHT = 32 BORDER = 0 ALT="Home"></A>
+
+</P><UL>
+
+<LI>
+
+<A HREF="#I1">16</A></LI>
+
+<UL>
+
+<LI>
+
+<A HREF="#I3">Veronica</A></LI>
+
+<UL>
+
+<UL>
+
+<UL>
+
+<LI>
+
+<A HREF="#I4">by Billy Barron</A></LI></UL></UL>
+
+<LI>
+
+<A HREF="#I5">Fred Barrie and Steven Foster</LI>
+
+<UL>
+
+<UL>
+
+<LI>
+
+<A HREF="#I6">--by Tod Foley</A></LI></UL></UL>
+
+<LI>
+
+<A HREF="#I7">Access Tricks</A></LI>
+
+<LI>
+
+<A HREF="#I8">Different or Invalid Results</A></LI>
+
+<LI>
+
+<A HREF="#I9">The Stoplist</A></LI>
+
+<LI>
+
+<A HREF="#I10">Relevance Ranking</A></LI>
+
+<LI>
+
+<A HREF="#I11">Word Stemming</A></LI>
+
+<LI>
+
+<A HREF="#I12">Multiple Word Searching</A></LI>
+
+<LI>
+
+<A HREF="#I13">Boolean Searching</A></LI>
+
+<LI>
+
+<A HREF="#I14">Word Delimiters</A></LI>
+
+<LI>
+
+<A HREF="#I15">Using Synonyms</A></LI>
+
+<LI>
+
+<A HREF="#I16">Seeing More Responses</A></LI>
+
+<LI>
+
+<A HREF="#I17">Searching on Types</A></LI>
+
+<LI>
+
+<A HREF="#I18">Link Files</A></LI>
+
+<LI>
+
+<A HREF="#I19">Helping Veronica</A></LI>
+
+<LI>
+
+<A HREF="#I20">Competing Systems</A></LI>
+
+<LI>
+
+<A HREF="#I21">Future Directions</A></LI>
+
+<LI>
+
+<A HREF="#I22">Summary</A></LI></UL></UL></UL>
+
+
+
+<H1><A ID="I1" NAME="I1">
+
+<BR>
+
+<FONT SIZE=5><A ID="I2" NAME="I2"></A><B>16</B>
+
+<BR></FONT></A></H1>
+
+<H2><A ID="I3" NAME="I3">
+
+<FONT SIZE=5><B>Veronica</B>
+
+<BR></FONT></A></H2>
+
+<H5><A ID="I4" NAME="I4">
+
+<FONT SIZE=3><B>by Billy Barron</B>
+
+<BR></FONT></A></H5>
+
+<H3><A ID="I5" NAME="I5">
+
+<FONT SIZE=4><B>Fred Barrie and Steven Foster</B>
+
+<BR></FONT></A></H3>
+
+<H5><A ID="I6" NAME="I6">
+
+<FONT SIZE=3><B>--by Tod Foley</B>
+
+<BR></FONT></A></H5>
+
+<P>Fred Barrie and Steven Foster are the creators of Veronica, a powerful Gopher-based program that continually gathers and maintains a list of menu items on all Gopher servers worldwide&#151;enabling you to search Gopherspace by <I>topic </I>rather than 
+<I>location</I>. By finding your keywords and providing you with a simple menu-driven interface to navigate Gopherspace by, Veronica certainly lives up to her name: <I>Very Easy</I>,<I> </I><I>Rodent-Oriented</I>,<I> Netwide Index of Computerized 
+Archives</I>. She was the main topic of discussion recently on IRC channel <I>#veronica</I>, where Barrie and Foster met with me to talk about their work.
+
+<BR></P>
+
+<P><B>&lt;tod&gt;</B> Tell me something about the origins of Veronica.
+
+<BR></P>
+
+<P><B>&lt;barrie&gt;</B> Well, in the beginning we started by compiling the code for Gopher.
+
+<BR></P>
+
+<P><B>&lt;foster&gt;</B> Steve and I were trying every little program and if it did not compile the first time, we gave up on it.
+
+<BR></P>
+
+<P><B>&lt;barrie&gt;</B> Well, to Paul Linders credit, it compiled the first time and we were in the Gopher world.
+
+<BR></P>
+
+<P><B>&lt;tod&gt;</B> How long have you worked together?
+
+<BR></P>
+
+<P><B>&lt;foster&gt;</B> We started together in the fall of '91. We had both workd for NV computer services for a while before, but not together.
+
+<BR></P>
+
+<P><B>&lt;foster&gt;</B> It got exciting together when we found we both thought Gopher was interesting. At that time we were the only 2 here who thought so.
+
+<BR></P>
+
+<P><B>&lt;barrie&gt;</B> After the Gopher server was compiled at UNR, we started to think how to improve Gopher. Originally we were to index the Gopher world similiar to Archie&#151;that is, find out where an item is and then give the route to the user to 
+find it.
+
+<BR></P>
+
+<P><B>&lt;barrie&gt;</B> The idea was to give them the address of the Gopher server that matched their query and then the directory&#151;they would have to go down to find that item.
+
+<BR></P>
+
+<P><B>&lt;barrie&gt;</B> Steve came up with the great idea of actually connecting them direct, and then we hit the big time.
+
+<BR></P>
+
+<P><B>&lt;tod&gt;</B> Ahaa! Like the idea that Archie and FTP should really be one tool....
+
+<BR></P>
+
+<P><B>&lt;barrie&gt;</B> Yes, Archie and FTP should be one tool....
+
+<BR></P>
+
+<P><B>&lt;foster&gt;</B> Actaully, the dumb way of doing it would make some sense. At first, people were very interested in &quot;Where is this resource?&quot; and what institutional domain it belonged in; that is, they really felt they needed a lot of 
+context.
+
+<BR></P>
+
+<P><B>&lt;tod&gt;</B> The realspace was really that important to people?
+
+<BR></P>
+
+<P><B>&lt;foster&gt;</B> Well, yes. I talked to Peterd [Peter Deutsch] shortly after our work began, and Peter did emphasize that...no, he emphasized that the &quot;failure&quot; of archie to directly connect is really a client issue, not a server issue. 
+He said someone should do that client. But mainly, it was timing. The interactive protocols weren't there until '91...late '91.
+
+<BR></P>
+
+<P><B>&lt;barrie&gt;</B> Actually, Gopher is the FTP and Archie client that made that all work.
+
+<BR></P>
+
+<P><B>&lt;tod&gt;</B> So what happened next for you and V?
+
+<BR></P>
+
+<P><B>&lt;barrie&gt;</B> Well, we found some code that did a simple search of a Gopher site for administrative purposes, by Boone at Michigan State.
+
+<BR></P>
+
+<P><B>&lt;barrie&gt;</B> Well, we took that code and modified, really took a machete to it :) and started to do an index of about 250 Gopher sites.
+
+<BR></P>
+
+<P><B>&lt;barrie&gt;</B> The first index we used was on a NeXT computer, using the Digitial Librarian with really really small data files to speed up the index process.
+
+<BR></P>
+
+<P><B>&lt;barrie&gt;</B> After we brought the NeXT computer to its knees by the third day of the release...
+
+<BR></P>
+
+<P><B>&lt;tod&gt;</B>!!!
+
+<BR></P>
+
+<P><B>&lt;barrie&gt;</B>...we started to create new index schemes.
+
+<BR></P>
+
+<P><B>&lt;tod&gt;</B> How many Gopher sites are there now?
+
+<BR></P>
+
+<P><B>&lt;foster&gt;</B> June 1994: about 5800 Gopher sites.... It is a bit inexact because some gateways are halfway Gophers, maybe. From analysis of the last Veronica data collection, it looks like Gopher is being used more as &quot;duct tape&quot; than 
+it was at first: many more gateways to FTP, Usenet, etc. At first we just had files, of course.
+
+<BR></P>
+
+<P><B>&lt;tod&gt;</B> Okay&#151;we're back in '92....
+
+<BR></P>
+
+<P><B>&lt;foster&gt;</B> Okay, in 1992...
+
+<BR></P>
+
+<P><B>&lt;barrie&gt;</B> Well, back in '92 we gave the guys at University of Minnesota a sneak peak at our little server.
+
+<BR></P>
+
+<P><B>&lt;barrie&gt;</B> Farhad from U Minn came back and said we had to go to the Internet with this.
+
+<BR></P>
+
+<P><B>&lt;barrie&gt;</B> So on November 17, we made an announcement that Veronica had started and asked people to comment on our great experiment in networking.
+
+<BR></P>
+
+<P><B>&lt;tod&gt;</B> You originally saw V as just a personal tool?
+
+<BR></P>
+
+<P><B>&lt;foster&gt;</B> NO NO&#151;not just as a personal tool. But we needed the encouragement from the Minnesota team to announce it before we thought it was ready.
+
+<BR></P>
+
+<P><B>&lt;foster&gt;</B> We wanted to work on it some more. They essentially said that the world needs this now, go for it guys, or some such Farhad-ism!
+
+<BR></P>
+
+<P><B>&lt;tod&gt;</B> Well, Gopherspace sure the hell needed it....
+
+<BR></P>
+
+<P><B>&lt;foster&gt;</B> That it did. Most interesting response.
+
+<BR></P>
+
+<P><B>&lt;tod&gt;</B>&quot;Most interesting?&quot;
+
+<BR></P>
+
+<P><B>&lt;foster&gt;</B> We posted to a few lists on the evening of Nov 17, and by the next morning our little NeXT box had taken about 4700 search connections!!!!
+
+<BR></P>
+
+<P><B>&lt;tod&gt;</B>!!!
+
+<BR></P>
+
+<P><B>&lt;foster&gt;</B> We were pleased.
+
+<BR></P>
+
+<P><B>&lt;barrie&gt;</B> Oh by the way&#151;the code was written in Perl.
+
+<BR></P>
+
+<P><B>&lt;tod&gt;</B> Thanx.
+
+<BR></P>
+
+<P><B>&lt;barrie&gt;</B> Let us say that it was the first thing we had ever written in Perl.
+
+<BR></P>
+
+<P><B>&lt;tod&gt;</B> You guys are quick learners....
+
+<BR></P>
+
+<P><B>&lt;barrie&gt;</B> We were learning Perl and Veronica at the same time. We made a lot of improvements in the first three months.
+
+<BR></P>
+
+<P><B>&lt;tod&gt;</B> What have some of the significant improvements been?
+
+<BR></P>
+
+<P><B>&lt;barrie&gt;</B> At first, Veronica was a search that took quite a bit of time to run.
+
+<BR></P>
+
+<P><B>&lt;barrie&gt;</B> On the order of an Archie search, somewhere about 20 minutes or longer per search.
+
+<BR></P>
+
+<P><B>&lt;barrie&gt;</B> Most people were happy with this since they were used to Archie.
+
+<BR></P>
+
+<P><B>&lt;tod&gt;</B> How did you cut that down?
+
+<BR></P>
+
+<P><B>&lt;barrie&gt;</B> I read a book on how to index...after I tried to hack the WAIS code into Veronica.
+
+<BR></P>
+
+<P><B>&lt;barrie&gt;</B> The WAIS code was faster but it still lacked something...about 10 minutes.
+
+<BR></P>
+
+<P><B>&lt;barrie&gt;</B> I experimented a lot with different codes and finally got the search time down to a reasonable time&#151;20 to 30 seconds. This was all in April 93 (right before GOPHERCON '93). We had to show off a little :)
+
+<BR></P>
+
+<P><I>[Here Barrie gets offline for a short time; the interview </I><I>continues.]</I>
+
+<BR></P>
+
+<P><B>&lt;tod&gt;</B> Let's talk about your individual contributions&#151;how's the work divided between you and Fred? Who does what?
+
+<BR></P>
+
+<P><B>&lt;foster&gt;</B> It has varied at different parts of the project. Fred was definitely faster at learning Perl than I was. On the other hand, I saw some of how the architecture should work, first. The first cut was really very evenly split as to 
+server code. I did the first writeups on the WAIS cut, Fred started it, and I continued with it. I was still trying to write the server in C, using pieces of WAIS code, when Fred redid it in Perl with his nice no-overhead algorithm. Last summer I went off 
+and consulted on some other stuff for a while; Fred did the data harvests alone for a couple of months then.
+
+<BR></P>
+
+<P>Anyway, I took over managing the harvests last August. Have done them since. Fred wrote some new stuff into the server and harvesting code in the fall. Since Feb, I have been doing it without Fred. [He] has actually started a new project with a 
+different firm, and I think he will talk about that when he gets back on.
+
+<BR></P>
+
+<P>I am working on some new things for Veronica; improved interfaces, mostly. Seems every month there is a different pressing aspect to server bugs, or better control of no-index options, or something. In the next few months I want to work on interface 
+issues.
+
+<BR></P>
+
+<P><B>&lt;tod&gt;</B> There are plenty of people doing GUIs of one type or another.
+
+<BR></P>
+
+<P><B>&lt;foster&gt;</B> YUP. I am definitely interested in the server end of it.
+
+<BR></P>
+
+<P><B>&lt;tod&gt;</B> how do they fit with you, commercially/professionally? Has anyone approached you to package &quot;Veronica in a Box?&quot;
+
+<BR></P>
+
+<P><B>&lt;foster&gt;</B> Interesting question. Yes, there have been some suggestions, but nothing real firm.
+
+<BR></P>
+
+<P><B>&lt;tod&gt;</B> Is the code public domain?
+
+<BR></P>
+
+<P><B>&lt;foster&gt;</B> No, the code is copyrighted. Shareware with no fee.
+
+<BR></P>
+
+<P><B>&lt;tod&gt;</B> Heh!
+
+<BR></P>
+
+<P><B>&lt;foster&gt;</B> Yes, that is the way we think it should be. I do think it is better to avoid proliferation of many indexers for the Net's sake. I am working with Peterd (for instance) to keep synchrionized about options for controlling no-index 
+flags, update frequency, and so forth. And of course we are working with the MN team to add things to Gopher servers which can simplify the indexing problem....
+
+<BR></P>
+
+<P><B>&lt;foster&gt;</B> Tell me Tod, do you have any ideas about how to package &quot;Veronica in a box?&quot;
+
+<BR></P>
+
+<P><B>&lt;tod&gt;</B> Heh. I'm thinking of a personalized Veronica. She could limit her harvests to categories determined by questions you answer.
+
+<BR></P>
+
+<P><B>&lt;foster&gt;</B> What would that be like ( for you :^) ?
+
+<BR></P>
+
+<P><B>&lt;tod&gt;</B> For me? Well, &quot;interactive,&quot; &quot;fiction,&quot; &quot;games,&quot; &quot;magick,&quot; and she could infer from that, and go do harvests for me.
+
+<BR></P>
+
+<P><B>&lt;foster&gt;</B> Ah, yes. But not, of course, if each one actually does a harvest on-demand. Oddly, there is much more interest in many topics like that, but not so many resources on the Gophers. People do ask for lots of things that are not in the 
+index yet. I hope I can do something with that information, to promote services to supply that need.
+
+<BR></P>
+
+<P><B>&lt;tod&gt;</B> I guess it would really be sort of an AI-esque shell over a Veronica client....
+
+<BR></P>
+
+<P><B>&lt;foster&gt;</B> Yes, the AI Veronica. I am actually interested in telescript and so forth.
+
+<BR></P>
+
+<P><I>[At this point, Fred Barrie rejoins the conversation. Because of </I><I>his quick return, he is now known as &quot;Fast.&quot;]</I>
+
+<BR></P>
+
+<P>*** Fast (barrie@shadow.scs.unr.edu) has joined channel #veronica
+
+<BR></P>
+
+<P><B>&lt;fast&gt;</B> Hello again.
+
+<BR></P>
+
+<P><B>&lt;tod&gt;</B> Hey, FastFred. &lt;g&gt;
+
+<BR></P>
+
+<P><B>&lt;foster&gt;</B> These guys can't stand alone and do their own harvests; they need an infrastructure. At least with forseeable channel capacity.... I certainly sound geeky here don't I ? &lt;g&gt;
+
+<BR></P>
+
+<P><B>&lt;fast&gt;</B> Say, where are we?
+
+<BR></P>
+
+<P><B>&lt;tod&gt;</B> We were just talking about AI Veronicas.
+
+<BR></P>
+
+<P><B>&lt;foster&gt;</B> Right, we had just been thinking about how a personalized Veronica should work.
+
+<BR></P>
+
+<P><B>&lt;fast&gt;</B> Whoa, went off the deep end didn't we?&lt;g&gt;
+
+<BR></P>
+
+<P><B>&lt;tod&gt;</B>&lt;g&gt;
+
+<BR></P>
+
+<P><B>&lt;foster&gt;</B> I summarized past work division, and told Tod that you had been doing something else since Feb, but other than that have not talked about the future.
+
+<BR></P>
+
+<P><B>&lt;tod&gt;</B> Even though the AI Veronica is a ways off, I was wondering what's the next step now for Veronica?
+
+<BR></P>
+
+<P><B>&lt;fast&gt;</B> Well, in my opinion we need to bring V fully up to Gopher+, with both an index for Gopher+ fields and a neat ask block interface.
+
+<BR></P>
+
+<P><B>&lt;foster&gt;</B> Yes, we will make V handle URLs soon, for URL-savvy clients....
+
+<BR></P>
+
+<P><B>&lt;fast&gt;</B> I think the URLs will be very important. We've talked about a V that returns html for those clients....
+
+<BR></P>
+
+<P><B>&lt;tod&gt;</B> co0lco0l. URLs are starting to be listed in mags &amp; directories in print....
+
+<BR></P>
+
+<P><B>&lt;foster&gt;</B> Yes, but more important, V needs to provide Gopher addresses in URL form when asked, because the client software can do stuff with those URLs.
+
+<BR></P>
+
+<P><B>&lt;fast&gt;</B> I have envisioned a BIG V that could handle WWW, FTP, and Gopher.
+
+<BR></P>
+
+<P><B>&lt;tod&gt;</B> Yaas&#151;The other side of the tool...the supertool....
+
+<BR></P>
+
+<P><B>&lt;foster&gt;</B> YES. That side. Big server side. I want to do it. Actually, I am thinking a lot about that.
+
+<BR></P>
+
+<P><B>&lt;fast&gt;</B> Well, the supertool is not that far away. Veronica can do both FTP and Gopher now but we turned off the FTP.
+
+<BR></P>
+
+<P><B>&lt;foster&gt;</B> Yes, exactly. It is not so far away. And it will need the AI to do it correctly, or something a little smarter on the client side. Need to sort and cross-link and so forth.
+
+<BR></P>
+
+<P><B>&lt;fast&gt;</B> I think if Mosaic could do Gopher+ we would be there.
+
+<BR></P>
+
+<P><B>&lt;tod&gt;</B> How far away, realistically, is the required AI?
+
+<BR></P>
+
+<P><B>&lt;foster&gt;</B> I think the required AI is available. But I don't know how to really use it until we have URNs.
+
+<BR></P>
+
+<P><B>&lt;fast&gt;</B> Yes, URNs would make the job easier.
+
+<BR></P>
+
+<P><B>&lt;tod&gt;</B> URNs&#151;Names?
+
+<BR></P>
+
+<P><B>&lt;foster&gt;</B> Yup. Uniform Resource Names...
+
+<BR></P>
+
+<P><B>&lt;fast&gt;</B> ...so we have one resource for any service.
+
+<BR></P>
+
+<P><B>&lt;tod&gt;</B> Fff... who does *that* indexing job?
+
+<BR></P>
+
+<P><B>&lt;foster&gt;</B> He hee.
+
+<BR></P>
+
+<P><B>&lt;fast&gt;</B> Say anyone...we all could do it....
+
+<BR></P>
+
+<P><B>&lt;foster&gt;</B> That is a good question. We are asking whether the AI will do it or librarians will do it. But I think Fred is getting at a potential for us EACH to register our domain name space of resources, as we are each providers...so we 
+could have URNs within a year? 2?
+
+<BR></P>
+
+<P><B>&lt;fast&gt;</B> Yeah 2...the Internet community is sometimes slow in committee.
+
+<BR></P>
+
+<P><B>&lt;foster&gt;</B> Lots of far-out ideas here. One very interesting thing to me is a sort of filter that could impose various editorial organizations on the realm of resources&#151;a plug-in editor module. If I like Tod's view of the Magick on the 
+Net, I can use his view. Otherwise, use McKenna's :^}
+
+<BR></P>
+
+<P><B>&lt;tod&gt;</B> Uh-huh. Different filters for different industries/whatever....
+
+<BR></P>
+
+<P><B>&lt;foster&gt;</B> Yes.
+
+<BR></P>
+
+<P><B>&lt;fast&gt;</B> I think that all of the next-generation stuff can be done if we only had more time to experiment. The difficulty is two years ago we could waste bandwidth, but now the Internet is growing so big that it is unwise to do that. So we 
+need to get our ducks in a row before we announce the next tool.
+
+<BR></P>
+
+<P><B>&lt;tod&gt;</B> How long do you plan on being &quot;in charge&quot; of Veronica? Do you see &quot;passing her along&quot; some day, or continually refining and developing her?
+
+<BR></P>
+
+<P><B>&lt;fast&gt;</B> Actually, I have alreay passed the Veronica stuff over to Steve.
+
+<BR></P>
+
+<P><B>&lt;foster&gt;</B> I want to keep developing her. Continual refinement does not look boring to me. Lots of interesting stuff keeps coming along.
+
+<BR></P>
+
+<P><B>&lt;fast&gt;</B> I got a *real* job and am no longer employed at UNR. My efforts are being put into NorthStar for now.
+
+<BR></P>
+
+<P><B>&lt;tod&gt;</B> What are you doing there?
+
+<BR></P>
+
+<P><B>&lt;fast&gt;</B> NorthStar is an attempt at indexing the Web. So far so good. (Plus it will fall into Veronica in the future.)
+
+<BR></P>
+
+<P><B>&lt;fast&gt;</B> What I did was take the existing code for Veronica and modify (note I am not a programmer but a major hacker) it so that it could understand URLs, then I went out and indexed the WWW with this piece of code. Same idea, gather the 
+information, retain what I need for the index, index that information, and present it in proper WWW format for clients.
+
+<BR></P>
+
+<P><B>&lt;tod&gt;</B> It seems that conservation of time is always a key issue with you&#151;is this a life thread ;-)?
+
+<BR></P>
+
+<P><B>&lt;fast&gt;</B> Well yeah...so many things to do and so little time.
+
+<BR></P>
+
+<P><B>&lt;foster&gt;</B> Interesting...time conservation is a major thread for us both. We wonder if we are normal.
+
+<BR></P>
+
+<P><B>&lt;fast&gt;</B> &lt;g&gt;
+
+<BR></P>
+
+<P><B>&lt;foster&gt;</B> We are Net guys. Our view exceeds our sleep requirement ...
+
+<BR></P>
+
+<P><B>&lt;fast&gt;</B> The major problem, however, to the great tools of the future besides time is the computing resources. It is hard to experiment on a working Veronica server.
+
+<BR></P>
+
+<P><B>&lt;tod&gt;</B> You need a (what?) a pseudoserver for testing?
+
+<BR></P>
+
+<P><B>&lt;fast&gt;</B> Yes, a fast workstation for testing purposes that is not being bogged down.
+
+<BR></P>
+
+<P><B>&lt;tod&gt;</B> Um-hmm.
+
+<BR></P>
+
+<P><B>&lt;fast&gt;</B> Something we can reboot often :)
+
+<BR></P>
+
+<P><B>&lt;fast&gt;</B> Not that I have ever brought a computer to its knees, mind you :)
+
+<BR></P>
+
+<P><B>&lt;tod&gt;</B> Heh. Are there any things you'd like to be sure to say to the future gurus who read this interview?
+
+<BR></P>
+
+<P><B>&lt;fast&gt;</B> My suggestion to them is: On the Internet, go ahead and just do it. No one else will do it until you do, so if you get an idea....go for it.
+
+<BR></P>
+
+<P><B>&lt;tod&gt;</B> Like the god Nike sez!
+
+<BR></P>
+
+<P><B>&lt;fast&gt;</B> Oh yes, no committee work either....
+
+<BR></P>
+
+<P><B>&lt;foster&gt;</B> I think I also would make a plug for public interest. We are all shaping the way the Net will be, and what its potentials will be...so keep thinking about how it &quot;should&quot; be.
+
+<BR></P>
+
+<P>On the surface, Veronica may seem very simple. You enter a search word, and it returns a menu of items. Then you browse through the items looking for what you really want to do. Veronica is surprisingly complex and has power that the Internet guru can 
+only exploit.
+
+<BR></P>
+
+<P>The Internet guru can use Veronica more efficiently than a novice and therefore will have more time for other tasks. In this chapter, it is assumed that you can use Gopher and know the basics of using Veronica.
+
+<BR></P>
+
+<H3><A ID="I7" NAME="I7">
+
+<FONT SIZE=4><B>Access Tricks</B>
+
+<BR></FONT></A></H3>
+
+<P>One of the most difficult things about Veronica often is just gaining access to it. Each Veronica server only allows a limited number of simultaneous searches (usually two to six). If these slots are busy, you will get a &quot;connection refused&quot; 
+message.
+
+<BR></P>
+
+<P>An Internet novice just keeps trying repeatedly to get through manually. Statistics I generated based on the University of Nevada Reno and the University of Manchester, Veronica servers showed that this method is not good. When one server is busy, they 
+usually are all busy. It is much better to wait and try at a different time.
+
+<BR></P>
+
+<P>From my research, I determined that the worst time of day to access a particular Veronica server is between 10 a.m. to 6 p.m. server time (see Table 16.1).
+
+<BR></P>
+
+<P>On the other hand, the best times appear to be between 9 p.m. and 12 a.m., and then from 1 a.m. to 9 a.m.. For some odd reason, between 12 a.m. and 1 a.m. is a busy time.
+
+<BR></P>
+
+<UL>
+
+<LH><B>Table 16.1. Veronica usage based on time of day.</B>
+
+<BR></LH></UL>
+
+<TABLE BORDER>
+
+<TR>
+
+<TD>
+
+<PRE><B><I>Hour</I></B>
+
+<BR></PRE>
+
+<TD>
+
+<PRE><B><I>Percentage of Queries</I></B>
+
+<BR></PRE>
+
+<TR>
+
+<TD>
+
+<P>12 a.m.</P>
+
+<TD>
+
+<P>4.19</P>
+
+<TR>
+
+<TD>
+
+<P> 1 a.m.</P>
+
+<TD>
+
+<P>2.26</P>
+
+<TR>
+
+<TD>
+
+<P> 2 a.m.</P>
+
+<TD>
+
+<P>1.96</P>
+
+<TR>
+
+<TD>
+
+<P> 3 a.m.</P>
+
+<TD>
+
+<P>1.97</P>
+
+<TR>
+
+<TD>
+
+<P> 4 a.m.</P>
+
+<TD>
+
+<P>2.02</P>
+
+<TR>
+
+<TD>
+
+<P> 5 a.m.</P>
+
+<TD>
+
+<P>2.25</P>
+
+<TR>
+
+<TD>
+
+<P> 6 a.m.</P>
+
+<TD>
+
+<P>2.53</P>
+
+<TR>
+
+<TD>
+
+<P> 7 a.m.</P>
+
+<TD>
+
+<P>2.97</P>
+
+<TR>
+
+<TD>
+
+<P> 8 a.m.</P>
+
+<TD>
+
+<P>3.63</P>
+
+<TR>
+
+<TD>
+
+<P> 9 a.m.</P>
+
+<TD>
+
+<P>4.26</P>
+
+<TR>
+
+<TD>
+
+<P>10 a.m.</P>
+
+<TD>
+
+<P>5.15</P>
+
+<TR>
+
+<TD>
+
+<P>11 a.m.</P>
+
+<TD>
+
+<P>5.74</P>
+
+<TR>
+
+<TD>
+
+<P>12 p.m.</P>
+
+<TD>
+
+<P>6.29</P>
+
+<TR>
+
+<TD>
+
+<P> 1 p.m.</P>
+
+<TD>
+
+<P>6.52</P>
+
+<TR>
+
+<TD>
+
+<P> 2 p.m.</P>
+
+<TD>
+
+<P>6.33</P>
+
+<TR>
+
+<TD>
+
+<P> 3 p.m.</P>
+
+<TD>
+
+<P>6.32</P>
+
+<TR>
+
+<TD>
+
+<P> 4 p.m.</P>
+
+<TD>
+
+<P>6.06</P>
+
+<TR>
+
+<TD>
+
+<P> 5 p.m.</P>
+
+<TD>
+
+<P>5.58</P>
+
+<TR>
+
+<TD>
+
+<P> 6 p.m.</P>
+
+<TD>
+
+<P>4.98</P>
+
+<TR>
+
+<TD>
+
+<P> 7 p.m.</P>
+
+<TD>
+
+<P>4.76</P>
+
+<TR>
+
+<TD>
+
+<P> 8 p.m.</P>
+
+<TD>
+
+<P>4.34</P>
+
+<TR>
+
+<TD>
+
+<P> 9 p.m.</P>
+
+<TD>
+
+<P>3.77</P>
+
+<TR>
+
+<TD>
+
+<P>10 p.m.</P>
+
+<TD>
+
+<P>3.29</P>
+
+<TR>
+
+<TD>
+
+<P>11 p.m.</P>
+
+<TD>
+
+<P>2.81</P></TABLE>
+
+<P>The intermediate Internet user would probably come up with the idea of a war-dialer program that would keep trying until it got through. However, the real Internet guru would realize that all this does is slow down Veronica service for all other people. 
+Therefore, the Internet guru would not use this method.
+
+<BR></P>
+
+<P>A real Internet guru with quite a bit of spare disk space (1.3GB for the April 1994 dataset) can run his/her own Veronica server to guarantee access. If the security tool TCP Wrapper is installed also, it is easy to control who can access the Veronica 
+server. More advanced Veronica server administrators can even set up two Veronicas: One for public Internet access with a limited number of simultaneous connections, and one for local access with a high number of simultaneous connections.
+
+<BR></P>
+
+<P>Related to this discussion is a program called Maltshop. Some Veronica servers have a bad habit of crashing frequently. Maltshop is installed by a Gopher server administrator, and it automatically tests the servers to see if they are up. Unfortunately, 
+some server administrators have set up their Maltshops to check too frequently, which has put some strain on the Gopher servers out there. In fact, the author of Maltshop has called it a virus.
+
+<BR></P>
+
+<P>Hopefully, one of the improvements mentioned at the end of the chapter will largely eliminate the need for Maltshop. If you set up Maltshop in the meantime, please set it to check only about once or twice a day.
+
+<BR></P>
+
+<H3><A ID="I8" NAME="I8">
+
+<FONT SIZE=4><B>Different or Invalid Results</B>
+
+<BR></FONT></A></H3>
+
+<P>Though, in theory, all Veronica servers should give you the same results, they do not. Some Veronicas are running an old version of the database. Others may remove some parts of the data that are of little value to conserve disk space. Some Veronica 
+servers may even be running an old version of the Veronica code that may have some bugs.
+
+<BR></P>
+
+<P>Even when Veronica works normally, you probably will notice that many of the items returned do not work. Several events cause this to occur.
+
+<BR></P>
+
+<P>First, sometimes Veronica ends up indexing a collection of files that expire quickly. If you run such a collection, check the section &quot;Helping Veronica,&quot; later in this chapter. Second, Gopher administrators love to move items around their 
+Gopher servers to make their Gopher servers look better. This is okay because Veronica will find the items the next time it indexes. Other Gopher administrators will restrict items from public view, making them inaccessible. Finally, sometimes when you are 
+looking for an item, the Gopher server that it's on is just down.
+
+<BR></P>
+
+<H3><A ID="I9" NAME="I9">
+
+<FONT SIZE=4><B>The Stoplist</B>
+
+<BR></FONT></A></H3>
+
+<P>Most indexing systems, including Veronica as well as WAIS, contain a list of words that are not indexed. This list is known as a <I>stoplist</I>. The words in the stoplist are commonly occurring words that are not useful in almost all searches. For 
+example, words like <I>the</I>, <I>a</I>, and <I>an</I> can be found in the stoplist. The advantages of the stoplist are that it makes the index much smaller and saves CPU time when a query is being processed because the word can be safely ignored if it is 
+part of the search string.
+
+<BR></P>
+
+<P>An Internet guru should probably learn what words occur in the stoplist. The Veronica stoplist can be found in the Veronica server package, which can be found via anonymous FTP on futique.scs.unr.edu.
+
+<BR></P>
+
+<H3><A ID="I10" NAME="I10">
+
+<FONT SIZE=4><B>Relevance Ranking</B>
+
+<BR></FONT></A></H3>
+
+<P>As many Internet gurus are also WAIS users, they are used to a WAIS feature known as <I>relevance ranking</I>. Relevance ranking assigns a relevance number to each document. The more times the search string appears in the document, the higher its 
+ranking. Veronica has no similar feature, so the order Veronica returns items has no meaning.
+
+<BR></P>
+
+<H3><A ID="I11" NAME="I11">
+
+<FONT SIZE=4><B>Word Stemming</B>
+
+<BR></FONT></A></H3>
+
+<P>Occasionally, you may want to search on both the single and plural forms of a word. You may also want to search on both the noun, adjective, verb, and adverb forms of the word. <I>Word stemming</I>, also known as <I>wild </I><I>carding</I>, is the 
+solution to this need. The way word stemming works is that it finds all words that start with the specified characters.
+
+<BR></P>
+
+<P>While doing a Veronica search, end the word with a * (asterisk) to specify stemming. For example, you may want to look for book and books. In this case, you enter book* as your search string. This will return all words starting with book followed by any 
+letters. In addition to what you are looking for, you will find that the search returns bookkeeper too, so you need to be careful when analyzing the results.
+
+<BR></P>
+
+<P>Some systems allow you to control the number of characters that can be added to the stem. For example, book? returns book and books, but not bookkeeper. Veronica unfortunately does not support this feature.
+
+<BR></P>
+
+<P>It should also be noted that a stem by itself (for example, *) is not a valid search string. Also, it does not make much sense to use common stems such as a* or under*. Thousands of items will be returned, and the result will be so big that it's 
+meaningless.
+
+<BR></P>
+
+<H3><A ID="I12" NAME="I12">
+
+<FONT SIZE=4><B>Multiple Word Searching</B>
+
+<BR></FONT></A></H3>
+
+<P>Multiple words can be used in a Veronica search. For example, if you are looking for the book Tom Sawyer, you can just specify tom sawyer as your search string (remember that Veronica is case-insensitive). First, Veronica will find all items with the 
+word tom. Then, Veronica will find all items with the word sawyer. Finally, it will compare each list and return items that are in both lists.
+
+<BR></P>
+
+<P>It should be noted that any multiple word search is not order dependent. If a search is done on tom sawyer, you will also be returned items of the form sawyer tom if they occur in the Veronica database. Currently, there is no way to specify that you 
+want hits only of a specific order to be returned to you.
+
+<BR></P>
+
+<P>In multiple-word searching, there is no performance advantage in reordering the terms as there is with some database systems. Searching for tom sawyer and sawyer tom will take the exact same amount of time and give you the same results.
+
+<BR></P>
+
+<H3><A ID="I13" NAME="I13">
+
+<FONT SIZE=4><B>Boolean Searching</B>
+
+<BR></FONT></A></H3>
+
+<P>Frequently, Veronica returns hundreds if not thousands of entries when a query is entered. Every once in a while, that is useful. However, most of the time, it is not. Boolean searching allows you to more closely specify your query on your target. 
+Another benefit of Boolean searching is the ability to include more words into your search and make your results larger, but contain exactly what you need.
+
+<BR></P>
+
+<P>Boolean searching uses three keywords: AND, OR, and NOT. In addition, parentheses allow words to be grouped together and processed first. The use of AND is unnecessary as any two adjacent words excluding OR and NOT will be ANDed together automatically, 
+as we saw previously.
+
+<BR></P>
+
+<P>OR works by evaluating each of the words and then returning all of the items that match either word. For example, we are interested in finding all Gopher items about Bach or Mozart. We can do the search bach or mozart. Veronica will first find all items 
+with the word bach in the title and then it will find all the items with the word mozart. Then it will present all of these items to the user.
+
+<BR></P>
+
+<P>NOT finds items where the first word is in the item and the second word is not. You cannot start a query with the word not. For example, saying not baseball is an invalid query. It is not really a useful query anyway, as it would return hundreds of 
+thousands of items.
+
+<BR></P>
+
+<P>Parentheses are useful for more complex searches to make sure that what you want is what you actually are going to get back. The easiest way to see this is to run through an example. You want information on either left or right field. To begin with, you 
+enter left or right field. Veronica returns you over 2000 items. When you start looking through them, you realize that Veronica has returned a lot of items that have the word left but not the word field in them. The reason is that Veronica interpreted the 
+query as left or (right field). After figuring this out, you enter (left or right) field, which returns you just six items that all meet your requirements.
+
+<BR></P>
+
+<P>You may be wondering why Veronica grouped the original query as left or (right field). This is because Veronica parses the query from right to left instead of left to right as most systems. Instead of remembering this and wasting your valuable time 
+figuring out how to build your query so it parses correctly right to left, it is much easier and highly recommended to just use parentheses.
+
+<BR></P>
+
+<H3><A ID="I14" NAME="I14">
+
+<FONT SIZE=4><B>Word Delimiters</B>
+
+<BR></FONT></A></H3>
+
+<P>Veronica has an unusual concept of what a word is that it applies when it is indexing a title. This is very important to know when you are querying Veronica. Veronica treats any special characters as a delimiter. Therefore, a newsgroup name such as 
+alt.bbs.internet would be indexed under alt, bbs, and internet separately. When you are performing searches, it does not make any sense to use special characters either. If you want to search and find items about the newsgroup alt.bbs.internet, you can 
+just search for alt bbs internet or alt and bbs and internet.
+
+<BR></P>
+
+<H3><A ID="I15" NAME="I15">
+
+<FONT SIZE=4><B>Using Synonyms</B>
+
+<BR></FONT></A></H3>
+
+<P>At the current time, Veronica does not support a thesaurus feature. If it did, then when you searched on a word, you would also find items with other words that have the same meaning. At times, it is important to do searches of this nature to find all 
+the items you are looking for.
+
+<BR></P>
+
+<P>The solution for now is to pull out your own thesaurus and build your own list of related words, and do a query on all of them. Let's say we are interested in the 1960s and hippies in particular. I looked up the word <I>hippie</I> and decided to enter 
+the query hippie or hipster or beatnik or bohemian.
+
+<BR></P>
+
+<P>If you do not have a thesaurus handy, several thesauri exist on the Internet that you can use. If you do not know where they are, just query Veronica to find out. One caveat, however, is that most of the thesauri accessible by the general Internet 
+community is the 1905 version of <I>Roget's Thesaurus</I>. Needless to say, it is not current&#151;especially on topics like computing.
+
+<BR></P>
+
+<P>The danger of any thesaurus feature is that in English, at least each word has a single different meaning. Therefore, some of the results may not be exactly what you are looking for, but you can always ignore the items you don't want. Some of the Gopher 
+clients even support a key to remove items from your display so as you go through your Veronica results, you can make the items you are not interested in disappear. For example, on the University of Minnesota UNIX Gopher client, you can invoke this 
+function by hitting D when your arrow is pointing at the item you no longer want to see.
+
+<BR></P>
+
+<H3><A ID="I16" NAME="I16">
+
+<FONT SIZE=4><B>Seeing More Responses</B>
+
+<BR></FONT></A></H3>
+
+<P>Very frequently, you will enter a Veronica query, 200 items will be returned to you, and at the end you will see an item that says ** There are 1958 more items matching the query 'golf', or some similar message. This is often a good time to do a Boolean 
+search, as was previously discussed. However, at other times, you'll want to see all of these items.
+
+<BR></P>
+
+<P>To see more items, you can add the option -m to the end of your queries (for example, golf -m). If you specify it as -m, it will return all items no matter how many there are. Alternatively, you can specify a number after the -m to specify exactly how 
+many items you want to see. For example, golf -m500 returns you the first 500 items matching golf.
+
+<BR></P>
+
+<P>It is important to use -m only when you need it. Some clients have trouble with long menus being returned. Also, using -m adds an additional load to the Veronica servers. Most of the time when a large number of items are returned, the user will not use 
+them, so the extra values are unneeded. The server has to do some extra processing to return all of the items to the user, so not using -m saves a little bit of time.
+
+<BR></P>
+
+<H3><A ID="I17" NAME="I17">
+
+<FONT SIZE=4><B>Searching on Types</B>
+
+<BR></FONT></A></H3>
+
+<P>Every item in Gopherspace has an associated type (see Table 16.2). By default, Veronica returns you all items no matter what their type is. By using the -t option, you can specify what types you want to get back. The -t is followed by a one character 
+type that you want to get. For example, if you only want to see directories (menus), you can specify -t1.
+
+<BR></P>
+
+<UL>
+
+<LH><B>Table 16.2. Popular Gopher types.</B>
+
+<BR></LH></UL>
+
+<TABLE BORDER>
+
+<TR>
+
+<TD>
+
+<PRE><B><I>Type</I></B>
+
+<BR></PRE>
+
+<TD>
+
+<PRE><B><I>Description</I></B>
+
+<BR></PRE>
+
+<TR>
+
+<TD>
+
+<P>0</P>
+
+<TD>
+
+<P>File</P>
+
+<TR>
+
+<TD>
+
+<P>1</P>
+
+<TD>
+
+<P>Directory/Menu</P>
+
+<TR>
+
+<TD>
+
+<P>2</P>
+
+<TD>
+
+<P>CSO PhoneBook</P>
+
+<TR>
+
+<TD>
+
+<P>3</P>
+
+<TD>
+
+<P>Error</P>
+
+<TR>
+
+<TD>
+
+<P>4</P>
+
+<TD>
+
+<P>Binhex file</P>
+
+<TR>
+
+<TD>
+
+<P>5</P>
+
+<TD>
+
+<P>DOS binary archive file</P>
+
+<TR>
+
+<TD>
+
+<P>6</P>
+
+<TD>
+
+<P>Uuencoded file</P>
+
+<TR>
+
+<TD>
+
+<P>7</P>
+
+<TD>
+
+<P>Index, such as Veronica, WAIS, and so on</P>
+
+<TR>
+
+<TD>
+
+<P>8</P>
+
+<TD>
+
+<P>Telnet session</P>
+
+<TR>
+
+<TD>
+
+<P>9</P>
+
+<TD>
+
+<P>Binary file</P>
+
+<TR>
+
+<TD>
+
+<P>T</P>
+
+<TD>
+
+<P>TN3270 session</P>
+
+<TR>
+
+<TD>
+
+<P>I</P>
+
+<TD>
+
+<P>Image</P>
+
+<TR>
+
+<TD>
+
+<P>h</P>
+
+<TD>
+
+<P>HTML file</P></TABLE>
+
+<H3><A ID="I18" NAME="I18">
+
+<FONT SIZE=4><B>Link Files</B>
+
+<BR></FONT></A></H3>
+
+<P>Internet gurus can use Veronica to add items to either their own Gopher server or their bookmarks file. If an -l option is added to the search, the first item returned is a link file that contains links to all the items that were returned in the search. 
+This item can be saved into a file and then included into a UNIX Gopher server to build a new menu, or in the .gopherrc file on UNIX to add bookmarks. This is also useful when you need more than one session to go through the results of a Veronica search.
+
+<BR></P>
+
+<H3><A ID="I19" NAME="I19">
+
+<FONT SIZE=4><B>Helping Veronica</B>
+
+<BR></FONT></A></H3>
+
+<P>The Veronica database is ever growing. In April 1993, Veronica only consumed 300MB of disk space. By April 1994, Veronica had grown to 1.3GB. If the current growth rate continues, Veronica will be up to 5.6GB by April 1995.
+
+<BR></P>
+
+<P>The Veronica team has been finding ways to keep the database as small as possible without losing valuable data. Unfortunately, these methods alone are not sufficient to deal with the growth of Gopherspace by themselves. If the growth continues, fewer 
+sites will be able to run Veronica databases. The fewer sites will have to absorb more of a load, meaning they will be busier than ever.
+
+<BR></P>
+
+<P>If you are a Gopher server administrator, as are many Internet gurus, then you also can help Veronica work better. Most importantly, it is critical that items of little or no value to the Internet community at large not be included in the Veronica 
+database. An item that falls in one of the following classes generally should not be included in Veronica:
+
+<BR></P>
+
+<OL>
+
+<LI>Experimental items that are not ready for production use.
+
+<BR>
+
+<BR></LI>
+
+<LI>Items that expire quickly. This is especially the case for Usenet News articles.
+
+<BR>
+
+<BR></LI>
+
+<LI>Restricted directories that should be accessible only by a limited number of users and not the whole Internet.
+
+<BR>
+
+<BR></LI>
+
+<LI>Items that are not of general interest.
+
+<BR>
+
+<BR></LI>
+
+<LI>Items that are useful to the Internet community at large, but the server administrator does not want to include in the Veronica database due to the fear of your server not handling the load of the entire Internet.
+
+<BR>
+
+<BR></LI>
+
+<LI>Items that are useful to the Internet community that exist in several locations on the network, but your copy of the items is older and more out-of-date than the ones existing elsewhere. A classic example of this is the hundreds of sites that have 
+partial collections of RFCs.
+
+<BR>
+
+<BR></LI></OL>
+
+<P>The instructions in this section are written around the University of Minnesota UNIX Gopher server, which is the most popular Gopher server in existence. It is expected that if you are reading this book, you should be able to modify these into what is 
+necessary for your particular server&#151;or know how to ask on the comp.infosystems.gopher newsgroup for further assistance.
+
+<BR></P>
+
+<P>If you want to remove your whole server from the Veronica database and you are running version 2.x or higher, it is easy to do. Just add the line veronica index: no to your gopherd.conf file. Fro version 1 or excluding parts of your Gopher Tree, you 
+need to ask for the current standard on comp.infosystems.gopher or by e-mailing Steve Foster at foster@scs.cnr.edu.
+
+<BR></P>
+
+<P>Also, it is possible to generate a file with all of the items that you want indexed by Veronica. Then Veronica will use this file instead of traversing your Gopher tree and looking at each individual item. As this feature is undergoing some changes even 
+while I am writing this, I will not specify the details for now.
+
+<BR></P>
+
+<H3><A ID="I20" NAME="I20">
+
+<FONT SIZE=4><B>Competing Systems</B>
+
+<BR></FONT></A></H3>
+
+<P>Though Veronica was the first system of its type to index Gopherspace, other systems are starting to do it also. Internet gurus should keep track of these developments because each will probably be useful in its own way. The other systems mentioned next 
+should support the options in the previous section to allow people to make sure their Gopher server is not indexed. If you notice they do not support them, you should inform the system's author that they do not.
+
+<BR></P>
+
+<P>Most likely before this book hits the streets, Archie will also support Gopher (it is in beta test as I am writing). The major difference between Archie and Veronica is that while Veronica indexes everything unless the Gopher administrator specifically 
+requests it not be indexed, Archie will index only those sites that request to be indexed. In April 1994, Veronica indexed around 6900 Gopher servers, but the Archie people had requests that only 600 servers be indexed.
+
+<BR></P>
+
+<P>Rhett &quot;Jonzy&quot; Jones, author of Jughead, proposed a scheme by which Jughead will now allow searches of large parts of Gopherspace. The plan is to have Jughead servers have knowledge of each other in a DNS-like scheme. Other sites that run 
+Jughead will be the only ones indexed by Jughead, so the number of sites listed in Jughead will probably be smaller than either Veronica or Archie. Some people doubt that this scheme will work. However, the unofficial motto of the Internet community is 
+that almost anything is worth a try, and we can learn as much from our mistakes as our successes.
+
+<BR></P>
+
+<H3><A ID="I21" NAME="I21">
+
+<FONT SIZE=4><B>Future Directions</B>
+
+<BR></FONT></A></H3>
+
+<P>In the middle of writing this chapter, I attended the GopherCon 94 conference. During the conference, many discussions were held about the future of Veronica. I will present the features that are of interest to the Internet guru and are planned to be 
+added to the code. However, I make no guarantees that these additions will be made. Of course, if a particular modification is important to you, you are always welcome to take the source code, modify it, and send the modification back to the Veronica Team.
+
+
+<BR></P>
+
+<P>As I write, an alpha-test version of Veronica is being worked on. In this version, Veronica will group the items it returns by hostname. For example, you search on the word dog; it will give you back a list of menus. The first menu is a list of all 
+items with dog in the title. Selecting this menu gives you the standard Veronica results. The rest of the menus list host names. If you select the host name, you see all the items with the word dog on that hostname. The benefit of this feature is that you 
+can get an idea of where sites are that contain materials of interest to you.
+
+<BR></P>
+
+<P>A couple of ideas about improving Veronica performance has been talked about recently. Veronica is written in Perl and runs under INETD. What this means is that the Veronica source code is compiled every time someone does a query. Heinz Stoewe is 
+working on a way to keep Veronica running and not have it recompile every time a query is done&#151;this should make a minor improvement in performance. My estimate is that it will save a quarter of a second per query. In the longer term, it is hoped that 
+Veronica will be rewritten in C. Once that happens, it is hoped that Veronica's bottleneck will be purely disk I/O.
+
+<BR></P>
+
+<P>Mark McCahill of the Gopher Team came up with an excellent idea. The idea was to do a search with a special flag and end up in a random spot in Gopherspace. This would be a good method for you to find new, unexpected resources in Gopher.
+
+<BR></P>
+
+<P>Veronica's database will be undergoing some changes. First of all, the stoplist will be increased. Gopher gateways to FTP, X.500, and other services will no longer be included in the database. Some discussions were held about removing all filenames from 
+the database.
+
+<BR></P>
+
+<P>Several of us came up with a method to minimize the Veronica access problems I discussed earlier. A Gopher-to-Veronica gateway is planned. The gateway will accept a query. The gateway will contact a preferred Veronica server if the system administration 
+has defined one. If the preferred server does not resolve the query due to load, the gateway will randomly try another server. It will keep trying servers until the query is successfully completed or too many retries occur.
+
+<BR></P>
+
+<P>In the longer term, Veronica may support synonyms. When this feature is implemented, a user who searches for dishes would also see the occurrences of plates in the Veronica database. This is a common feature in other searching systems.
+
+<BR></P>
+
+<P>Another interesting possible future addition is the addition of <I>facets</I>. Facets give access to an idea by some of its other features instead of just its title. For example, searches could be done by Geography, Discipline, or time period. These 
+additions will allow queries to be narrowed down more easily.
+
+<BR></P>
+
+<H3><A ID="I22" NAME="I22">
+
+<FONT SIZE=4><B>Summary</B>
+
+<BR></FONT></A></H3>
+
+<P>Veronica is useful to all Internet users, including the Internet guru. The rapid growth of Gopherspace is starting to strain Veronica. It is up to us&#151;the Internet gurus&#151;to find ways to improve Veronica and keep it the useful service it is over 
+the next few years.</P>
+
+<P><A HREF="tig15.htm"><IMG SRC="bluprev.gif" WIDTH = 32 HEIGHT = 32 BORDER = 0 ALT="Previous Page"></A>
+
+<A HREF="httoc.htm"><IMG SRC="blutoc.gif" WIDTH = 32 HEIGHT = 32 BORDER = 0 ALT="TOC"></A>
+
+<A HREF="htindex.htm"><IMG SRC="bluindex.gif" WIDTH = 32 HEIGHT = 32 BORDER = 0 ALT="Index"></A>
+
+<A HREF="tig17.htm"><IMG SRC="blunext.gif" WIDTH = 32 HEIGHT = 32 BORDER = 0 ALT="Next Page"></A>
+
+<A HREF="httoc.htm"><IMG SRC="bluprev.gif" WIDTH = 32 HEIGHT = 32 BORDER = 0 ALT="Home"></A>
+
+</P></BODY></HTML>
+

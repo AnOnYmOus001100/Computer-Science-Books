@@ -1,0 +1,1294 @@
+<HTML>
+
+<HEAD>
+
+<TITLE>Tricks of the Internet Gurus tig09.htm</TITLE>
+
+<LINK REL="ToC" HREF="httoc.htm">
+
+<LINK REL="Index" HREF="htindex.htm">
+
+<LINK REL="Next" HREF="tig10.htm">
+
+<LINK REL="Previous" HREF="tig08.htm"></HEAD>
+
+<BODY TEXT="#000000" LINK="#0000FF" VLINK="#800080" bgcolor=white>
+
+<P><A HREF="tig08.htm"><IMG SRC="bluprev.gif" WIDTH = 32 HEIGHT = 32 BORDER = 0 ALT="Previous Page"></A>
+
+<A HREF="httoc.htm"><IMG SRC="blutoc.gif" WIDTH = 32 HEIGHT = 32 BORDER = 0 ALT="TOC"></A>
+
+<A HREF="htindex.htm"><IMG SRC="bluindex.gif" WIDTH = 32 HEIGHT = 32 BORDER = 0 ALT="Index"></A>
+
+<A HREF="tig10.htm"><IMG SRC="blunext.gif" WIDTH = 32 HEIGHT = 32 BORDER = 0 ALT="Next Page"></A>
+
+<A HREF="httoc.htm"><IMG SRC="bluprev.gif" WIDTH = 32 HEIGHT = 32 BORDER = 0 ALT="Home"></A>
+
+</P><UL>
+
+<LI>
+
+<A HREF="#I1">9</A></LI>
+
+<UL>
+
+<LI>
+
+<A HREF="#I3">Usenet</A></LI>
+
+<UL>
+
+<UL>
+
+<UL>
+
+<LI>
+
+<A HREF="#I4"><A HREF="kibobio.gif">--by James &quot;Kibo&quot; Parry</A></A></LI></UL></UL>
+
+<LI>
+
+<A HREF="#I5">Volume, Volume, Volume</A></LI>
+
+<UL>
+
+<LI>
+
+<A HREF="#I6">Crossposting and Redirecting</A></LI></UL>
+
+<LI>
+
+<A HREF="#I7">The Art of the Killfile</A></LI>
+
+<LI>
+
+<A HREF="#I8">Where the Heck Is That Group?</A></LI>
+
+<LI>
+
+<A HREF="#I9">Creating a New Group</A></LI>
+
+<LI>
+
+<A HREF="#I10"><A HREF="kibointv.gif">Kibo</A></A></LI>
+
+<UL>
+
+<UL>
+
+<LI>
+
+<A HREF="#I11">--by Tod Foley</A></LI></UL></UL>
+
+<LI>
+
+<A HREF="#I12">Searching For Things</A></LI>
+
+<UL>
+
+<LI>
+
+<A HREF="#I13">Searching Subject: and From: Lines</A></LI>
+
+<LI>
+
+<A HREF="#I14">rn Text Searches</A></LI>
+
+<LI>
+
+<A HREF="#I15">grep: Searching at the Lowest Level</A></LI>
+
+<LI>
+
+<A HREF="#I17">Larry Wall's clip</A></LI>
+
+<LI>
+
+<A HREF="#I18">The Shape of Agents to Come</A></LI></UL></UL></UL></UL>
+
+
+
+<H1><A ID="I1" NAME="I1">
+
+<BR>
+
+<FONT SIZE=5><A ID="I2" NAME="I2"></A><B>9</B>
+
+<BR></FONT></A></H1>
+
+<H2><A ID="I3" NAME="I3">
+
+<FONT SIZE=5><B>Usenet</B>
+
+<BR></FONT></A></H2>
+
+<H5><A ID="I4" NAME="I4">
+
+<FONT SIZE=3><B><A HREF="kibobio.gif">--by James &quot;Kibo&quot; Parry</A></B>
+
+<BR></FONT></A></H5>
+
+<H3><A ID="I5" NAME="I5">
+
+<FONT SIZE=4><B>Volume, Volume, Volume</B>
+
+<BR></FONT></A></H3>
+
+<P>If you've read the Foreword, you've heard me ranting about how much there is to read on Usenet, the Internet's news/discussion service. It is text in bulk, much of it is just vacuous chatter or repetitious arguments, and worst of all, it's not exactly 
+well-indexed.
+
+<BR></P>
+
+<P>When I say &quot;not exactly well-indexed,&quot; I mean that all of the information is sorted by topic (into <I>newsgroups</I>). Discussion of, for instance, Macintosh hardware goes in comp.sys.mac.hardware, and discussion of field hockey is in 
+rec.sport.hockey.field. The problem is that it's often hard to find which newsgroup, out of over 9000, the topic you want to read is in; and even with this many groups there are topics where there's no clear association with any one group. There are also 
+groups where the topic is broad enough that 200 new articles appear in that group every day. The key to mastering Usenet lies in the ability to find only the interesting or useful stuff, without having to read the rest.
+
+<BR></P>
+
+<P>This chapter will go into a bunch of detail about that later, but first I'll touch on some simpler topics that people frequently ask about. You may already know the first couple of these&#151;but then again, you may not.
+
+<BR></P>
+
+<H4><A ID="I6" NAME="I6">
+
+<FONT SIZE=3><B>Crossposting and Redirecting</B>
+
+<BR></FONT></A></H4>
+
+<P>As I'm sure you know, when you post a new article to Usenet, you get to choose which newsgroup to put it in. Let's say I've just thought of a question I need to ask about my neon tetras. I would, naturally, put it in rec.aquaria. The post would start 
+with the following header:
+
+<BR></P>
+
+<PRE>Newsgroups: rec.aquaria</PRE>
+
+<P>But suppose that I've just thought of a wonderfully ribald pun about neon tetras. The people in rec.aquaria would probably enjoy it, but people interested in jokes in general might also enjoy it. Therefore, I'd want it to go to both rec.aquaria and 
+rec.humor. But if I posted the article once to each group, the people who read both groups will see both articles, and they'll get mad at me for wasting 10 valuable seconds of their time by repeating myself. Fortunately, there's a way to post one copy of 
+an article to two (or more) groups, by <I>crossposting</I>:
+
+<BR></P>
+
+<PRE>Newsgroups: rec.aquaria,rec.humor</PRE>
+
+<P>The only thing to remember is that there are no spaces around the comma, but there always has to be one after the colon in any Usenet header.
+
+<BR></P>
+
+<P>Of course, so far, this has been a purely hypothetical discussion. If I really were posting a pun about neon tetras, I'd want to crosspost it to a third group (alt.religion.kibology) because the people in said group want to see the stuff I write (hence 
+its name):
+
+<BR></P>
+
+<PRE>Newsgroups: rec.aquaria,rec.humor,alt.religion.kibology</PRE>
+
+<P>The article shows up in all three groups, but only one copy of it is normally stored on each computer&#151;cross-posts don't take up extra disk space or &quot;bandwidth&quot; on machines where the machine can save the file in the rec.aquaria directory 
+and make symbolic links to it in the other two. (More later on how machines store Usenet articles.)
+
+<BR></P>
+
+<P>A question arises now: If someone makes a followup posting (that is, a public response) to my article, it will by default go to all three newsgroups (unless the responder edits that Newsgroups header line). Because I'm making a silly joke, the silly 
+people in rec.humor and alt.religion.kibology will likely respond with something silly, which may or may not be about tropical fish. If I want to set it up so that any discussion the article generates will go into rec.humor and not disturb the aquarium 
+fans, I just have to type an extra header:
+
+<BR></P>
+
+<PRE>Newsgroups: rec.aquaria,rec.humor,alt.religion.kibology
+
+Followup-To: rec.humor</PRE>
+
+<P>Again, the space after the colon is necessary, and you need to capitalize that <I>T</I>. Now, by default all followups will go to rec.humor, except if the responder edits the Newsgroups list manually.
+
+<BR></P>
+
+<P>Some people, when they see a string of articles (a <I>thread</I>) that they would like to see moved out of a newsgroup (say they're tired of a &quot;Macs vs. PCs&quot; argument in soc.penpals), will try to move the thread by posting an article like this 
+one:
+
+<BR></P>
+
+<PRE>Newsgroups: soc.penpals
+
+Followup-To: alt.flame
+
+From: spot@doghouse.yard.net (Spot, a dog)
+
+Date: Mon Aug 15 17:05:34 EDT 1994
+
+I'm tired to this thread, followups to alt.flame. &#151;Spot</PRE>
+
+<P>...but this won't work. It will only redirect the followups to the new article, not to any of the dozens of older articles.
+
+<BR></P>
+
+<P>The only other catch to the Followup-To: header is that when you post a followup, you should read your own Newsgroups line before you post&#151;quite often a thread will be redirected without warning. This is occasionally done as a practical joke of 
+sorts:
+
+<BR></P>
+
+<PRE>Newsgroups: rec.arts.startrek.fandom
+
+Followup-To: alt.test,misc.test,alt.sex,alt.alien.visitors,alt.magic
+
+From: lucy@babaloo.net (Lucy Ricardo)
+
+Date: Mon Aug 15 13:41:02 EDT 1994
+
+&quot;Star Trek&quot; sucks! &quot;Space: 1999&quot; was better because Martin Landau
+
+could beat up William Shatner any day! Majel Barrett was only on
+
+Star Trek because she was married to William Shatner!!!</PRE>
+
+<P>When careless Trekkies post followups, frothing at the mouth over the insult to the show, and patiently explaining that Majel was married to Gene Roddenberry and not William Shatner, they will be surprised to find out (later) that their post has gone to 
+alt.magic (they'll get mail saying &quot;Why are you posting this drivel to alt.magic?&quot;) and to misc.test (they'll get automatic replies from a dozen sites saying &quot;Your article was received here in Norway&quot;). This is just one of the many ways 
+Usenet is used to get &quot;newbies&quot; to show themselves. (I'd tell you the others, but I don't want to ruin the market for elitist pranks; what would Usenet be without an elaborate social stratification?)
+
+<BR></P>
+
+<P>Note that all this discussion about how to edit Newsgroups: and Followup-To: lines is moot if you're using one of the few commercial systems that allows access to Usenet but doesn't let you edit any headers (I've heard Portal is one such system). In 
+normal environments, you can move the cursor around and edit most of the headers to your liking, in case you want to change your Organization or Summary line. (Some of the headers are automatically set by the news software, so changing Date or From won't 
+do too much good.)
+
+<BR></P>
+
+<H3><A ID="I7" NAME="I7">
+
+<FONT SIZE=4><B>The Art of the Killfile</B>
+
+<BR></FONT></A></H3>
+
+<P>Let's go back to the hypothetical question of &quot;What do you do about the Macs vs. PCs flamewar in soc.penpals?&quot; Some people would simply post to soc.penpals asking the participants in the flamewar to shut up. Bad idea&#151;that's just one more 
+article everyone has to read, and it probably won't do much good. If only there were a key you could press to simply make that flamewar vanish forever!
+
+<BR></P>
+
+<P>Welcome to the world of the <I>killfile</I>. A killfile is simply a list of things you don't want to see. If I have a killfile for soc.penpals that removes all articles with the words &quot;Macintosh&quot; or &quot;PC&quot; in their Subject headers, I 
+can ignore that flamewar. (Note that it will not stop <I>anyone</I> <I>else</I> from seeing the flamewar! A few people misunderstand the concept of killfiles&#151;probably because of the word &quot;kill&quot; in the name&#151;and will rant about censorship 
+if they find out that someone has killfiled them. Killfiles will not blow someone off the face of the earth&#151;although sometimes you'll wish they could.)
+
+<BR></P>
+
+<P>The exact operation of a killfile depends on what sort of system you're using and (more importantly) what program you're using to read Usenet. Most of them (such as the rn family) keep a directory with a separate file for each group you want to operate 
+on. Others do not literally keep kill<I>files</I> but instead keep a list of killable things somewhere in their database.
+
+<BR></P>
+
+<P>rn and its derivatives (rrn, xrn, xrrn, trn, trrn, and so on) all have the same basic killfile functionality, and they're quite popular (as you can see by the plethora of variants), so I'm going to talk about how killfiles work in them. If you use nn, 
+some of this will also apply to you (but not all); if you use gnus, none of this will do you any good; gnus is unlike anything else. (You can do anything you want in gnus, but it requires writing bits of LISP code.) And for those of you running software 
+without killfiles (for example, some shareware newsreader on your 386), you should consider running something else, as killfiles are quite useful.
+
+<BR></P>
+
+<P>In rn (or trn, and so on), if you're looking at an article, and you never want to see another one with the same subject, just press K (that's Shift-k.) You will see something along these lines:
+
+<BR></P>
+
+<PRE>Marking subject &quot;I hate your computer\.\.\.&quot; as read.
+
+Depositing command in /home/foyer/kibo/News/soc/penpals/KILL...done
+
+Searching...</PRE>
+
+<P>What this means is that rn has recorded, in a file for soc.penpals, that the subject I hate your computer... is verboten. 
+
+<BR></P>
+
+<HR ALIGN=CENTER>
+
+<NOTE>
+
+<IMG SRC="note.gif"><B>Note: </B>Why the backslashes in front of the periods? Because punctuation marks have various special meanings. The period, for instance, stands for any single character. If you really want all the gory details, read the 
+documentation for a program called grep.
+
+<BR></NOTE>
+
+<HR ALIGN=CENTER>
+
+<P>The file that rn created for soc.penpals now looks like so:
+
+<BR></P>
+
+<PRE>THRU 40697
+
+/: *I hate your computer\.\.\./:j</PRE>
+
+<P>That first line is just to remind rn what the last article it checked was, so that it won't have to scan them all again tomorrow. The next line does the actual killing. When you press K, it automatically adds another one of those lines with the current 
+Subject header inserted in the middle. You can do far more than just kill a particular subject, though. If you press Ctrl-K instead, rn will let you edit the contents of the killfile, and you can type in new killfile lines.
+
+<BR></P>
+
+<P>Each line has three parts: a pattern to search for, an optional modifier that tells it what to search, and then an rn command.
+
+<BR></P>
+
+<PRE>/pattern/modifier:command</PRE>
+
+<P>J is the key you press to &quot;junk&quot; an article (to make it go away and mark it as having been read so that it won't show up next time). Therefore, to junk all articles whose Subject lines contain&#151;<I>anywhere</I>&#151;the word marshmallow, 
+you can type this:
+
+<BR></P>
+
+<PRE>/marshmallow/:j</PRE>
+
+<P>This would kill a subject such as &quot;What's the best flavor of marshmallow?&quot; as well as &quot;I like MaRsHmaLLowS&quot; (it'll work on upper- and lowercase letters).
+
+<BR></P>
+
+<P>The optional modifier before the colon is what gives you the real power. Normally rn searches the subject line for your pattern. What if you want to search <I>all</I> the headers?
+
+<BR></P>
+
+<PRE>/marshmallow/h:j</PRE>
+
+<P>The h makes it junk any articles about marshmallows, or from someone with the word &quot;marshmallow&quot; in their name (it could happen, I suppose), and even articles that pass through a computer named &quot;marshmallow.&quot; h searches all the 
+headers. Want more? Here's how to kill any article that mentions marshmallows anywhere, in the headers, the text, or the signature:
+
+<BR></P>
+
+<PRE>/marshmallow/a:j</PRE>
+
+<P>With a little ingenuity, you can use those modifiers to do various things. To kill any postings made by John Smith (jsmith@slackvax.subg.com) you can type:
+
+<BR></P>
+
+<PRE>/^From:*jsmith@*subg.com/:j</PRE>
+
+<P>The ^ (caret) stands for the beginning of a line; the * (asterisk) stands for any text. We didn't include the word slackvax because someday jsmith might post from another workstation at the same site. If you wanted to kill all articles from anyone at 
+that darn subg.com site, it's as simple as using an asterisk: eliminate *@*subg.com.
+
+<BR></P>
+
+<P>Here's another idea: you're reading rec.arts.prose to see some original fiction, but you don't want to see all the followups that discuss it. Because followups normally have Re: added somewhere in the subject line, you can kill the subject Re:.
+
+<BR></P>
+
+<P>To eliminate crossposted articles from newsgroups you dislike, you can do something along the lines of:
+
+<BR></P>
+
+<PRE>/^Newsgroups:*alt\.sex\.fetish\.feet/:j</PRE>
+
+<P>There's also a <I>global</I> killfile that is processed whenever you read any group. You can edit this by pressing Ctrl-K when you're not reading articles in any group. Of course, it can sometimes slow down your session greatly if you have an elaborate 
+global killfile, but if there's something you're just plain sick and tired of seeing <I>everywhere</I>, this is the optimal answer.
+
+<BR></P>
+
+<P>If you're using nn, the K key will perform similar functions&#151;and some others&#151;that involve nn asking you some questions about what sort of articles you wish to automatically kill or select (the K key does both). It's nice that nn lets you 
+create killfiles with this interactive method, useful if you hate typing strange characters like colons. Read the nn manual (pages 33 to 37) for details.
+
+<BR></P>
+
+<P>If you're using trn (or trrn, the networked version) you can do everything you can in rn&#151;plus, you have the f modifier that searches only the From: line.
+
+<BR></P>
+
+<P>If you have your newsreader set up to automatically eliminate <I>all</I> articles you don't specifically ask to see (nn works this way by default, and trn can be made to do it), you can use the killfiles to <I>select</I> the good articles instead of 
+deleting the bad ones. If you find yourself wanting to read only a few articles in most of the newsgroups you visit, here's a handy little trick that makes trn display menus of articles and then show you only the ones you select:
+
+<BR></P>
+
+<PRE>trn -a -x -X1X&gt;</PRE>
+
+<P>Because that &gt; is actually part of the command and not the usual &gt; that tells the shell to write the output to a file, you may need to escape it with a \ immediately in front. In csh, you can add this to your .cshrc:
+
+<BR></P>
+
+<PRE>alias trn &quot;trn -a -x -X1X\&gt; !*&quot;</PRE>
+
+<P>The -a and -x enable some useful features, and -X1X&gt; defines the default command (that is, the one the Spacebar does) to page you through the menus of articles and then delete all the unmarked ones. You can mark an article by selecting its letter 
+from the menu or by using a killfile; + is the command to mark an article.
+
+<BR></P>
+
+<P>Here's a trn killfile entry that, if used with the preceding options, will show you only the articles from guys named Bernie:
+
+<BR></P>
+
+<PRE>/Bernie/f:+</PRE>
+
+<P>For more details about any of this stuff, read the manual for the appropriate program, and also see the rn KILL file FAQ that is posted periodically to news.newusers.questions and news.answers.
+
+<BR></P>
+
+<H3><A ID="I8" NAME="I8">
+
+<FONT SIZE=4><B>Where the Heck Is That Group?</B>
+
+<BR></FONT></A></H3>
+
+<P>One of the more frustrating situations you'll face reading Usenet is that you may suddenly decide that you want to read about football, but you don't know if it would be filed under rec.football, rec.sport.football, rec.sport.pro-football, 
+talk.football, or football.general. There are a couple of ways of going about locating a group. (Actually, there are more, if you count telephoning someone and asking them where it is, or if you ask news.newusers.questions. These are, of course, last 
+resorts, as it's more educational to find out for yourself.)
+
+<BR></P>
+
+<P>On any system that has nn available, there will be a companion program called nngrep. (You don't have to use nn to enjoy nngrep&#151;it's a utility for everyone.) Typing nngrep -a pattern lists all available newsgroups whose name contains that pattern:
+
+<BR></P>
+
+<PRE>kibo@world&gt; nngrep -a football
+
+alt.sports.football.arena
+
+alt.sports.football.mn-vikings
+
+alt.sports.football.pro.atl-falcons
+
+alt.sports.football.pro.buffalo-bills
+
+alt.sports.football.pro.car-panthers
+
+[...the list goes on, and on...]
+
+clari.sports.football
+
+clari.sports.football.college
+
+clari.sports.football.games
+
+fido7.sport.football
+
+fj.rec.sports.american.football
+
+fj.rec.sports.football
+
+rec.sport.football.australian
+
+rec.sport.football.canadian
+
+rec.sport.football.college
+
+rec.sport.football.fantasy
+
+rec.sport.football.misc
+
+rec.sport.football.pro
+
+uiuc.sport.football</PRE>
+
+<P>The reason you have to type the -a in the middle of the command is that otherwise, it'll only search the newsgroups you're already subscribed to&#151;and if you're already reading them, you probably don't need to search for them.
+
+<BR></P>
+
+<HR ALIGN=CENTER>
+
+<NOTE>
+
+<IMG SRC="imp.gif"><B>Tip: </B>If you decide you want to read rec.sport.football.misc but you're not subscribed to it, in the rn family you can type grec.sport.football.misc; in nn you type G, rec.sport.football.misc, and then j.
+
+<BR></NOTE>
+
+<HR ALIGN=CENTER>
+
+<P>A shortcut in rn for finding all groups whose names contain a pattern, and then subscribing to them, is to type a followed by the pattern; for example, afootball will add the fifty groups just listed.
+
+<BR></P>
+
+<P>There's also a program named newsgroups on some sites that works like nngrep.
+
+<BR></P>
+
+<PRE>kibo@world&gt; newsgroups football
+
+Completely unsubscribed newsgroups:
+
+clari.sports.football
+
+clari.sports.football.college
+
+fj.rec.sports.football
+
+rec.sport.football.australian
+
+rec.sport.football.college
+
+rec.sport.football.misc
+
+rec.sport.football.pro
+
+[Type return to continue]</PRE>
+
+<P>You'll notice the list is much shorter than the one we got before. This is because newsgroups will often leave out some or all of the newsgroups on your system. nngrep is preferable for this reason.
+
+<BR></P>
+
+<P>One last thing to try before asking for help is to look in news.lists or news.answers for the various lists people post of newsgroups. These long documents give the names and one-line descriptions of most all the groups in the world. Here's a short 
+excerpt from David Lawrence's list:
+
+<BR></P>
+
+<PRE>comp.admin.policy       Discussions of site administration policies.
+
+comp.ai                 Artificial intelligence discussions.
+
+comp.ai.alife           Research about artificial life.
+
+comp.ai.fuzzy           Fuzzy set theory, aka fuzzy logic.
+
+comp.ai.genetic         Genetic algorithms in computing.
+
+comp.ai.jair.announce   Announcements &amp; abstracts of the Journal of AI Research. (Moderated)
+
+comp.ai.jair.papers     Papers published by the Journal of AI Research. (Moderated)</PRE>
+
+<P>However, when you get down to the alt groups, you'll notice that there is no &quot;official&quot; description for some of them&#151;or rather, that some of them will have &quot;joke&quot; descriptions. Here's an excerpt from one of the various 
+unofficial listings:
+
+<BR></P>
+
+<PRE>alt.artcom              Artistic Community, arts &amp; communication.
+
+alt.arts.ballet         All aspects of ballet &amp; modern dance as performing art.
+
+alt.ascii-art           Pictures composed of ASCII characters.
+
+alt.ascii-art.animation Movies composed of ASCII characters.
+
+alt.asian-movies        Movies from Hong Kong, Taiwan and the Chinese mainland.
+
+alt.astrology           Twinkle, twinkle, little planet.
+
+alt.atari-jaguar.discussion     As opposed to simply alt.atari.jaguar.
+
+alt.atari.2600          The Atari 2600 game system, not 2600 Magazine.
+
+alt.atheism             Godless heathens.
+
+alt.atheism.moderated   Focused Godless heathens. (Moderated)
+
+alt.atheism.satire      Atheism-related humour and satire.
+
+alt.authorware          About Authorware, produced by Authorware.  So subtle.
+
+alt.autos.antique       Discussion of all facets of older automobiles.
+
+alt.autos.camaro.firebird       A couple of American sports cars.
+
+alt.autos.rod-n-custom  Vehicles with modified engines and/or appearance.
+
+alt.backrubs            Lower...to the right...aaaah!
+
+alt.banjo               Someone's in the kitchen with Dinah.</PRE>
+
+<P>No newsgroup is ever &quot;on topic&quot; 100 percent of the time, so don't be surprised to find that the people in an automobile group are all discussing Flintstones reruns. There is no rule that says people have to discuss what anyone wants them to, 
+except for peer pressure&#151;at least in the unmoderated groups. (The moderated groups carry fewer articles because the chatter generally isn't permitted there.) Also, some groups on the list might be ones that nobody's posted anything to in months.
+
+<BR></P>
+
+<P>Even with 9,251 groups (at my site, at this moment&#151;your mileage may vary), you may still want to discuss something for which there is no group. If, after slaving away with the preceding methods, you can't find a place for the topic, and nobody else 
+can, and you think there's a need for a new group. . .I feel a section heading coming on. . .
+
+<BR></P>
+
+<H3><A ID="I9" NAME="I9">
+
+<FONT SIZE=4><B>Creating a New Group</B>
+
+<BR></FONT></A></H3>
+
+<P>Ever wonder where the dozen or so new groups that appear every day are coming from? (About a week ago, three <I>thousand</I> arrived at once here, due to circumstances beyond anyone's control!) There's a special kind of &quot;control&quot; article 
+called a newgroup. When a Usenet article is posted with the proper headers, it spreads around the world alerting all the computer operators that someone wants a new group to be added, and then they get to decide whether to make it available at their site 
+or not.
+
+<BR></P>
+
+<HR ALIGN=CENTER>
+
+<NOTE>
+
+<IMG SRC="note.gif"><B>Note: </B>This is different from the problem of adding an existing group to your site. This section discusses how to create a <I>new</I> group. If you want to read an existing group but can't get to it at your site&#151;if you try to 
+read rec.sport.football.pro but it's not there&#129;97&#196;what you should do is to ask your site's administrator or operator to add it, usually with the addgroup command. Now, back to our story.
+
+<BR></NOTE>
+
+<HR ALIGN=CENTER>
+
+<P>If you were to just type in a newgroup control message (let's say you're creating rec.sport.mud-wrestling) and send it out, most likely nothing would happen because there are rules you're supposed to follow&#151;or at least guidelines&#151;and if you 
+don't follow them, the administrators of thousands of sites will just ignore you. (Even if a few of them add the group at their sites, articles in the group won't be able to travel from those sites to others; you need to get the group on a large percentage 
+of sites before articles can flow around the world with ease.)
+
+<BR></P>
+
+<P>The aforementioned <I>rules</I> govern the &quot;main&quot; (&quot;Big Seven&quot;) Usenet hierarchies, which are comp.*, news.*, soc.*, sci.*, rec.*, talk.*, and misc.*. The <I>guidelines</I> govern the &quot;alternative&quot; hierarchy, alt.*, where 
+anything goes, sort of. For other hierarchies&#151;the special-purpose ones like bionet.*, clari.*, and so forth, and the regional ones like de.* (Germany), fr.* (France), capdist.* (Schenectady/Albany/Troy), different situations apply in each case.
+
+<BR></P>
+
+<P>Getting a new group created in the main hierarchies&#151;the &quot;Big Seven&quot;&#151;is quite a challenge. First the idea should be discussed in groups related to your topic. Next a Request For Discussion (RFD, sometimes CFD for &quot;Call&quot;), 
+that outlines the proposed group, should be drawn up and posted to news.announce.newgroups (which is moderated) as well as news.groups and the places where the idea was discussed. Now more discussion&#151;in news.groups. At this stage there will likely be 
+a flamewar with people who feel we don't need a new group arguing with people who think the proposed group has a bad name. (Take a peek into news.groups sometime if you want to experience the thrill of being a flamewar spectator; it's like alt.flame but 
+slightly more intelligent.) About a month after the RFD is posted, you can hold a vote (for another month) where the object is to get 100 more &quot;yes&quot; votes than &quot;no&quot; votes, <I>and</I> the &quot;yes&quot; votes must outnumber the 
+&quot;no&quot; votes by a factor of two. After the voting, the results will be posted (a list of who voted for what) and another flamewar will ensue in which random people claim there was vote fraud. If the group's vote was dominated by the &quot;yes&quot; 
+people, the moderator of news.announce.newgroups (currently David Lawrence, mentioned earlier&#151;the busiest person on Usenet) will issue the newgroup message.
+
+<BR></P>
+
+<P>Whew. And that's just the tip of the iceberg! For a full list of rules, see &quot;How to Create a New Usenet Newsgroup,&quot; and for some more tips, &quot;Newsgroup Creation Companion&quot;; these articles are posted periodically to news.answers and 
+other prominent places. (All the important FAQs and periodic postings are repeated in news.answers; news.newusers.questions also gets some of the most important ones.)
+
+<BR></P>
+
+<P>What this all boils down to is that whenever you suggest a new group for the Big Seven, there will be a lot of people who have an opinion as to whether it should or should not be created&#151;and they will argue vociferously (and some of them are good 
+at it because the same people do it for almost every proposed group). It's quite a pain.
+
+<BR></P>
+
+<P>For alt.* groups, there are no hard-and-fast rules, but the days where anyone can issue a newgroup message and have it work are long gone&#151;due to there being over 1600 alt.* groups at the moment, operators are getting rather reluctant to add every 
+alt.i-hate-barney-the-dinosaur.kill.kill.kill.die.die.die that someone sends down the pipe. alt.* is often where groups that don't make it into in the Big Seven are banished. Some of the most popular groups, like the alt.sex.* hierarchy, are in alt.* (as 
+is my favorite, alt.religion.kibology). Some are moderated, but most are unmoderated, as elsewhere. The procedure for creating a new alt.* group is similar to that for Big Seven, except there's no voting and discussion should take place in alt.config, not 
+news.announce.newgroups or news.groups.
+
+<BR></P>
+
+<P>(Why is it alt.config and not alt.groups? I don't know either.) Basically, the group should be suggested and discussed in alt.config, and if people there generally seem in favor of it (allow a week or two for discussion), it would be a good time to send 
+the newgroup message. The point of the discussion is to make the people who care about such things aware that there's support for your idea, so that when the newgroup arrives at various sites, the operators will recognize it as a good idea and add the 
+group.
+
+<BR></P>
+
+<P>See &quot;So You Want to Create an Alt Newsgroup&quot; (posted periodically to news.answers, as well as alt.answers and alt.config) for more suggestions and guidelines.
+
+<BR></P>
+
+<P>Note that not only can anyone post a newgroup message to request the addition of a group, but anyone can post the evil twin of it&#151;the rmgroup message. An rmgroup sends a note to the operator of each site telling them that someone would like a group 
+removed. Like newgroup, it's usually ignored unless the person posting it has some authority and seems to have a valid reason.
+
+<BR></P>
+
+<P>I'm not going to discuss the actual mechanics of issuing a newgroup message here, as it's usually best if you just ask some noted authority to post it for you anyway, as their word will carry more weight. (I try not to get involved in such things, for 
+political reasons, so please don't ask me.)
+
+<BR></P>
+
+<H3><A ID="I10" NAME="I10">
+
+<FONT SIZE=4><B><A HREF="kibointv.gif">Kibo</A></B>
+
+<BR></FONT></A></H3>
+
+<H5><A ID="I11" NAME="I11">
+
+<FONT SIZE=3><B>--by Tod Foley</B>
+
+<BR></FONT></A></H5>
+
+<P>Although it will take HappyNet months, maybe years, to improve all areas of daily existence in all possible ways, it will be obvious to the most casual reader that HappyNet is better than Usenet. Those who aren't casual readers&#151;well, they will come 
+to agree. In time, they will even love me. In fact, soon they will beg to love me! But I, Leader Kibo, want only the best for everyone. After all, I am one of the readers of Usenet, so I can make the readers of Usenet happy by making me happy FIRST. DEATH 
+TO USENET! LONG LIVE HAPPYNET! TO THE MOON!
+
+<BR></P>
+
+<P>--From Kibo's <I>HappyNet Proclamation and Manifesto</I>
+
+<BR></P>
+
+<P>&quot;Kibo,&quot; the Net persona of graphic artist and ontological guerilla James Parry, is a virtual god to many Usenet users, who read of his exploits (or just hang out with him) in any of the several newsgroups devoted to discussion of the man, the 
+myth, and whatever other weird thoughts pop into their peculiar little heads. The g-word is not used lightly here, either; alt.religion.kibology is the third most popular religious newsgroup on the Net (tied with soc.religion.islam). To all appearances, 
+this mysterious and quasi-mythical Kibo character possesses powers that are nothing short of awe-inspiring (alt.exploding.kibo and alt.imploding.kibo are both popular groups)&#151;he even ran for president of the United States in 1992 on the electronic 
+platform of alt.politics.kibo.
+
+<BR></P>
+
+<P>Late one evening this summer, Kibo and I played tag with each other through the ever-netsplitting IRC terrain; due to his immense popularity, we were forced to communicate through personal /msg commands. In his sometimes-serious, sometimes-surreal 
+style, Kibo chatted with me about his unusual Net religion, his interests and philosophies, and his ideas on Usenet posts as communicative medium and performance artform.
+
+<BR></P>
+
+<P><B>TF:</B> Your reputation precedes you to such a degree that at times (many times!) it must be an awful impediment. How do you feel about this?
+
+<BR></P>
+
+<P><B>Kibo:</B> Well, the burden of pseudo-fame is slowly increasing. Recently I had to take three weeks leave of my e-mail, and now there are 715 messages in my mailbox. Mail is actually harder to keep up with than Usenet, as it requires more replies, and 
+the tools for dealing with it aren't as good at weeding out the stuff you don't want to see.
+
+<BR></P>
+
+<P><B>TF:</B> Are you working on any AI ki-bots to shoulder some of the infoload?
+
+<BR></P>
+
+<P><B>Kibo:</B> I already have a few. I tried out my first one about six years ago. It was written in, believe it or not, BASIC. There's a crude piece of ELISP code that generates Kibo-style nonsensical slogans about Kibology, and a C translation of the 
+same&#151;which actually can put together a grammatical sentence on occasion.
+
+<BR></P>
+
+<P><B>TF:</B> How long do you figure before most online persons have some sort of intelligent filtering agent?
+
+<BR></P>
+
+<P><B>Kibo:</B> Depends on how you define intelligence. A newsreader killfile is a very, very primitive sort of agent; you can extend them to do a lot in the way of auto-selecting and managing Usenet. Eventually someone will write a good content-sensitive 
+one, which will figure out what you want to read by searching the text of everything, and classifying it by what keywords it contains. Of course, the agent wouldn't <I>understand </I>what it's selecting for the user, but if it sees something containing 
+cichlids and it knows I want to read about tropical fish and it can cross-reference the two in a dictionary, that's good enough.
+
+<BR></P>
+
+<P><B>TF:</B> What grepwords are prominent in your filter?
+
+<BR></P>
+
+<P><B>Kibo:</B> Depends on the groups. Often I include or exclude articles based on their authors. Certain words in subject lines are searched for, too. As far as searching the text of Usenet articles, about all I look for are variants of my name (good for 
+finding followups to articles I've posted, .signatures that quote me, and so on). I don't filter my mail (but I may have to <I>soon</I>.)
+
+<BR></P>
+
+<P><B>TF: </B>How did all this kibomania begin?
+
+<BR></P>
+
+<P><B>Kibo:</B> Oh, it was when I was in college (the first of three colleges). I had already adopted the nickname &quot;Kibo&quot; (for reasons that are not clear any more) and when I was having dinner with two friends, in a Chinese restaurant in Troy, 
+NY, one of them said, &quot;There should be Kibology!&quot; So we made up a stupid ol' doctrine and began proselytizing on the local computer conferencing system. One thing led to another. . .a few years after that, alt.religion.kibology was created on 
+Usenet, and I started running that program to search for my name (people seem to find that last part the most interesting).
+
+<BR></P>
+
+<P><B>TF:</B> Was the original idea of kibology computer-related <I>per se</I>, or was it just &quot;James' type of weirdness?&quot;
+
+<BR></P>
+
+<P><B>Kibo:</B> I don't think it really involved computers. Hard to say, given that the doctrine was completely nonsensical and content-free. But computers were involved from the beginning. Nowadays alt.religion.kibology really has little to do at all with 
+any sort of mock religion; it's more of a forum for me and people who seem not to mind being around me.
+
+<BR></P>
+
+<P><B>TF:</B> Kibo and the wacky disciples of noncontent. What do y'all do there?
+
+<BR></P>
+
+<P><B>Kibo:</B> I keep getting asked this about alt.religion.kibology and I really can't say. We talk about stuff that's not worth talking about, is the best I can describe it. The newgroup is an intellectual vacuum except that it's full of keystrokes. 
+And, of course, there are a few Kibo groupies in there, and some genuine wackos. Occasionally, I'll do something like running for President of the World or other pointless activity. Keeps the peons amused, you know. They get sick of attending the 
+gladiatorial games and Giant H Fights unless I throw 'em a bone. :-) Some of those people have <I>no </I>lives, let me tell you. A lot of them want to date <I>me</I>, and I have no social skills, so they must be really pathetic if they think I'm a step up. 
+Lest I insult my followers too many times, I should point out to your readers that my followers know that I'm <I>always </I>sarcastic (except when writing chapters in books on how to use the network).
+
+<BR></P>
+
+<P><B>TF:</B> Heh. What is it that people seem to want from being around you, or what do they want from their association with kibology?
+
+<BR></P>
+
+<P><B>Kibo:</B> Entertainment? Someone to laugh at and/or with. I try to be both to everyone.
+
+<BR></P>
+
+<P><B>TF:</B> A new form of public service... perhaps one day people will be professional kibos.
+
+<BR></P>
+
+<P><B>Kibo:</B> I don't try to be <I>funny</I>, of course, because many people can do that better. I try to fail to be funny. That way people get to laugh at me. Someday I want to make a film worse than <I>Plan 9 From </I><I>Outer Space</I>. I'm a little 
+like Max Headroom in a way; I pop in in random places on Usenet and make life more surreal for people there. Of course, I don't wear as much makeup as he does. And I don't do as many product placements as he once did.
+
+<BR></P>
+
+<P><I>&quot;A reporter from Australia recently asked me the meaning of life. </I><I>I said it was like this: Suppose you like candy so you devote </I><I>your life to getting all the candy in the world, and you put it </I><I>all in one big pile, and there's 
+so much candy in the pile that </I><I>it becomes sentient and chases you around with big teeth, so you </I><I>have to use the atomic bomb on it, and then there's candy </I><I>everywhere. In retrospect, I think that may not have been </I><I>nonsensical 
+enough.&quot;</I>
+
+<BR></P>
+
+<P><I>&#151;Kibo</I>
+
+<BR></P>
+
+<P><B>TF:</B> what are some of the basic tenets of kibology today?
+
+<BR></P>
+
+<P><B>Kibo:</B> Um, um, um... um... can you ask me an easier question, like &quot;How can we prove that quantum mechanics is a better model for the observed universe than general relativity?&quot; I think it would go something like this: 1. Kibo is God 
+and/or a bozo. 2. Spot is a stupid little puppy. 3. You're allowed. 4. Spot isn't&#151;he's JUST a DOG! [damn line breaks.] 5. Damn the line breaks! 6. Kibo can make up any doctrine he wants in any interview because nobody cares anyway. 7. Kibo should be 
+interviewed more often. And if I were a tree, what kind of tree would I be, you ask? Why, a binary tree, of course.
+
+<BR></P>
+
+<P><B>TF:</B> Okay. What does kibo like?
+
+<BR></P>
+
+<P><B>Kibo:</B> On Usenet, my favroite groups to read (besides alt.religion.kibology / alt.exploding.kibo / alt.politics.kibo / etc.) include alt.usenet.kooks, sci.physics, alt.folklore.urban, alt.conspiracy, and a slew of other ones where weird stuff 
+happens. There are many where I just skim the list of subject lines and read only the 0.5 percent of articles that look deranged enough to be funny. For example, in alt.sex.fetish.feet I look for the posts by the guy who wants women to videotape their feet 
+flooring their car's accelerator. (I am not making this up.) Other Usenet groups I read include alt.fan.cecil-adams, alt.fan.mike-jittlov, and alt.tv-babylon-5, but I only select those posts by the actual &quot;celebs&quot; the groups are devoted to (Ed 
+Zotti, Mike Jittlov, and J.M. Straczynski); it's interesting to just read the posts by the minor celebrities who are on the Net. (<I>Major</I> celebrities, for example, actors and well-known musicians, generally don't participate in Usenet directly, if at 
+all; they'd be swamped.) There's a twilight of people who are only well-known to a small enough degree that they can personally participate in the Net without being swamped. &quot;J. Michael Straczynski&quot; isn't a household name, but as creator of the 
+show <I>Babylon 5</I> there are thousands of people on the Net who know who he is, and they have a group to go to, and in places like that you get this sort of action you'd get at a rock concert, where they've all come to see one person perform. (Yeah, I 
+know, the thousands of fans also talk amongst themselves, but what I like to see is the &quot;celeb&quot; dealing directly with them.)
+
+<BR></P>
+
+<P><B>TF:</B> Is that what they want you to do? This is performance&#151;is it art?
+
+<BR></P>
+
+<P><B>Kibo:</B> When I used to do standup comedy (as an amateur) I preferred to call it &quot;performance art&quot; because usually I tried to be bizarre and to confuse the audience, rather than simply trying to entertain them. My presence on Usenet is 
+pretty similar; if I just tried to tell jokes or be &quot;funny,&quot; that would probably come out pretty lame. I like to keep 'em guessing. Right now I'm trying to start a panic that there's a computer virus named READ.ME that attaches itself to any 
+program you download, and I'm trying to teach a certain poster in sci.physics the word <I>phlezofigle</I>.
+
+<BR></P>
+
+<P><B>TF:</B> OoOoOOOOOoOoOoOoOo...
+
+<BR></P>
+
+<P><B>Kibo:</B> Geez, that sounds dumb, doesn't it?
+
+<BR></P>
+
+<P><B>TF:</B> Actually, the one about the READ.ME virus is catchy. . ..
+
+<BR></P>
+
+<P><B>Kibo:</B> One of the things that passes for interactive entertainment on Usenet is &quot;trolling for newbies.&quot; Trolling is the art of saying something completely outrageous (for example, &quot;William Shatner was only on Star Trek because he 
+was married to the producer, Gene Roddenberry!&quot;) and having people react to it; most people will realize that that must have been said in jest, but a few, who lack the &quot;bozo detection circuit&quot; in their brains, will say completely serious 
+things like NO HE WASNT !!!!!1 ARE U STUPPID OR SOME THING ???????// Again, this sounds really pathetic when described instead of actually performed. Hmm, maybe this should tell us something. Usenet, the interactive entertainment form where patheticness is 
+entertaining.
+
+<BR></P>
+
+<P><B>TF:</B> So we're talking guerilla surrealist performance art here.
+
+<BR></P>
+
+<P><B>Kibo:</B> I guess that would be a good way to put it. Sort of like those evil mimes who follow people around and make fun of them, only combined with the fine performance art talents of Yoko Ono or Chris Burden. (If any of the readers out there know 
+who Chris Burden is or what he did with a VW Beetle, they win a SPECIAL PRIZE!!!) Now I'm talking like Zippy the Pinhead. Ever notice that CARTOON CHARACTERS say lots of WORDS in BOLDFACE in each SENTENCE? YOW! My socks are shaped like ETHERNET CONNECTORS! 
+Have I got a FIBER-OPTIC NERVE yet? Also, I have the <I>most </I>over-inflated ego in the <I>whole world! </I>I'm also the most humble person on earth. Like the way Barney is so wuvvable that you just want to hate him, I'm so obnoxious that you just want 
+to wuv me.
+
+<BR></P>
+
+<P><B>TF:</B> I know who Burden is&#151;one of his coolest works was one where he sat the audience members on high ladders in a deep room, and then started flooding the room with water, and then passed a high-voltage electrical current through the water. . 
+..
+
+<BR></P>
+
+<P><B>Kibo: </B>Yeah, that's Burden. He made his chest explode once with a welding arc, and once he nailed himself to a VW's hood and someone drove it into a wall. I hope the NEA gave him enough money to cover the hospital bills. YOU KNOW I THINK IT'S SICK 
+THAT THE NATIONAL ENDUCATION ASSOCIATION NOT ONLY FUNDS SESAME STREET BUT ALSO THESE SICKO ARTISTS !!!!!!!!1111!!!!!@!!!!11
+
+<BR></P>
+
+<P>I meant to make all those typos.
+
+<BR></P>
+
+<P><B>Kibo:</B> Have you read my .sig and the HappyNet manifesto? Those are probably the two pieces of Net activity for which I'm best known. I used to get two complaints about my .sig for every compliment, and now the ratio has more than reversed. It's 
+eerie, especially since all I ever do is make the .sig more obnoxious. Apparently I passed the point of maximum obnoxiousness and the sign bit flipped around (two's complement) and now it's maximally nonobnoxious. Eek, I made a binary joke. Shoot me. STOP 
+ME BEFORE I TURN INTO A NERRRRD!
+
+<BR></P>
+
+<P>&quot;While watching today's Star Trek: The Next Generation episode for the fifth time, I noticed that the controls on the Transporter were slightly different than--&quot;**BANG**&quot;--OW!&quot; Thud.
+
+<BR></P>
+
+<P><B>TF:</B> Your mail didn't include a .sig. send me one. While we're on the subject, send me some bio stuff on yourself as well. I've read the HappyNet manifesto, but where is it located for our readers to FTP?
+
+<BR></P>
+
+<P><B>Kibo:</B> ftp.std.com, login as anonymous, password <I>your address</I>, cd to pub/alt.religion.kibology. There's a whole mess (and I mean <I>mess</I>) of stuff there. The HappyNet directory there has the manifesto. I'll mail the .sig.
+
+<BR></P>
+
+<P>I should point out that the HappyNet manifesto was intended as a parody of what people perceive to be Usenet's weaker points, and it's slowly becoming less fictional. Someone's going to have to seize control of alt.* someday and clean out a few of those 
+thousand groups that carry no traffic.
+
+<BR></P>
+
+<P><B>TF:</B> Why is Usenet your favorite service/environment?
+
+<BR></P>
+
+<P><B>Kibo:</B> Usenet has everything. It has discussion on every <I>possible </I>topic (all the way down to &quot;I'm turned on by women who floor gas pedals really hard&quot;) and every intelligence level (serious discussions of high-energy particle 
+physics to the latest Baywatch episode).
+
+<BR></P>
+
+<P><B>TF:</B> Do you think that any other form of Net service could sustain kibology as well as Usenet does?
+
+<BR></P>
+
+<P><B>Kibo:</B> I'd love to have the Usenet equivalent of a cable public-access show, where I'd just post little QuickTime movies of me that you could play on your screen. I'm going to start posting <I>audio </I>clips soon since people have been requesting 
+it.
+
+<BR></P>
+
+<P>Video would be better, of course, because I could then put in product-placement shots. &quot;Look! Kibo's wearing Doc Martens! I guess those shoes really do make you more handsome!&quot; I was recently approached by an ad agency that represented a store 
+that sells Doc Martens and assorted other grunge-type clothing...
+
+<BR></P>
+
+<P><B>TF:</B> Unreal!
+
+<BR></P>
+
+<P>*** <B>Kibo:</B> No such nick/channel
+
+<BR></P>
+
+<P><B>TF:</B> /ping kibo
+
+<BR></P>
+
+<P>*** <B>Kibo:</B> No such nick/channel
+
+<BR></P>
+
+<P><B>TF:</B> /quit
+
+<BR></P>
+
+<P>After more than two hours of IRC-hopping, Kibo had disappeared from the Internet Relays. I bounced up a few times, hoping to find him there, but my /pings yielded nothing. Upon checking my e-mail, however, I found two messages of note: The first was 
+Kibo's .sig file (yes, it's just as obnoxious as promised), and the second was a short note from the deity himself:
+
+<BR></P>
+
+<PRE>Date: Wed, 10 Aug 1994 02:44:09 -0400
+
+From: kibo@world.std.com (James &quot;Kibo&quot; Parry)
+
+To: asif@well.sf.ca.us
+
+Subject: what I was saying
+
+Well, looks like the Split will be permanent. This is the last thing
+
+I said in response to the Doc Martens discussion:
+
+Nothing ever came to pass of it, but the idea of an agency rep talking
+
+a chain-store owner into using Kibo to advertise Doc Martens on MTV felt
+
+like it was a sign of the Apocalypse.
+
+And then the Net broke when I said &quot;Apocalypse.&quot;
+
+-- K.
+
+(If the Net doesn't heal in about ten minutes, I'm going to bed.)
+
+&amp; r
+
+To: asif@well.sf.ca.us kibo@world.std.com
+
+Subject: Re: what I was saying
+
+&gt; And then the Net broke when I said &quot;Apocalypse.&quot;
+
+There's a bang of an ending if ever I've seen one...!
+
+thanx
+
+LVX
+
+TF</PRE>
+
+<H3><A ID="I12" NAME="I12">
+
+<FONT SIZE=4><B>Searching For Things</B>
+
+<BR></FONT></A></H3>
+
+<P>And now, we come to the final section of this chapter, the one everyone's been waiting for. Several years ago, after I became slightly well-known on the Net, I noticed that people were quoting me in their signatures. I started searching all of Usenet 
+(that is, the text of all articles) for my name. That had the added advantage that I could find all the followup articles people made to my posts, a real timesaver. But its greatest effect, wholly unexpected, was that after I caught people discussing me in 
+random newsgroups and jumped into the conversation, a legend sprung up that I would respond to any mention of my name on Usenet. It ain't so, Joe. I am narcissistic enough to want to read what people are saying about me, but responding to all the articles 
+that mention me anywhere (up to two hundred a day) would be no fun at all. (I tend to perform the full search once a week and print out a long list of all the results to read at my leisure.)
+
+<BR></P>
+
+<P>This is a technique that is, in my opinion, <I>the</I> most powerful way to read Usenet. Remember that searching for information of any sort is as easy as searching for your name. It's not the most straightforward way, but if you know you want to read 
+all articles about, say, marshmallows, you can search for the word marshmallow across all groups and get just the few articles that actually mention the squishy little things. I'm going to give you various approaches to do just that; not all of them will 
+work on your site, but some of them should do something for you. (They all work for me, but then my account on world.std.com is on a machine with a lot of resources available.)
+
+<BR></P>
+
+<H4><A ID="I13" NAME="I13">
+
+<FONT SIZE=3><B>Searching </B><B><I>Subject:</I></B><B> and </B><B><I>From:</I></B><B> Lines</B>
+
+<BR></FONT></A></H4>
+
+<P>My single favorite feature in nn (and one you can use even if you normally use another newsreader) is its ability to merge all existing articles into one enormous <I>pseudogroup</I> (with about a million articles!) and then rapidly find the ones with 
+particular header lines. You can't search the <I>text</I> of the articles, but this method is very fast (relatively speaking, anyway) and simple to do. Here are three command lines that search From: headers:
+
+<BR></P>
+
+<PRE>nn -mxX -nPerot all
+
+nn -mxX &quot;-nRoss Perot&quot; all
+
+nn -mxX -nSquiggy rec.sport.</PRE>
+
+<P>The first command searches for all articles from anyone whose &quot;real name&quot; includes Perot. (The &quot;real name&quot; is what usually shows up after the e-mail address. nn searches only the address in articles where no real name is given, so 
+try the real name first, and try the address if all else fails.) The second version is a more fussy one that will only find people named &quot;Ross Perot&quot; (but not &quot;Ross Q. Perot&quot;). I prefer just to specify the last name or part of it for 
+this reason. Another reason is that nn shortens the names it displays&#151;Charles Nelson Reilly may show up as Charles N Reilly or C N Reilly&#151;and searches are performed on the <I>short</I> version.
+
+<BR></P>
+
+<P>The third will search all articles from Squiggy in the groups that start with rec.sport. The documentation says you can say rec.sport.*, but leaving the asterisk off actually works better for me.
+
+<BR></P>
+
+<P>Similar searches can be made on the Subject header lines:
+
+<BR></P>
+
+<PRE>nn -mxX -spizza all
+
+nn -mxX &quot;-spepperoni pizza&quot; all
+
+nn -mxX -splutonium sci.</PRE>
+
+<P>On the machine I use, these searches generally take 5 to 15 minutes, depending on how busy the machine is. It may be slower or faster for you, depending on your machine's speed and the number of articles that exist at your site (on some machines they 
+&quot;expire&quot; and evaporate in just a few days, and on others they stick around for weeks). Here's a sample screen of results from the &quot;plutonium&quot; search:
+
+<BR></P>
+
+<PRE>MERGED NEWS GROUPS:  66 ARTICLES
+
+a nelson@usuhsb    26  &gt;&gt;chlorine vs. plutonium
+
+b Jay Mann         16  &gt;&gt;&gt;&gt;&gt;
+
+c Jay Mann         16  &gt;&gt;&gt;&gt;&gt;
+
+d Jay Mann         16  &gt;&gt;&gt;&gt;&gt;
+
+e robert wood      38  &gt;&gt;&gt;&gt;&gt;&gt;
+
+f robert wood      38  &gt;&gt;&gt;&gt;&gt;&gt;
+
+g robert wood      38  &gt;&gt;&gt;&gt;&gt;&gt;
+
+h Bob Savas        10  &gt;&gt;&gt;&gt;&gt;&gt;
+
+i Bob Savas        10  &gt;&gt;&gt;&gt;&gt;&gt;
+
+j Bob Savas        10  &gt;&gt;&gt;&gt;&gt;&gt;
+
+k.James Lynch       4  Abian Vs. Plutonium
+
+l.Benjamin Carter   8  &gt;
+
+m B. Alan Guthrie  61  &gt;&gt;&gt;Purifying Plutonium
+
+n B. Alan Guthrie  61  &gt;&gt;&gt;
+
+o B. Alan Guthrie  61  &gt;&gt;&gt;
+
+p Ludwig Plutoniu 369  PLUTONIUM ATOM TOTALITY THEORY FAQ (1 OF 2)
+
+q Ludwig Plutoniu 369  -
+
+r.Ludwig Plutoniu 369  -
+
+s.Ludwig Plutoniu 369  -
+
+t David Erwin      13  &gt;
+
+u David Erwin      13  &gt;
+
+-- 06:08 -- SELECT -----63%-----
+
+Read 20542 articles in 22 seconds (62 kbyte/s)</PRE>
+
+<P>All you need to know about nn at this point is that you should press the letters corresponding to the articles you want to see, and then press the Spacebar. You can select the whole screenful of articles with @; and if you want to save all the selected 
+articles, press S (Shift-s), then type the name of a file to save to, press y and +.
+
+<BR></P>
+
+<H4><A ID="I14" NAME="I14">
+
+<FONT SIZE=3><B><I>rn</I></B><B> Text Searches</B>
+
+<BR></FONT></A></H4>
+
+<P>Remember when I was talking about killfiles, and I said that /marshmallow/a:j would kill all articles mentioning marshmallows anywhere? Well, those commands don't have to be in an rn (or trn, and so on) killfile, but they can be typed in while reading 
+articles. (Then the command applies to the current articles only, because the command isn't saved to the killfile.) In rn, leaving off the :j will simply find the next matching article.
+
+<BR></P>
+
+<PRE>/marshmallow/       find the next unread article with that subject
+
+/marshmallow/a      find the next one with &quot;marshmallow&quot; anywhere
+
+/marshmallow/ar     add &quot;r&quot; to search unread and old articles too
+
+?marshmallow?ar     find, going backwards</PRE>
+
+<P>Searching backwards with ? is most useful if you type $ first, which will move you to the newest article in the group; then, ? will find you the most recent matching article.
+
+<BR></P>
+
+<P>Because trn, unlike rn, has those nice menus of articles' subjects, you can do a command like /marshmallow/a and then press Shift-X to junk all the articles it didn't find. If you've got trn configured with the options I gave several pages ago to make 
+it never show you any articles you didn't select, you can make a killfile that says /marshmallow/a:+ (the plus sign selects articles) and, coupled with the -X1X&gt; option, all you'll ever need to do is press the Spacebar. You'll see all the articles 
+mentioning marshmallows, and nothing else.
+
+<BR></P>
+
+<P>Automatically selecting based on Subject lines or From lines is quite quick in trn if you use this method&#151;but the a modifier will slow things down considerably because trn will have to read every article all the way through. I have a global 
+killfile that auto-selects anything containing a few variants of my name, anything written by certain people I like, and anything with a subject line containing certain keywords. This, in combination with a few extra killfiles for specific groups, saves me 
+a lot of time when I use trn.
+
+<BR></P>
+
+<H4><A ID="I15" NAME="I15">
+
+<FONT SIZE=3><B><I>g</I></B><A ID="I16" NAME="I16"></A><B><I>rep</I></B><B>: Searching at the Lowest Level</B>
+
+<BR></FONT></A></H4>
+
+<P><I>grep</I> is one of the oldest and most basic UNIX programs. If your machine isn't running UNIX, stop, do not pass go, please proceed to the next session. This magical <I>grep</I> will search files for strings. (Why the funny name? It's short for 
+g/re/p, which is a sed command to <I>G</I>lobally find a <I>R</I>egular <I>E</I>xpression and <I>P</I>rint it.) There are several variants of <I>grep</I>; your machine probably has <I>egrep</I>, which is faster (and has extra options), and might have 
+<I>agrep</I> (which is the fastest and has the most options). You can substitute any of them for the method detailed here.
+
+<BR></P>
+
+<P>This method is going to get tricky fast, so please bear with me. Because grep searches files, and because each Usenet article is stored in a file somewhere, the first thing you need to do is to find where the files are. On some sites the files are 
+actually stored on a neighboring machine, and the newsreader programs retrieve them with a protocol called NNTP. If your machine uses NNTP, this method won't work. (If your newsreader is named rrn or xrrn or trrn, the extra <I>r</I> for <I>remote</I> means 
+you're using NNTP. Often you'll use NNTP without being able to tell, though.)
+
+<BR></P>
+
+<P>Look through various directories until you find where the Usenet files are stored. /usr/spool/news, /usenet/spool, /var/news/spool, and so on, are places to try (it's different on every system). Sometimes the whereis spool command tells you some likely 
+candidates. You'll know you've found the right directory if it contains subdirectories named alt, comp, talk, and so on. If you can't find such directories anywhere, you're probably on a site that uses NNTP, and you'll have to skip to the next section.
+
+<BR></P>
+
+<P>On my site, the articles are in subdirectories in /usr/spool/news. This means that the articles for sci.physics are in /usr/spool/news/sci/physics; each filename is a number indicating in what order the articles arrived. To search all articles in 
+sci.physics for my name and display all the results at once, I type:
+
+<BR></P>
+
+<PRE>grep -i &quot;kibo&quot; /usr/spool/news/sci/physics/*</PRE>
+
+<P>The -i means it will match upper- and lowercase letters. The results will be a list of lines from files containing kibo, with the name of the file before each. You may also see a bunch of error messages scrolling past; don't worry about them.
+
+<BR></P>
+
+<P>The biggest limitation of grep is that it can search only the files in one directory. Because each newsgroup is stored in a different directory, we have to introduce a few other programs into the mix.
+
+<BR></P>
+
+<PRE>find /usr/spool/news/* -type f -print | xargs grep -i &quot;kibo&quot; &gt;output</PRE>
+
+<P>Here's where it gets complicated. The find program, with the preceding arguments, will find all files (-type f) in the Usenet directories, meaning all files in all groups. It will print out this horribly long list and pass it to program xargs, which 
+will run grep on each of those files. The &gt;output part saves all the results (many pages) in file output.
+
+<BR></P>
+
+<P>Major drawback: The preceding command line will take at least a few hours to run (maybe all day), and it may spit out thousands of spurious error messages you'll want to ignore. Here's how to work around that; create a file named myscript containing 
+these three lines:
+
+<BR></P>
+
+<PRE>#!/bin/sh
+
+rm -f output
+
+find /usr/spool/news/* -type f -print | xargs grep -i &quot;kibo&quot; &gt;output</PRE>
+
+<P>Now, do chmod 700 myscript to make myscript into an executable script. To start this script running so that it will chug away overnight&#151;even if you're not logged in!&#151;and to make it not display any error, run this command:
+
+<BR></P>
+
+<PRE>nohup nice -10 myscript &gt;&amp;/dev/null</PRE>
+
+<P>nohup is a program that runs other programs in such a way that they won't stop when you logout and go to bed. (On some machines, the administrators may terminate all your processes when you leave. If that's so, you'll have to stay logged in while it 
+runs.) nice is a program that runs other programs at a low priority, to avoid annoying the other users of the machine. (If you have a workstation all to yourself, you can leave out nice -10. Because I run the program overnight while I'm not logged in, I 
+don't care if it runs slowly.) Finally, &gt;&amp; /dev/null sends all the spurious errors to Richard Simmons. No, just kidding&#151;it sends them into a very deep hole where they'll never come out.
+
+<BR></P>
+
+<P>So, what we've done is to tie a handful of little programs&#151;UNIX commands&#151;together to do something reasonably powerful with just a few lines of typing. This is why I like UNIX. In just thirty seconds, you can write a script that will take all 
+day to run.
+
+<BR></P>
+
+<H4><A ID="I17" NAME="I17">
+
+<FONT SIZE=3><B>Larry Wall's </B><B><I>clip</I></B>
+
+<BR></FONT></A></H4>
+
+<P>Larry Wall, author of several important programs (including the original rn and the programming language Perl) is also known on Usenet for the ability to find mentions of his name anywhere. He uses a program named clip, and not surprisingly, it's 
+written in Perl, and not surprisingly, Perl is optimized for doing things like searching files for text. (It's useful for millions of other things, too.)
+
+<BR></P>
+
+<P>Because clip is six pages long, I won't show the code here. You can get clip via anonymous FTP from ftp.netlabs.com, and the filename is /pub/outgoing/clip/clip. (Larry's address is lwall@scalpel.netlabs.com in case you need help finding it, but please 
+don't send him too much adoring fan mail&#151;he's busy enough from getting even more mail than I do.)
+
+<BR></P>
+
+<P>The patterns clip searches for, along with other parameters, are stored in a file named .cliprc in your home directory. Because perl is different from grep, and so on, the patterns are specified in a different manner than the others we've been looking 
+at. Here is a simple .cliprc:
+
+<BR></P>
+
+<PRE># How much do we slow down the system?
+
+$MAXLOAD = 10;
+
+# Newsgroups to be skipped.
+
+&amp;NGSKIP( &lt;&lt;'END' );
+
+    &amp;skip if /alt\.religion\.kibology/;
+
+END
+
+# Patterns I'm interested in scanning for.
+
+&amp;SCANNER( &lt;&lt;'END' );
+
+    &amp;hit if /\bKibo\b/i;
+
+    &amp;hit if /(James|Jim)( W.|) Parry/i;
+
+END</PRE>
+
+<P>The \b represents a word boundary, so that it will find Kibo and not Skibo or Kibozo. The complicated line will match James W. Parry, Jim Parry, James Parry, and Jim W. Parry. (As if anyone's going to call me that last one. Ugh.)  This is just the tip 
+of the iceberg; with Perl, as with grep, if you know what you're doing it can get quite byzantine. Here's an example from Tom Christiansen's .cliprc file:
+
+<BR></P>
+
+<PRE>if (/\btchrist\b/i || /tom[^\0]christ(ia|e)ns[eo]n/i) {{
+
+    next if /\n\s*Tom Christiansen\s+tchrist\@convex.com/;
+
+    &amp;hit;
+
+}}</PRE>
+
+<P>A similar program to clip is newsclip, by Brad Templeton (brad@clarinet.com). You may remember him as the moderator of rec.humor.funny a few years ago. Currently he runs the ClariNet electronic newspaper service (that is, AP and Reuters news that is 
+broadcast to sites paying for the clari.* groups); you don't have to be a ClariNet user to use newsclip, of course. newsclip, being even fancier than clip (and harder to install), can't really be described here; suffice it to say that you can FTP it from 
+ftp.clarinet.com, in sources/nc.tar.Z, and that it's got many excellent features for selecting or killing articles&#151;you can even patch rn or rrn to let you filter articles with newsclip while reading them.
+
+<BR></P>
+
+<H4><A ID="I18" NAME="I18">
+
+<FONT SIZE=3><B>The Shape of Agents to Come</B>
+
+<BR></FONT></A></H4>
+
+<P>Well, so far, I've talked about some methods for searching text for strings. That's fine if you're looking for a <I>word</I>, but what if you're looking for a <I>concept</I>? How do you find &quot;all articles relating to philosophy applied to 
+dialectical materialism?&quot; And how do you even deal with finding all possible misspellings of &quot;marshmallow?&quot; What do you do if, even when you narrow your search as much as possible, it still turns up too much to read&#151;how can you 
+prioritize the articles in order of importance?
+
+<BR></P>
+
+<P>Such questions will be addressed in the future by the development of <I>intelligent agents</I>&#151;not just for Usenet, but for other hypertext and electronic news services. These tools for managing information will need to be able to imitate our own 
+preferences for what to read and figure out what we'd like to see. The amount of programming that will be involved in these compares to the little scripts given here the way a zeppelin does to an amoeba.
+
+<BR></P>
+
+<P>Someday, while your grandchildren are scanning the world hypertext network for information on their favorite musicians, you'll be able to tell them you remember the good ol' days, when there were only nine thousand newsgroups, and you had to search them 
+by hand, while walking ten miles to school in the snow. . .</P>
+
+<P><A HREF="tig08.htm"><IMG SRC="bluprev.gif" WIDTH = 32 HEIGHT = 32 BORDER = 0 ALT="Previous Page"></A>
+
+<A HREF="httoc.htm"><IMG SRC="blutoc.gif" WIDTH = 32 HEIGHT = 32 BORDER = 0 ALT="TOC"></A>
+
+<A HREF="htindex.htm"><IMG SRC="bluindex.gif" WIDTH = 32 HEIGHT = 32 BORDER = 0 ALT="Index"></A>
+
+<A HREF="tig10.htm"><IMG SRC="blunext.gif" WIDTH = 32 HEIGHT = 32 BORDER = 0 ALT="Next Page"></A>
+
+<A HREF="httoc.htm"><IMG SRC="bluprev.gif" WIDTH = 32 HEIGHT = 32 BORDER = 0 ALT="Home"></A>
+
+</P></BODY></HTML>
+
